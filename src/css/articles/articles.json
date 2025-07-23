@@ -1,0 +1,11 @@
+{
+    "layout": "article.njk",
+    "permalink": "/articles/{{ page.fileSlug }}/",
+    "tags": "article",
+    "pagination": {
+      "data": "notion.results",
+      "size": 1,
+      "alias": "article"
+    },
+    "notion": "dynamic"
+  }

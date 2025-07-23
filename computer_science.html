@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+        <title>cūriōsitās</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body class="computerscience-headings">
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Curiositas Logo" class="site-logo" />
+            </div>
+            <div class="top-buttons">
+                <a href="index.html" title="Home" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                    <img src="icon/purple_blue_metallic_heart.png" alt="Home" class="nav-icon-btn" />
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="contact.html" title="Contact Us" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                    <img src="pink_flip_phone.png" alt="Contact Us" class="nav-icon-btn" />
+                    <span class="nav-label">Contact Us</span>
+                </a>
+            </div>
+        </div>
+        <div class="header-row">
+            <h1 class="computerscience-title">Computer Science</h1>
+        </div>
+        <main>
+            <div class="definition-image-row">
+                <img src="src/images/definitions/computing.png" alt="Computing Definition" class="definition-img" style="display: block; margin: 32px auto 24px auto; z-index: 10; position: static;" />
+                <img id="cs-figure-img" src="src/images/quotes/co1.png" alt="Computer Science Quote Figure" class="cs-figure-img" style="display: block; margin: 32px 0 24px 32px; cursor: pointer;" />
+            </div>
+            <div class="mission-statement">
+                
+                <h2 class="computerscience-section">Opportunities</h2>
+                <a href="https://astro-pi.org/">AStro Pi</a>
+                <p>AStro Pi is a program that allows students to build and program robots to explore space. It is a great way to learn about space and robotics.</p>
+                
+                <div class="popular-articles computerscience-articles">
+                    <h2 class="computerscience-section">Popular Articles</h2>
+                    <div id="top-articles-list" class="article-grid">
+                        {# ELEVENTY WILL INJECT THE ARTICLES HERE #}
+                        {% set filteredArticles = collections.articles | filterBySubject("Computer Science") %} {# Filters for "Computer Science" articles #}
+                        {% if filteredArticles.length %}
+                            {% for article in filteredArticles %}
+                                <div class="article-summary">
+                                    <h3><a href="/articles/{{ article.slug }}/">{{ article.title }}</a></h3> {# Link to the individual article page #}
+                                    <p class="article-meta">
+                                        By {{ article.author }} on <time datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+                                    </p>
+                                    {% if article.tags.length %}
+                                        <p class="article-tags">Tags:
+                                            {% for tag in article.tags %}
+                                                <span class="tag">{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </p>
+                                    {% endif %}
+                                    {# You can add article.description here if you add it to your Notion database #}
+                                    <a href="/articles/{{ article.slug }}/">Read More</a>
+                                </div>
+                                {% if not loop.last %}<hr>{% endif %} {# Add a horizontal rule between articles #}
+                            {% endfor %}
+                        {% else %}
+                            <p>No articles found for Computer Science yet. Check back soon!</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </main>   
+        <div id="articleModal" class="modal">
+            <div id="modalContent" class="modal-content">
+                <!-- Article content will be injected here by the script -->
+            </div>
+        </div>
+    <script src="script.js"></script>
+    <script>
+        const csFigures = [
+            'src/images/quotes/co1.png',
+            'src/images/quotes/co2.png',
+            'src/images/quotes/co3.png',
+            'src/images/quotes/co4.png',
+            'src/images/quotes/co5.png'
+        ];
+        let currentCSFigure = 0;
+        const csFigureImg = document.getElementById('cs-figure-img');
+        const csDefinitionImg = document.querySelector('.definition-img');
+        function matchCSFigureHeight() {
+            if (csDefinitionImg && csFigureImg) {
+                csFigureImg.style.height = csDefinitionImg.clientHeight + 'px';
+                csFigureImg.style.width = 'auto';
+            }
+        }
+        window.addEventListener('load', matchCSFigureHeight);
+        window.addEventListener('resize', matchCSFigureHeight);
+        csFigureImg.addEventListener('click', function() {
+            currentCSFigure = (currentCSFigure + 1) % csFigures.length;
+            csFigureImg.src = csFigures[currentCSFigure];
+            matchCSFigureHeight();
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+# --- Eleventy Specific ---
+# The directory where Eleventy outputs the built website.
+# This should *never* be committed to Git as it's generated.
+_site/
+
+# Eleventy Fetch uses a cache directory to store fetched data (e.g., Notion API responses).
+# This is a cache, so it doesn't need to be version controlled.
+.cache/
+
+# --- Environment Variables / Sensitive Data ---
+# Your .env file contains sensitive API keys (like your Notion API Key).
+# This should NEVER be committed to a public repository.
+.env
+
+# --- Node.js Specific ---
+# The 'node_modules' directory contains all the packages (libraries) your project depends on.
+# These are downloaded when someone runs 'npm install', so they don't need to be committed.
+node_modules/
+
+# --- Operating System Specific ---
+# macOS system files (often created when you browse directories)
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Any temporary files created by your editor or OS (e.g., Vim swap files)
+*.tmp
+*.swp
+*~
+
+# --- Common Editor/IDE Specific (Optional, but good practice) ---
+# Visual Studio Code settings and workspace files (if you use VS Code)
+.vscode/
+
+# IntelliJ IDEA / WebStorm specific files
+.idea/
+
+# Atom editor specific files
+.atom/
+
+# Sublime Text specific files
+*.sublime-project
+*.sublime-workspace

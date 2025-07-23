@@ -1,0 +1,19 @@
+{# src/articles/_article.njk #}
+---
+layout: layouts/article.njk # Uses the specific article layout
+pagination:
+  data: articles # Uses the global 'articles' data collection
+  size: 1 # Generate one page per article
+  alias: article # Name of the variable representing each article in the loop
+  permalink: "/articles/{{ article.slug }}/index.html" # Defines the URL path for each article page
+eleventyComputed:
+  title: "{{ article.title }}"
+  date: "{{ article.date }}"
+  author: "{{ article.author }}"
+  tags: "{{ article.tags }}"
+  subject: "{{ article.subject }}"
+  headerImage: "{{ article.headerImage }}"
+  references: "{{ article.references }}"
+  notionPageId: "{{ article.id }}"
+---
+{# This file remains empty; it just drives the pagination. #}

@@ -1,0 +1,34 @@
+{# src/articles/articles.njk #}
+---
+layout: layouts/base.njk
+title: All Magazine Articles
+permalink: /articles/index.html
+---
+<h1>All Magazine Articles</h1>
+
+<div class="articles-list">
+    {# Loop through all articles fetched globally by Eleventy, ordered by date descending #}
+    {% for article in collections.articles %}
+        <div class="article-summary">
+            {# Link to the individual article page, using the 'slug' from Notion #}
+            <h2><a href="/articles/{{ article.slug }}/">{{ article.title }}</a></h2>
+            <p class="article-meta">
+                {# Display author and formatted date #}
+                By {{ article.author }} on <time datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+            </p>
+            {# Link to the static subject page for this article #}
+            <p>Subject: <a href="/{{ article.subject | slug }}.html">{{ article.subject }}</a></p>
+            {% if article.tags.length %}
+                <p class="article-tags">Tags:
+                    {% for tag in article.tags %}
+                        <span class="tag">{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+            {% endif %}
+            {# You could add a short description/excerpt here if you had a 'Description' property in Notion #}
+            <a href="/articles/{{ article.slug }}/">Read Full Article</a>
+        </div>
+        {# Add a horizontal rule between articles for visual separation #}
+        <hr>
+    {% endfor %}
+</div>

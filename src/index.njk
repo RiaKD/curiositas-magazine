@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+        <title>cūriōsitās</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="top-bar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Curiositas Logo" class="site-logo" />
+            </div>
+            <div class="top-buttons">
+                <a href="index.html" title="Home" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                    <img src="icon/purple_blue_metallic_heart.png" alt="Home" class="nav-icon-btn" />
+                    <span class="nav-label">Home</span>
+                </a>
+                <a href="contact.html" title="Contact Us" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                    <img src="pink_flip_phone.png" alt="Contact Us" class="nav-icon-btn" />
+                    <span class="nav-label">Contact Us</span>
+                </a>
+            </div>
+        </div>
+        <div class="header-row">
+            <h1 class="main-title">Welcome to Cūriōsitās</h1>
+        </div>
+        <div class="tv-remote-container">
+            <img src="pinktv1.png" id="pinktv" alt="Pink TV" />
+            <img src="remote.png" id="remote-btn" alt="Remote" />
+        </div>
+        <main>
+        </main>
+        <section class="cd-section">
+            <!-- Y2K CD Navigation Section -->
+            <div class="y2k-cd-nav">
+                <a href="articles.html" class="cd-btn cd-pink" title="Articles">
+                    <img src="cd/cd_pink-removebg-preview.png" alt="Articles CD" />
+                    <span>Articles</span>
+                </a>
+                <a href="computer_science.html" class="cd-btn cd-purple" title="Computer Science">
+                    <img src="cd/cd_purple-removebg-preview.png" alt="Computer Science CD" />
+                    <span>Computer Science</span>
+                </a>
+                <a href="physics.html" class="cd-btn cd-orange" title="Physics">
+                    <img src="cd/cd_orange-removebg-preview.png" alt="Physics CD" />
+                    <span>Physics</span>
+                </a>
+                <a href="biology.html" class="cd-btn cd-green" title="Biology">
+                    <img src="cd/cd_green-removebg-preview.png" alt="Biology CD" />
+                    <span>Biology</span>
+                </a>
+                <a href="mathematics.html" class="cd-btn cd-blue" title="Mathematics">
+                    <img src="cd/cd_blue-removebg-preview.png" alt="Mathematics CD" />
+                    <span>Mathematics</span>
+                </a>
+                <a href="chemistry.html" class="cd-btn cd-red" title="Chemistry">
+                    <img src="cd/cd_red-removebg-preview.png" alt="Chemistry CD" />
+                    <span>Chemistry</span>
+                </a>
+            </div>
+            <!-- End Y2K CD Navigation Section -->
+        </section>
+        <!-- Contact Us Button -->
+        <!-- Removed floating contact button -->
+        <!-- End Contact Us Button -->
+        <div id="articleModal" class="modal">
+            <div id="modalContent" class="modal-content">
+                <!-- Article content will be injected here by the script -->
+            </div>
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>

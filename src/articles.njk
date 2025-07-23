@@ -1,0 +1,29 @@
+{# src/articles/articles.njk #}
+---
+layout: layouts/base.njk
+title: All Magazine Articles
+permalink: /articles/index.html   {# NEW - Keep it as index.html for the URL #}
+---
+
+<h1>All Magazine Articles</h1>
+
+<div class="articles-list">
+    {% for article in collections.articles %}
+        <div class="article-summary">
+            <h2><a href="/articles/{{ article.slug }}/">{{ article.title }}</a></h2>
+            <p class="article-meta">
+                By {{ article.author }} on <time datetime="{{ article.date | htmlDateString }}">{{ article.date | readableDate }}</time>
+            </p>
+            <p>Subject: <a href="/{{ article.subject | slug }}.html">{{ article.subject }}</a></p>
+            {% if article.tags.length %}
+                <p class="article-tags">Tags:
+                    {% for tag in article.tags %}
+                        <span class="tag">{{ tag }}</span>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+            {% endif %}
+            <a href="/articles/{{ article.slug }}/">Read Full Article</a>
+        </div>
+        <hr>
+    {% endfor %}
+</div> 
