@@ -12,7 +12,12 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@notionhq/client": "^2.2.14",
-    "dotenv": "^16.4.5"
+    "@notionhq/client": "^2.3.0",
+    "dotenv": "^16.6.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-fetch": "^5.1.0",
+    "luxon": "^3.7.1",
+    "notion-to-md": "^3.1.9"
   }
 }

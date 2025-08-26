@@ -6,13 +6,13 @@
         "name": "Biology",
         "slug": "biology",
         "cssClass": "biology",
-        "definitionImg": "definitions/biology.png",
+        "definitionImg": "images/definitions/biology.png",
         "figureImages": [
-          "quotes/b1.png",
-          "quotes/b2.png",
-          "quotes/b3.png",
-          "quotes/b4.png",
-          "quotes/b5.png"
+          "images/quotes/b1.png",
+          "images/quotes/b2.png",
+          "images/quotes/b3.png",
+          "images/quotes/b4.png",
+          "images/quotes/b5.png"
         ],
         "opportunities": [
           {"text": "AStro Pi", "url": "https://astro-pi.org/", "description": "A program that allows students to build and program robots to explore space. It is a great way to learn about space and robotics."}
@@ -22,11 +22,11 @@
         "name": "Chemistry",
         "slug": "chemistry",
         "cssClass": "chemistry",
-        "definitionImg": "definitions/chemistry.png",
+        "definitionImg": "images/definitions/chemistry.png",
         "figureImages": [
-          "quotes/c1.png",
-          "quotes/c2.png",
-          "quotes/c3.png"
+          "images/quotes/c1.png",
+          "images/quotes/c2.png",
+          "images/quotes/c3.png"
         ],
         "opportunities": []
       },
@@ -34,11 +34,11 @@
         "name": "Computer Science",
         "slug": "computer-science",
         "cssClass": "computerscience",
-        "definitionImg": "definitions/computerscience.png",
+        "definitionImg": "images/definitions/computerscience.png",
         "figureImages": [
-          "quotes/cs1.png",
-          "quotes/cs2.png",
-          "quotes/cs3.png"
+          "images/quotes/cs1.png",
+          "images/quotes/cs2.png",
+          "images/quotes/cs3.png"
         ],
         "opportunities": []
       },
@@ -46,12 +46,12 @@
         "name": "Mathematics",
         "slug": "mathematics",
         "cssClass": "mathematics",
-        "definitionImg": "definitions/mathematics.png",
+        "definitionImg": "images/definitions/mathematics.png",
         "figureImages": [
-          "quotes/m1.png",
-          "quotes/m2.png",
-          "quotes/m3.png",
-          "quotes/m4.png"
+          "images/quotes/m1.png",
+          "images/quotes/m2.png",
+          "images/quotes/m3.png",
+          "images/quotes/m4.png"
         ],
         "opportunities": []
       },
@@ -59,11 +59,11 @@
         "name": "Physics",
         "slug": "physics",
         "cssClass": "physics",
-        "definitionImg": "definitions/physics.png",
+        "definitionImg": "images/definitions/physics.png",
         "figureImages": [
-          "quotes/p1.png",
-          "quotes/p2.png",
-          "quotes/p3.png"
+          "images/quotes/p1.png",
+          "images/quotes/p2.png",
+          "images/quotes/p3.png"
         ],
         "opportunities": []
       }
