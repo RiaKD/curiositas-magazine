@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+    <title>Applications | cūriōsitās</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+  <body class="">
+    
+    <div class="top-bar">
+        <div class="logo-container">
+            <a href="/index.html" title="Home" class="nav-btn home-btn">
+                <img src="/images/logo.png" alt="Curiositas Logo" class="nav-button" />
+                <span class="nav-button-label">Home</span>
+            </a>
+            <a href="/submissions.html" title="Submissions" class="nav-btn submit-btn">
+                <img src="/images/submit.png" alt="Submissions" class="nav-button" />
+                <span class="nav-button-label">Submissions</span>
+            </a>
+            <a href="/applications.html" title="Applications" class="nav-btn join-btn">
+                <img src="/images/join2.png" alt="Applications" class="nav-button" />
+                <span class="nav-button-label">Applications</span>
+            </a>
+        </div>
+        <div class="dog-nav">
+            <a href="/all-articles/" class="dog-btn dog-pink" title="Articles">
+                <img src="/images/dog/pink.png" alt="Articles Dog" />
+                <span>Articles</span>
+            </a>
+            <a href="/chemistry.html" class="dog-btn dog-red" title="Chemistry">
+                <img src="/images/dog/red.png" alt="Chemistry Dog" />
+                <span>Chemistry</span>
+            </a>
+            <a href="/physics.html" class="dog-btn dog-orange" title="Physics">
+                <img src="/images/dog/orange.png" alt="Physics Dog" />
+                <span>Physics</span>
+            </a>
+            <a href="/biology.html" class="dog-btn dog-green" title="Biology">
+                <img src="/images/dog/green.png" alt="Biology Dog" />
+                <span>Biology</span>
+            </a>
+            <a href="/mathematics.html" class="dog-btn dog-blue" title="Mathematics">
+                <img src="/images/dog/blue.png" alt="Mathematics Dog" />
+                <span>Mathematics</span>
+            </a>
+            <a href="/computer_science.html" class="dog-btn dog-purple" title="Computer Science">
+                <img src="/images/dog/purple.png" alt="Computer Science Dog" />
+                <span>Computer Science</span>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Menu</button>
+    
+    <!-- Centered Scrollable List -->
+    <div class="centered-scrollable-list" id="centeredList">
+        <div class="list-content">
+            <div class="list-item" data-subject="home">Home</div>
+            <div class="list-item" data-subject="all">All Articles</div>
+            <div class="list-item" data-subject="submissions">Submissions</div>
+            <div class="list-item" data-subject="applications">Applications</div>
+            <div class="list-item" data-subject="chemistry">Chemistry</div>
+            <div class="list-item" data-subject="physics">Physics</div>
+            <div class="list-item" data-subject="biology">Biology</div>
+            <div class="list-item" data-subject="mathematics">Mathematics</div>
+            <div class="list-item" data-subject="computer-science">Computer Science</div>
+        </div>
+    </div>
+    
+
+    
+<div class="applications-page">
+
+<div class="header-row">
+    <h1>Applications</h1>
+</div>
+
+<!-- Mobile Only - Application Dropdowns -->
+<div class="mobile-submission-dropdowns mobile-only">
+    <div class="mobile-submission-dropdown" id="why-join-dropdown">
+        <button class="dropdown-btn">
+            Why Join Our Team?
+            <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">
+            <p>Our magazine is powered by the curiosity of students like you. If you're looking for a way to use your skills to help others discover their passion for STEM, we'd love to have you on our team.</p>
+            <p>We're looking for passionate writers, creative designers, sharp editors and social media enthusiasts who want to help us share engaging content and build a vibrant community.</p>
+        </div>
+    </div>
+    
+    <div class="mobile-submission-dropdown" id="positions-dropdown">
+        <button class="dropdown-btn">
+            Available Positions
+            <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">            
+            <div class="guidelines-section">
+                <h4>Content Writers</h4>
+                <p>Write articles on biology, chemistry, physics, mathematics, computer science or academic advice. Share your knowledge and passion with other students!</p>
+                <ul>
+                    <li>Research and write engaging articles</li>
+                    <li>Collaborate with our editing team</li>
+                    <li>Contribute to our growing knowledge base</li>
+                </ul>
+            </div>
+            
+            <div class="guidelines-section">
+                <h4>Editors</h4>
+                <p>Have a sharp eye for detail? Help us ensure every article is accurate, clear and ready for publication.</p>
+                <ul>
+                    <li>Review article submissions</li>
+                    <li>Provide constructive feedback</li>
+                    <li>Ensure accuracy and clarity</li>
+                </ul>
+            </div>
+            
+            <div class="guidelines-section">
+                <h4>Graphic Designers</h4>
+                <p>Do you love bringing ideas to life with visuals? Help us create a stunning magazine by designing eye-catching layouts, graphics and covers.</p>
+                <ul>
+                    <li>Design magazine layouts and article graphics</li>
+                    <li>Create visuals for our social media channels</li>
+                    <li>Collaborate with writers and editors to bring articles to life</li>
+                </ul>
+            </div>
+
+            <div class="guidelines-section">
+                <h4>Social Media Managers</h4>
+                <p>Help us expand our reach! Create and share content that connects with students and makes STEM more exciting.</p>
+                <ul>
+                    <li>Create engaging social media content</li>
+                    <li>Manage our Instagram and other platforms</li>
+                    <li>Engage with our community</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mobile-submission-dropdown" id="requirements-dropdown">
+        <button class="dropdown-btn">
+            What We're Looking For
+            <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">            
+            <div class="guidelines-section">
+                <p><strong>Passion for Learning</strong> - A genuine interest in science, education or helping others learn</p>
+            </div>
+            
+            <div class="guidelines-section">
+                <p><strong>Creativity</strong> - A willingness to explore new ideas from a unique perspective</p>
+            </div> 
+            
+            <div class="guidelines-section">
+                <p><strong>Communication Skills</strong> - The ability to express ideas clearly and work well with others</p>
+            </div>
+            
+            <div class="guidelines-section">
+                <p><strong>Problem-solving</strong> - Find new and unique ways to approach challenges</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mobile-submission-dropdown" id="benefits-dropdown">
+        <button class="dropdown-btn">
+            What You'll Gain
+            <span class="dropdown-arrow">▼</span>
+        </button>
+        <div class="dropdown-content">            
+            <div class="guidelines-section">
+                <p><strong>Portfolio Building</strong> - Add published work and team experience to your CV</p>
+            </div>
+            
+            <div class="guidelines-section">
+                <p><strong>Skill Development</strong> - Improve writing, editing, teamwork and leadership skills</p>
+            </div>
+            
+            <div class="guidelines-section">
+                <p><strong>Networking</strong> - Connect with like-minded students around the world</p>
+            </div>
+            
+            <div class="guidelines-section">
+                <p><strong>Experience</strong> - Get hands-on experience in a collaborative, creative environment</p>
+            </div>
+            
+            <div class="guidelines-section">
+                <p><strong>Support</strong> - Work closely with other students and get feedback to help you grow</p>
+            </div>
+            
+            <div class="guidelines-section">
+                <p><strong>Making a Difference</strong> - Help other students discover their passion for science</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mobile Only - Applications Form -->
+<div class="mobile-google-form mobile-only">
+    <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__meSE8VUMzZDU0xVVTAyNDk3Qk9DNkZLRFVMMkRaUS4u" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">
+        Loading…
+    </iframe>
+</div>
+
+<main>
+    <div class="applications-layout">
+        <div class="applications-left">
+            <div class="applications-intro">
+                <h2>Join our team</h2>
+                <p>Our magazine is powered by the curiosity of students like you. If you're looking for a way to use your skills to help others discover their passion for STEM, we'd love to have you on our team.</p>
+                <p>We're looking for passionate writers, creative designers, sharp editors and social media enthusiasts who want to help us share engaging content and build a vibrant community.</p>
+            </div>
+            
+            <div class="positions-section">
+                <h3>Available Positions</h3>
+                
+                <div class="position-card">
+                    <button class="position-btn" onclick="togglePosition('content-writers')">
+                        <h4>Content Writers</h4>
+                    </button>
+                    <div class="position-details" id="content-writers">
+                        <p>Write articles on biology, chemistry, physics, mathematics, computer science or academic advice. Share your knowledge and passion with other students!</p>
+                        <ul>
+                            <li>Research and write engaging articles</li>
+                            <li>Collaborate with our editing team</li>
+                            <li>Contribute to our growing knowledge base</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="position-card">
+                    <button class="position-btn" onclick="togglePosition('editors')">
+                        <h4>Editors</h4>
+                    </button>
+                    <div class="position-details" id="editors">
+                        <p>Have a sharp eye for detail? Help us ensure every article is accurate, clear and ready for publication.</p>
+                        <ul>
+                            <li>Review article submissions</li>
+                            <li>Provide constructive feedback</li>
+                            <li>Ensure accuracy and clarity</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="position-card">
+                    <button class="position-btn" onclick="togglePosition('graphic-designers')">
+                        <h4>Graphic Designers</h4>
+                    </button>
+                    <div class="position-details" id="graphic-designers">
+                        <p>Do you love bringing ideas to life with visuals? Help us create a stunning magazine by designing eye-catching layouts, graphics and covers.</p>
+                        <ul>
+                            <li>Design magazine layouts and article graphics</li>
+                            <li>Create visuals for our social media channels</li>
+                            <li>Collaborate with writers and editors to bring articles to life</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="position-card">
+                    <button class="position-btn" onclick="togglePosition('social-media-managers')">
+                        <h4>Social Media Managers</h4>
+                    </button>
+                    <div class="position-details" id="social-media-managers">
+                        <p>Help us expand our reach! Create and share content that connects with students and makes STEM more exciting.</p>
+                        <ul>
+                            <li>Create engaging social media content</li>
+                            <li>Manage our Instagram and other platforms</li>
+                            <li>Engage with our community</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="requirements-section">
+                <h3>What We're Looking For</h3>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <h4>Passion for Learning</h4>
+                        <p>A genuine interest in science, education or helping others learn</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>Creativity</h4>
+                        <p>A willingness to explore new ideas from a unique perspective</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>Communication Skills</h4>
+                        <p>The ability to express ideas clearly and work well with others</p>
+                    </div>
+                    <div class="requirement-item">
+                        <h4>Problem-solving</h4>
+                        <p>Find new and unique ways to approach challenges</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="benefits-section">
+                <h3>What You'll Gain</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Portfolio Building</h4>
+                        <p>Add published work and team experience to your CV</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Skill Development</h4>
+                        <p>Improve writing, editing, teamwork and leadership skills</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Networking</h4>
+                        <p>Connect with like-minded students around the world</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Experience</h4>
+                        <p>Get hands-on experience in a collaborative, creative environment</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Support</h4>
+                        <p>Work closely with other students and get feedback to help you grow</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Making a Difference</h4>
+                        <p>Help other students discover their passion for science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="applications-right">
+            <div class="application-form-section">
+                <div class="application-form">
+                    <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAZ__meSE8VUMzZDU0xVVTAyNDk3Qk9DNkZLRFVMMkRaUS4u" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">
+                        Loading…
+                    </iframe>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <h3>Questions?</h3>
+                <p>Not sure which role is right for you? Want to know more about what we do? Feel free to reach out!</p>
+                <div class="contact-options">
+                    <a href="mailto:curiositasmagazine@hotmail.com" class="contact-btn">Email us at curiositasmagazine@hotmail.com</a>
+                    <a href="https://instagram.com/curiositas_mag" target="_blank" class="contact-btn">DM us on Instagram @curiositas_mag</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</div>
+
+<!-- Mobile Submission Dropdowns Script -->
+<script src="js/mobile-submission-dropdowns.js"></script>
+
+<script>
+function togglePosition(positionId) {
+    const details = document.getElementById(positionId);
+    const allDetails = document.querySelectorAll('.position-details');
+    
+    // Close all other position details
+    allDetails.forEach(detail => {
+        if (detail.id !== positionId) {
+            detail.style.display = 'none';
+        }
+    });
+    
+    // Toggle the clicked position
+    if (details.style.display === 'none' || details.style.display === '') {
+        details.style.display = 'block';
+    } else {
+        details.style.display = 'none';
+    }
+}
+</script>
+
+
+    <script src="/js/script.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

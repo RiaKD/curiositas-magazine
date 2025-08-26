@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+    <title>Physics | cūriōsitās</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+  <body class="physics-page">
+    
+    <div class="top-bar">
+        <div class="logo-container">
+            <a href="/index.html" title="Home" class="nav-btn home-btn">
+                <img src="/images/logo.png" alt="Curiositas Logo" class="nav-button" />
+                <span class="nav-button-label">Home</span>
+            </a>
+            <a href="/submissions.html" title="Submissions" class="nav-btn submit-btn">
+                <img src="/images/submit.png" alt="Submissions" class="nav-button" />
+                <span class="nav-button-label">Submissions</span>
+            </a>
+            <a href="/applications.html" title="Applications" class="nav-btn join-btn">
+                <img src="/images/join2.png" alt="Applications" class="nav-button" />
+                <span class="nav-button-label">Applications</span>
+            </a>
+        </div>
+        <div class="dog-nav">
+            <a href="/all-articles/" class="dog-btn dog-pink" title="Articles">
+                <img src="/images/dog/pink.png" alt="Articles Dog" />
+                <span>Articles</span>
+            </a>
+            <a href="/chemistry.html" class="dog-btn dog-red" title="Chemistry">
+                <img src="/images/dog/red.png" alt="Chemistry Dog" />
+                <span>Chemistry</span>
+            </a>
+            <a href="/physics.html" class="dog-btn dog-orange" title="Physics">
+                <img src="/images/dog/orange.png" alt="Physics Dog" />
+                <span>Physics</span>
+            </a>
+            <a href="/biology.html" class="dog-btn dog-green" title="Biology">
+                <img src="/images/dog/green.png" alt="Biology Dog" />
+                <span>Biology</span>
+            </a>
+            <a href="/mathematics.html" class="dog-btn dog-blue" title="Mathematics">
+                <img src="/images/dog/blue.png" alt="Mathematics Dog" />
+                <span>Mathematics</span>
+            </a>
+            <a href="/computer_science.html" class="dog-btn dog-purple" title="Computer Science">
+                <img src="/images/dog/purple.png" alt="Computer Science Dog" />
+                <span>Computer Science</span>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Menu</button>
+    
+    <!-- Centered Scrollable List -->
+    <div class="centered-scrollable-list" id="centeredList">
+        <div class="list-content">
+            <div class="list-item" data-subject="home">Home</div>
+            <div class="list-item" data-subject="all">All Articles</div>
+            <div class="list-item" data-subject="submissions">Submissions</div>
+            <div class="list-item" data-subject="applications">Applications</div>
+            <div class="list-item" data-subject="chemistry">Chemistry</div>
+            <div class="list-item" data-subject="physics">Physics</div>
+            <div class="list-item" data-subject="biology">Biology</div>
+            <div class="list-item" data-subject="mathematics">Mathematics</div>
+            <div class="list-item" data-subject="computer-science">Computer Science</div>
+        </div>
+    </div>
+    
+
+    
+<div class="header-row">
+    <h1 class="subject-title">Physics</h1>
+</div>
+<main>
+    <div class="definition-image-row">
+        <img src="/images/definitions/physics.png" alt="Physics Definition" class="definition-img" />
+        <img id="physics-figure-img" src="/images/quotes/p1.png" alt="Physics Quote Figure" class="subject-figure-img" />
+        
+        <!-- Mobile-only online resources dropdown -->
+        <div class="online-resources-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Online Resources
+            </button>
+            <div class="dropdown-content">
+                <div class="resource-details">
+                    <ul>
+                        <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Physics)</a></span> - <span class="resource-description">Superb free resource with interactive notes, videos, quizzes, and activities</span></li>
+                        <li><span class="resource-name"><a href="https://www.physicsandmathstutor.com" target="_blank" class="resource-link">Physics & Maths Tutor Education</a></span> - <span class="resource-description">Essential free resource with extensive revision notes, past papers, and mark schemes</span></li>
+                        <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Free engaging platform using neuroscience-backed learning methods with GIFs and animations</span></li>
+                        <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">High-quality revision notes, exam-style questions, and past papers for all exam boards</span></li>
+                        <li><span class="resource-name"><a href="https://a-levelphysicstutor.com" target="_blank" class="resource-link">A-Level Physics Online</a></span> - <span class="resource-description">Comprehensive free video tutorials covering entire AQA specification</span></li>
+                        <li><span class="resource-name"><a href="https://isaacphysics.org" target="_blank" class="resource-link">Isaac Physics</a></span> - <span class="resource-description">Free platform from University of Cambridge with challenging physics problems</span></li>
+                        <li><span class="resource-name"><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/index.html" target="_blank" class="resource-link">Hyperphysics</a></span> - <span class="resource-description">Fantastic in-depth resource for understanding physics concepts</span></li>
+                        <li><span class="resource-name"><a href="https://www.khanacademy.org/science/physics" target="_blank" class="resource-link">Khan Academy Physics</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for conceptual understanding</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile-only recommended reading dropdown -->
+        <div class="recommended-reading-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Recommended Reading
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    General Physics
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">The Physics Book</li>
+                        <li class="mobile-author">Clifford A. Pickover</li>
+                        <li class="mobile-blurb">A comprehensive journey through 250 milestones in physics history. Perfect for GCSE students to understand the development of physics concepts.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Physics for Scientists and Engineers</li>
+                        <li class="mobile-author">Raymond A. Serway</li>
+                        <li class="mobile-blurb">A clear and comprehensive textbook that covers all fundamental physics concepts. Excellent for A-Level students.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Classical Mechanics
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Classical Mechanics</li>
+                        <li class="mobile-author">Herbert Goldstein</li>
+                        <li class="mobile-blurb">The definitive guide to classical mechanics. Great for students interested in understanding motion and forces in detail.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Mechanics</li>
+                        <li class="mobile-author">Keith R. Symon</li>
+                        <li class="mobile-blurb">A clear introduction to mechanics with excellent examples and problem-solving approaches.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Quantum & Modern
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Quantum Physics for Beginners</li>
+                        <li class="mobile-author">Zbigniew Ficek</li>
+                        <li class="mobile-blurb">An accessible introduction to quantum physics concepts. Perfect for A-Level students exploring modern physics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">The Feynman Lectures on Physics</li>
+                        <li class="mobile-author">Richard P. Feynman</li>
+                        <li class="mobile-blurb">Classic lectures that provide deep insights into physics concepts. Highly recommended for advanced students.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Astrophysics
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Astrophysics for People in a Hurry</li>
+                        <li class="mobile-author">Neil deGrasse Tyson</li>
+                        <li class="mobile-blurb">A concise and engaging introduction to astrophysics concepts. Great for students interested in space and cosmology.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">An Introduction to Modern Astrophysics</li>
+                        <li class="mobile-author">Bradley W. Carroll</li>
+                        <li class="mobile-blurb">Comprehensive coverage of astrophysics topics. Excellent for students considering further study in this field.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Critical Thinking
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Thinking Physics</li>
+                        <li class="mobile-author">Lewis Carroll Epstein</li>
+                        <li class="mobile-blurb">Uses thought experiments to develop critical thinking skills in physics. Perfect for developing problem-solving abilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile-only opportunities dropdown -->
+        <div class="opportunities-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Opportunities
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    Research
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Lumiere Research Scholar Program</li>
+                        <li class="mobile-url"><a href="https://www.lumiere-education.com/students-application-form" target="_blank">Apply Here</a></li>
+                        <li class="mobile-blurb">This program pairs high school students with PhD mentors from top universities to conduct independent research projects. They have a specific focus on physics and engineering.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Polygence</li>
+                        <li class="mobile-url"><a href="https://www.polygence.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Similar to Lumiere, Polygence connects students with academic mentors for one-on-one research projects. The platform is flexible and can accommodate a wide range of physics topics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Cambridge Centre for International Research</li>
+                        <li class="mobile-url"><a href="https://cambridge-research.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">CCIR offers research mentorship programs in various subjects, including physics. Their programs are designed to provide a university-level research experience.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Programs
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Immerse Education Physics Summer School</li>
+                        <li class="mobile-url"><a href="https://www.immerse.education/physics-summer-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Immerse offers in-person physics programs at prestigious universities like Oxford and Cambridge. The curriculum covers mechanics, thermodynamics, and modern physics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Imperial College London Global Summer School</li>
+                        <li class="mobile-url"><a href="https://www.imperial.ac.uk/study/visit/summer-schools/high-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This program offers specialized areas of study, including physics and engineering, allowing students to engage in academic lectures and practical challenges.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Experience
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Conrad Challenge</li>
+                        <li class="mobile-url"><a href="https://www.conradchallenge.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is a global competition for students to create innovative solutions to global challenges. A team could develop a physics-related project to address energy or transportation issues.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">International Physics Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.ipho2024.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is the most prestigious physics competition for high school students globally. To participate, students must typically first succeed in their national physics olympiad.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Awards
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Regeneron International Science and Engineering Fair</li>
+                        <li class="mobile-url"><a href="https://www.societyforscience.org/isef/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">ISEF is the world's largest pre-college STEM competition. Students qualify through local and regional fairs, and the event offers significant awards and networking opportunities.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">British Physics Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.bpho.org.uk/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This competition recognizes outstanding high school students for their physics knowledge and problem-solving skills. It offers recognition and opportunities for further competition.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Other
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Online Courses</li>
+                        <li class="mobile-blurb">Many universities and platforms offer free or low-cost online courses (MOOCs) in physics and related fields. Platforms like Coursera, edX, and FutureLearn have courses from top institutions.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Science Communication</li>
+                        <li class="mobile-blurb">Look for opportunities to write for a school science magazine, start a blog, or create a YouTube channel about physics topics. This is a great way to deepen your understanding.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Local Organizations</li>
+                        <li class="mobile-blurb">Check with local science museums, planetariums, engineering companies, or research institutions for volunteer opportunities. Many of these places have programs for young people.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="word-image-section">
+            <img src="/images/word/physics-word.png" alt="Physics" class="subject-word-image" />
+            <div class="word-resources-box">
+                <div class="resources-content" id="word-resources-content">
+                    <h3>Online Resources</h3>
+                    <div class="resource-details">
+                        <ul>
+                            <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Physics)</a></span> - <span class="resource-description">Superb free resource with interactive notes, videos, quizzes, and activities</span></li>
+                            <li><span class="resource-name"><a href="https://www.physicsandmathstutor.com" target="_blank" class="resource-link">Physics & Maths Tutor Education</a></span> - <span class="resource-description">Essential free resource with extensive revision notes, past papers, and mark schemes</span></li>
+                            <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Free engaging platform using neuroscience-backed learning methods with GIFs and animations</span></li>
+                            <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">High-quality revision notes, exam-style questions, and past papers for all exam boards</span></li>
+                            <li><span class="resource-name"><a href="https://a-levelphysicstutor.com" target="_blank" class="resource-link">A-Level Physics Online</a></span> - <span class="resource-description">Comprehensive free video tutorials covering entire AQA specification</span></li>
+                            <li><span class="resource-name"><a href="https://isaacphysics.org" target="_blank" class="resource-link">Isaac Physics</a></span> - <span class="resource-description">Free platform from University of Cambridge with challenging physics problems</span></li>
+                            <li><span class="resource-name"><a href="http://hyperphysics.phy-astr.gsu.edu/hbase/index.html" target="_blank" class="resource-link">Hyperphysics</a></span> - <span class="resource-description">Fantastic in-depth resource for understanding physics concepts</span></li>
+                            <li><span class="resource-name"><a href="https://www.khanacademy.org/science/physics" target="_blank" class="resource-link">Khan Academy Physics</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for conceptual understanding</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second-row-section">
+        <div class="recommended-reading-section">
+            <div class="recommended-reading-container">
+                <div class="ibook-image-container">
+                    <img src="/images/ibook/orange-ibook.png" alt="Physics Book Recommendations" class="subject-ibook-image" />
+                    <div class="ibook-recommended-reading-box">
+                        <div class="recommended-reading-content" id="recommended-reading-content">
+                            <h3 class="category-selection-text">Recommended Reading</h3>
+                        </div>
+                        <div class="recommended-reading-buttons">
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="general-physics">
+                                    <img src="/images/gifs/o1.gif" alt="General Physics" class="btn-gif" />
+                                    General Physics
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="classical-mechanics">
+                                    <img src="/images/gifs/o2.gif" alt="Classical Mechanics" class="btn-gif" />
+                                    Classical Mechanics
+                                </button>
+                            </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="quantum-modern">
+                                    <img src="/images/gifs/o3.gif" alt="Quantum & Modern" class="btn-gif" />
+                                    Quantum & Modern
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="astrophysics-cosmology">
+                                    <img src="/images/gifs/o4.gif" alt="Astrophysics" class="btn-gif" />
+                                    Astrophysics
+                                </button>
+                            </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="critical-thinking">
+                                    <img src="/images/gifs/o5.gif" alt="Critical Thinking" class="btn-gif" />
+                                    Critical Thinking
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="opportunities-section">
+            <div class="tips-and-game-container">
+                <div class="top-tips-section">
+                </div>
+                <div class="game-image-container">
+                    <img src="/images/game/orange-game.png" alt="Physics Game" class="subject-game-image" />
+                    <div class="game-opportunities-box">
+                        <div class="opportunity-content" id="opportunity-content">
+                            <h3>Select an opportunity type to see relevant options</h3>
+                        </div>
+                        <div class="opportunity-buttons">
+                            <button class="opportunity-btn" data-opportunity="research">
+                                Research
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="experience">
+                                Experience
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="programs">
+                                Programs
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="awards">
+                                Awards
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="other">
+                                Other
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="game-articles-layout">
+  <main class="game-main-content">
+    <div class="article-tiles-sidebar" data-subject="physics">
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              
+                
+              
+            
+              
+                
+              
+            
+          
+        
+          
+        
+          
+        
+        
+          <button class="game-tag-btn" data-tag="careers">careers</button>
+        
+          <button class="game-tag-btn" data-tag="medicine">medicine</button>
+        
+      </div>
+      <div class="articles-grid" id="game-articles-list">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <div class="game-article-tile" data-tags="careers,medicine">
+              <img src="https://d.techtimes.com/en/full/458480/phantom-laser-tattoo-removal-institute-medical-physics.png?w=1600&amp;h=1200&amp;q=88&amp;f=3c5799d7304b5df01d6199c6e6c73d06" alt="Medical Physicist" class="tile-header-image" />
+              <div class="tile-divider"></div>
+              <div class="tile-title">Medical Physicist</div>
+              <a href="/articles/medical-physicist-career/" class="tile-link"></a>
+            </div>
+          
+        
+          
+        
+          
+        
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/js/all-articles-filter.js"></script>
+<script src="/js/opportunities-ui.js"></script>
+<script src="/js/book-recommendations-ui.js"></script>
+<div id="articleModal" class="modal">
+    <div id="modalContent" class="modal-content">
+    </div>
+</div>
+<script>
+    const physicsFigures = [
+        '/images/quotes/p1.png',
+        '/images/quotes/p2.png',
+        '/images/quotes/p3.png',
+        '/images/quotes/p4.png',
+        '/images/quotes/p5.png'
+    ];
+    let currentPhysicsFigure = 0;
+    const physicsFigureImg = document.getElementById('physics-figure-img');
+    const physicsDefinitionImg = document.querySelector('.definition-img');
+    function matchPhysicsFigureHeight() {
+        if (physicsDefinitionImg && physicsFigureImg) {
+            if (physicsDefinitionImg.complete && physicsFigureImg.complete) {
+                physicsFigureImg.style.height = physicsDefinitionImg.clientHeight + 'px';
+                physicsFigureImg.style.width = 'auto';
+            } else {
+                physicsDefinitionImg.onload = matchPhysicsFigureHeight;
+                physicsFigureImg.onload = matchPhysicsFigureHeight;
+            }
+        }
+    }
+    window.addEventListener('load', matchPhysicsFigureHeight);
+    window.addEventListener('resize', matchPhysicsFigureHeight);
+    if (physicsFigureImg) {
+        physicsFigureImg.addEventListener('click', function() {
+            currentPhysicsFigure = (currentPhysicsFigure + 1) % physicsFigures.length;
+            physicsFigureImg.src = physicsFigures[currentPhysicsFigure];
+            physicsFigureImg.onload = matchPhysicsFigureHeight;
+        });
+    }
+</script>
+<script>
+    // Opportunity buttons functionality
+    const opportunityButtons = document.querySelectorAll('.opportunity-btn');
+    const opportunityContent = document.getElementById('opportunity-content');
+    
+    const opportunities = {
+        research: [
+            "Laboratory Research Assistant",
+            "Theoretical Physics Projects",
+            "Data Analysis Studies",
+            "Computational Physics",
+            "Experimental Design Projects"
+        ],
+        experience: [
+            "Laboratory Internship",
+            "Research Assistant Position",
+            "Observatory Work",
+            "Industry Placement",
+            "Teaching Assistant Role"
+        ],
+        programs: [
+            "Summer Physics Programs",
+            "Physics Boot Camps",
+            "Laboratory Skills Workshops",
+            "Research Methodology Courses",
+            "Computational Physics Programs"
+        ],
+        awards: [
+            "Physics Achievement Awards",
+            "Research Excellence Scholarships",
+            "Science Competition Prizes",
+            "Academic Merit Awards",
+            "Innovation in Physics Awards"
+        ],
+        other: [
+            "Physics Clubs & Societies",
+            "Science Communication",
+            "Science Outreach Programs",
+            "Physics Conferences",
+            "Science Journalism"
+        ]
+    };
+    
+    opportunityButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const opportunityType = this.getAttribute('data-opportunity');
+            
+            // Remove active class from all buttons
+            opportunityButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update content
+            const content = opportunities[opportunityType];
+            opportunityContent.innerHTML = `
+                <h3>${opportunityType.charAt(0).toUpperCase() + opportunityType.slice(1)} Opportunities</h3>
+                <ul>
+                    ${content.map(item => `<li>• ${item}</li>`).join('')}
+                </ul>
+            `;
+        });
+    });
+</script>
+
+    <script src="/js/script.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,6978 @@
+:root {
+  --text-dark: #2b2b2b;
+  --text-light: #fbf8f6;
+  --background-color: #fbf8f6;
+  --white: #fbf8f6;
+  --black: #2b2b2b;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --light-red: #f9d4d8;
+  --red:#F06A7A;
+  --dark-red: #EA283E;
+  --light-orange: #f6d5c1;
+  --orange: #FD8B49;
+  --dark-orange: #F55A02;
+  --light-yellow: #FFF9D1;
+  --yellow: #FFE95C;
+  --dark-yellow: #FFDD00;
+  --light-green: #ECFEF1;
+  --green: #8BF9AE;
+  --dark-green: #0fd27d;
+  --light-blue: #EBFEFF;
+  --blue: #85E0FF;
+  --dark-blue: #33CCFF;
+  --light-purple: #E9DCF9;
+  --purple: #DCA2F6;
+  --dark-purple: #BF58EE;
+  --light-pink: #FDECF7;
+  --pink: #F7A1D5;
+  --dark-pink: #F15BB5; 
+  --pale-grey:#B6B6CE;
+  --light-grey:#787BA5;
+  --grey: #414361;
+  --dark-grey: #22223B;
+}
+
+/* Desktop elements are visible by default - no need for explicit display rules */
+
+/* ===== DESKTOP SUBMISSIONS LAYOUT STYLING ===== */
+.submissions-layout {
+  display: flex;
+  gap: 40px;
+  max-width: 4000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.submissions-left {
+  flex: 1;
+  max-width: 2000px;
+}
+
+.submissions-right {
+  flex: 1;
+  max-width: 2000px;
+}
+
+/* Mobile submissions elements - hidden on desktop, visible on mobile */
+.mobile-submission-dropdowns,
+.mobile-google-form,
+.mobile-only {
+  display: none;
+}
+
+/* Desktop elements are visible by default - only hide on mobile */
+
+.all-articles {
+--color-dark: var(--dark-pink);
+--normal-color: var(--pink);
+--color-light: var(--light-pink);
+--article-gradient-start: #1a0033;
+}
+
+.biology-page {
+--color-dark: var(--dark-green);
+--normal-color: var(--green);
+--color-light: var(--light-green);
+}
+
+.chemistry-page {
+--color-dark: var(--dark-red);
+--normal-color: var(--red);
+--color-light: var(--light-red);
+}
+
+.physics-page {
+--color-dark: var(--dark-orange);
+--normal-color: var(--orange);
+--color-light: var(--light-orange);
+}
+
+.computerscience-page {
+--color-dark: var(--dark-purple);
+--normal-color: var(--purple);
+--color-light: var(--light-purple);
+}
+
+.mathematics-page {
+--color-dark: var(--dark-blue);
+--normal-color: var(--blue);
+--color-light: var(--light-blue);
+}
+
+body {
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  margin: 0;
+  padding: 32px 0 32px 32px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: white;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 1001; /* Ensure the image is above the nav */
+  margin-bottom: 5px;
+}
+
+/* === Navigation Bar Styles === */
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+  margin-top: 24px;
+  margin-bottom: 0;
+  background: transparent;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  background: transparent;
+}
+
+.nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Specific button styling to remove backgrounds */
+.home-btn, .submit-btn, .join-btn {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.home-btn img, .submit-btn img, .join-btn img {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.nav-button {
+  height: 190px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.nav-button-label {
+  font-weight: bold;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 0.5em;
+  color: white;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  text-shadow: 0 0 8px #fff, 0 0 16px white;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+.dog-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.dog-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.dog-btn img {
+  width: auto;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.dog-btn span {
+  font-weight: bold;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 0.5em;
+  color: white;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+}
+
+/* Ensure navigation buttons are properly displayed on all screen sizes */
+.dog-nav .dog-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.dog-nav .dog-btn img {
+  width: auto;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.dog-nav .dog-btn span {
+  font-weight: bold;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 0.5em;
+  color: white;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+}
+
+/* Dog button label colors with glow effects */
+.dog-pink span {
+  text-shadow: 0 0 8px #ff69b4, 0 0 16px #ff69b4;
+}
+
+.dog-purple span {
+  text-shadow: 0 0 8px #a259e6, 0 0 16px #a259e6;
+}
+
+.dog-orange span {
+  text-shadow: 0 0 8px #ff9900, 0 0 16px #ff9900;
+}
+
+.dog-green span {
+  text-shadow: 0 0 8px #00cc66, 0 0 16px #00cc66;
+}
+
+.dog-blue span {
+  text-shadow: 0 0 8px #3399ff, 0 0 16px #3399ff;
+}
+
+.dog-red span {
+  text-shadow: 0 0 8px #ff3333, 0 0 16px #ff3333;
+}
+
+
+
+main {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+h1 {
+  color: var(--color); /* Deep purple */
+  font-family: 'Orbitron', 'Itim', Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 40px 0 0 40px;
+}
+
+h2 {
+  color: var(--color);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.google-form {
+  margin-top: 0;
+  border: 2px solid #000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.google-form iframe {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.google-form iframe::-webkit-scrollbar {
+  display: none;
+}
+
+/* Submission Encouragement Section */
+.submission-encouragement {
+  max-width: 100%;
+  margin: 0 0 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #1a0033 0%, var(--dark-pink) 100%);
+  border: 4px solid var(--dark-pink);
+  box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+  border-radius: 0;
+  text-align: center;
+}
+
+.submission-encouragement h3 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.submission-encouragement p {
+  color: white;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.submission-encouragement p:last-child {
+  margin-bottom: 0;
+}
+
+/* Submissions Page Layout */
+.submissions-layout {
+  display: flex;
+  gap: 40px;
+  max-width: 4000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.submissions-left {
+  flex: 1;
+  max-width: 2000px;
+}
+
+.submissions-right {
+  flex: 1;
+  max-width: 2000px;
+}
+
+/* Submission Guidelines Styling */
+.submission-guidelines {
+  max-width: 100%;
+  margin: 0 0 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, #1a0033 0%, var(--dark-pink) 100%);
+  border: 4px solid var(--dark-pink);
+  box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+  border-radius: 0;
+}
+
+.submission-guidelines h2 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.guidelines-intro {
+  color: white;
+  font-size: 1.1em;
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.guidelines-section {
+  margin-bottom: 15px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 4px solid var(--dark-pink);
+  border-radius: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.guidelines-section h3 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.guidelines-section p {
+  color: white;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0;
+  white-space: normal;
+  word-break: keep-all;
+  min-width: 0;
+  overflow-wrap: break-word;
+  hyphens: none;
+  display: block;
+  clear: both;
+}
+
+.guidelines-section p strong {
+  display: inline !important;
+  font-weight: bold;
+  margin-right: 0;
+  white-space: normal;
+  word-break: normal;
+  float: none !important;
+  clear: none !important;
+}
+
+.guidelines-section a {
+  color: white;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+/* Applications Page Layout */
+.applications-layout {
+  display: flex;
+  gap: 40px;
+  max-width: 4000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.applications-left {
+  flex: 1;
+  max-width: 2000px;
+}
+
+.applications-right {
+  flex: 1;
+  max-width: 2000px;
+}
+
+/* Applications Page Styling */
+.applications-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.applications-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #1a0033 0%, var(--dark-pink) 100%);
+  border: 4px solid var(--dark-pink);
+  box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+  border-radius: 0;
+}
+
+.applications-intro h2 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2.5em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.applications-intro p {
+  color: white;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.positions-section {
+  margin-bottom: 40px;
+}
+
+.positions-section h3 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 30px 0;
+  letter-spacing: 2px;
+}
+
+.position-card {
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--dark-pink);
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 0 16px var(--dark-pink), 0 0 32px #fff2;
+  overflow: hidden;
+}
+
+.position-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 25px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.position-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.position-btn h4 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.position-details {
+  display: none;
+  padding: 0 25px 25px 25px;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 2px solid var(--dark-pink);
+}
+
+.position-details p {
+  color: white;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.position-details ul {
+  color: white;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.position-details li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.requirements-section, .benefits-section {
+  margin-bottom: 40px;
+}
+
+.requirements-section h3, .benefits-section h3 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 30px 0;
+  letter-spacing: 2px;
+}
+
+.requirements-grid, .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.requirement-item, .benefit-item {
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid var(--dark-pink);
+  border-radius: 0;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 12px var(--dark-pink), 0 0 24px #fff2;
+}
+
+.requirement-item h4, .benefit-item h4 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+}
+
+.requirement-item p, .benefit-item p {
+  color: white;
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.how-to-apply {
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--dark-pink);
+  border-radius: 0;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 16px var(--dark-pink), 0 0 32px #fff2;
+}
+
+.how-to-apply h3 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.how-to-apply p {
+  color: white;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.how-to-apply ol {
+  color: white;
+  margin: 0 0 20px 0;
+  padding-left: 20px;
+}
+
+.how-to-apply li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.application-note {
+  font-style: italic;
+  color: #fff9;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-section {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: 3px solid var(--dark-pink);
+  border-radius: 0;
+  padding: 30px;
+  box-shadow: 0 0 16px var(--dark-pink), 0 0 32px #fff2;
+}
+
+.contact-section h3 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.contact-section p {
+  color: white;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: inline-block;
+  background: linear-gradient(145deg, var(--dark-pink), var(--pink));
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 2px solid var(--dark-pink);
+  border-radius: 0;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--dark-pink);
+}
+
+/* Application Form Section */
+.application-form-section {
+  margin-bottom: 40px;
+}
+
+.application-form-section h3 {
+  color: white;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 20px 0;
+  letter-spacing: 2px;
+}
+
+.application-form-section p {
+  color: white;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.application-form {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.application-form iframe {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.application-form iframe::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.application-form iframe::-webkit-scrollbar-track {
+  display: none !important;
+}
+
+.application-form iframe::-webkit-scrollbar-thumb {
+  display: none !important;
+}
+
+.magazine-title {
+  font-size: 2.5em;
+  color: var(--color);
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.magazine-subtitle {
+  font-size: 1.2em;
+  color: var(--color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Updated selectors for Eleventy/Notion-powered articles */
+/*.popular-articles ul {
+  list-style: none;
+  padding: 0;
+}
+.popular-articles li {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #eee;
+}
+.popular-articles li:last-child {
+  border-bottom: none;
+}
+.popular-articles li a {
+  font-size: 1.5em;
+  color: #007bff;
+  text-decoration: none;
+}
+.popular-articles li a:hover {
+  text-decoration: underline;
+}*/
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.article-header-image,
+.modal-header-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+.article-meta {
+  font-size: 0.9em;
+  color: #666;
+}
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+.article-citations {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+.article-citations h2 {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 10px;
+}
+.article-content h1, .article-content h2, .article-content h3 {
+  color: #222;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.article-content p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+.article-content ul, .article-content ol {
+  margin-bottom: 1em;
+  padding-left: 20px;
+}
+.article-content li {
+  margin-bottom: 0.5em;
+}
+.article-content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.tag {
+  background-color: var(--blue);
+  color: var(--text-dark);
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.tag:hover {
+  background-color: var(--light-purple);
+}
+
+#tag-filter {
+  margin-bottom: 20px;
+}
+
+.filter-tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: var(--blue);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-tag:hover {
+  background-color: var(--light-pink);
+}
+
+.filter-tag.active {
+  background-color: var(--light-pink);
+  font-weight: bold;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--shadow-color);
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 15% auto;
+  padding: 20px;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Styles for the article content inside the modal */
+
+
+#modalContent img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+#full-article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#full-article h1 {
+  color: var(--light-purple);
+}
+
+#full-article .article-info {
+  color: var(--pink);
+  font-style: italic;
+}
+
+#full-article img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+
+#full-article .article-content {
+  line-height: 1.6;
+}
+
+.article-title a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.article-title a:hover {
+  text-decoration: underline;
+}
+
+.article-content h1, .article-content h2, .article-content h3 {
+  color: var(--light-purple);
+  margin-top: 20px;
+}
+
+.article-content p {
+  margin-bottom: 15px;
+}
+
+.article-content ul, .article-content ol {
+  margin-left: 20px;
+  margin-bottom: 15px;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 15px 0;
+}
+
+.article-content li {
+  margin-bottom: 5px;
+}
+
+.popular-articles {
+  background-color: var(--white);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.popular-articles h2 {
+  color: var(--blue);
+  margin-bottom: 20px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Styles for the article content inside the modal */
+#modalContent h2 {
+  color: var(--light-purple);
+  margin-bottom: 10px;
+}
+
+#modalContent p {
+  margin-bottom: 15px;
+}
+
+/* Styles for the article content inside the modal */
+
+.tag {
+  display: inline-block;
+  background: var(--grey);
+  color: var(--pale-grey);
+  padding: 4px 9px;
+  margin: 5px;
+  border-radius: 17px;
+  font-size: 14px;
+}
+
+.close {
+  background-color: /*var(--pink)*/ var (--white);
+  color: var(--blue);
+  border: none;
+  width: 30px; /* Fixed width */
+  height: 30px; /* Fixed height */
+  float: right;
+  font-weight: bold;
+  font-size: 25px; /* Adjusted font size for better fit */
+  line-height: 30px; /* Set line-height to match height for vertical centering */
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Keep it circular */
+  display: flex; /* Center the text */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
+
+.close:hover {
+  /*background-color: var(--blue);*/
+  color: var(--pink);
+}
+
+
+
+/* Styles for the new Article Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  padding-top: 50px;
+}
+
+.modal-content {
+  background-color: var(--background-color);
+  margin: 5% auto;
+  padding: 25px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  color: var(--text-dark);
+}
+
+/*.close-btn {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: var(--red);
+  text-decoration: none;
+}
+
+.modal-header-image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  border-radius: 0;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 2.5em;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+
+.modal-info {
+  font-size: 1.1em;
+  color: var(--text-dark);
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--light-blue);
+  padding-bottom: 15px;
+}
+
+.modal-body {
+  font-size: 1.1em;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.modal-tags {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid var(--light-blue);
+}*/
+/* Group the shared styles together */
+h1.articles-title,
+/* Subject title styles - now using shared .subject-title class */
+
+/* Subject-specific h2 headers for sections */
+h2.subject-section {
+color: var(--dark-color);
+}
+
+/* === Y2K Index Page Styles === */
+.y2k-cd-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 40px 0 32px 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.cd-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Itim', Arial, sans-serif;
+  font-size: 1.2em;
+  color: white;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  width: auto;
+  height: auto;
+  transition: none;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.cd-btn img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  border-radius: 0;
+  background: none;
+  transition: transform 0.2s;
+}
+
+.cd-btn:hover img, .cd-btn:focus img {
+  transform: scale(1.12) rotate(-6deg);
+  z-index: 2;
+}
+
+.cd-btn span {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: block;
+  margin-top: 0.5em;
+}
+
+.cd-pink span {
+  text-shadow: 0 0 8px #ff69b4, 0 0 16px #ff69b4;
+}
+
+.cd-purple span {
+  text-shadow: 0 0 8px #a259e6, 0 0 16px #a259e6;
+}
+
+.cd-orange span {
+  text-shadow: 0 0 8px #ff9900, 0 0 16px #ff9900;
+}
+
+.cd-green span {
+  text-shadow: 0 0 8px #00cc66, 0 0 16px #00cc66;
+}
+
+.cd-blue span {
+  text-shadow: 0 0 8px #3399ff, 0 0 16px #3399ff;
+}
+
+.cd-red span {
+  text-shadow: 0 0 8px #ff3333, 0 0 16px #ff3333;
+}
+
+.cd-btn:hover, .cd-btn:focus {
+  /* Only animate the image, no background, no outline, no box */
+  background: none;
+  outline: none;
+}
+
+.main-title {
+  color: white;
+  font-family: 'Orbitron', 'Itim', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 4em;
+}
+
+/* Override margins for main-title in home layout */
+.home-left-section .main-title {
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* Home page top section layout */
+.home-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100vw;
+  margin-top: 32px;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.home-left-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.home-right-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.tv-remote-container {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  z-index: 2100;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.tv-remote-container.scrolled {
+  opacity: 0.3;
+  pointer-events: none;
+  transform: scale(0.7) translateY(60px);
+}
+
+#pinktv {
+  width: auto;
+  height: 300px;
+  margin-right: 10px;
+  transition: filter 0.2s;
+  box-sizing: border-box;
+}
+#remote-btn {
+  width: auto;
+  height: 300px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+#remote-btn:active {
+  transform: scale(0.95) rotate(-10deg);
+}
+
+.cd-section {
+  margin-top: 0;
+  padding-top: 100px;
+}
+
+/* Top navigation image buttons for subject pages */
+.top-buttons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 32px 0 16px 0;
+  padding-left: 24px;
+}
+.nav-icon-btn {
+  height: auto;
+  width: auto;
+  object-fit: contain;
+  border: none;
+  box-shadow: none;
+  background: none;
+  transition: transform 0.18s;
+  cursor: pointer;
+}
+
+.header-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 40px 40px 40px 40px;
+}
+
+/* Home page logo button */
+.home-logo-btn {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.home-logo-btn:hover {
+  transform: scale(1.05);
+}
+
+.home-logo-btn img {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* Home page join button */
+.home-join-btn {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.home-join-btn img {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+/* Home page submissions button */
+.home-submit-btn {
+  display: block;
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.home-submit-btn img {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+  background: transparent;
+}
+
+.definition-image-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.definition-image-row .word-image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.second-row-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 0;
+}
+/* Shared definition image styles */
+.definition-img {
+  width: 682px;
+  max-width: 100%;
+  height: 374px;
+  object-fit: contain;
+  display: block;
+  margin: 32px auto 24px auto;
+  z-index: 10;
+  position: static;
+}
+
+/* Shared subject figure image styles */
+.subject-figure-img {
+  height: 340px;
+  width: auto;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/*.magazine-page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+.magazine-page header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+.magazine-page nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.magazine-page main {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}*/
+.latest-articles ul {
+  list-style: none;
+  padding: 0;
+}
+.latest-articles li {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #eee;
+}
+.latest-articles li:last-child {
+  border-bottom: none;
+}
+.latest-articles li a {
+  font-size: 1.5em;
+  /*color: #007bff;*/
+  text-decoration: none;
+}
+.latest-articles li a:hover {
+  text-decoration: underline;
+}
+.article-meta {
+  font-size: 0.9em;
+  color: #666;
+}
+.article-header-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+}
+.article-citations {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+.article-citations h2 {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 10px;
+}
+.article-content h1, .article-content h2, .article-content h3 {
+  color: #222;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.article-content p {
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+.article-content ul, .article-content ol {
+  margin-bottom: 1em;
+  padding-left: 20px;
+}
+.article-content li {
+  margin-bottom: 0.5em;
+}
+.article-content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+.articles-title {
+  color: var(--dark-pink);
+  font-family: 'Orbitron', 'Itim', Arial, sans-serif;
+  font-weight: 700;
+}
+/*.popular-articles.mathematics-articles {
+  background-color: var(--light-blue);
+}
+.popular-articles.physics-articles {
+  background-color: var(--light-orange);
+}
+.popular-articles.biology-articles {
+  background-color: var(--light-green);
+}
+.popular-articles.chemistry-articles {
+  background-color: var(--light-red);
+}
+.popular-articles.computerscience-articles {
+  background-color: var(--light-purple);
+}
+.popular-articles.all-articles {
+  background-color: var(--light-pink);
+}
+.popular-articles.computer-science-articles {
+  background-color: var(--light-purple);
+}
+.popular-articles.mathematics-articles .article-summary {
+  border-color: var(--blue);
+}
+.popular-articles.mathematics-articles .article-title a {
+  color: var(--dark-blue);
+}
+.popular-articles.mathematics-articles .article-summary .article-header-image {
+  border-bottom: 4px solid var(--blue);
+}
+
+.popular-articles.physics-articles .article-summary {
+  border-color: var(--orange);
+}
+.popular-articles.physics-articles .article-title a {
+  color: var(--dark-orange);
+}
+.popular-articles.physics-articles .article-summary .article-header-image {
+  border-bottom: 4px solid var(--orange);
+}
+
+.popular-articles.biology-articles .article-summary {
+  border-color: var(--green);
+}
+.popular-articles.biology-articles .article-title a {
+  color: var(--dark-green);
+}
+.popular-articles.biology-articles .article-summary .article-header-image {
+  border-bottom: 4px solid var(--green);
+}
+
+.popular-articles.chemistry-articles .article-summary {
+  border-color: var(--red);
+}
+.popular-articles.chemistry-articles .article-title a {
+  color: var(--dark-red);
+}
+.popular-articles.chemistry-articles .article-summary .article-header-image {
+  border-bottom: 4px solid var(--red);
+}
+
+.popular-articles.computer-science-articles .article-summary {
+  border-color: var(--purple);
+}
+.popular-articles.computer-science-articles .article-title a {
+  color: var(--dark-purple);
+}
+.popular-articles.computer-science-articles .article-summary .article-header-image {
+  border-bottom: 4px solid var(--purple);
+}
+
+.popular-articles.all-articles .article-summary {
+  background: linear-gradient(135deg, #1a0033 0%, var(--dark-pink) 100%);
+  border: 3px solid var(--dark-pink);
+  box-shadow: 0 0 16px var(--dark-pink), 0 0 32px #fff2;
+  border-radius: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+}
+.popular-articles.all-articles .article-summary:hover {
+  box-shadow: 0 0 32px var(--dark-pink), 0 0 64px #fff5;
+  border-color: white;
+  background: linear-gradient(135deg, var(--dark-pink) 0%, #1a0033 100%);
+}
+.popular-articles.all-articles .article-title {
+  padding: 12px 16px 4px 16px;
+}
+.popular-articles.all-articles .article-meta {
+  padding: 0 16px 4px 16px;
+}
+.popular-articles.all-articles .article-tags {
+  padding: 0 16px 12px 16px;
+}
+.popular-articles.all-articles .article-title a {
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  color: white;
+  text-shadow: 0 0 8px var(--dark-pink), 0 0 16px white;
+  letter-spacing: 2px;
+  font-size: 1.4em;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+.popular-articles.all-articles .article-title a:hover {
+  color: var(--dark-pink);
+  text-shadow: 0 0 16px #fff, 0 0 32px var(--dark-pink);
+}
+.popular-articles.all-articles .article-header-image {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: #1a0033;
+}*/
+
+.article-summary .article-header-image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin-bottom: 0;
+  border-radius: 0;
+  object-fit: contain;
+  background: var(--white);
+}
+.modal-content, .modal-header-image {
+  border-radius: 0;
+}
+
+.game-articles-layout {
+display: flex;
+  gap: 10px;
+min-height: 80vh;
+align-items: flex-start;
+justify-content: center;
+}
+.game-main-content {
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 32px;
+margin-top: 0;
+padding-top: 0;
+}
+.game-sidebar {
+  width: 450px;
+background: #181828;
+padding: 24px 12px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+border: 3px solid var(--dark-pink);
+box-shadow: 0 0 16px var(--dark-pink), 0 0 32px #fff2;
+border-radius: 0;
+  margin: 20px 10px 20px 0px;
+}
+
+.sidebar-title {
+color: var(--dark-pink);
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-size: 1.2em;
+margin-bottom: 18px;
+letter-spacing: 2px;
+}
+.game-tag-filter {
+display: flex;
+flex-direction: column;
+gap: 10px;
+width: 100%;
+}
+/* Game tag button styles - now using consolidated class below */
+/*.featured-article {
+width: 100%;
+margin-bottom: 0;
+}
+.featured-article-box {
+background: linear-gradient(135deg, #1a0033 0%, var(--dark-pink) 100%);
+border: 4px solid var(--dark-pink);
+box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+border-radius: 0;
+padding: 0;
+overflow: hidden;
+margin-bottom: 0;
+}
+.featured-header-image {
+width: 100%;
+max-width: 200px;
+max-height: 267px;
+aspect-ratio: 3 / 4;
+object-fit: contain;
+background: #1a0033;
+border-bottom: 4px solid var(--dark-pink);
+border-radius: 0;
+display: block;
+margin: 0 auto;
+}
+.featured-meta {
+padding: 18px 24px 0 24px;
+}
+.featured-author-date {
+color: white;
+font-size: 1em;
+margin-bottom: 6px;
+}
+.featured-tags {
+margin-bottom: 0;
+}
+.featured-divider {
+border: none;
+border-top: 2px solid #fff5;
+margin: 18px 0 0 0;
+}
+.featured-content {
+padding: 18px 24px 0 24px;
+color: white;
+font-size: 1.1em;
+}
+.featured-citations {
+padding: 18px 24px 24px 24px;
+color: white;
+}
+.featured-citations h4 {
+color: var(--dark-pink);
+margin-bottom: 8px;
+}*/
+.other-articles-section {
+margin-top: 0;
+}
+.other-articles-title {
+color: var(--dark-pink);
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-size: 1.1em;
+margin-bottom: 12px;
+letter-spacing: 2px;
+}
+.other-articles-list {
+display: flex;
+flex-direction: column;
+gap: 18px;
+max-height: 60vh;
+overflow-y: auto;
+}
+
+.tile-link {
+position: absolute;
+inset: 0;
+z-index: 2;
+cursor: pointer;
+text-indent: -9999px;
+background: transparent;
+border: none;
+outline: none;
+display: block;
+}
+
+.tile-header-image {
+width: 120px;
+object-fit: cover;
+border-radius: 0;
+margin: 0;
+padding: 0;
+max-height: 100px;
+border-right: 4px solid var(--dark-pink);
+}
+
+/* Ensure ALL tile header images have no padding anywhere */
+.tile-header-image,
+.game-article-tile .tile-header-image,
+.article-tiles-sidebar .tile-header-image,
+.article-layout .tile-header-image,
+.subject-page .tile-header-image {
+padding: 0 !important;
+margin: 0 !important;
+}
+
+/* Ensure article tiles have no padding that could create space around images */
+.game-article-tile,
+.article-tiles-sidebar .game-article-tile,
+.article-layout .game-article-tile,
+.subject-page .game-article-tile {
+padding: 0 !important;
+}
+/* Subject-specific tile header image styles - now using shared .subject-articles-list .tile-header-image class */
+.tile-title {
+color: var(--light-grey);
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-size: 1em;
+font-weight: bold;
+letter-spacing: 1px;
+padding: 12px 18px;
+}
+.tile-meta {
+color: #fff9;
+font-size: 0.9em;
+margin-left: auto;
+padding-right: 12px;
+}
+
+.featured-tags .tag {
+display: inline-block;
+color: white;
+border: 2px solid white;
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-size: 1em;
+font-weight: bold;
+letter-spacing: 1px;
+padding: 6px 18px;
+margin: 0 8px 8px 0;
+border-radius: 0;
+transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+cursor: pointer;
+position: relative;
+z-index: 1;
+}
+.featured-tags .tag:hover {
+border-color: var(--dark-pink);
+transform: scale(1.08) rotate(-2deg);
+}
+
+.game-articles-title {
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-size: 2.8em;
+font-weight: 900;
+  color: white;
+text-align: center;
+letter-spacing: 4px;
+margin-top: 0;
+margin-bottom: 32px;
+text-transform: uppercase;
+}
+.cute-author-date {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 14px;
+background: #000;
+border: 2px solid var(--dark-pink);
+border-radius: 18px;
+padding: 8px 18px;
+margin-bottom: 10px;
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-size: 1.1em;
+color: var(--dark-pink);
+}
+.cute-author-left {
+display: flex;
+align-items: center;
+gap: 14px;
+}
+.cute-pink-gif {
+width: 38px;
+height: 38px;
+object-fit: contain;
+border-radius: 8px;
+border: 2px solid white;
+background: #fff8;
+box-shadow: 0 0 8px var(--dark-pink), 0 0 16px #fff5;
+margin-right: 6px;
+}
+.cute-author {
+font-weight: bold;
+color: var(--dark-pink);
+letter-spacing: 1px;
+}
+/*.cute-date {
+color: white;
+font-style: italic;
+margin-left: 8px;
+}*/
+
+.article-page {
+background: linear-gradient(135deg, #1a0033 0%, var(--dark-pink) 100%);
+border: 4px solid var(--dark-pink);
+box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+border-radius: 0;
+padding: 0;
+overflow: hidden;
+max-width: 1400px;
+width: 100%;
+}
+
+/* Subject-specific article page styling - now using shared CSS custom properties */
+.biology-article-page .article-page,
+.article-layout[data-subject="biology"] .article-page,
+[data-subject="biology"] .article-page,
+.biology-page .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-green) 100%) !important;
+  border: 4px solid var(--dark-green) !important;
+  box-shadow: 0 0 24px var(--dark-green), 0 0 48px #fff2 !important;
+}
+
+/* Nuclear option - override any biology page with green */
+body:has([data-subject="biology"]) .article-page,
+body:has(.biology-article-page) .article-page,
+body:has(.biology-page) .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-green) 100%) !important;
+  border: 4px solid var(--dark-green) !important;
+  box-shadow: 0 0 24px var(--dark-green), 0 0 48px #fff2 !important;
+}
+
+.chemistry-article-page .article-page,
+.article-layout[data-subject="chemistry"] .article-page,
+[data-subject="chemistry"] .article-page,
+.chemistry-page .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-red) 100%) !important;
+  border: 4px solid var(--dark-red) !important;
+  box-shadow: 0 0 24px var(--dark-red), 0 0 48px #fff2 !important;
+}
+
+/* Nuclear option - override any chemistry page with red */
+body:has([data-subject="chemistry"]) .article-page,
+body:has(.chemistry-article-page) .article-page,
+body:has(.chemistry-page) .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-red) 100%) !important;
+  border: 4px solid var(--dark-red) !important;
+  box-shadow: 0 0 24px var(--dark-red), 0 0 48px #fff2 !important;
+}
+
+.physics-article-page .article-page,
+.article-layout[data-subject="physics"] .article-page,
+[data-subject="physics"] .article-page,
+.physics-page .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-orange) 100%) !important;
+  border: 4px solid var(--dark-orange) !important;
+  box-shadow: 0 0 24px var(--dark-orange), 0 0 48px #fff2 !important;
+}
+
+/* Nuclear option - override any physics page with orange */
+body:has([data-subject="physics"]) .article-page,
+body:has(.physics-article-page) .article-page,
+body:has(.physics-page) .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-orange) 100%) !important;
+  border: 4px solid var(--dark-orange) !important;
+  box-shadow: 0 0 24px var(--dark-orange), 0 0 48px #fff2 !important;
+}
+
+.mathematics-article-page .article-page,
+body.mathematics-article-page .article-page,
+html .mathematics-article-page .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-blue) 100%) !important;
+  border: 4px solid var(--dark-blue) !important;
+  box-shadow: 0 0 24px var(--dark-blue), 0 0 48px #fff2 !important;
+}
+
+/* Additional specificity for mathematics to ensure blue gradient */
+.mathematics-article-page .article-page,
+.article-layout[data-subject="mathematics"] .article-page,
+[data-subject="mathematics"] .article-page,
+.mathematics-page .article-page {
+  background: linear-gradient(135deg, #000 0%, #33CCFF 100%) !important;
+  border: 4px solid #33CCFF !important;
+  box-shadow: 0 0 24px #33CCFF, 0 0 48px #fff2 !important;
+}
+
+/* Nuclear option - override any mathematics page with blue */
+body:has([data-subject="mathematics"]) .article-page,
+body:has(.mathematics-article-page) .article-page,
+body:has(.mathematics-page) .article-page {
+  background: linear-gradient(135deg, #000 0%, #33CCFF 100%) !important;
+  border: 4px solid #33CCFF !important;
+  box-shadow: 0 0 24px #33CCFF, 0 0 48px #fff2 !important;
+}
+
+.computer-science-article-page .article-page,
+.article-layout[data-subject="computer-science"] .article-page,
+[data-subject="computer-science"] .article-page,
+.computer-science-page .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-purple) 100%) !important;
+  border: 4px solid var(--dark-purple) !important;
+  box-shadow: 0 0 24px var(--dark-purple), 0 0 48px #fff2 !important;
+}
+
+/* Nuclear option - override any computer science page with purple */
+body:has([data-subject="computer-science"]) .article-page,
+body:has(.computer-science-article-page) .article-page,
+body:has(.computer-science-page) .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-purple) 100%) !important;
+  border: 4px solid var(--dark-purple) !important;
+  box-shadow: 0 0 24px var(--dark-purple), 0 0 48px #fff2 !important;
+}
+
+.none-article-page .article-page,
+.article-layout[data-subject="none"] .article-page,
+[data-subject="none"] .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-pink) 100%) !important;
+  border: 4px solid var(--dark-pink) !important;
+  box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2 !important;
+}
+
+/* Nuclear option - override any none/general page with pink */
+body:has([data-subject="none"]) .article-page,
+body:has(.none-article-page) .article-page {
+  background: linear-gradient(135deg, #000 0%, var(--dark-pink) 100%) !important;
+  border: 4px solid var(--dark-pink) !important;
+  box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2 !important;
+}
+
+/* Article title styling - centered above article box */
+.article-title {
+  color: white;
+  font-family: 'Orbitron', 'Itim', Arial, sans-serif;
+  font-weight: 700;
+  margin-top: -35px;
+  font-size: 4em;
+  text-align: center;
+  margin: 40px auto 24px auto;
+  text-shadow: 0 0 8px var(--color-dark), 0 0 16px white;
+  width: fit-content;
+}
+
+/* Article layout with camera screen */
+.article-layout {
+display: flex;
+  gap: 5px;
+align-items: flex-start;
+max-width: none;
+  width: 100%;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+
+
+/* Article tiles sidebar */
+.article-tiles-sidebar {
+  width: 95%;
+background: #181828;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+border: 4px solid var(--dark-pink);
+box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+overflow-y: auto;
+    overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-pink) white;
+}
+
+/* Grid layout for articles list - unified for all pages */
+.articles-grid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  grid-auto-rows: min-content;
+  min-width: 0;
+  justify-content: center;
+}
+
+/* Add margins to tiles only in grid layout */
+.articles-grid .game-article-tile {
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  box-sizing: border-box;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Override grid layout for individual article pages - keep list format */
+.article-layout .game-articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.article-layout .game-articles-list .game-article-tile {
+  width: 100%;
+  max-width: none;
+}
+
+/* Force grid to stay within page bounds */
+body .game-articles-layout .articles-grid {
+  max-width: calc(100% - 80px) !important;
+  width: calc(100% - 80px) !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  grid-template-columns: repeat(auto-fill, 350px) !important;
+  justify-content: center !important;
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: 0 auto !important;
+  transform: none !important;
+  gap: 20px !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+
+
+
+
+body .article-layout[data-subject="mathematics"] .article-tiles-sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-blue) !important;
+  border: 2px solid #fff !important;
+}
+
+/* For main subject pages */
+body .article-tiles-sidebar[data-subject="mathematics"]::-webkit-scrollbar-thumb {
+  background: var(--dark-blue) !important;
+  border: 2px solid #fff !important;
+}
+
+
+
+/* Main page scrollbar colors for individual article pages */
+body .article-layout[data-subject="biology"]::-webkit-scrollbar {
+    width: 12px !important;
+  }
+
+body .article-layout[data-subject="biology"]::-webkit-scrollbar-track {
+    background: #fff !important;
+    border-radius: 6px !important;
+  }
+
+body .article-layout[data-subject="biology"]::-webkit-scrollbar-thumb {
+    background: var(--dark-green) !important;
+    border-radius: 6px !important;
+    border: 2px solid #fff !important;
+  }
+
+body .article-layout[data-subject="biology"]::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green) !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="chemistry"]::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+body .article-layout[data-subject="chemistry"]::-webkit-scrollbar-track {
+  background: #fff !important;
+  border-radius: 6px !important;
+}
+
+body .article-layout[data-subject="chemistry"]::-webkit-scrollbar-thumb {
+    background: var(--dark-red) !important;
+  border-radius: 6px !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="chemistry"]::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-red) !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="physics"]::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+body .article-layout[data-subject="physics"]::-webkit-scrollbar-track {
+  background: #fff !important;
+  border-radius: 6px !important;
+}
+
+body .article-layout[data-subject="physics"]::-webkit-scrollbar-thumb {
+    background: var(--dark-orange) !important;
+  border-radius: 6px !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="physics"]::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-orange) !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="mathematics"]::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+body .article-layout[data-subject="mathematics"]::-webkit-scrollbar-track {
+  background: #fff !important;
+  border-radius: 6px !important;
+}
+
+body .article-layout[data-subject="mathematics"]::-webkit-scrollbar-thumb {
+    background: var(--dark-blue) !important;
+  border-radius: 6px !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="mathematics"]::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-blue) !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="computer-science"]::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+body .article-layout[data-subject="computer-science"]::-webkit-scrollbar-track {
+  background: #fff !important;
+  border-radius: 6px !important;
+}
+
+body .article-layout[data-subject="computer-science"]::-webkit-scrollbar-thumb {
+    background: var(--dark-purple) !important;
+  border-radius: 6px !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="computer-science"]::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-purple) !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="none"]::-webkit-scrollbar {
+  width: 12px !important;
+}
+
+body .article-layout[data-subject="none"]::-webkit-scrollbar-track {
+  background: #fff !important;
+  border-radius: 6px !important;
+}
+
+body .article-layout[data-subject="none"]::-webkit-scrollbar-thumb {
+  background: var(--dark-pink) !important;
+  border-radius: 6px !important;
+  border: 2px solid #fff !important;
+}
+
+body .article-layout[data-subject="none"]::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-pink) !important;
+  border: 2px solid #fff !important;
+}
+
+/* Firefox main page scrollbar colors */
+body .article-layout[data-subject="biology"] {
+  scrollbar-color: var(--dark-green) #fff !important;
+}
+
+body .article-layout[data-subject="chemistry"] {
+  scrollbar-color: var(--dark-red) #fff !important;
+}
+
+body .article-layout[data-subject="physics"] {
+  scrollbar-color: var(--dark-orange) #fff !important;
+}
+
+body .article-layout[data-subject="mathematics"] {
+  scrollbar-color: var(--dark-blue) #fff !important;
+}
+
+body .article-layout[data-subject="computer-science"] {
+  scrollbar-color: var(--dark-purple) #fff !important;
+}
+
+body .article-layout[data-subject="none"] {
+  scrollbar-color: var(--dark-pink) #fff !important;
+}
+
+.article-tiles-sidebar .sidebar-title {
+color: var(--dark-pink);
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-weight: 700;
+font-size: 1.5em;
+margin-bottom: 16px;
+text-align: center;
+width: 100%;
+}
+.article-tiles-list {
+display: flex;
+flex-direction: column;
+gap: 8px;
+width: 100%;
+}
+
+.article-tiles-sidebar .tile-header-image {
+width: 120px;
+border-radius: 0;
+margin: 0;
+padding: 0;
+max-height: 100px;
+border-right: 4px solid var(--dark-pink);
+}
+.article-tiles-sidebar .tile-title {
+color: var(--light-grey);
+font-family: 'Intel One Mono', Arial, sans-serif;
+font-weight: 600;
+font-size: 0.9em;
+line-height: 1.3;
+padding: 8px 12px;
+flex: 1;
+display: flex;
+align-items: center;
+}
+.article-tiles-sidebar .tile-link {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+}
+.article-tiles-sidebar .tag-filter-bar {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+margin-bottom: 16px;
+padding-bottom: 12px;
+border-bottom: 2px solid var(--dark-pink);
+width: 100%;
+}
+.article-tiles-sidebar .tag-btn {
+background: transparent;
+border: 2px solid var(--dark-pink);
+color: var(--dark-pink);
+padding: 4px 8px;
+font-family: 'Intel One Mono', Arial, sans-serif;
+font-size: 0.8em;
+font-weight: 600;
+border-radius: 0;
+cursor: pointer;
+transition: all 0.2s ease;
+}
+.article-tiles-sidebar .tag-btn:hover,
+.article-tiles-sidebar .tag-btn.active {
+background: var(--dark-pink);
+color: #000;
+box-shadow: 0 0 8px var(--dark-pink);
+}
+
+/* Base styles for article tiles sidebar */
+.article-tiles-sidebar .game-articles-list {
+margin-bottom: 0;
+}
+.article-tiles-sidebar .game-tag-filter-bar {
+border-bottom: 2px solid var(--dark-pink);
+}
+
+/* Subject-specific tag styling for all-articles page */
+/* ===== CONSOLIDATED GAME TAG BUTTON STYLES ===== */
+/* Base styles for all game tag buttons */
+.game-tag-btn {
+  display: inline-block;
+color: white;
+border: 2px solid white;
+  box-shadow: 0 0 8px white;
+font-family: 'Intel One Mono', Arial, sans-serif;
+font-size: 0.9em;
+font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 16px;
+border-radius: 0;
+  text-shadow: none;
+transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  margin: 0 8px 8px 0;
+  background: var(--color-dark);
+}
+
+/* Hover and active states */
+.game-tag-btn:hover,
+.game-tag-btn.active {
+color: white;
+  border-color: white;
+box-shadow: 0 0 12px white;
+  text-shadow: none;
+  transform: scale(1.02);
+}
+
+.game-tag-btn.active {
+  transform: scale(1.05);
+}
+
+/* ===== EFFICIENT ARTICLE PAGE TAG BUTTON STYLES ===== */
+/* Article page tag buttons inherit base styles from .game-tag-btn above */
+
+/* Subject-specific backgrounds using data attributes */
+.article-layout[data-subject="biology"] .article-tiles-sidebar .game-tag-btn {
+background: var(--dark-green);
+}
+
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar .game-tag-btn {
+background: var(--dark-red);
+}
+
+.article-layout[data-subject="physics"] .article-tiles-sidebar .game-tag-btn {
+background: var(--dark-orange);
+}
+
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar .game-tag-btn {
+background: var(--dark-blue);
+}
+
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar .game-tag-btn {
+background: var(--dark-purple);
+}
+
+.article-layout[data-subject="none"] .article-tiles-sidebar .game-tag-btn {
+background: var(--dark-pink);
+}
+
+/* Hover and active states for subject-specific tag buttons */
+.article-layout[data-subject="biology"] .article-tiles-sidebar .game-tag-btn:hover,
+.article-layout[data-subject="biology"] .article-tiles-sidebar .game-tag-btn.active {
+background: var(--dark-green);
+box-shadow: 0 0 8px var(--dark-green);
+}
+
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar .game-tag-btn:hover,
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar .game-tag-btn.active {
+background: var(--dark-red);
+box-shadow: 0 0 8px var(--dark-red);
+}
+
+.article-layout[data-subject="physics"] .article-tiles-sidebar .game-tag-btn:hover,
+.article-layout[data-subject="physics"] .article-tiles-sidebar .game-tag-btn.active {
+background: var(--dark-orange);
+box-shadow: 0 0 8px var(--dark-orange);
+}
+
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar .game-tag-btn:hover,
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar .game-tag-btn.active {
+background: var(--dark-blue);
+box-shadow: 0 0 8px var(--dark-blue);
+}
+
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar .game-tag-btn:hover,
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar .game-tag-btn.active {
+background: var(--dark-purple);
+box-shadow: 0 0 8px var(--dark-purple);
+}
+
+.article-layout[data-subject="none"] .article-tiles-sidebar .game-tag-btn:hover,
+.article-layout[data-subject="none"] .article-tiles-sidebar .game-tag-btn.active {
+background: var(--dark-pink);
+box-shadow: 0 0 8px var(--dark-pink);
+}
+
+/* Subject-specific article tiles sidebar styling for individual article pages */
+.article-layout[data-subject="biology"] .article-tiles-sidebar {
+background: #000;
+border-color: var(--dark-green);
+box-shadow: 0 0 24px var(--dark-green), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+}
+
+.article-layout[data-subject="biology"] .article-tiles-sidebar .game-tag-filter-bar {
+border-bottom-color: var(--dark-green);
+}
+
+.article-layout[data-subject="biology"] .article-tiles-sidebar .game-article-tile {
+background: #000;
+border-color: var(--dark-green);
+box-shadow: 0 0 16px var(--dark-green), 0 0 32px #fff2;
+border-radius: 0;
+}
+
+.article-layout[data-subject="biology"] .article-tiles-sidebar .game-article-tile:hover {
+box-shadow: 0 0 24px var(--dark-green), 0 0 48px #fff2;
+}
+
+.article-layout[data-subject="biology"] .article-tiles-sidebar .tile-header-image {
+border-right-color: var(--dark-green);
+}
+
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar {
+background: #000;
+border-color: var(--dark-red);
+box-shadow: 0 0 24px var(--dark-red), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+}
+
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar .game-tag-filter-bar {
+border-bottom-color: var(--dark-red);
+}
+
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar .game-article-tile {
+background: #000;
+border-color: var(--dark-red);
+box-shadow: 0 0 16px var(--dark-red), 0 0 32px #fff2;
+border-radius: 0;
+}
+
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar .game-article-tile:hover {
+box-shadow: 0 0 24px var(--dark-red), 0 0 48px #fff2;
+}
+
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar .tile-header-image {
+border-right-color: var(--dark-red);
+}
+
+.article-layout[data-subject="physics"] .article-tiles-sidebar {
+background: #000;
+border-color: var(--dark-orange);
+box-shadow: 0 0 24px var(--dark-orange), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+}
+
+.article-layout[data-subject="physics"] .article-tiles-sidebar .game-tag-filter-bar {
+border-bottom-color: var(--dark-orange);
+}
+
+.article-layout[data-subject="physics"] .article-tiles-sidebar .game-article-tile {
+background: #000;
+border-color: var(--dark-orange);
+box-shadow: 0 0 16px var(--dark-orange), 0 0 32px #fff2;
+border-radius: 0;
+}
+
+.article-layout[data-subject="physics"] .article-tiles-sidebar .game-article-tile:hover {
+box-shadow: 0 0 24px var(--dark-orange), 0 0 48px #fff2;
+}
+
+.article-layout[data-subject="physics"] .article-tiles-sidebar .tile-header-image {
+border-right-color: var(--dark-orange);
+}
+
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar {
+background: #000;
+border-color: var(--dark-blue);
+box-shadow: 0 0 24px var(--dark-blue), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+}
+
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar .game-tag-filter-bar {
+border-bottom-color: var(--dark-blue);
+}
+
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar .game-article-tile {
+background: #000;
+border-color: var(--dark-blue);
+box-shadow: 0 0 16px var(--dark-blue), 0 0 32px #fff2;
+border-radius: 0;
+}
+
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar .game-article-tile:hover {
+box-shadow: 0 0 24px var(--dark-blue), 0 0 48px #fff2;
+}
+
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar .tile-header-image {
+border-right-color: var(--dark-blue);
+}
+
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar {
+background: #000;
+border-color: var(--dark-purple);
+box-shadow: 0 0 24px var(--dark-purple), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+}
+
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar .game-tag-filter-bar {
+border-bottom-color: var(--dark-purple);
+}
+
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar .game-article-tile {
+background: #000;
+border-color: var(--dark-purple);
+box-shadow: 0 0 16px var(--dark-purple), 0 0 32px #fff2;
+border-radius: 0;
+}
+
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar .game-article-tile:hover {
+box-shadow: 0 0 24px var(--dark-purple), 0 0 48px #fff2;
+}
+
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar .tile-header-image {
+border-right-color: var(--dark-purple);
+}
+
+.article-layout[data-subject="none"] .article-tiles-sidebar {
+background: #000;
+border-color: var(--dark-pink);
+box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+}
+
+.article-layout[data-subject="none"] .article-tiles-sidebar .game-tag-filter-bar {
+border-bottom-color: var(--dark-pink);
+}
+
+.article-layout[data-subject="none"] .article-tiles-sidebar .game-article-tile {
+background: #000;
+border-color: var(--dark-pink);
+box-shadow: 0 0 16px var(--dark-pink), 0 0 32px #fff2;
+border-radius: 0;
+}
+
+.article-layout[data-subject="none"] .article-tiles-sidebar .game-article-tile:hover {
+box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+}
+
+.article-layout[data-subject="none"] .article-tiles-sidebar .tile-header-image {
+border-right-color: var(--dark-pink);
+}
+
+/* General scrollbar styling - removed conflicting rules */
+
+.article-tiles-sidebar[data-subject] {
+background: #000;
+scrollbar-color: var(--color-dark) white;
+border-color: var(--color-dark);
+box-shadow: 0 0 24px var(--color-dark), 0 0 48px #fff2;
+border-radius: 0;
+  margin: 0px 10px 10px 5px;
+  margin-right: 15px;
+}
+
+/* General styling for article sidebar components */
+.article-tiles-sidebar[data-subject] .game-tag-filter-bar {
+border-bottom-color: var(--color-dark);
+}
+
+.article-tiles-sidebar[data-subject] .game-article-tile {
+background: #000;
+border-color: var(--color-dark);
+box-shadow: 0 0 16px var(--color-dark), 0 0 32px #fff2;
+border-radius: 0;
+}
+
+.article-tiles-sidebar[data-subject] .game-article-tile:hover {
+box-shadow: 0 0 24px var(--color-dark), 0 0 48px #fff2;
+}
+
+.article-tiles-sidebar[data-subject] .tile-header-image {
+border-right-color: var(--color-dark);
+}
+
+.article-tiles-sidebar[data-subject] .game-tag-btn {
+background: var(--color-dark);
+}
+
+/* Article tiles sidebar tag buttons inherit hover/active states from .game-tag-btn above */
+
+/* Firefox scrollbar styling */
+.other-articles-list,
+.article-tiles-sidebar,
+.game-articles-list {
+scrollbar-width: thin;
+}
+
+/* Articles page styling - using dark pink theme */
+.article-tiles-sidebar[data-subject="all"] {
+scrollbar-color: var(--dark-pink) white;
+}
+
+.article-tiles-sidebar[data-subject="all"] .game-tag-filter-bar {
+border-bottom-color: var(--dark-pink);
+}
+
+.article-tiles-sidebar[data-subject="all"] .game-article-tile {
+background: #000;
+border-color: var(--dark-pink);
+box-shadow: 0 0 16px var(--dark-pink), 0 0 48px #fff2;
+border-radius: 0;
+}
+
+.article-tiles-sidebar[data-subject="all"] .game-article-tile:hover {
+box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+}
+
+.article-tiles-sidebar[data-subject="all"] .tile-header-image {
+border-right-color: var(--dark-pink);
+}
+
+.article-tiles-sidebar[data-subject="all"] .game-tag-btn {
+background: var(--dark-pink);
+}
+
+.article-tiles-sidebar[data-subject="all"] .game-tag-btn:hover,
+.article-tiles-sidebar[data-subject="all"] .game-tag-btn.active {
+background: var(--dark-pink);
+box-shadow: 0 0 8px var(--dark-pink);
+}
+
+/* Main container box styling for articles page */
+.article-tiles-sidebar[data-subject="all"] {
+background: #000;
+border: 4px solid var(--dark-pink);
+box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+border-radius: 0;
+}
+
+.article-layout[data-subject="biology"] .article-tiles-sidebar,
+.article-layout[data-subject="chemistry"] .article-tiles-sidebar,
+.article-layout[data-subject="physics"] .article-tiles-sidebar,
+.article-layout[data-subject="mathematics"] .article-tiles-sidebar,
+.article-layout[data-subject="computer-science"] .article-tiles-sidebar,
+.article-tiles-sidebar[data-subject="all"],
+.physics-subject-container[data-subject="physics"] .game-articles-list {
+scrollbar-color: var(--color-dark) white;
+}
+
+.article-tiles-sidebar {
+  margin-top: 40px;
+  padding: 20px;
+  background: #181828;
+  border-radius: 8px;
+}
+
+.camera-screen {
+  flex: 0 0 auto;
+  margin-top: -50px;
+  margin-right: 0;
+  position: relative;
+}
+.camera-screen-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
+}
+.camera-screen-cutout {
+  position: absolute;
+  top: 112.5px;
+  left: 21px;
+  width: 311px;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+  transform: rotate(-2deg);
+}
+.camera-article-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Black meta bar with curved edges */
+.article-meta-bar {
+  background: #000;
+  border-radius: 20px;
+  padding: 12px 24px;
+  margin: 0 32px 24px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.article-meta-bar .article-author,
+.article-meta-bar .article-date {
+  color: var(--light-grey);
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+.author-gif {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 4px;
+  border: 1px solid white;
+  background: white;
+}
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  color: white;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+.article-author, .article-date, .article-subject {
+  color: var(--light-grey);
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.1em;
+}
+.article-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  padding-top: 24px;
+}
+.article-tags .tag {
+  display: inline-block;
+  background: var(--dark-pink);
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 0 8px var(--white), 0 0 16px;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 6px 18px;
+  border-radius: 0;
+  text-shadow: 0 0 8px #fff, 0 0 16px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+/* Subject-specific article tag styling */
+.article-layout[data-subject="biology"] .article-tags .tag {
+  background: var(--dark-green) !important;
+  border-color: white;
+  box-shadow: 0 0 8px white;
+}
+
+.article-layout[data-subject="chemistry"] .article-tags .tag {
+  background: var(--dark-red) !important;
+  border-color: white;
+  box-shadow: 0 0 8px white;
+}
+
+.article-layout[data-subject="physics"] .article-tags .tag {
+  background: var(--dark-orange) !important;
+  border-color: white;
+  box-shadow: 0 0 8px white;
+}
+
+.article-layout[data-subject="mathematics"] .article-tags .tag {
+  background: var(--dark-blue) !important;
+  border-color: white;
+  box-shadow: 0 0 8px white;
+}
+
+.article-layout[data-subject="computer-science"] .article-tags .tag {
+  background: var(--dark-purple) !important;
+  border-color: white;
+  box-shadow: 0 0 8px white;
+}
+
+/* Override for "none" subject tags to ensure they take precedence */
+.article-layout[data-subject="none"] .article-tags .tag {
+  background: var(--dark-pink) !important;
+  border-color: white;
+  box-shadow: 0 0 8px white;
+}
+.article-content {
+  padding: 32px 32px 0 32px;
+  color: white;
+  font-size: 1.15em;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  line-height: 1.7;
+}
+.article-citations {
+  padding: 24px 32px 32px 32px;
+  color: white;
+  background: #181828;
+  border-top: 4px solid var(--dark-pink);
+  border-radius: 0;
+}
+.article-citations h2 {
+  color: var(--dark-pink);
+  margin-bottom: 8px;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+}
+.article-citations ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.game-info-box {
+  width: 1020px;
+  min-width: 660px;
+  max-width: 1200px;
+  background: linear-gradient(135deg, #181828 0%, var(--dark-pink) 100%);
+  border: 4px solid var(--dark-pink);
+  box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2;
+  border-radius: 0;
+  color: white;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.08em;
+  padding: 32px 24px 32px 24px;
+  margin: 40px 32px 40px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.game-info-box h2 {
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  color: var(--dark-pink);
+  font-size: 1.4em;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+
+/* Subject-specific article list styles - now using shared classes */
+
+.game-articles-list {
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+/* Subject-specific article list styles - now using shared classes with CSS custom properties */
+
+/* Right sidebar containing camera and tiles */
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-end;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.game-tag-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--dark-pink);
+  justify-content: center;
+}
+
+/* Subject-specific backgrounds for all-articles pages */
+.game-articles-list[data-subject="biology"] .game-tag-btn {
+  background: var(--dark-green);
+}
+
+.game-articles-list[data-subject="chemistry"] .game-tag-btn {
+  background: var(--dark-red);
+}
+
+.game-articles-list[data-subject="physics"] .game-tag-btn {
+  background: var(--dark-orange);
+}
+
+.game-articles-list[data-subject="mathematics"] .game-tag-btn {
+  background: var(--dark-blue);
+}
+
+.game-articles-list[data-subject="computer-science"] .game-tag-btn {
+  background: var(--dark-purple);
+}
+
+.game-articles-list[data-subject="all"] .game-tag-btn {
+  background: var(--dark-pink);
+}
+
+/* Subject-specific borders for individual article pages - removed game-articles-list borders */
+
+/* Subject page containers for tag buttons and article borders */
+.physics-subject-container[data-subject="physics"] .game-tag-btn {
+  background: var(--dark-orange);
+}
+
+/* Physics subject container tag buttons inherit hover/active states from .game-tag-btn above */
+
+.physics-subject-container[data-subject="physics"] .game-articles-list {
+  border-color: var(--dark-orange);
+  box-shadow: 0 0 24px var(--dark-orange), 0 0 48px #fff2;
+}
+
+.physics-subject-container[data-subject="physics"] .game-tag-filter-bar {
+  border-bottom-color: var(--dark-orange);
+}
+
+.physics-subject-container[data-subject="physics"] .game-article-tile {
+  border-color: var(--dark-orange);
+  box-shadow: 0 0 16px var(--dark-orange), 0 0 32px #fff2;
+}
+
+.physics-subject-container[data-subject="physics"] .game-article-tile:hover {
+  box-shadow: 0 0 24px var(--dark-orange), 0 0 48px #fff2;
+}
+
+.physics-subject-container[data-subject="physics"] .tile-header-image {
+  border-right-color: var(--dark-orange);
+}
+
+/* All-articles page tag buttons inherit hover/active states from .game-tag-btn above */
+
+/* ===== CUSTOM SCROLLBAR STYLING ===== */
+
+/* Webkit browsers (Chrome, Safari, Edge) */
+/* General scrollbar styling class */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--dark-colour);
+  border-radius: 0;
+  border: 2px solid white;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--colour);
+}
+
+/* Make all article text white */
+.article-content,
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6,
+.article-content p,
+.article-content ul,
+.article-content ol,
+.article-content li,
+.article-content a,
+.article-content blockquote,
+.article-content code,
+.article-content pre {
+color: white;
+}
+
+.article-content a {
+color: white;
+text-decoration: underline;
+}
+
+.article-content a:hover {
+color: white;
+text-decoration: none;
+}
+
+.tips-and-game-container {
+  display: flex;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.word-image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.top-tips-section {
+  flex: 1;
+  padding: 0 16px;
+  position: relative;
+}
+
+/* Game image container - now using shared class above */
+
+/*
+* Global/Utility Styles: Define shared properties once.
+* These can be applied to multiple elements to avoid repetition.
+*/
+.font-courier {
+font-family: 'Courier New', 'Courier', monospace;
+}
+
+.button-base {
+padding: 10px 18px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 0.9em;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 100px;
+}
+
+.content-box {
+display: flex;
+flex-direction: column;
+height: 100%;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+.title-style {
+margin: 0;
+font-size: 3.9em;
+flex-shrink: 0;
+text-align: center;
+width: 100%;
+}
+
+.opportunity-buttons {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+justify-content: center;
+margin: 20px auto 0 auto;
+width: 400px;
+}
+
+.opportunity-btn,
+.nav-btn {
+/* Using utility classes for DRY code */
+@extend .button-base;
+@extend .font-courier;
+}
+
+.opportunity-btn .btn-gif {
+width: 20px;
+height: 20px;
+object-fit: contain;
+background: white;
+border-radius: 4px;
+padding: 2px;
+}
+
+.opportunity-content,
+.opportunity-details {
+/* Using utility classes for DRY code */
+@extend .content-box;
+text-align: center;
+margin-top: 8px;
+}
+
+.opportunity-content h3 {
+@extend .font-courier;
+font-size: 1.8em;
+font-weight: 900;
+color: #000;
+flex-shrink: 0;
+}
+
+.opportunity-navigation {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+align-items: center;
+padding: 10px 0;
+flex-shrink: 0;
+width: 100%;
+max-width: 400px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 40px;
+}
+
+.nav-btn:disabled {
+  opacity: 0;
+cursor: not-allowed;
+  pointer-events: none;
+}
+
+.opportunity-counter {
+  font-family: 'Courier New', 'Courier', monospace;
+font-size: 0.9em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  line-height: 1;
+  margin: auto 0;
+  transform: translateY(2px);
+}
+
+.opportunity-title {
+@extend .title-style;
+}
+
+.opportunity-link {
+text-decoration: none;
+font-weight: bold;
+transition: all 0.2s ease;
+color: var(--color-dark); /* Now using the page-specific variable */
+}
+
+.opportunity-link:hover {
+text-decoration: underline;
+color: var(--normal-color); /* Now using the page-specific variable */
+}
+
+.opportunity-name {
+font-weight: bold;
+}
+
+.opportunity-description {
+  font-family: 'Courier New', 'Courier', monospace;
+font-size: 0.9em;
+font-weight: 999;
+  line-height: 1.3;
+max-width: 400px;
+text-align: center;
+color: #000;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+width: 100%;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* Subject-specific navigation button colors */
+.nav-btn {
+background: #000;
+border: 2px solid var(--color-dark);
+color: white;
+}
+
+.opportunity-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.opportunity-content li {
+  color: #333;
+  margin: 8px 0;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 0.9em;
+  padding: 4px 0;
+}
+
+/* Word image styles - now using shared classes above */
+
+.opportunities-text-box {
+position: absolute;
+top: 56%;
+left: 50.5%;
+transform: translate(-50%, -50%);
+background: white;
+padding: 24px;
+text-align: center;
+height: 235px;
+width: 435px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.opportunities-text-box h2 {
+margin: 0 0 32px 0; /* Increased bottom margin for more space */
+font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+font-size: 1.5em;
+font-weight: bold;
+letter-spacing: 2px;
+text-align: center; /* Center the title */
+}
+
+.opportunities-text-box a {
+color: #000;
+text-decoration: underline;
+font-family: 'Intel One Mono', Arial, sans-serif;
+font-size: 1em;
+display: block;
+margin: 12px 0;
+transition: color 0.2s;
+}
+
+.opportunities-text-box p {
+color: #000;
+margin: 12px 0 0 0;
+font-family: 'Intel One Mono', Arial, sans-serif;
+font-size: 0.9em;
+line-height: 1.4;
+}
+
+.opportunities-text-box ul {
+color: #000;
+margin: 12px 0 0 0;
+font-family: 'Intel One Mono', Arial, sans-serif;
+font-size: 0.9em;
+line-height: 1.4;
+text-align: center; /* Center the list content */
+}
+
+.opportunities-text-box li {
+color: #000;
+margin: 8px 0;
+font-family: 'Intel One Mono', Arial, sans-serif;
+font-size: 0.9em;
+line-height: 1.4;
+}
+
+/* Subject-specific text box styling */
+.opportunities-text-box h2,
+.opportunities-text-box p { /* or any other elements */
+color: var(--color-dark);
+}
+
+/* General resource box styling - now using shared .word-resources-box class above */
+
+.resources-title {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  color: var(--dark-color); /* Default color */
+}
+
+.resources-content {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.resources-content h3 {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 2em;
+  color: var(--dark-color); /* Default color */
+  margin: 0;
+}
+
+.resource-name {
+  color: var(--dark-color); /* Default color */
+  font-weight: bold;
+}
+
+.resource-description {
+  color: #666666;
+}
+
+.resource-details li {
+  margin-bottom: 10px;
+}
+
+/* --- Resource link styling --- */
+.resource-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: inherit;
+  transition: opacity 0.2s ease;
+}
+
+.resource-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Apply the variables to the elements */
+/* Subject-specific resource name styles - now using shared .subject-page .resource-name class */
+
+
+/* --- Scrollbar styling (using variables) --- */
+.word-resources-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.word-resources-box::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 4px;
+}
+
+.word-resources-box::-webkit-scrollbar-thumb {
+  background: var(--color-dark);
+  border-radius: 4px;
+}
+
+.word-resources-box::-webkit-scrollbar-thumb:hover {
+  background: var(--normal-color);
+}
+
+.opportunities-text-box {
+  padding: 16px;
+  max-width: 300px;
+}
+
+.opportunities-text-box h2 {
+  font-size: 1.2em;
+  margin: 0 0 12px 0;
+}
+
+.opportunities-text-box a {
+  font-size: 0.9em;
+  margin: 8px 0;
+}
+
+.opportunities-text-box p {
+  font-size: 0.8em;
+  margin: 8px 0 0 0;
+}
+
+/* Opportunities text box scrollbar styling */
+.opportunities-text-box::-webkit-scrollbar {
+width: 12px;
+}
+
+.opportunities-text-box::-webkit-scrollbar-track {
+background: white;
+border: 2px solid #000;
+border-radius: 0;
+}
+
+.opportunities-text-box::-webkit-scrollbar-thumb {
+background: #000;
+border: 2px solid white;
+border-radius: 0;
+transition: background 0.2s;
+}
+
+.opportunities-text-box::-webkit-scrollbar-thumb:hover {
+background: #333;
+}
+
+/* First, define a general style for the scrollbar thumb */
+.opportunities-text-box::-webkit-scrollbar-thumb {
+background: var(--color-dark);
+}
+
+/* Subject-specific opportunities-text-box scrollbar colors - now using shared .subject-page .opportunities-text-box class */
+
+/* Generic game image styling - now using shared .subject-game-image class */
+
+/* Shared opportunity content styling */
+.opportunity-content h3 {
+color: var(--color-dark);
+  margin: 0 16px;
+font-family: 'Courier New', 'Courier', monospace;
+  font-size: 1.8em;
+  font-weight: 900;
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.1;
+  padding-bottom: 10px;
+}
+
+.opportunity-btn {
+background: #000;
+color: white;
+border: 2px solid var(--color-dark);
+padding: 10px 18px;
+border-radius: 8px;
+cursor: pointer;
+font-family: 'Courier New', 'Courier', monospace;
+font-size: 0.9em;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 1px;
+display: flex;
+align-items: center;
+gap: 8px;
+min-width: 100px;
+}
+
+/* Generic opportunities-text-box positioning - now using shared .subject-page .opportunities-text-box class */
+
+/* Recommended Reading Section Styles */
+.recommended-reading-section {
+  margin: 0 0 0 0;
+}
+
+.recommended-reading-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ibook image container - now using shared class above */
+
+/* Biology ibook image - now using shared .subject-ibook-image class */
+
+/* Ibook recommended reading box - now using shared class above */
+
+/* Custom scrollbar styling - now using shared scrollbar classes above */
+
+.recommended-reading-content {
+  text-align: center;
+  margin: 0 10px 10px 10px;
+  width: calc(100% - 20px);
+}
+
+.recommended-reading-content h3 {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 15px 0;
+  color: var(--dark-color);
+}
+
+.recommended-reading-content h3.category-selection-text {
+  margin-top: 0;
+}
+
+.recommended-reading-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.recommended-reading-content li {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  color: #000;
+  list-style-type: disc;
+  border-bottom: none;
+  line-height: 1.4;
+}
+
+.recommended-reading-content li strong {
+  color: var(--dark-color);
+  font-weight: bold;
+}
+
+.recommended-reading-content li span {
+  display: block;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.recommended-reading-content li:last-child {
+  border-bottom: none;
+}
+
+.recommended-reading-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.recommended-reading-buttons .button-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.recommended-reading-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 80px;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--color-dark), var(--normal-color));
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.recommended-reading-btn .btn-gif {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+  background: white;
+  padding: 2px;
+}
+
+/* Recommended reading navigation and back button styles */
+.recommended-reading-details {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.recommended-reading-navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.recommended-reading-back-btn {
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Resource navigation and back button styles */
+.resource-details {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.resource-navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.resource-back-btn {
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Subject-specific back button colors */
+.recommended-reading-back-btn,
+.resource-back-btn,
+.back-btn,
+.next-btn {
+background: var(--normal-color);
+border: 2px solid var(--normal-color);
+color: white;
+padding: 8px 12px;
+border-radius: 8px;
+cursor: pointer;
+font-family: 'Courier New', 'Courier', monospace;
+font-size: 0.8em;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+min-width: 80px;
+text-align: center;
+}
+
+/* Book details and navigation styles */
+.book-details {
+  text-align: center;
+  margin-bottom: 80px;
+  width: 100%;
+}
+
+.book-title {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 1.1em;
+  font-weight: 900;
+  margin: 0 0 80px 0;
+  line-height: 1.3;
+  color: var(--color-dark);
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.book-description {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.9em;
+  color: #000;
+  line-height: 1.4;
+  text-align: center;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.book-navigation {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 60px;
+}
+
+.book-counter {
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.9em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+  line-height: 1;
+  margin: auto 0;
+  transform: translateY(2px);
+} 
+
+.back-btn {
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+  min-width: 80px;
+  text-align: center;
+  margin-top: 0;
+  justify-self: start;
+}
+
+/* Next button styling to match back button */
+.next-btn {
+  margin-top: 0;
+  justify-self: end;
+}
+
+/* Subject-specific iBook image styles - now using shared .subject-ibook-image class */
+
+/* General styles using the CSS variables */
+.ibook-recommended-reading-box,
+.ibook-resources-box {
+  border-color: var(--color-dark);
+}
+
+.recommended-reading-content h3,
+.resources-content h3 {
+  color: var(--color-dark);
+}
+
+.recommended-reading-btn,
+.nav-btn {
+  background: white;
+  border: 2px solid white;
+  color: var(--color-dark);
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: white;
+  border: 2px solid white;
+  color: var(--color-dark);
+  }
+
+  /* Ibook resources box - now using shared class above */
+
+  .resources-buttons {
+      gap: 6px;
+  }
+
+  .resources-btn {
+      padding: 6px 10px;
+      font-size: 0.7em;
+      min-width: 70px;
+}
+
+/* === SUBJECT PAGE STYLES === */
+
+/* Shared subject page styles */
+.subject-page {
+  /* Common styles for all subject pages */
+}
+
+/* Subject-specific color variables */
+.biology-page {
+  --color-dark: var(--dark-green);
+  --normal-color: var(--green);
+  --color-light: var(--light-green);
+  --article-gradient-start: #000;
+}
+
+.chemistry-page {
+  --color-dark: var(--dark-red);
+  --normal-color: var(--red);
+  --color-light: var(--light-red);
+  --article-gradient-start: #000;
+}
+
+.physics-page {
+  --color-dark: var(--dark-orange);
+  --normal-color: var(--orange);
+  --color-light: var(--light-orange);
+  --article-gradient-start: #000;
+}
+
+.computer-science-page {
+  --color-dark: var(--dark-purple);
+  --normal-color: var(--purple);
+  --color-light: var(--light-purple);
+  --article-gradient-start: #000;
+}
+
+.mathematics-page {
+  --color-dark: var(--dark-blue);
+  --normal-color: var(--blue);
+  --color-light: var(--light-blue);
+  --article-gradient-start: #000;
+}
+
+/* Shared subject title styles */
+.subject-title {
+  font-family: 'Orbitron', 'Itim', Arial, sans-serif;
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+/* Shared subject figure image styles */
+.subject-figure-img {
+  display: block;
+  margin: 8px 0 6px 8px;
+  cursor: pointer;
+}
+
+/* Shared subject game image styles */
+.subject-game-image {
+  width: auto;
+  height: 400px;
+  margin: 10px 5px 0px 5px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Shared subject ibook image styles */
+.subject-ibook-image {
+  width: 750px;
+  height: auto;
+  display: block;
+}
+
+
+
+/* Shared subject tile header image styles */
+.subject-articles-list .tile-header-image {
+  border-right: 4px solid var(--color-dark);
+}
+
+/* Subject page grid layout - matching all-articles page */
+.biology-page .articles-grid,
+.chemistry-page .articles-grid,
+.physics-page .articles-grid,
+.mathematics-page .articles-grid,
+.computer-science-page .articles-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, 350px) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  grid-auto-rows: min-content !important;
+  min-width: 0 !important;
+  justify-content: center !important;
+  padding: 5px !important;
+  text-align: center !important;
+}
+
+/* Subject page article tiles - matching all-articles page */
+.biology-page .articles-grid .game-article-tile,
+.chemistry-page .articles-grid .game-article-tile,
+.physics-page .articles-grid .game-article-tile,
+.mathematics-page .articles-grid .game-article-tile,
+.computer-science-page .articles-grid .game-article-tile {
+  margin: 0 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  width: 350px !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  border: 4px solid var(--color-dark) !important;
+}
+
+.biology-page .articles-grid .game-article-tile:hover,
+.chemistry-page .articles-grid .game-article-tile:hover,
+.physics-page .articles-grid .game-article-tile:hover,
+.mathematics-page .articles-grid .game-article-tile:hover,
+.computer-science-page .articles-grid .game-article-tile:hover {
+  box-shadow: 0 0 16px var(--color-dark), 0 0 32px #fff5 !important;
+}
+
+/* Subject page article tiles sidebar - matching all-articles page */
+.biology-page .article-tiles-sidebar,
+.chemistry-page .article-tiles-sidebar,
+.physics-page .article-tiles-sidebar,
+.mathematics-page .article-tiles-sidebar,
+.computer-science-page .article-tiles-sidebar {
+  width: 95% !important;
+  background: #181828 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  border: 4px solid var(--color-dark) !important;
+  box-shadow: 0 0 24px var(--color-dark), 0 0 48px #fff2 !important;
+  border-radius: 0 !important;
+  margin: 0px 10px 10px 5px !important;
+  margin-right: 15px !important;
+  overflow-y: auto !important;
+  overflow-y: scroll !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--color-dark) #fff !important;
+}
+
+/* Individual article page sidebar - narrower width */
+.article-layout .article-tiles-sidebar {
+  width: 550px !important;
+  margin: 0px 50px 50px 50px !important;
+  padding: 30px !important;
+  height: 1100px !important;
+  overflow-x: hidden !important;
+}
+
+/* Individual article page tiles - control width */
+.article-layout .article-tiles-sidebar .game-article-tile {
+  width: 539px !important;
+  margin: 0px 00px 0px 0px !important;
+  padding: 0px 0px 0px 0px !important;
+}
+
+/* Center tiles horizontally in individual article page sidebar */
+.article-layout .article-tiles-sidebar {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Shared opportunities text box styles */
+.subject-page .opportunities-text-box {
+  position: absolute;
+  top: 56%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 24px;
+  text-align: center;
+  height: 235px;
+  width: 435px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Shared resource name styles */
+.subject-page .resource-name {
+  color: var(--color-dark);
+  font-weight: bold;
+}
+
+/* Shared ibook recommended reading box styles */
+.ibook-recommended-reading-box {
+  position: absolute;
+  top: 42.5%;
+  left: 49.5%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  text-align: center;
+  height: 270.5px;
+  width: 375px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Shared game opportunities box styles */
+.game-opportunities-box {
+  position: absolute;
+  top: 52%;
+  left: 49.7%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  padding: 24px;
+  text-align: center;
+  height: 220px;
+  width: 459px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Shared recommended reading and opportunity button styles */
+.recommended-reading-btn {
+  background: #000;
+  color: white;
+  border: 3px solid var(--white);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 80px;
+  justify-content: center;
+}
+
+.opportunity-btn {
+  background: var(--normal-color);
+  border: 4px solid white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 100px;
+}
+
+/* Shared content heading styles */
+.recommended-reading-content h3 {
+  color: var(--color-dark);
+  margin: 7px 0 0 0;
+  font-family: 'Courier New', 'Courier', monospace;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+/* Shared content text styles */
+.opportunity-content ul,
+.recommended-reading-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.opportunity-content li,
+.recommended-reading-content li {
+  color: #333;
+  margin: 8px 0;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 0.9em;
+  padding: 4px 0;
+}
+
+/* Shared definition image styles - consolidated above */
+
+/* Shared subject word image styles */
+.subject-word-image {
+  max-width: 3000px;
+  height: 500px;
+  display: block;
+  border-radius: 0;
+  margin: 20px 5px 0px 5px;
+}
+
+/* Shared word image container styles */
+.word-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto 32px auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Shared word resources box styles */
+.word-resources-box {
+  position: absolute;
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 24px;
+  text-align: center;
+  height: 220px;
+  width: 427px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+/* Custom scrollbar styling for word resources box */
+.word-resources-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.word-resources-box::-webkit-scrollbar-track {
+  background: white;
+  border-radius: 4px;
+}
+
+.word-resources-box::-webkit-scrollbar-thumb {
+  background: var(--color-dark);
+  border-radius: 4px;
+}
+
+.word-resources-box::-webkit-scrollbar-thumb:hover {
+  background: var(--normal-color);
+}
+
+/* Shared resources content styles */
+.resources-content h3 {
+  margin: 0 0 32px 0;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.resources-content ul {
+  color: #000;
+  margin: 12px 0 0 0;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.resources-content li {
+  color: #000;
+  margin: 8px 0;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.resource-link {
+  color: var(--color-dark);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.resource-description {
+  color: #666;
+}
+
+/* Shared category selection text styles */
+.category-selection-text {
+  margin: 0 0 32px 0;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+/* Shared button gif styles */
+.btn-gif {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Shared section styles */
+.header-row {
+  margin-bottom: 0;
+}
+
+.definition-image-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.second-row-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.recommended-reading-section,
+.opportunities-section {
+  flex: 1;
+}
+
+.recommended-reading-container,
+.tips-and-game-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ibook-image-container,
+.game-image-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Shared modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--shadow-color);
+}
+
+.modal-content {
+  background-color: var(--white);
+  margin: 15% auto;
+  padding: 20px;
+  color: var(--text-dark);
+  border: 1px solid var(--text-dark);
+  width: 80%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* Shared article tiles sidebar styles */
+
+.game-tag-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--color-dark);
+  justify-content: center;
+}
+
+/* Game tag button styles - now using consolidated class above */
+
+.game-articles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.game-article-tile {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  background: #181828;
+  border: 4px solid var(--dark-pink);
+  border-radius: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  gap: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+.tile-header-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tile-divider {
+  height: 2px;
+  background: var(--color-dark);
+}
+
+.tile-title {
+  padding: 16px;
+  font-family: 'Intel One Mono', Arial, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.tile-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* Mobile form - hidden by default, shown only on mobile */
+.mobile-form {
+  display: none;
+  visibility: hidden;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ===== GLOBAL DESKTOP HIDING - HIDE MOBILE SUBMISSIONS ELEMENTS ===== */
+@media screen and (min-width: 750px) {
+  /* Global desktop hiding - highest priority, no media query conflicts */
+  .mobile-submission-dropdowns,
+  .mobile-submission-dropdowns *,
+  .mobile-google-form,
+  .mobile-google-form *,
+  .mobile-only,
+  body .mobile-submission-dropdowns,
+  html .mobile-submission-dropdowns,
+  .submissions-page .mobile-submission-dropdowns,
+  .submissions-layout .mobile-submission-dropdowns,
+  body .submissions-page .mobile-submission-dropdowns,
+  html .submissions-page .mobile-submission-dropdowns,
+  body .submissions-layout .mobile-submission-dropdowns,
+  html .submissions-layout .mobile-submission-dropdowns,
+  [class*="submissions"] .mobile-submission-dropdowns,
+  [class*="submissions"] .mobile-submission-dropdowns *,
+  [class*="mobile-submission"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    transform: scale(0) !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+  }
+}
+
+/* ===== DESKTOP DROPDOWN HIDING - HIDE MOBILE DROPDOWNS ON DESKTOP ===== */
+@media screen and (min-width: 750px) {
+  /* Hide all mobile dropdowns on desktop */
+  .online-resources-dropdown,
+  .recommended-reading-dropdown,
+  .opportunities-dropdown,
+  .mobile-submissions-dropdowns,
+  .online-resources-dropdown *,
+  .recommended-reading-dropdown *,
+  .opportunities-dropdown *,
+  .mobile-submissions-dropdowns * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+  
+  /* Additional specificity for subject pages */
+  .biology-page .online-resources-dropdown,
+  .biology-page .recommended-reading-dropdown,
+  .biology-page .opportunities-dropdown,
+  .chemistry-page .online-resources-dropdown,
+  .chemistry-page .recommended-reading-dropdown,
+  .chemistry-page .opportunities-dropdown,
+  .physics-page .online-resources-dropdown,
+  .physics-page .recommended-reading-dropdown,
+  .physics-page .opportunities-dropdown,
+  .mathematics-page .online-resources-dropdown,
+  .mathematics-page .recommended-reading-dropdown,
+  .mathematics-page .opportunities-dropdown,
+  .computer-science-page .online-resources-dropdown,
+  .computer-science-page .recommended-reading-dropdown,
+  .computer-science-page .opportunities-dropdown {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+}
+
+/* ===== MOBILE STYLES (≤750px) - CLEAN VERSION ===== */
+@media (max-width: 750px) {
+  main {
+    margin-top: 0;
+  }
+
+  /* Make all mobile titles bold and white */
+  .mobile-title {
+    font-weight: bold !important;
+    color: white !important;
+  }
+
+  /* Make all mobile authors italic and pale grey */
+  .mobile-author {
+    font-style: italic !important;
+    color: var(--pale-grey) !important;
+  }
+
+  /* Make all mobile blurbs pale grey with white line below */
+  .mobile-blurb {
+    color: var(--pale-grey) !important;
+    border-bottom: 1px solid white !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Make all mobile URLs pale grey */
+  .mobile-url {
+    color: var(--pale-grey) !important;
+  }
+
+  .mobile-url a {
+    color: var(--pale-grey) !important;
+    text-decoration: underline !important;
+  }
+
+  /* Remove bullet points from opportunities dropdown */
+  .opportunities-dropdown .dropdown-content ul,
+  body .opportunities-dropdown .dropdown-content ul,
+  html .opportunities-dropdown .dropdown-content ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .opportunities-dropdown .dropdown-content li,
+  body .opportunities-dropdown .dropdown-content li,
+  html .opportunities-dropdown .dropdown-content li {
+    list-style: none !important;
+    list-style-type: none !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
+  }
+
+    /* Hide all navigation elements on mobile - use menu button instead */
+  .top-bar {
+    display: none !important;
+  }
+  
+  .logo-container {
+    display: none !important;
+  }
+  
+  /* Hide join button, submissions button, and subject CDs on mobile home page */
+  .home-join-btn,
+  .home-submit-btn,
+  .cd-section,
+  .y2k-cd-nav {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  .dog-nav {
+    display: none !important;
+  }
+  
+  /* Hide any subjects dropdown functionality on mobile */
+  .subjects-toggle-btn {
+    display: none !important;
+  }
+  
+  /* Hide any other navigation elements that might appear */
+  .nav-btn,
+  .home-btn,
+  .submit-btn,
+  .join-btn {
+    display: none !important;
+  }
+
+  /* Ensure mobile menu button is visible and functional on mobile */
+  .mobile-menu-btn {
+    display: block !important;
+    position: fixed !important;
+    top: 20px !important;
+    left: 20px !important;
+    z-index: 1001 !important;
+    background: #181828 !important;
+    border: 2px solid white !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 0 8px white, 0 0 16px white !important;
+    user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  /* Ensure centered scrollable list is properly positioned on mobile */
+  .centered-scrollable-list {
+    display: none !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100vh !important;
+    background: #181828 !important;
+    z-index: 1000 !important;
+    overflow: hidden !important;
+  }
+
+  .centered-scrollable-list.show-menu {
+    display: block !important;
+  }
+  
+  /* Show mobile submissions elements ONLY on mobile */
+  .mobile-submission-dropdowns,
+  .mobile-submission-dropdowns *,
+  .mobile-google-form,
+  .mobile-google-form *,
+  .mobile-only,
+  body .mobile-submission-dropdowns,
+  html .mobile-submission-dropdowns,
+  .submissions-page .mobile-submission-dropdowns,
+  .submissions-layout .mobile-submission-dropdowns,
+  body .submissions-page .mobile-submission-dropdowns,
+  html .submissions-page .mobile-submission-dropdowns,
+  body .submissions-layout .mobile-submission-dropdowns,
+  html .submissions-layout .mobile-submission-dropdowns,
+  [class*="submissions"] .mobile-submission-dropdowns,
+  [class*="submissions"] .mobile-submission-dropdowns *,
+  [class*="mobile-submission"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    width: auto !important;
+    overflow: visible !important;
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    margin: 20px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    clip: auto !important;
+    clip-path: none !important;
+    transform: none !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: auto !important;
+    min-width: auto !important;
+  }
+  
+  /* Position mobile Google form below dropdowns on mobile */
+  .mobile-google-form {
+    display: block !important; /* Ensure form is visible */
+    margin-top: 30px !important; /* Add space above form */
+    margin-bottom: 20px !important; /* Add space below form */
+    width: 100% !important; /* Full width on mobile */
+    clear: both !important; /* Ensure it's on a new line */
+  }
+  
+  /* Ensure mobile dropdowns appear first and are visible */
+  .mobile-submission-dropdowns {
+    display: block !important; /* Ensure dropdowns are visible */
+    margin-bottom: 20px !important; /* Add space below dropdowns */
+  }
+  
+  /* Make sure mobile elements are properly stacked */
+  .mobile-only {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  /* Mobile dropdown button styling */
+  .mobile-submission-dropdown .dropdown-btn {
+    width: 100% !important;
+    background: linear-gradient(135deg, #1a0033 0%, var(--dark-pink) 100%) !important;
+    border: 4px solid var(--dark-pink) !important;
+    border-radius: 0 !important;
+    padding: 20px !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    color: white !important;
+    font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif !important;
+    font-size: 1.8rem !important;
+    font-weight: bold !important;
+    margin-bottom: 3px !important;
+    box-shadow: 0 0 24px var(--dark-pink), 0 0 48px rgba(255, 255, 255, 0.2) !important;
+    position: relative !important;
+    z-index: 10 !important;
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    pointer-events: auto !important;
+  }
+  
+  
+  /* Dropdown arrow styling */
+  .mobile-submission-dropdown .dropdown-arrow {
+    font-size: 1.5rem !important;
+    color: #ffffff !important;
+    transition: transform 0.3s ease !important;
+    margin-left: 15px !important;
+  }
+  
+  /* Dropdown content styling */
+  .mobile-submission-dropdown .dropdown-content,
+  .online-resources-dropdown .dropdown-content,
+  .recommended-reading-dropdown .dropdown-content,
+  .opportunities-dropdown .dropdown-content {
+    background: #000 !important;
+    color: white !important;
+    padding: 0 !important; /* Start with no padding */
+    border: none !important;
+    border-radius: 0 !important;
+    margin-top: 3px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    max-height: 0 !important; /* Start collapsed */
+    opacity: 0 !important; /* Start invisible */
+  }
+
+  /* Active dropdown content */
+  .mobile-submission-dropdown.active .dropdown-content,
+  .online-resources-dropdown.active .dropdown-content,
+  .recommended-reading-dropdown.active .dropdown-content,
+  .opportunities-dropdown.active .dropdown-content {
+    padding: 20px !important; /* Show padding when active */
+    max-height: 2000px !important; /* Allow expansion when active */
+    opacity: 1 !important; /* Show when active */
+  }
+
+  /* Nested dropdown content (category dropdowns inside main dropdowns) */
+  .recommended-reading-dropdown .dropdown-content .dropdown-content,
+  .opportunities-dropdown .dropdown-content .dropdown-content {
+    background: #000 !important;
+    color: white !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    margin-top: 5px !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+  }
+
+  /* Active nested dropdown content */
+  .recommended-reading-dropdown .dropdown-content .dropdown-content.active,
+  .opportunities-dropdown .dropdown-content .dropdown-content.active {
+    padding: 15px !important;
+    max-height: 1500px !important;
+    opacity: 1 !important;
+  }
+
+  .mobile-submission-dropdown .dropdown-content h3 {
+    color: white !important;
+    margin-bottom: 15px !important;
+    font-size: 1.4rem !important;
+  }
+
+  .mobile-submission-dropdown .dropdown-content p {
+    margin-bottom: 15px !important;
+    line-height: 1.6 !important;
+    font-size: 1rem !important;
+  }
+
+  .mobile-submission-dropdown .dropdown-content a {
+    color: var(--light-pink) !important;
+    text-decoration: underline !important;
+  }
+
+  /* Ensure lists show bullet points with maximum specificity */
+  .mobile-submission-dropdown .dropdown-content ul,
+  body .mobile-submission-dropdown .dropdown-content ul,
+  html .mobile-submission-dropdown .dropdown-content ul {
+    list-style: disc !important;
+    list-style-type: disc !important;
+    margin-left: 20px !important;
+    margin-bottom: 15px !important;
+    padding-left: 0 !important;
+  }
+
+  .mobile-submission-dropdown .dropdown-content li,
+  body .mobile-submission-dropdown .dropdown-content li,
+  html .mobile-submission-dropdown .dropdown-content li {
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
+    list-style: disc !important;
+    list-style-type: disc !important;
+    display: list-item !important;
+  }
+
+  /* Remove bullet points from online resources dropdown */
+  .online-resources-dropdown .dropdown-content ul,
+  body .online-resources-dropdown .dropdown-content ul,
+  html .online-resources-dropdown .dropdown-content ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .online-resources-dropdown .dropdown-content li,
+  body .online-resources-dropdown .dropdown-content li,
+  html .online-resources-dropdown .dropdown-content li {
+    list-style: none !important;
+    list-style-type: none !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Remove bullet points from recommended reading dropdown */
+  .recommended-reading-dropdown .dropdown-content ul,
+  body .recommended-reading-dropdown .dropdown-content ul,
+  html .recommended-reading-dropdown .dropdown-content ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .recommended-reading-dropdown .dropdown-content li,
+  body .recommended-reading-dropdown .dropdown-content li,
+  html .recommended-reading-dropdown .dropdown-content li {
+    list-style: none !important;
+    list-style-type: none !important;
+    display: block !important;
+    margin-bottom: 8px !important;
+    line-height: 1.4 !important;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Applications form styling */
+  .applications-form {
+    display: block !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+    width: 100% !important;
+    clear: both !important;
+  }
+
+  .applications-form iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 1400px !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  
+  /* Force mobile Google form to be visible with high specificity */
+  .mobile-google-form,
+  body .mobile-google-form,
+  html .mobile-google-form,
+  .mobile-only.mobile-google-form,
+  body .mobile-only.mobile-google-form,
+  html .mobile-only.mobile-google-form {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    width: 100vw !important; /* Full viewport width */
+    max-width: 100vw !important; /* Ensure full width */
+    overflow: visible !important;
+    position: relative !important;
+    left: 0 !important; /* Align to left edge */
+    right: 0 !important; /* Align to right edge */
+    top: auto !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    margin: 30px 0 20px 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+    clip: auto !important;
+    clip-path: none !important;
+    transform: none !important;
+    max-height: none !important;
+    min-height: auto !important;
+    min-width: 100vw !important; /* Minimum full viewport width */
+    clear: both !important;
+    box-sizing: border-box !important; /* Include padding in width calculation */
+  }
+  
+  /* Ensure the iframe inside the form fills the entire container */
+  .mobile-google-form iframe,
+  body .mobile-google-form iframe,
+  html .mobile-google-form iframe {
+    width: 100% !important; /* Full width of container */
+    max-width: 100% !important; /* No max-width restriction */
+    height: 2000px !important; /* Fixed height to show entire form */
+    min-height: 2000px !important; /* Minimum height for complete form visibility */
+    border: none !important; /* Remove iframe border */
+    margin: 0 !important; /* Remove iframe margin */
+    padding: 0 !important; /* Remove iframe padding */
+    display: block !important; /* Ensure iframe is visible */
+  }
+  
+  /* Hide desktop submissions elements on mobile */
+  .submissions-layout,
+  .submissions-left,
+  .submission-encouragement,
+  .submission-guidelines,
+  .submissions-right,
+  .google-form,
+  .desktop-only,
+  body .submissions-layout,
+  html .submissions-layout,
+  body .submissions-left,
+  html .submissions-left,
+  body .submission-encouragement,
+  html .submission-encouragement,
+  body .submission-guidelines,
+  html .submission-guidelines,
+  body .submissions-right,
+  html .submissions-right,
+  body .google-form,
+  html .google-form,
+  body .desktop-only,
+  html .desktop-only,
+  [class*="submissions-layout"],
+  [class*="submissions-left"],
+  [class*="submission-encouragement"],
+  [class*="submission-guidelines"],
+  [class*="submissions-right"],
+  [class*="google-form"],
+  [class*="desktop-only"],
+
+  /* Hide desktop applications elements on mobile */
+  .applications-layout,
+  .applications-left,
+  .applications-intro,
+  .positions-section,
+  .requirements-section,
+  .benefits-section,
+  .applications-right,
+  .application-form-section,
+  .contact-section,
+  body .applications-layout,
+  html .applications-layout,
+  body .applications-left,
+  html .applications-left,
+  body .applications-intro,
+  html .applications-intro,
+  body .positions-section,
+  html .positions-section,
+  body .requirements-section,
+  html .requirements-section,
+  body .benefits-section,
+  html .benefits-section,
+  body .applications-right,
+  html .applications-right,
+  body .application-form-section,
+  html .application-form-section,
+  body .contact-section,
+  html .contact-section,
+  [class*="applications-layout"],
+  [class*="applications-left"],
+  [class*="applications-intro"],
+  [class*="positions-section"],
+  [class*="requirements-section"],
+  [class*="benefits-section"],
+  [class*="applications-right"],
+  [class*="application-form-section"],
+  [class*="contact-section"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+    transform: scale(0) !important;
+    max-height: 0 !important;
+    max-width: 0 !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+  }
+
+/* Applications page styling - clean and simple */
+.applications-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Mobile form - visible on mobile, hidden on desktop */
+.mobile-form {
+  display: block;
+  visibility: visible;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.mobile-form h2 {
+  color: var(--dark-pink);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.form-container {
+  border: 2px solid var(--light-pink);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container iframe {
+  border-radius: 8px;
+  width: 100%;
+}
+
+
+
+.applications-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.applications-left {
+  padding-right: 20px;
+}
+
+.applications-right {
+  padding-left: 20px;
+}
+
+.applications-intro h2 {
+  color: var(--dark-pink);
+  margin-bottom: 20px;
+}
+
+.applications-intro p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.positions-section,
+.requirements-section,
+.benefits-section {
+  margin-top: 40px;
+}
+
+.positions-section h3,
+.requirements-section h3,
+.benefits-section h3 {
+  color: var(--dark-pink);
+  margin-bottom: 20px;
+}
+
+.position-card {
+  margin-bottom: 25px;
+  border: 2px solid var(--light-pink);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.position-btn {
+  width: 100%;
+  background: var(--dark-pink);
+    color: white;
+  border: none;
+  padding: 15px 20px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.position-btn:hover {
+  background: var(--pink);
+}
+
+.position-btn h4 {
+  margin: 0;
+}
+
+.position-details {
+  display: none;
+    padding: 20px;
+  background: var(--light-pink);
+  color: var(--text-dark);
+}
+
+.position-details p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.position-details ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.position-details li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.requirements-grid,
+.benefits-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.requirement-item,
+.benefit-item {
+  background: var(--light-pink);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--pink);
+}
+
+.requirement-item h4,
+.benefit-item h4 {
+  color: var(--dark-pink);
+  margin-bottom: 10px;
+}
+
+.requirement-item p,
+.benefit-item p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.application-form-section {
+  margin-bottom: 40px;
+}
+
+.application-form iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+  background: var(--light-pink);
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid var(--pink);
+}
+
+.contact-section h3 {
+  color: var(--dark-pink);
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-btn {
+    display: block;
+  background: var(--dark-pink);
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+  background: var(--pink);
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 750px) {
+
+  .applications-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .applications-left,
+  .applications-right {
+    padding: 0;
+  }
+
+  .requirements-grid,
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .position-card {
+    margin-bottom: 20px;
+  }
+
+  .position-btn {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+
+  .position-details {
+    padding: 15px;
+  }
+
+  .requirement-item,
+  .benefit-item {
+    padding: 15px;
+  }
+}
+
+/* Extra small mobile devices */
+@media screen and (max-width: 480px) {
+}
+
+
+
+  
+  /* Mobile home page layout reorganization using CSS Grid */
+  .home-top,
+  body .home-top,
+  html .home-top {
+    display: grid !important;
+    grid-template-rows: auto auto auto auto !important;
+    gap: 5px !important; /* Reduced from 10px to 5px */
+    padding: 10px !important; /* Reduced from 15px to 10px */
+    justify-items: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  /* Row 1: Logo and Curiositas at top */
+  .home-left-section,
+  body .home-left-section,
+  html .home-left-section {
+    grid-row: 1 !important;
+    text-align: center !important;
+    justify-self: center !important;
+  }
+  
+  .home-logo-btn,
+  body .home-logo-btn,
+  html .home-logo-btn {
+    margin-bottom: 4px !important; /* Reduced from 8px to 4px */
+  }
+  
+  .home-logo-btn img,
+  body .home-logo-btn img,
+  html .home-logo-btn img {
+    width: 120px !important;
+    height: auto !important;
+  }
+  
+  .main-title,
+  body .main-title,
+  html .main-title {
+    font-size: 2rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Row 2: Pink TV and Remote side by side - closer together */
+  .pinktv,
+  #pinktv,
+  body .pinktv,
+  body #pinktv,
+  html .pinktv,
+  html #pinktv {
+    grid-row: 2 !important;
+    grid-column: 1 !important;
+    width: auto !important;
+    height: 250px !important;
+    justify-self: center !important;
+    margin-right: 0 !important;
+  }
+  
+  .remote-btn,
+  #remote-btn,
+  body .remote-btn,
+  body #remote-btn,
+  html .remote-btn,
+  html #remote-btn {
+    grid-row: 2 !important;
+    grid-column: 2 !important;
+    width: auto !important;
+    height: 250px !important;
+    justify-self: center !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Row 3: Submit and Applications buttons side by side - closer together */
+  .home-submit-btn,
+  body .home-submit-btn,
+  html .home-submit-btn {
+    grid-row: 3 !important;
+    grid-column: 1 !important;
+    justify-self: center !important;
+    margin-right: 0 !important;
+  }
+  
+  .home-submit-btn img,
+  body .home-submit-btn img,
+  html .home-submit-btn img {
+    width: auto !important;
+    height: 200px !important;
+  }
+  
+  .home-join-btn,
+  body .home-join-btn,
+  html .home-join-btn {
+    grid-row: 3 !important;
+    grid-column: 2 !important;
+    justify-self: center !important;
+    margin-left: 0 !important;
+  }
+  
+  .home-join-btn img,
+  body .home-join-btn img,
+  html .home-join-btn img {
+    width: auto !important;
+    height: 200px !important;
+  }
+  
+  /* Hide the home-right-section wrapper to prevent conflicts */
+  .home-right-section {
+    display: contents !important;
+  }
+  
+  /* Hide the home-right-section wrapper to prevent conflicts */
+  .home-right-section {
+    display: contents !important;
+  }
+  
+  /* CDs stacked two at a time - MOBILE ONLY - OVERRIDE ALL DESKTOP CSS */
+  .y2k-cd-nav,
+  body .y2k-cd-nav,
+  html .y2k-cd-nav,
+  .home-top .y2k-cd-nav {
+    order: 4 !important;
+    display: grid !important;
+    grid-template-columns: 45vw 45vw !important; /* About half viewport width each */
+    grid-template-rows: auto auto auto !important; /* Auto height rows */
+    gap: 20px !important; /* Increased gap for larger images */
+    width: 100% !important; /* Full width */
+    max-width: 100% !important;
+    margin: 20px auto !important; /* Centered with more margin */
+    justify-content: center !important;
+    align-items: start !important;
+    padding: 0 10px !important; /* Add some padding */
+    grid-auto-flow: row !important;
+    background: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+  
+  .cd-btn,
+  body .cd-btn,
+  html .cd-btn,
+  .y2k-cd-nav .cd-btn {
+    width: 45vw !important; /* About half the viewport width */
+    height: auto !important; /* Auto height to accommodate content */
+    min-height: 140px !important; /* Minimum height for consistency */
+    justify-self: center !important;
+    text-align: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    float: none !important;
+    position: static !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-size: 0.9em !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    transition: none !important;
+    margin-bottom: 8px !important; /* Increased spacing */
+    box-sizing: border-box !important;
+  }
+  
+  .cd-btn img,
+  body .cd-btn img,
+  html .cd-btn img,
+  .y2k-cd-nav .cd-btn img {
+    width: 45vw !important; /* About half the viewport width */
+    height: 45vw !important; /* Maintain aspect ratio */
+    max-width: 200px !important; /* Cap at reasonable size */
+    max-height: 200px !important; /* Cap at reasonable size */
+    object-fit: contain !important;
+    margin-bottom: 8px !important; /* Increased spacing */
+    border-radius: 0 !important;
+    background: none !important;
+    transition: transform 0.2s !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .cd-btn span,
+  body .cd-btn span,
+  html .cd-btn span,
+  .y2k-cd-nav .cd-btn span {
+    font-weight: bold !important;
+    font-size: 0.9em !important; /* Slightly larger text */
+    display: block !important;
+    margin-top: 0.5em !important;
+    text-align: center !important;
+    line-height: 1.1 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    max-width: 45vw !important; /* Match button width */
+    width: 100% !important; /* Full width of button */
+  }
+  
+  /* Force each CD to its proper grid position */
+  .cd-btn:nth-child(1) { /* Articles */
+    grid-row: 1 !important;
+    grid-column: 1 !important;
+    order: unset !important;
+  }
+  
+  .cd-btn:nth-child(2) { /* Computer Science */
+    grid-row: 1 !important;
+    grid-column: 2 !important;
+    order: unset !important;
+  }
+  
+  .cd-btn:nth-child(3) { /* Physics */
+    grid-row: 2 !important;
+    grid-column: 1 !important;
+    order: unset !important;
+  }
+  
+  .cd-btn:nth-child(4) { /* Biology */
+    grid-row: 2 !important;
+    grid-column: 2 !important;
+    order: unset !important;
+  }
+  
+  .cd-btn:nth-child(5) { /* Mathematics */
+    grid-row: 3 !important;
+    grid-column: 1 !important;
+    order: unset !important;
+  }
+  
+  .cd-btn:nth-child(6) { /* Chemistry */
+    grid-row: 3 !important;
+    grid-column: 2 !important;
+    order: unset !important;
+  }
+  
+  /* Force specific CD pairing order - Articles + Computer Science, Biology + Mathematics, Chemistry + Physics */
+  .cd-btn:nth-child(1) { /* Articles */
+    order: 1 !important;
+    grid-column: 1 !important;
+  }
+  
+  .cd-btn:nth-child(2) { /* Computer Science */
+    order: 2 !important;
+    grid-column: 2 !important;
+  }
+  
+  .cd-btn:nth-child(3) { /* Physics */
+    order: 3 !important;
+    grid-column: 1 !important;
+  }
+  
+  .cd-btn:nth-child(4) { /* Biology */
+    order: 4 !important;
+    grid-column: 2 !important;
+  }
+  
+  .cd-btn:nth-child(5) { /* Mathematics */
+    order: 5 !important;
+    grid-column: 1 !important;
+  }
+  
+  .cd-btn:nth-child(6) { /* Chemistry */
+    order: 6 !important;
+    grid-column: 2 !important;
+  }
+  
+  /* ===== MOBILE INDIVIDUAL ARTICLE STYLING ===== */
+  
+  /* Article page container - mobile optimized */
+  .article-page {
+    max-width: 100% !important;
+    width: 95% !important;
+    margin: 8px auto !important; /* Reduced from 10px to 8px */
+    padding: 12px !important; /* Reduced from 15px to 12px */
+    border-width: 2px !important;
+    box-shadow: 0 0 12px var(--dark-pink), 0 0 24px #fff2 !important;
+  }
+  
+  /* Article header image - mobile optimized */
+  .article-header-image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 8px !important;
+    margin-bottom: 12px !important; /* Reduced from 15px to 12px */
+  }
+  
+  /* Article title - mobile optimized */
+  .article-content h1,
+  .article-title {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 12px !important; /* Reduced from 15px to 12px */
+    text-align: center !important;
+  }
+  
+  /* Article content - mobile optimized */
+  .article-content {
+    padding: 0 8px !important; /* Reduced from 10px to 8px */
+  }
+  
+  .article-content p {
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 12px !important; /* Reduced from 15px to 12px */
+    text-align: justify !important;
+  }
+  
+  .article-content h2,
+  .article-content h3 {
+    font-size: 1.4rem !important;
+    margin: 16px 0 8px 0 !important; /* Reduced from 20px 0 10px 0 to 16px 0 8px 0 */
+    text-align: center !important;
+  }
+  
+  /* Article images - mobile optimized */
+  .article-content img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    margin: 12px 0 !important; /* Reduced from 15px 0 to 12px 0 */
+  }
+  
+  /* Article meta information - mobile optimized */
+  .article-meta {
+    text-align: center !important;
+    margin-bottom: 16px !important; /* Reduced from 20px to 16px */
+    font-size: 0.9rem !important;
+  }
+  
+  /* Article tags - mobile optimized */
+  .article-tags {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 6px !important; /* Reduced from 8px to 6px */
+    margin-bottom: 35px !important;
+  }
+  
+  .article-tags span {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 4px 8px !important;
+    border-radius: 12px !important;
+    font-size: 0.8rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  /* Article citations - mobile optimized */
+  .article-citations {
+    margin-top: 20px !important; /* Reduced from 25px to 20px */
+    padding: 12px !important; /* Reduced from 15px to 12px */
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 8px !important;
+  }
+  
+  .article-citations h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 12px !important; /* Reduced from 15px to 12px */
+    text-align: center !important;
+  }
+  
+  .article-citations ul {
+    padding-left: 20px !important;
+  }
+  
+  .article-citations li {
+    margin-bottom: 6px !important; /* Reduced from 8px to 6px */
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Hide articles list sidebar on mobile individual article pages */
+
+  
+  /* Ensure article content takes full width on mobile */
+  .article-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 8px !important; /* Reduced from 10px to 8px */
+  }
+  
+  /* Force article layout to be full width on mobile */
+  .article-layout {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Hide article list on mobile individual article pages - OVERRIDE ALL DESKTOP RULES */
+  .article-layout .article-tiles-sidebar,
+  body .article-layout .article-tiles-sidebar,
+  html .article-layout .article-tiles-sidebar,
+  .article-layout[data-subject] .article-tiles-sidebar,
+  body .article-layout[data-subject] .article-tiles-sidebar,
+  html .article-layout[data-subject] .article-tiles-sidebar {
+    display: none !important; /* Hide completely on mobile individual article pages */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+  
+  /* Keep article list visible on subject pages (not individual articles) */
+  .biology-page .article-tiles-sidebar,
+  .chemistry-page .article-tiles-sidebar,
+  .physics-page .article-tiles-sidebar,
+  .mathematics-page .article-tiles-sidebar,
+  .computer-science-page .article-tiles-sidebar {
+    display: block !important; /* Show on subject pages */
+    margin-top: -40px !important; /* Move up by 40px */
+    margin-bottom: 20px !important; /* Reduce bottom margin */
+    margin-left: 10px !important; /* Override desktop margins */
+    margin-right: 10px !important; /* Override desktop margins */
+    padding: 20px !important; /* Reduce padding */
+    height: auto !important; /* Allow height to adjust */
+    max-height: 80vh !important; /* Limit height on mobile */
+    overflow-y: auto !important;
+    width: 95% !important; /* Override desktop width */
+  }
+  
+  /* Adjust article tiles spacing on mobile - OVERRIDE ALL DESKTOP RULES */
+  .article-layout .article-tiles-sidebar .game-article-tile,
+  body .article-layout .article-tiles-sidebar .game-article-tile,
+  html .article-layout .article-tiles-sidebar .game-article-tile,
+  .article-layout[data-subject] .article-tiles-sidebar .game-article-tile,
+  body .article-layout[data-subject] .article-tiles-sidebar .game-article-tile,
+  html .article-layout[data-subject] .article-tiles-sidebar .game-article-tile,
+  .biology-page .article-tiles-sidebar .game-article-tile,
+  .chemistry-page .article-tiles-sidebar .game-article-tile,
+  .physics-page .article-tiles-sidebar .game-article-tile,
+  .mathematics-page .article-tiles-sidebar .game-article-tile,
+  .computer-science-page .article-tiles-sidebar .game-article-tile {
+    margin-bottom: 8px !important; /* Reduce spacing between tiles */
+    padding: 0 !important; /* Remove all padding from tiles */
+    width: 100% !important; /* Override desktop width */
+    max-width: none !important; /* Override desktop max-width */
+  }
+  
+  /* Ensure tile header images have no padding on mobile */
+  .article-layout .article-tiles-sidebar .tile-header-image,
+  body .article-layout .article-tiles-sidebar .tile-header-image,
+  html .article-layout .article-tiles-sidebar .tile-header-image,
+  .article-layout[data-subject] .article-tiles-sidebar .tile-header-image,
+  body .article-layout[data-subject] .article-tiles-sidebar .tile-header-image,
+  html .article-layout[data-subject] .article-tiles-sidebar .tile-header-image,
+  .biology-page .article-tiles-sidebar .tile-header-image,
+  .chemistry-page .article-tiles-sidebar .tile-header-image,
+  .physics-page .article-tiles-sidebar .tile-header-image,
+  .mathematics-page .article-tiles-sidebar .tile-header-image,
+  .computer-science-page .article-tiles-sidebar .tile-header-image {
+    padding: 0 !important; /* Ensure no padding around images */
+    margin: 0 !important; /* Ensure no margin around images */
+  }
+  
+  /* Move article title up on mobile */
+  .article-layout .article-title,
+  body .article-layout .article-title,
+  html .article-layout .article-title {
+    margin-top: 10px !important; /* Reduce top margin further (from 20px to 10px) */
+    margin-bottom: 16px !important; /* Reduce bottom margin */
+  }
+  
+  /* Adjust article meta bar position on mobile */
+  .article-layout .article-meta-bar,
+  body .article-layout .article-meta-bar,
+  html .article-layout .article-meta-bar {
+    margin-top: -10px !important; /* Move up by 10px (from 0 to -10px) */
+    margin-bottom: 16px !important; /* Reduce bottom margin */
+  }
+  
+  /* Move camera screen up on mobile */
+  .article-layout .camera-screen,
+  body .article-layout .camera-screen,
+  html .article-layout .camera-screen {
+    margin-top: -50px !important; /* Move up by 50px (increased from -30px) */
+    margin-bottom: 16px !important; /* Reduce bottom margin */
+  }
+  
+  /* Adjust article content spacing on mobile */
+  .article-layout .article-content,
+  body .article-layout .article-content,
+  html .article-layout .article-content {
+    padding-top: 16px !important; /* Reduce top padding */
+    padding-bottom: 16px !important; /* Reduce bottom padding */
+    padding-left: 3px !important; /* Add equal left padding to match right side */
+    padding-right: 3px !important; /* Add equal right padding to match left side */
+    box-sizing: border-box !important; /* Ensure padding is included in width calculation */
+  }
+  
+  /* Move article citations up on mobile */
+  .article-layout .article-citations,
+  body .article-layout .article-citations,
+  html .article-layout .article-citations {
+    margin-top: 16px !important; /* Reduce top margin */
+    padding-top: 16px !important; /* Reduce top padding */
+  }
+  
+  /* Adjust overall article page spacing on mobile */
+  .article-layout .article-page,
+  body .article-layout .article-page,
+  html .article-layout .article-page {
+    margin-top: -5px !important; /* Move up by 5px (from 8px to -5px) */
+    padding-top: 8px !important; /* Reduce top padding further (from 12px to 8px) */
+  }
+  
+  /* Compact article tiles sidebar on mobile */
+  .article-layout .article-tiles-sidebar .sidebar-title,
+  body .article-layout .article-tiles-sidebar .sidebar-title,
+  html .article-layout .article-tiles-sidebar .sidebar-title {
+    margin-bottom: 12px !important; /* Reduce title margin */
+    padding-bottom: 8px !important; /* Reduce title padding */
+  }
+  
+  /* Reduce spacing in article tiles list on mobile */
+  .article-layout .article-tiles-sidebar .article-tiles-list,
+  body .article-layout .article-tiles-sidebar .article-tiles-list,
+  html .article-layout .article-tiles-sidebar .article-tiles-list {
+    gap: 6px !important; /* Reduce gap between tiles */
+  }
+  
+  /* Compact tag filter bar on mobile */
+  .article-layout .article-tiles-sidebar .game-tag-filter-bar,
+  body .article-layout .article-tiles-sidebar .game-tag-filter-bar,
+  html .article-layout .article-tiles-sidebar .game-tag-filter-bar {
+    margin-bottom: 12px !important; /* Reduce bottom margin */
+    padding-bottom: 8px !important; /* Reduce bottom padding */
+  }
+  
+  /* Hide right sidebar on mobile individual article pages - OVERRIDE ALL DESKTOP RULES */
+  .article-layout .right-sidebar,
+  body .article-layout .right-sidebar,
+  html .article-layout .right-sidebar,
+  .article-layout[data-subject] .right-sidebar,
+  body .article-layout[data-subject] .right-sidebar,
+  html .article-layout[data-subject] .right-sidebar {
+    display: none !important; /* Hide completely on mobile individual article pages */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+  
+  /* FINAL OVERRIDE - Hide article list on mobile individual article pages */
+  body .article-layout .article-tiles-sidebar,
+  html .article-layout .article-tiles-sidebar,
+  body .article-layout[data-subject] .article-tiles-sidebar,
+  html .article-layout[data-subject] .article-tiles-sidebar {
+    display: none !important; /* Hide completely on mobile individual article pages */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+  
+  body .article-layout .right-sidebar,
+  html .article-layout .right-sidebar {
+    display: none !important; /* Hide completely on mobile individual article pages */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+  
+
+  
+  /* ===== MOBILE SUBJECT PAGE LAYOUT - PREVENT OVERLAPPING ===== */
+  
+  /* Subject page container - mobile optimized */
+  .subject-page,
+  .biology-page,
+  .chemistry-page,
+  .physics-page,
+  .mathematics-page,
+  .computer-science-page {
+    padding: 12px !important; /* Reduced from 15px to 12px */
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Header row - prevent overlap with main content */
+  .header-row {
+    margin-bottom: 8px !important; /* Reduced from 16px to 8px */
+    padding: 8px !important; /* Reduced from 12px to 8px */
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .subject-title {
+    font-size: 2rem !important;
+    margin: 0 0 6px 0 !important; /* Reduced from 12px to 6px */
+    padding: 0 !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+  }
+  
+  /* Definition image row - stack vertically on mobile to prevent overlap */
+  .definition-image-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important; /* Reduced from 20px to 16px */
+    margin-bottom: 20px !important; /* Reduced from 25px to 20px */
+    padding: 12px !important; /* Reduced from 15px to 12px */
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Word image section - prevent overlap, hide images on mobile */
+  .word-image-section {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 16px !important; /* Reduced from 20px to 16px */
+    padding: 12px !important; /* Reduced from 15px to 12px */
+    box-sizing: border-box !important;
+  }
+  
+  .word-image-section img {
+    display: none !important;
+  }
+  
+  /* Word resources box - prevent overlap */
+  .word-resources-box {
+    margin-top: 16px !important; /* Reduced from 20px to 16px */
+    padding: 12px !important; /* Reduced from 15px to 12px */
+    background: rgba(0, 0, 0, 0.2) !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+  }
+  
+  .resources-content h3 {
+    font-size: 1.4rem !important;
+    margin-bottom: 12px !important; /* Reduced from 15px to 12px */
+    text-align: center !important;
+  }
+  
+  .resource-details ul {
+    padding-left: 20px !important;
+    margin: 0 !important;
+  }
+  
+  .resource-details li {
+    margin-bottom: 10px !important; /* Reduced from 12px to 10px */
+    line-height: 1.5 !important;
+  }
+  
+  /* Second row section - prevent overlap */
+  .second-row-section {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important; /* Reduced from 25px to 20px */
+    margin-bottom: 20px !important; /* Reduced from 25px to 20px */
+    padding: 12px !important; /* Reduced from 15px to 12px */
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+
+  
+
+  
+  /* ===== MOBILE DROPDOWNS - CLEAN CONSOLIDATED VERSION ===== */
+  
+  /* SHOW DROPDOWNS BY DEFAULT (FOR MOBILE) */
+  .online-resources-dropdown,
+  .recommended-reading-dropdown,
+  .opportunities-dropdown {
+    display: block;
+    width: 100%;
+    margin: 16px 0 !important; /* Reduced from 20px to 16px */
+  }
+  
+  /* CONSOLIDATED DESKTOP HIDING - CLEAN AND EFFICIENT */
+  @media screen and (min-width: 751px) {
+    /* Hide all mobile dropdowns and their children on desktop */
+    .online-resources-dropdown,
+    .recommended-reading-dropdown,
+    .opportunities-dropdown,
+    .online-resources-dropdown *,
+    .recommended-reading-dropdown *,
+    .opportunities-dropdown *,
+    .mobile-only,
+    .mobile-only * {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      width: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      left: -9999px !important;
+      top: -9999px !important;
+      pointer-events: none !important;
+      user-select: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      background: transparent !important;
+      color: transparent !important;
+      font-size: 0 !important;
+      line-height: 0 !important;
+    }
+  }
+  
+  /* ADDITIONAL DESKTOP HIDING - Ensure dropdowns are hidden on all desktop screen sizes */
+  @media screen and (min-width: 750px) {
+    .online-resources-dropdown,
+    .recommended-reading-dropdown,
+    .opportunities-dropdown,
+    .mobile-submissions-dropdowns {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      width: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      left: -9999px !important;
+      top: -9999px !important;
+      pointer-events: none !important;
+      user-select: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      background: transparent !important;
+      color: transparent !important;
+      font-size: 0 !important;
+      line-height: 0 !important;
+    }
+    
+    /* EXTRA SPECIFICITY for mobile submissions dropdowns */
+    .mobile-submissions-dropdowns,
+    .mobile-submissions-dropdowns *,
+    body .mobile-submissions-dropdowns,
+    html .mobile-submissions-dropdowns,
+    .submissions-page .mobile-submissions-dropdowns,
+    .submissions-layout .mobile-submissions-dropdowns,
+    body .submissions-page .mobile-submissions-dropdowns,
+    html .submissions-page .mobile-submissions-dropdowns,
+    body .submissions-layout .mobile-submissions-dropdowns,
+    html .submissions-layout .mobile-submissions-dropdowns,
+    [class*="submissions"] .mobile-submissions-dropdowns,
+    [class*="submissions"] .mobile-submissions-dropdowns * {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      height: 0 !important;
+      width: 0 !important;
+      overflow: hidden !important;
+      position: absolute !important;
+      left: -9999px !important;
+      top: -9999px !important;
+      pointer-events: none !important;
+      user-select: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      background: transparent !important;
+      color: transparent !important;
+      font-size: 0 !important;
+      line-height: 0 !important;
+      clip: rect(0, 0, 0, 0) !important;
+      clip-path: inset(50%) !important;
+    }
+  }
+    
+  /* ===== MOBILE SUBJECT PAGES - SHOW ONLY QUOTE, TITLE, DEFINITION + DROPDOWNS ===== */
+  
+  /* Hide everything except title, definition image, quote image, and dropdowns */
+  .biology-page .definition-image-row > *:not(.definition-img):not(.subject-figure-img):not(.online-resources-dropdown):not(.recommended-reading-dropdown):not(.opportunities-dropdown),
+  .biology-page .second-row-section > *:not(.word-image-section),
+  .biology-page .word-image-section > *:not(.word-resources-box),
+  .chemistry-page .definition-image-row > *:not(.definition-img):not(.subject-figure-img):not(.online-resources-dropdown):not(.recommended-reading-dropdown):not(.opportunities-dropdown),
+  .chemistry-page .second-row-section > *:not(.word-image-section),
+  .chemistry-page .word-image-section > *:not(.word-resources-box),
+  .physics-page .definition-image-row > *:not(.definition-img):not(.subject-figure-img):not(.online-resources-dropdown):not(.recommended-reading-dropdown):not(.opportunities-dropdown),
+  .physics-page .second-row-section > *:not(.word-image-section),
+  .physics-page .word-image-section > *:not(.word-resources-box),
+  .mathematics-page .definition-image-row > *:not(.definition-img):not(.subject-figure-img):not(.online-resources-dropdown):not(.recommended-reading-dropdown):not(.opportunities-dropdown),
+  .mathematics-page .second-row-section > *:not(.word-image-section),
+  .mathematics-page .word-image-section > *:not(.word-resources-box),
+  .computer-science-page .definition-image-row > *:not(.definition-img):not(.subject-figure-img):not(.online-resources-dropdown):not(.recommended-reading-dropdown):not(.opportunities-dropdown),
+  .computer-science-page .second-row-section > *:not(.word-image-section),
+  .computer-science-page .word-image-section > *:not(.word-resources-box) {
+    display: none !important;
+  }
+  
+  /* ===== CONSOLIDATED DROPDOWN STYLING ===== */
+  
+
+  
+  /* Position card container styling */
+  .online-resources-dropdown,
+  .recommended-reading-dropdown,
+  .opportunities-dropdown {
+    background: rgba(0, 0, 0, 0.7) !important;
+    border: 3px solid #ffffff !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 3px !important; /* Reduced from 5px to 3px */
+    box-shadow: 0 0 16px #ffffff, 0 0 32px rgba(255, 255, 255, 0.2) !important;
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  /* Main dropdown button styling - POSITION CARD STYLE */
+  .online-resources-dropdown .dropdown-btn,
+  .recommended-reading-dropdown .dropdown-btn,
+  .opportunities-dropdown .dropdown-btn {
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 20px !important; /* Reduced from 25px to 20px */
+    cursor: pointer !important;
+    text-align: left !important;
+    transition: all 0.3s ease !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif !important;
+    font-size: 1.4em !important;
+    font-weight: 700 !important;
+    color: white !important;
+    letter-spacing: 1px !important;
+    outline: none !important;
+  }
+
+  /* Main dropdown button arrow */
+  .online-resources-dropdown .dropdown-btn::after,
+  .recommended-reading-dropdown .dropdown-btn::after,
+  .opportunities-dropdown .dropdown-btn::after {
+    content: '▼' !important;
+    font-size: 0.8rem !important;
+    transition: transform 0.3s ease !important;
+  }
+
+  .online-resources-dropdown.active .dropdown-btn::after,
+  .recommended-reading-dropdown.active .dropdown-btn::after,
+  .opportunities-dropdown.active .dropdown-btn::after {
+    transform: rotate(180deg) !important;
+  }
+
+  /* Force closer spacing for main dropdown sections */
+  .online-resources-dropdown + .recommended-reading-dropdown,
+  .recommended-reading-dropdown + .opportunities-dropdown {
+    margin-top: -12px !important; /* Reduced from -15px to -12px */
+  }
+  
+  /* Ensure title, definition image, and quote image are visible */
+  .biology-page .subject-title,
+  .biology-page .definition-img,
+  .biology-page .subject-figure-img,
+  .chemistry-page .subject-title,
+  .chemistry-page .definition-img,
+  .chemistry-page .subject-figure-img,
+  .physics-page .subject-title,
+  .physics-page .definition-img,
+  .physics-page .subject-figure-img,
+  .mathematics-page .subject-title,
+  .mathematics-page .definition-img,
+  .mathematics-page .subject-figure-img,
+  .computer-science-page .subject-title,
+  .computer-science-page .definition-img,
+  .computer-science-page .subject-figure-img {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: 3px 0 !important; /* Reduced from 5px 0 to 3px 0 */
+  }
+  
+  /* Style the title - keep original subject colors */
+  .biology-page .subject-title {
+    color: var(--dark-green) !important;
+  }
+  
+  .chemistry-page .subject-title {
+    color: var(--dark-red) !important;
+  }
+  
+  .physics-page .subject-title {
+    color: var(--dark-orange) !important;
+  }
+  
+  .mathematics-page .subject-title {
+    color: var(--dark-blue) !important;
+  }
+  
+  .computer-science-page .subject-title {
+    color: var(--dark-purple) !important;
+  }
+  
+  /* Style the images */
+  .definition-img,
+  .subject-figure-img {
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 3px auto !important; /* Reduced from 5px auto to 3px auto */
+    display: block !important;
+  }
+
+  /* Make all elements closer together on mobile */
+  .subject-page .subject-title,
+  .subject-page .definition-img,
+  .subject-page .subject-figure-img,
+  .subject-page .subject-game-image,
+  .subject-page .subject-ibook-image {
+    margin: 2px 0 !important; /* Reduced from 3px 0 to 2px 0 */
+  }
+
+  /* Override ALL desktop articles-grid rules for mobile */
+  .subject-page .articles-grid,
+  body .subject-page .articles-grid,
+  html .subject-page .articles-grid,
+  .biology-page .articles-grid,
+  .chemistry-page .articles-grid,
+  .physics-page .articles-grid,
+  .mathematics-page .articles-grid,
+  .computer-science-page .articles-grid,
+  body .game-articles-layout .articles-grid {
+    gap: 3px !important; /* Reduced from 5px to 3px */
+    padding: 2px !important; /* Reduced from 3px to 2px */
+  }
+
+  .subject-page .game-article-tile {
+    margin-bottom: 3px !important; /* Reduced from 5px to 3px */
+  }
+    
+  /* Centered scrollable list - MOBILE ONLY */
+  .centered-scrollable-list {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 85% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    max-height: 70vh !important;
+    background: #181828 !important;
+    border: 3px solid white !important;
+    border-radius: 12px !important;
+    box-shadow: 0 0 20px white, 0 0 40px rgba(255, 255, 255, 0.3) !important;
+    z-index: 999 !important;
+    overflow: hidden !important;
+    display: none !important;
+  }
+  
+  /* Allow JavaScript to show the menu */
+  .centered-scrollable-list.show-menu {
+    display: block !important;
+  }
+  
+  /* Mobile menu button */
+  .mobile-menu-btn,
+  body .mobile-menu-btn,
+  html .mobile-menu-btn {
+    display: block !important;
+    position: fixed !important;
+    top: 20px !important;
+    left: 20px !important;
+    z-index: 1001 !important;
+    background: #181828 !important;
+    border: 2px solid white !important;
+    border-radius: 8px !important;
+    padding: 12px 16px !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 0 8px white, 0 0 16px white !important;
+    user-select: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+  
+  /* Close mode styling */
+  .mobile-menu-btn.close-mode {
+    padding: 12px 16px !important;
+    min-width: 50px !important;
+    text-align: center !important;
+  }
+    
+  .centered-scrollable-list .list-header {
+    background: white !important;
+    color: #181828 !important;
+    padding: 20px !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    border-bottom: 3px solid white !important;
+  }
+  
+  .centered-scrollable-list .list-content {
+    max-height: calc(90vh - 20px) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  .centered-scrollable-list .list-item {
+    padding: 15px 20px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  .centered-scrollable-list .list-item:last-child {
+    border-bottom: none !important;
+  }
+  
+  .centered-scrollable-list .list-item:active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    transform: translateX(10px) !important;
+  }
+  
+  /* Custom scrollbar for the list */
+  .centered-scrollable-list .list-content::-webkit-scrollbar {
+    width: 8px !important;
+  }
+  
+  .centered-scrollable-list .list-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 4px !important;
+  }
+  
+  .centered-scrollable-list .list-content::-webkit-scrollbar-thumb {
+    background: white !important;
+    border-radius: 4px !important;
+    border: 1px solid #181828 !important;
+  }
+
+  .mobile-form {
+    visibility: visible;
+    display: block;
+  }
+  
+  /* FINAL OVERRIDE - Ensure mobile styles take precedence over ALL conflicting rules */
+  body .home-top,
+  html .home-top {
+    gap: 5px !important;
+    padding: 10px !important;
+  }
+  
+  body .y2k-cd-nav,
+  html .y2k-cd-nav {
+    gap: 15px !important;
+    margin: 10px auto 0 auto !important;
+  }
+  
+  body .cd-btn,
+  html .cd-btn {
+    margin-bottom: 4px !important;
+  }
+  
+  body .cd-btn img,
+  html .cd-btn img {
+    margin-bottom: 4px !important;
+  }
+  
+  body .articles-grid,
+  html .articles-grid,
+  body .game-articles-layout .articles-grid {
+    gap: 3px !important;
+    padding: 2px !important;
+}
+
+  body {
+      padding: 12px;
+  }
+}
+
+/* Responsive navigation - LAPTOP ONLY (900px to 1200px) */
+@media (min-width: 900px) and (max-width: 1200px) {
+  .dog-nav {
+    gap: 12px;
+    margin-left: 16px;
+  }
+
+  .dog-btn img {
+    width: auto;
+    height: 100px;
+  }
+
+  .dog-btn span {
+    font-size: 0.7em;
+  }
+
+  .home-top {
+    padding: 0 8px;
+  }
+  
+  .home-left-section, .home-right-section {
+    gap: 15px;
+  }
+  
+  .article-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .camera-screen {
+    margin-top: -100px;
+  }
+  
+  .camera-screen-img {
+    width: 250px;
+  }
+
+  /* Prevent definition images from being cut off on medium screens */
+  .definition-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 300px;
+    object-fit: contain;
+  }
+
+  .definition-image-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .definition-image-row .word-image-section {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .subject-figure-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 280px;
+  }
+}
+
+/* Responsive encouragement section - LAPTOP ONLY (751px to 900px) */
+@media (min-width: 750px) and (max-width: 900px) {
+  .top-bar {
+    gap: 16px;
+    margin-top: 12px;
+  }
+
+  .dog-nav {
+    gap: 8px;
+    margin-left: 12px;
+  }
+
+  .dog-btn img {
+    width: auto;
+    height: 100px;
+  }
+
+  .dog-btn span {
+    font-size: 0.6em;
+  }
+
+  .submission-guidelines {
+    margin: 0 20px 30px 20px;
+    padding: 20px;
+  }
+  
+  .submission-guidelines h2 {
+    font-size: 1.8em;
+  }
+  
+  .guidelines-section {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .submission-encouragement {
+    margin: 0 20px 30px 20px;
+    padding: 20px;
+  }
+  
+  .submission-encouragement h3 {
+    font-size: 1.6em;
+  }
+  
+  /* Stack layout on smaller screens */
+  .submissions-layout {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+  
+  .submissions-left,
+  .submissions-right {
+    max-width: 100%;
+  }
+  
+  /* Stack applications layout on smaller screens */
+  .applications-layout {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  /* Ensure definition images are fully visible on smaller screens */
+  .definition-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    min-height: 250px;
+    object-fit: contain;
+  }
+
+  .definition-image-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .definition-image-row .word-image-section {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .subject-figure-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 220px;
+  }
+  
+  .applications-left,
+  .applications-right {
+    max-width: 100%;
+  }
+
+  .applications-content {
+    padding: 0 15px;
+  }
+  
+  .applications-intro h2 {
+    font-size: 2em;
+  }
+  
+  .requirements-grid, .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  .y2k-cd-nav {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 0;
+}
+.cd-btn {
+    width: 200px;
+    height: 230px;
+    font-size: 1em;
+    padding: 10px 6px 4px 6px;
+}
+.cd-btn img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.home-top {
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.home-left-section, .home-right-section {
+    gap: 10px;
+  }
+  
+.header-row {
+  margin: 30px;
+}
+
+.game-articles-layout {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-sidebar {
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 12px 4px;
+  margin-bottom: 12px;
+}
+
+.game-tag-filter {
+  flex-direction: row;
+  gap: 8px;
+  width: auto;
+}
+
+.game-main-content {
+  gap: 18px;
+}
+
+.other-articles-list {
+  max-height: 30vh;
+}
+
+.article-page {
+  max-width: 98vw;
+  margin: 10px auto;
+}
+
+.article-content, .article-citations {
+  padding: 12px 6vw 0 6vw;
+}
+
+.recommended-reading-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+  .subject-ibook-image {
+  width: 625px;
+}
+
+.resources-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+}
+
+/* Medium screens (≤1000px) */
+@media (max-width: 1000px) {
+  .definition-image-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .definition-image-row .word-image-section {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .second-row-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+/* Small mobile screens (≤600px) */
+@media (max-width: 600px) {
+  .mobile-form {
+    visibility: visible;
+    display: block;
+  }
+  .submission-guidelines {
+    margin: 0 10px 20px 10px;
+    padding: 15px;
+  }
+  
+  .submission-guidelines h2 {
+    font-size: 1.5em;
+  }
+  
+  .guidelines-section h3 {
+    font-size: 1.1em;
+  }
+  
+  .submission-encouragement {
+    margin: 0 10px 20px 10px;
+    padding: 15px;
+  }
+  
+  .submission-encouragement h3 {
+    font-size: 1.4em;
+  }
+  
+  .submission-encouragement p {
+    font-size: 1em;
+  }
+  
+  .applications-intro, .position-card, .how-to-apply, .contact-section {
+    padding: 20px;
+  }
+  
+  .applications-intro h2 {
+    font-size: 1.6em;
+  }
+  
+  .positions-section h3, .requirements-section h3, .benefits-section h3, .how-to-apply h3, .contact-section h3 {
+    font-size: 1.5em;
+  }
+  .modal-content {
+      width: 95%;
+      padding: 15px;
+      margin: 10% auto;
+  }
+  .modal-title {
+      font-size: 2em;
+  }
+
+  .modal-header-image {
+      height: 150px;
+  }
+
+  .y2k-cd-nav {
+    grid-template-columns: 1fr;
+      gap: 12px;
+      border-radius: 0;
+      padding: 0;
+  }
+  .cd-btn {
+      width: 180px;
+      height: 210px;
+      font-size: 0.9em;
+  }
+  .cd-btn img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 0;
+  }
+
+  .recommended-reading-section {
+    padding: 0 10px;
+  }
+  
+  .subject-ibook-image {
+    width: 500px;
+  }
+  
+  .recommended-reading-buttons {
+    gap: 6px;
+  }
+  
+  .recommended-reading-btn {
+    padding: 6px 10px;
+    font-size: 0.7em;
+    min-width: 70px;
+  }
+  
+  .resources-section {
+    padding: 0 10px;
+  }
+  .mobile-form {
+    visibility: visible;
+    display: block;
+  }
+}
+
+/* ===== LAPTOP SCREENS: Disable mobile subjects dropdown and restore normal navigation (≥751px) ===== */
+@media (min-width: 750px) {
+  /* Hide mobile menu elements on laptop */
+  .mobile-menu-btn,
+  .centered-scrollable-list {
+    display: none !important;
+  }
+  
+  /* Hide the mobile subjects toggle button on laptop */
+  .subjects-toggle-btn {
+    display: none !important;
+  }
+  
+  /* Restore normal dog-nav layout on laptop */
+  .dog-nav {
+    position: static !important;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 24px !important;
+    align-items: center !important;
+    order: unset !important;
+    width: auto !important;
+  }
+  
+  /* Show all subject buttons normally on laptop */
+  .dog-nav .dog-btn {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: static !important;
+    margin: 0 !important;
+    width: auto !important;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+      /* Restore normal button styling on laptop */
+    .dog-nav .dog-btn img {
+      display: block !important;
+      height: 150px !important;
+      width: auto !important;
+      object-fit: contain !important;
+      border: none !important;
+      box-shadow: none !important;
+      background: none !important;
+      transition: transform 0.18s !important;
+      cursor: pointer !important;
+    }
+  
+  .dog-nav .dog-btn:focus img {
+    transform: scale(1.08) rotate(-8deg) !important;
+  }
+  
+  .dog-nav .dog-btn span {
+    display: block !important; /* Show text labels on laptop */
+    font-weight: bold !important;
+    font-size: 0.8em !important;
+    margin-top: 0.5em !important;
+    color: white !important;
+    font-family: 'Intel One Mono', Arial, sans-serif !important;
+  }
+  
+  /* Remove any dropdown-related styles on laptop */
+  .dog-nav.dropdown-open .dog-btn {
+    position: static !important;
+    display: flex !important;
+    margin: 0 !important;
+    width: auto !important;
+    min-width: auto !important;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  /* Hide mobile dropdowns on laptop/desktop */
+  .online-resources-dropdown,
+  .recommended-reading-dropdown,
+  .opportunities-dropdown,
+  .online-resources-dropdown *,
+  .recommended-reading-dropdown *,
+  .opportunities-dropdown * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+  
+  /* COMPREHENSIVE DESKTOP HIDING - Override ALL conflicting rules */
+  body .mobile-submission-dropdowns,
+  html .mobile-submission-dropdowns,
+  .submissions-page .mobile-submission-dropdowns,
+  .submissions-layout .mobile-submission-dropdowns,
+  body .submissions-page .mobile-submission-dropdowns,
+  html .submissions-page .mobile-submission-dropdowns,
+  body .submissions-layout .mobile-submission-dropdowns,
+  html .submissions-layout .mobile-submission-dropdowns,
+  body .mobile-form,
+  html .mobile-form,
+  .applications-page .mobile-form {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+  }
+  
+  /* FINAL DESKTOP OVERRIDE - Highest priority hiding */
+  .mobile-submission-dropdowns,
+  .mobile-submission-dropdowns *,
+  .mobile-google-form,
+  .mobile-google-form *,
+  .mobile-only,
+  body .mobile-submission-dropdowns,
+  html .mobile-submission-dropdowns,
+  .submissions-page .mobile-submission-dropdowns,
+  .submissions-layout .mobile-submission-dropdowns,
+  body .submissions-page .mobile-submission-dropdowns,
+  html .submissions-page .mobile-submission-dropdowns,
+  body .submissions-layout .mobile-submission-dropdowns,
+  html .submissions-layout .mobile-submission-dropdowns,
+  [class*="submissions"] .mobile-submission-dropdowns,
+  [class*="submissions"] .mobile-submission-dropdowns * {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
+    line-height: 0 !important;
+    clip: rect(0, 0, 0, 0) !important;
+    clip-path: inset(50%) !important;
+  }
+  .mobile-form {
+    visibility: hidden;
+    display: none;
+}
+}

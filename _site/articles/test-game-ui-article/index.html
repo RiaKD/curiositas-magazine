@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+    <title>Test Game UI Article | cūriōsitās</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+  <body class="">
+    
+    <div class="top-bar">
+        <div class="logo-container">
+            <a href="/index.html" title="Home" class="nav-btn home-btn">
+                <img src="/images/logo.png" alt="Curiositas Logo" class="nav-button" />
+                <span class="nav-button-label">Home</span>
+            </a>
+            <a href="/submissions.html" title="Submissions" class="nav-btn submit-btn">
+                <img src="/images/submit.png" alt="Submissions" class="nav-button" />
+                <span class="nav-button-label">Submissions</span>
+            </a>
+            <a href="/applications.html" title="Applications" class="nav-btn join-btn">
+                <img src="/images/join2.png" alt="Applications" class="nav-button" />
+                <span class="nav-button-label">Applications</span>
+            </a>
+        </div>
+        <div class="dog-nav">
+            <a href="/all-articles/" class="dog-btn dog-pink" title="Articles">
+                <img src="/images/dog/pink.png" alt="Articles Dog" />
+                <span>Articles</span>
+            </a>
+            <a href="/chemistry.html" class="dog-btn dog-red" title="Chemistry">
+                <img src="/images/dog/red.png" alt="Chemistry Dog" />
+                <span>Chemistry</span>
+            </a>
+            <a href="/physics.html" class="dog-btn dog-orange" title="Physics">
+                <img src="/images/dog/orange.png" alt="Physics Dog" />
+                <span>Physics</span>
+            </a>
+            <a href="/biology.html" class="dog-btn dog-green" title="Biology">
+                <img src="/images/dog/green.png" alt="Biology Dog" />
+                <span>Biology</span>
+            </a>
+            <a href="/mathematics.html" class="dog-btn dog-blue" title="Mathematics">
+                <img src="/images/dog/blue.png" alt="Mathematics Dog" />
+                <span>Mathematics</span>
+            </a>
+            <a href="/computer_science.html" class="dog-btn dog-purple" title="Computer Science">
+                <img src="/images/dog/purple.png" alt="Computer Science Dog" />
+                <span>Computer Science</span>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Menu</button>
+    
+    <!-- Centered Scrollable List -->
+    <div class="centered-scrollable-list" id="centeredList">
+        <div class="list-content">
+            <div class="list-item" data-subject="home">Home</div>
+            <div class="list-item" data-subject="all">All Articles</div>
+            <div class="list-item" data-subject="submissions">Submissions</div>
+            <div class="list-item" data-subject="applications">Applications</div>
+            <div class="list-item" data-subject="chemistry">Chemistry</div>
+            <div class="list-item" data-subject="physics">Physics</div>
+            <div class="list-item" data-subject="biology">Biology</div>
+            <div class="list-item" data-subject="mathematics">Mathematics</div>
+            <div class="list-item" data-subject="computer-science">Computer Science</div>
+        </div>
+    </div>
+    
+
+    
+
+<div class="article-layout" data-subject="none">
+  <div>
+      <h1 class="article-title"></h1>
+    <div class="article-page none-article-page">
+      <header class="article-header">
+        <div class="article-tags">
+          
+        </div>
+      </header>
+      <div class="article-meta-bar">
+        <span class="article-author">
+          
+            <img src="/images/gifs/p1.gif" alt="Pink gif" class="author-gif" />
+          
+          By 
+        </span>
+        <span class="article-date">Invalid DateTime</span>
+      </div>
+      <main class="article-content">
+        
+          <em>No content available for this article.</em>
+        
+      </main>
+      
+    </div>
+  </div>
+  <div class="right-sidebar">
+    <div class="camera-screen">
+      <img src="/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img" />
+      
+    </div>
+    
+    <div class="article-tiles-sidebar">
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        
+        
+          
+            
+              
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+            
+              
+            
+          
+        
+          
+            
+          
+        
+          
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+        
+        
+          <button class="game-tag-btn" data-tag="careers">careers</button>
+        
+          <button class="game-tag-btn" data-tag="advice">advice</button>
+        
+          <button class="game-tag-btn" data-tag="medicine">medicine</button>
+        
+          <button class="game-tag-btn" data-tag="marine">marine</button>
+        
+          <button class="game-tag-btn" data-tag="biotech">biotech</button>
+        
+      </div>
+      <div class="game-articles-list" id="game-articles-list">
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="/images/error.png" alt="Cryobiologist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Cryobiologist</div>
+            <a href="/articles/cryobiologist/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="/images/error.png" alt="Forensic Entomologist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Forensic Entomologist</div>
+            <a href="/articles/forensic-entomologist-career/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="/images/error.png" alt="Neurogeneticist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Neurogeneticist</div>
+            <a href="/articles/neurogeneticist-career/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="advice">
+            <img src="/images/error.png" alt="Exam advice" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Exam advice</div>
+            <a href="/articles/exam-advice-gcse/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="https://d2z0k1elb7rxgj.cloudfront.net/uploads/2019/07/computational-neuroscience-diagram-2.png" alt="Computational Neuroscientist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Computational Neuroscientist</div>
+            <a href="/articles/computational-neuroscientist-career/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="https://www.fxguide.com/wp-content/uploads/2020/06/quantum-computer_resize_md.jpg" alt="Quantum Computing Researcher" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Quantum Computing Researcher</div>
+            <a href="/articles/quantum-computing-researcher-career/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="careers,medicine">
+            <img src="https://d.techtimes.com/en/full/458480/phantom-laser-tattoo-removal-institute-medical-physics.png?w=1600&amp;h=1200&amp;q=88&amp;f=3c5799d7304b5df01d6199c6e6c73d06" alt="Medical Physicist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Medical Physicist</div>
+            <a href="/articles/medical-physicist-career/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="https://careersnow.ca/wp-content/uploads/2022/12/Flavourist-01.jpg" alt="Flavour Chemist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Flavour Chemist</div>
+            <a href="/articles/flavour-chemist-career/" class="tile-link"></a>
+          </div>
+        
+          <div class="game-article-tile" data-tags="careers,marine,biotech">
+            <img src="https://www.academicinfo.net/static/d35e90b6196456c1ec1b4ccc12b5a20e/14b42/marine1.jpg" alt="Marine Biotechnologist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Marine Biotechnologist</div>
+            <a href="/articles/marine-biotechnologist-career/" class="tile-link"></a>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/js/article-sidebar-filter.js"></script>
+ 
+
+    <script src="/js/script.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

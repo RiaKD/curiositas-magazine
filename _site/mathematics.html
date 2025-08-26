@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+    <title>Mathematics | cūriōsitās</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+  <body class="mathematics-page">
+    
+    <div class="top-bar">
+        <div class="logo-container">
+            <a href="/index.html" title="Home" class="nav-btn home-btn">
+                <img src="/images/logo.png" alt="Curiositas Logo" class="nav-button" />
+                <span class="nav-button-label">Home</span>
+            </a>
+            <a href="/submissions.html" title="Submissions" class="nav-btn submit-btn">
+                <img src="/images/submit.png" alt="Submissions" class="nav-button" />
+                <span class="nav-button-label">Submissions</span>
+            </a>
+            <a href="/applications.html" title="Applications" class="nav-btn join-btn">
+                <img src="/images/join2.png" alt="Applications" class="nav-button" />
+                <span class="nav-button-label">Applications</span>
+            </a>
+        </div>
+        <div class="dog-nav">
+            <a href="/all-articles/" class="dog-btn dog-pink" title="Articles">
+                <img src="/images/dog/pink.png" alt="Articles Dog" />
+                <span>Articles</span>
+            </a>
+            <a href="/chemistry.html" class="dog-btn dog-red" title="Chemistry">
+                <img src="/images/dog/red.png" alt="Chemistry Dog" />
+                <span>Chemistry</span>
+            </a>
+            <a href="/physics.html" class="dog-btn dog-orange" title="Physics">
+                <img src="/images/dog/orange.png" alt="Physics Dog" />
+                <span>Physics</span>
+            </a>
+            <a href="/biology.html" class="dog-btn dog-green" title="Biology">
+                <img src="/images/dog/green.png" alt="Biology Dog" />
+                <span>Biology</span>
+            </a>
+            <a href="/mathematics.html" class="dog-btn dog-blue" title="Mathematics">
+                <img src="/images/dog/blue.png" alt="Mathematics Dog" />
+                <span>Mathematics</span>
+            </a>
+            <a href="/computer_science.html" class="dog-btn dog-purple" title="Computer Science">
+                <img src="/images/dog/purple.png" alt="Computer Science Dog" />
+                <span>Computer Science</span>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Menu</button>
+    
+    <!-- Centered Scrollable List -->
+    <div class="centered-scrollable-list" id="centeredList">
+        <div class="list-content">
+            <div class="list-item" data-subject="home">Home</div>
+            <div class="list-item" data-subject="all">All Articles</div>
+            <div class="list-item" data-subject="submissions">Submissions</div>
+            <div class="list-item" data-subject="applications">Applications</div>
+            <div class="list-item" data-subject="chemistry">Chemistry</div>
+            <div class="list-item" data-subject="physics">Physics</div>
+            <div class="list-item" data-subject="biology">Biology</div>
+            <div class="list-item" data-subject="mathematics">Mathematics</div>
+            <div class="list-item" data-subject="computer-science">Computer Science</div>
+        </div>
+    </div>
+    
+
+    
+<div class="header-row">
+    <h1 class="subject-title">Mathematics</h1>
+</div>
+<main>
+    <div class="definition-image-row">
+        <img src="/images/definitions/mathematics.png" alt="Mathematics Definition" class="definition-img" />
+        <img id="mathematics-figure-img" src="/images/quotes/m1.png" alt="Mathematics Quote Figure" class="subject-figure-img" />
+        
+        <!-- Mobile-only online resources dropdown -->
+        <div class="online-resources-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Online Resources
+            </button>
+            <div class="dropdown-content">
+                <div class="resource-details">
+                    <ul>
+                        <li><span class="resource-name"><a href="https://www.mathsgenie.co.uk" target="_blank" class="resource-link">Maths Genie</a></span> - <span class="resource-description">Incredibly popular free resource with topic-by-topic questions, practice papers, and video solutions</span></li>
+                        <li><span class="resource-name"><a href="https://corbettmaths.com" target="_blank" class="resource-link">Corbettmaths</a></span> - <span class="resource-description">Excellent free resource with vast library of videos, worksheets, and 5-a-day practice questions</span></li>
+                        <li><span class="resource-name"><a href="https://www.drfrostmaths.com" target="_blank" class="resource-link">Dr Frost Maths</a></span> - <span class="resource-description">Comprehensive free platform with thousands of videos and practice questions used by many schools</span></li>
+                        <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Maths)</a></span> - <span class="resource-description">Clear revision notes, video explanations, and interactive activities</span></li>
+                        <li><span class="resource-name"><a href="https://www.physicsandmathstutor.com" target="_blank" class="resource-link">Physics & Maths Tutor Education</a></span> - <span class="resource-description">Indispensable free resource with vast revision notes and past papers</span></li>
+                        <li><span class="resource-name"><a href="https://www.examsolutions.net" target="_blank" class="resource-link">Exam Solutions</a></span> - <span class="resource-description">Incredibly valuable free resource with extensive video tutorials covering almost every A-Level topic</span></li>
+                        <li><span class="resource-name"><a href="https://integralmaths.org" target="_blank" class="resource-link">Integral Maths</a></span> - <span class="resource-description">High-quality paid resource developed by MEI with comprehensive notes and exercises</span></li>
+                        <li><span class="resource-name"><a href="https://www.khanacademy.org/math" target="_blank" class="resource-link">Khan Academy Mathematics</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for core mathematical principles</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile-only recommended reading dropdown -->
+        <div class="recommended-reading-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Recommended Reading
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    General Mathematics
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Mathematics: A Very Short Introduction</li>
+                        <li class="mobile-author">Timothy Gowers</li>
+                        <li class="mobile-blurb">A concise and engaging introduction to the nature of mathematics. Perfect for GCSE students to understand what mathematics really is.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">The Princeton Companion to Mathematics</li>
+                        <li class="mobile-author">Timothy Gowers (Editor)</li>
+                        <li class="mobile-blurb">A comprehensive overview of mathematics for advanced students. Excellent for A-Level students considering further study.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    History & Biographies
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">The Man Who Knew Infinity</li>
+                        <li class="mobile-author">Robert Kanigel</li>
+                        <li class="mobile-blurb">Biography of Srinivasa Ramanujan, one of the most brilliant mathematicians. Great for understanding the human side of mathematics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">A Beautiful Mind</li>
+                        <li class="mobile-author">Sylvia Nasar</li>
+                        <li class="mobile-blurb">Biography of John Nash, Nobel laureate in economics. Fascinating story of mathematical genius and mental health challenges.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Specific Concepts
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">The Art and Craft of Problem Solving</li>
+                        <li class="mobile-author">Paul Zeitz</li>
+                        <li class="mobile-blurb">Excellent guide to mathematical problem-solving techniques. Perfect for developing critical thinking skills.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">How to Solve It</li>
+                        <li class="mobile-author">George Pólya</li>
+                        <li class="mobile-blurb">Classic text on mathematical problem-solving strategies. Essential reading for all mathematics students.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Problem Solving
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Mathematical Olympiad Challenges</li>
+                        <li class="mobile-author">Titu Andreescu</li>
+                        <li class="mobile-blurb">Collection of challenging problems from mathematical competitions. Great for students who want to push their problem-solving abilities.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">The USSR Olympiad Problem Book</li>
+                        <li class="mobile-author">D.O. Shklarsky</li>
+                        <li class="mobile-blurb">Classic collection of mathematical problems. Excellent for developing advanced problem-solving skills.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile-only opportunities dropdown -->
+        <div class="opportunities-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Opportunities
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    Research
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Lumiere Research Scholar Program</li>
+                        <li class="mobile-url"><a href="https://www.lumiere-education.com/students-application-form" target="_blank">Apply Here</a></li>
+                        <li class="mobile-blurb">This program pairs high school students with PhD mentors from top universities to conduct independent research projects. They have a specific focus on mathematics and applied sciences.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Polygence</li>
+                        <li class="mobile-url"><a href="https://www.polygence.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Similar to Lumiere, Polygence connects students with academic mentors for one-on-one research projects. The platform is flexible and can accommodate a wide range of mathematics topics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Cambridge Centre for International Research</li>
+                        <li class="mobile-url"><a href="https://cambridge-research.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">CCIR offers research mentorship programs in various subjects, including mathematics. Their programs are designed to provide a university-level research experience.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Programs
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Immerse Education Mathematics Summer School</li>
+                        <li class="mobile-url"><a href="https://www.immerse.education/mathematics-summer-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Immerse offers in-person mathematics programs at prestigious universities like Oxford and Cambridge. The curriculum covers pure mathematics, applied mathematics, and statistics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Imperial College London Global Summer School</li>
+                        <li class="mobile-url"><a href="https://www.imperial.ac.uk/study/visit/summer-schools/high-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This program offers specialized areas of study, including mathematics and engineering, allowing students to engage in academic lectures and practical challenges.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Experience
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Conrad Challenge</li>
+                        <li class="mobile-url"><a href="https://www.conradchallenge.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is a global competition for students to create innovative solutions to global challenges. A team could develop a mathematics-related project to address data analysis or optimization problems.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">International Mathematical Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.imo2024.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is the most prestigious mathematics competition for high school students globally. To participate, students must typically first succeed in their national mathematics olympiad.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Awards
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Regeneron International Science and Engineering Fair</li>
+                        <li class="mobile-url"><a href="https://www.societyforscience.org/isef/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">ISEF is the world's largest pre-college STEM competition. Students qualify through local and regional fairs, and the event offers significant awards and networking opportunities.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">British Mathematical Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.bmo.ukmt.org.uk/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This competition recognizes outstanding high school students for their mathematics knowledge and problem-solving skills. It offers recognition and opportunities for further competition.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Other
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Online Courses</li>
+                        <li class="mobile-blurb">Many universities and platforms offer free or low-cost online courses (MOOCs) in mathematics and related fields. Platforms like Coursera, edX, and FutureLearn have courses from top institutions.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Science Communication</li>
+                        <li class="mobile-blurb">Look for opportunities to write for a school science magazine, start a blog, or create a YouTube channel about mathematics topics. This is a great way to deepen your understanding.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Local Organizations</li>
+                        <li class="mobile-blurb">Check with local universities, research institutions, financial companies, or technology firms for volunteer opportunities. Many of these places have programs for young people.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="word-image-section">
+            <img src="/images/word/mathematics-word.png" alt="Mathematics" class="subject-word-image" />
+            <div class="word-resources-box">
+                <div class="resources-content" id="word-resources-content">
+                    <h3>Online Resources</h3>
+                    <div class="resource-details">
+                        <ul>
+                            <li><span class="resource-name"><a href="https://www.mathsgenie.co.uk" target="_blank" class="resource-link">Maths Genie</a></span> - <span class="resource-description">Incredibly popular free resource with topic-by-topic questions, practice papers, and video solutions</span></li>
+                            <li><span class="resource-name"><a href="https://corbettmaths.com" target="_blank" class="resource-link">Corbettmaths</a></span> - <span class="resource-description">Excellent free resource with vast library of videos, worksheets, and 5-a-day practice questions</span></li>
+                            <li><span class="resource-name"><a href="https://www.drfrostmaths.com" target="_blank" class="resource-link">Dr Frost Maths</a></span> - <span class="resource-description">Comprehensive free platform with thousands of videos and practice questions used by many schools</span></li>
+                            <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Maths)</a></span> - <span class="resource-description">Clear revision notes, video explanations, and interactive activities</span></li>
+                            <li><span class="resource-name"><a href="https://www.physicsandmathstutor.com" target="_blank" class="resource-link">Physics & Maths Tutor Education</a></span> - <span class="resource-description">Indispensable free resource with vast revision notes and past papers</span></li>
+                            <li><span class="resource-name"><a href="https://www.examsolutions.net" target="_blank" class="resource-link">Exam Solutions</a></span> - <span class="resource-description">Incredibly valuable free resource with extensive video tutorials covering almost every A-Level topic</span></li>
+                            <li><span class="resource-name"><a href="https://integralmaths.org" target="_blank" class="resource-link">Integral Maths</a></span> - <span class="resource-description">High-quality paid resource developed by MEI with comprehensive notes and exercises</span></li>
+                            <li><span class="resource-name"><a href="https://www.khanacademy.org/math" target="_blank" class="resource-link">Khan Academy Mathematics</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for core mathematical principles</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="second-row-section">
+        <div class="recommended-reading-section">
+            <div class="recommended-reading-container">
+                <div class="ibook-image-container">
+                    <img src="/images/ibook/blue-ibook.png" alt="Mathematics Book Recommendations" class="subject-ibook-image" />
+                    <div class="ibook-recommended-reading-box">
+                        <div class="recommended-reading-content" id="recommended-reading-content">
+                            <h3 class="category-selection-text">Recommended Reading</h3>
+                        </div>
+                        <div class="recommended-reading-buttons">
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="general-mathematics">
+                                    <img src="/images/gifs/b1.gif" alt="General Mathematics" class="btn-gif" />
+                                    General Mathematics
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="history-biographies">
+                                    <img src="/images/gifs/b2.gif" alt="History & Biographies" class="btn-gif" />
+                                    History & Biographies
+                                </button>
+                            </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="specific-concepts">
+                                    <img src="/images/gifs/b3.gif" alt="Specific Concepts" class="btn-gif" />
+                                    Specific Concepts
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="problem-solving-puzzles">
+                                    <img src="/images/gifs/b4.gif" alt="Problem Solving" class="btn-gif" />
+                                    Problem Solving
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="opportunities-section">
+            <div class="tips-and-game-container">
+                <div class="top-tips-section">
+                </div>
+                <div class="game-image-container">
+                    <img src="/images/game/blue-game.png" alt="Mathematics Game" class="subject-game-image" />
+                    <div class="game-opportunities-box">
+                        <div class="opportunity-content" id="opportunity-content">
+                            <h3>Select an opportunity type to see relevant options</h3>
+                        </div>
+                        <div class="opportunity-buttons">
+                            <button class="opportunity-btn" data-opportunity="research">
+                                Research
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="experience">
+                                Experience
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="programs">
+                                Programs
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="awards">
+                                Awards
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="other">
+                                Other
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="game-articles-layout">
+  <main class="game-main-content">
+    <div class="article-tiles-sidebar" data-subject="mathematics">
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+          <button class="game-tag-btn" data-tag="careers">careers</button>
+        
+      </div>
+      <div class="articles-grid" id="game-articles-list">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <div class="game-article-tile" data-tags="careers">
+              <img src="https://d2z0k1elb7rxgj.cloudfront.net/uploads/2019/07/computational-neuroscience-diagram-2.png" alt="Computational Neuroscientist" class="tile-header-image" />
+              <div class="tile-divider"></div>
+              <div class="tile-title">Computational Neuroscientist</div>
+              <a href="/articles/computational-neuroscientist-career/" class="tile-link"></a>
+            </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </div>
+  </main>
+</div>
+<script src="/js/all-articles-filter.js"></script>
+<script src="/js/opportunities-ui.js"></script>
+<script src="/js/book-recommendations-ui.js"></script>
+<div id="articleModal" class="modal">
+    <div id="modalContent" class="modal-content">
+    </div>
+</div>
+<script>
+    const mathematicsFigures = [
+        '/images/quotes/m1.png',
+        '/images/quotes/m2.png',
+        '/images/quotes/m3.png',
+        '/images/quotes/m4.png',
+        '/images/quotes/m5.png'
+    ];
+    let currentMathematicsFigure = 0;
+    const mathematicsFigureImg = document.getElementById('mathematics-figure-img');
+    const mathematicsDefinitionImg = document.querySelector('.definition-img');
+    function matchMathematicsFigureHeight() {
+        if (mathematicsDefinitionImg && mathematicsFigureImg) {
+            if (mathematicsDefinitionImg.complete && mathematicsFigureImg.complete) {
+                mathematicsFigureImg.style.height = mathematicsDefinitionImg.clientHeight + 'px';
+                mathematicsFigureImg.style.width = 'auto';
+            } else {
+                mathematicsDefinitionImg.onload = matchMathematicsFigureHeight;
+                mathematicsFigureImg.onload = matchMathematicsFigureHeight;
+            }
+        }
+    }
+    window.addEventListener('load', matchMathematicsFigureHeight);
+    window.addEventListener('resize', matchMathematicsFigureHeight);
+    if (mathematicsFigureImg) {
+        mathematicsFigureImg.addEventListener('click', function() {
+            currentMathematicsFigure = (currentMathematicsFigure + 1) % mathematicsFigures.length;
+            mathematicsFigureImg.src = mathematicsFigures[currentMathematicsFigure];
+            mathematicsFigureImg.onload = matchMathematicsFigureHeight;
+        });
+    }
+</script>
+<script>
+    // Opportunity buttons functionality
+    const opportunityButtons = document.querySelectorAll('.opportunity-btn');
+    const opportunityContent = document.getElementById('opportunity-content');
+    
+    const opportunities = {
+        research: [
+            "Mathematical Research Assistant",
+            "Data Analysis Projects",
+            "Statistical Research",
+            "Computational Mathematics",
+            "Theoretical Mathematics"
+        ],
+        experience: [
+            "Teaching Assistant Role",
+            "Tutoring Experience",
+            "Data Analysis Work",
+            "Research Assistant Position",
+            "Industry Placement"
+        ],
+        programs: [
+            "Summer Mathematics Programs",
+            "Math Boot Camps",
+            "Problem Solving Workshops",
+            "Research Methodology Courses",
+            "Computational Mathematics Programs"
+        ],
+        awards: [
+            "Mathematics Achievement Awards",
+            "Problem Solving Competition Prizes",
+            "Research Excellence Scholarships",
+            "Academic Merit Awards",
+            "Innovation in Mathematics Awards"
+        ],
+        other: [
+            "Mathematics Clubs & Societies",
+            "Science Communication",
+            "Math Outreach Programs",
+            "Mathematics Conferences",
+            "Science Journalism"
+        ]
+    };
+    
+    opportunityButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const opportunityType = this.getAttribute('data-opportunity');
+            
+            // Remove active class from all buttons
+            opportunityButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update content
+            const content = opportunities[opportunityType];
+            opportunityContent.innerHTML = `
+                <h3>${opportunityType.charAt(0).toUpperCase() + opportunityType.slice(1)} Opportunities</h3>
+                <ul>
+                    ${content.map(item => `<li>• ${item}</li>`).join('')}
+                </ul>
+            `;
+        });
+    });
+</script>
+
+    <script src="/js/script.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
