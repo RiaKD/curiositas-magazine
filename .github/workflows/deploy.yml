@@ -28,7 +28,7 @@ jobs:
     - name: Build Eleventy site
       run: npm run build
       env:
-        NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}  # Changed from NOTION_TOKEN
+        NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
         NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         
     - name: Deploy to GitHub Pages
@@ -36,3 +36,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./_site
+        force_orphan: true
+
