@@ -77,23 +77,64 @@
     </div>
     
 
-    <div class="article-layout" data-subject="none">
-  <!-- Article title outside the article-page div as per CSS expectations -->
-  <h1 class="article-title">Test Game UI Article</h1>
-  
-  <div class="article-page">
-    <div class="article-header">
+    <!-- Article title outside the layout as per CSS expectations -->
+<h1 class="article-title">Test Game UI Article</h1>
+
+<div class="article-layout" data-subject="biology">
+  <!-- Camera screen with article header image overlay -->
+  <div class="camera-screen">
+    <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
+    <div class="camera-screen-cutout">
+      
+    </div>
+  </div>
+
+  <!-- Article content and sidebar -->
+  <div class="article-tiles-sidebar" data-subject="biology">
+    <!-- Article meta above the main text -->
+    <div class="article-meta-bar">
+      
       
       
     </div>
-    
-    <div class="article-content">
-      <p>This is a test article to check the game UI layout.</p>
+
+    <!-- Main article content -->
+    <div class="article-page">
+      <div class="article-content">
+        <p>This is a test article to check the game UI layout.</p>
+      </div>
+      
+      
     </div>
-    
-    
-    
-    
+
+    <!-- Other articles sidebar -->
+    <div class="sidebar-title">Other Articles</div>
+    <div class="game-tag-filter-bar">
+      <button class="game-tag-btn active" data-tag="all">All</button>
+      <button class="game-tag-btn" data-tag="careers">careers</button>
+      <button class="game-tag-btn" data-tag="research">research</button>
+    </div>
+    <div class="game-articles-list article-tiles-list" id="game-articles-list">
+      
+        
+        
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="/curiositas-magazine/images/error.png" alt="Sample Biology Article" class="tile-header-image" />
+            <div class="tile-title">Sample Biology Article</div>
+            <a href="/curiositas-magazine/articles/sample-biology-article/" class="tile-link"></a>
+          </div>
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+    </div>
   </div>
 </div>
 t

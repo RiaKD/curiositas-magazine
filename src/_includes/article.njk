@@ -1,44 +1,77 @@
 ---
 layout: base
 ---
-<div class="article-layout" data-subject="{{ article.subjectNormalized or (article.subject or subject or 'none') | lower | replace(' ', '-') }}">
-  <!-- Article title outside the article-page div as per CSS expectations -->
-  <h1 class="article-title">{{ article.title or title }}</h1>
-  
-  <div class="article-page">
-    <div class="article-header">
+<!-- Article title outside the layout as per CSS expectations -->
+<h1 class="article-title">{{ article.title or title }}</h1>
+
+<div class="article-layout" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
+  <!-- Camera screen with article header image overlay -->
+  <div class="camera-screen">
+    <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
+    <div class="camera-screen-cutout">
       {% if article.headerImage %}
         <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
       {% endif %}
+    </div>
+  </div>
+
+  <!-- Article content and sidebar -->
+  <div class="article-tiles-sidebar" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
+    <!-- Article meta above the main text -->
+    <div class="article-meta-bar">
       {% if article.author and article.date %}
         <div class="article-meta">
           <p>By {{ article.author }} | {{ article.date }}</p>
         </div>
       {% endif %}
-    </div>
-    
-    <div class="article-content">
-      {{ content | safe }}
-    </div>
-    
-    {% if article.tags and article.tags.length > 0 %}
-      <div class="article-tags">
-        {% for tag in article.tags %}
-          <span class="tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    {% endif %}
-    
-    {% if article.citations and article.citations.length > 0 %}
-      <div class="article-citations">
-        <h4>References:</h4>
-        <ul>
-          {% for citation in article.citations %}
-            <li>{{ citation }}</li>
+      
+      {% if article.tags and article.tags.length > 0 %}
+        <div class="article-tags">
+          {% for tag in article.tags %}
+            <span class="tag">{{ tag }}</span>
           {% endfor %}
-        </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Main article content -->
+    <div class="article-page">
+      <div class="article-content">
+        {{ content | safe }}
       </div>
-    {% endif %}
+      
+      {% if article.citations and article.citations.length > 0 %}
+        <div class="article-citations">
+          <h4>References:</h4>
+          <ul>
+            {% for citation in article.citations %}
+              <li>{{ citation }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Other articles sidebar -->
+    <div class="sidebar-title">Other Articles</div>
+    <div class="game-tag-filter-bar">
+      <button class="game-tag-btn active" data-tag="all">All</button>
+      <button class="game-tag-btn" data-tag="careers">careers</button>
+      <button class="game-tag-btn" data-tag="research">research</button>
+    </div>
+    <div class="game-articles-list article-tiles-list" id="game-articles-list">
+      {% for otherArticle in articles %}
+        {% set currentSubject = (article.subject or subject or 'none') %}
+        {% set otherSubject = (otherArticle.subject or 'none') %}
+        {% if otherArticle.id != (article.id or '') and otherSubject and (otherSubject | lower) == (currentSubject | lower) %}
+          <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
+            <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
+            <div class="tile-title">{{ otherArticle.title }}</div>
+            <a href="{{ ('/articles/' + otherArticle.slug + '/') | url }}" class="tile-link"></a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 t

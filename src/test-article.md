@@ -1,8 +1,9 @@
 ---
 title: Test Game UI Article
-layout: article
+layout: article.njk
 date: 2024-06-01
 author: Test Author
+subject: Biology
 slug: test-game-ui-article
 headerImage: /images/logo.png
 tags:

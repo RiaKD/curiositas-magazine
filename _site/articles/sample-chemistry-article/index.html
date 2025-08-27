@@ -77,39 +77,74 @@
     </div>
     
 
-    <div class="article-layout" data-subject="chemistry">
-  <!-- Article title outside the article-page div as per CSS expectations -->
-  <h1 class="article-title">Sample Chemistry Article</h1>
-  
-  <div class="article-page">
-    <div class="article-header">
+    <!-- Article title outside the layout as per CSS expectations -->
+<h1 class="article-title">Sample Chemistry Article</h1>
+
+<div class="article-layout" data-subject="chemistry">
+  <!-- Camera screen with article header image overlay -->
+  <div class="camera-screen">
+    <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
+    <div class="camera-screen-cutout">
       
         <img src="/curiositas-magazine/images/error.png" alt="Sample Chemistry Article" class="article-header-image">
       
+    </div>
+  </div>
+
+  <!-- Article content and sidebar -->
+  <div class="article-tiles-sidebar" data-subject="chemistry">
+    <!-- Article meta above the main text -->
+    <div class="article-meta-bar">
       
         <div class="article-meta">
           <p>By Test Author | 2024-01-02</p>
         </div>
       
-    </div>
-    
-    <div class="article-content">
       
+      
+        <div class="article-tags">
+          
+            <span class="tag">careers</span>
+          
+            <span class="tag">research</span>
+          
+        </div>
+      
+    </div>
+
+    <!-- Main article content -->
+    <div class="article-page">
+      <div class="article-content">
+        
 Sample content for local development.
 
-    </div>
-    
-    
-      <div class="article-tags">
-        
-          <span class="tag">careers</span>
-        
-          <span class="tag">research</span>
-        
       </div>
-    
-    
-    
+      
+      
+    </div>
+
+    <!-- Other articles sidebar -->
+    <div class="sidebar-title">Other Articles</div>
+    <div class="game-tag-filter-bar">
+      <button class="game-tag-btn active" data-tag="all">All</button>
+      <button class="game-tag-btn" data-tag="careers">careers</button>
+      <button class="game-tag-btn" data-tag="research">research</button>
+    </div>
+    <div class="game-articles-list article-tiles-list" id="game-articles-list">
+      
+        
+        
+        
+      
+        
+        
+        
+      
+        
+        
+        
+      
+    </div>
   </div>
 </div>
 t
