@@ -1,6 +1,6 @@
 ---
 title: Test Game UI Article
-layout: article.njk
+layout: article
 date: 2024-06-01
 author: Test Author
 slug: test-game-ui-article

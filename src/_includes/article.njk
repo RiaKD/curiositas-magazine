@@ -1,0 +1,41 @@
+---
+layout: base
+---
+<div class="article-layout" data-subject="{{ subject or 'none' }}">
+  <div class="article-page">
+    <div class="article-header">
+      {% if headerImage %}
+        <img src="{{ headerImage }}" alt="{{ title }}" class="article-header-image">
+      {% endif %}
+      <h1 class="article-title">{{ title }}</h1>
+      {% if author and date %}
+        <div class="article-meta">
+          <p>By {{ author }} | {{ date }}</p>
+        </div>
+      {% endif %}
+    </div>
+    
+    <div class="article-content">
+      {{ content | safe }}
+    </div>
+    
+    {% if tags and tags.length > 0 %}
+      <div class="article-tags">
+        {% for tag in tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+    
+    {% if citations and citations.length > 0 %}
+      <div class="article-citations">
+        <h4>References:</h4>
+        <ul>
+          {% for citation in citations %}
+            <li>{{ citation }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</div>
