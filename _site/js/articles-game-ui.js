@@ -80,7 +80,10 @@ function renderArticles() {
   `;
   // If no content/excerpt, fetch the full article HTML
   if (!articleContent && featured.slug) {
-    fetch(`/articles/${featured.slug}/`)
+    const basePath = window.location.pathname.includes('/curiositas-magazine/') 
+        ? '/curiositas-magazine' 
+        : '';
+    fetch(`${basePath}/articles/${featured.slug}/`)
       .then(res => res.text())
       .then(html => {
         // Try to extract the main article content from the fetched HTML

@@ -12,11 +12,16 @@
     "type": "git",
     "url": "git+https://github.com/RiaKD/curiositas-magazine.git"
   },
-  "keywords": ["eleventy", "notion", "magazine"],
+  "keywords": [
+    "eleventy",
+    "notion",
+    "magazine"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@notionhq/client": "^4.0.2",
     "dotenv": "^16.6.1",
     "notion-to-md": "^3.1.9"
   },
