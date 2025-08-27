@@ -12,6 +12,7 @@ module.exports = async function() {
         title: 'Sample Biology Article',
         author: 'Test Author',
         subject: 'Biology',
+        subjectNormalized: 'biology',
         tags: ['careers'],
         headerImage: '/images/error.png',
         excerpt: 'Sample excerpt',
@@ -25,6 +26,7 @@ module.exports = async function() {
         title: 'Sample Chemistry Article',
         author: 'Test Author',
         subject: 'Chemistry',
+        subjectNormalized: 'chemistry',
         tags: ['careers', 'research'],
         headerImage: '/images/error.png',
         excerpt: 'Sample excerpt',
@@ -38,6 +40,7 @@ module.exports = async function() {
         title: 'Sample Computer Science Article',
         author: 'Test Author',
         subject: 'Computer science',
+        subjectNormalized: 'computer-science',
         tags: ['careers'],
         headerImage: '/images/error.png',
         excerpt: 'Sample excerpt',
@@ -143,12 +146,19 @@ module.exports = async function() {
           const slug = getProperty('Slug', 'rich_text');
           const status = getProperty('Status', 'select');
 
+          // Normalize subject for CSS data attributes
+          const normalizeSubject = (subj) => {
+            if (!subj) return 'none';
+            return subj.toLowerCase().replace(/\s+/g, '-');
+          };
+
           // Create article object
           const article = {
             id: page.id,
             title: title || 'Untitled',
             author: author || 'Unknown',
             subject: subject || 'None',
+            subjectNormalized: normalizeSubject(subject), // For CSS data attributes
             tags: tags || [],
             headerImage: headerImage || '/images/error.png',
             excerpt: '', // Add if you have an excerpt field

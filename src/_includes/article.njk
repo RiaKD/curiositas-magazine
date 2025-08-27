@@ -1,13 +1,15 @@
 ---
 layout: base
 ---
-<div class="article-layout" data-subject="{{ article.subject or subject or 'none' }}">
+<div class="article-layout" data-subject="{{ article.subjectNormalized or (article.subject or subject or 'none') | lower | replace(' ', '-') }}">
+  <!-- Article title outside the article-page div as per CSS expectations -->
+  <h1 class="article-title">{{ article.title or title }}</h1>
+  
   <div class="article-page">
     <div class="article-header">
       {% if article.headerImage %}
         <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
       {% endif %}
-      <h1 class="article-title">{{ article.title or title }}</h1>
       {% if article.author and article.date %}
         <div class="article-meta">
           <p>By {{ article.author }} | {{ article.date }}</p>
