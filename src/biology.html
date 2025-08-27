@@ -1,83 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
-    <title>Biology Articles | cūriōsitās</title>
-    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-</head>
-  <body class="biology-page">
-    
-    <div class="top-bar">
-        <div class="logo-container">
-            <a href="{{ '/index.html' | url }}" title="Home" class="nav-btn home-btn">
-                <img src="{{ '/images/logo.png' | url }}" alt="Curiositas Logo" class="nav-button" />
-                <span class="nav-button-label">Home</span>
-            </a>
-            <a href="{{ '/submissions.html' | url }}" title="Submissions" class="nav-btn submit-btn">
-                <img src="{{ '/images/submit.png' | url }}" alt="Submissions" class="nav-button" />
-                <span class="nav-button-label">Submissions</span>
-            </a>
-            <a href="{{ '/applications.html' | url }}" title="Applications" class="nav-btn join-btn">
-                <img src="{{ '/images/join2.png' | url }}" alt="Applications" class="nav-button" />
-                <span class="nav-button-label">Applications</span>
-            </a>
-        </div>
-        <div class="dog-nav">
-            <a href="{{ '/all-articles/' | url }}" class="dog-btn dog-pink" title="Articles">
-                <img src="{{ '/images/dog/pink.png' | url }}" alt="Articles Dog" />
-                <span>Articles</span>
-            </a>
-            <a href="{{ '/chemistry.html' | url }}" class="dog-btn dog-red" title="Chemistry">
-                <img src="{{ '/images/dog/red.png' | url }}" alt="Chemistry Dog" />
-                <span>Chemistry</span>
-            </a>
-            <a href="{{ '/physics.html' | url }}" class="dog-btn dog-orange" title="Physics">
-                <img src="{{ '/images/dog/orange.png' | url }}" alt="Physics Dog" />
-                <span>Physics</span>
-            </a>
-            <a href="{{ '/biology.html' | url }}" class="dog-btn dog-green" title="Biology">
-                <img src="{{ '/images/dog/green.png' | url }}" alt="Biology Dog" />
-                <span>Biology</span>
-            </a>
-            <a href="{{ '/mathematics.html' | url }}" class="dog-btn dog-blue" title="Mathematics">
-                <img src="{{ '/images/dog/blue.png' | url }}" alt="Mathematics Dog" />
-                <span>Mathematics</span>
-            </a>
-            <a href="{{ '/computer_science.html' | url }}" class="dog-btn dog-purple" title="Computer Science">
-                <img src="{{ '/images/dog/purple.png' | url }}" alt="Computer Science Dog" />
-                <span>Computer Science</span>
-            </a>
-        </div>
-    </div>
-    
+---
+layout: base.njk
+title: Biology Articles
+permalink: /biology.html
+bodyClass: biology-page
+---
 
-    
-    <!-- Mobile Menu Button -->
-    <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Menu</button>
-    
-    <!-- Centered Scrollable List -->
-    <div class="centered-scrollable-list" id="centeredList">
-        <div class="list-content">
-            <div class="list-item" data-subject="home">Home</div>
-            <div class="list-item" data-subject="all">All Articles</div>
-            <div class="list-item" data-subject="submissions">Submissions</div>
-            <div class="list-item" data-subject="applications">Applications</div>
-            <div class="list-item" data-subject="chemistry">Chemistry</div>
-            <div class="list-item" data-subject="physics">Physics</div>
-            <div class="list-item" data-subject="biology">Biology</div>
-            <div class="list-item" data-subject="mathematics">Mathematics</div>
-            <div class="list-item" data-subject="computer-science">Computer Science</div>
-        </div>
-    </div>
-    
-
-    
 <div class="header-row">
     <h1 class="subject-title">Biology</h1>
 </div>
@@ -88,636 +15,294 @@
         
         <!-- Mobile-only online resources dropdown -->
         <div class="online-resources-dropdown mobile-only">
-            <button class="dropdown-btn">
-                Online Resources
+            <button class="online-resources-btn dropdown-btn">
+                <span class="dropdown-text">Online Resources</span>
+                <span class="dropdown-arrow">▼</span>
             </button>
             <div class="dropdown-content">
-                <div class="resource-details">
-                    <ul>
-                        <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Biology)</a></span> - <span class="resource-description">Clear revision notes and interactive activities</span></li>
-                        <li><span class="resource-name"><a href="https://www.physicsandmathstutor.com" target="_blank" class="resource-link">Physics & Maths Tutor Education</a></span> - <span class="resource-description">Extensive revision notes and past papers</span></li>
-                        <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Interactive courses for all exam boards</span></li>
-                        <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">Comprehensive revision materials and practice questions</span></li>
-                        <li><span class="resource-name"><a href="https://www.ck12.org/c/biology/" target="_blank" class="resource-link">CK Biology</a></span> - <span class="resource-description">High-quality revision materials</span></li>
-                        <li><span class="resource-name"><a href="https://cognitoedu.org" target="_blank" class="resource-link">Cognito</a></span> - <span class="resource-description">Free video lessons, notes, and practice questions</span></li>
+                <div class="resource-category">
+                    <h4 class="resource-category-title">General Biology</h4>
+                    <ul class="resource-list">
+                        <li><span class="resource-name"><a href="https://www.khanacademy.org/science/biology" target="_blank" class="resource-link">Khan Academy - Biology</a></span> - <span class="resource-description">Comprehensive biology course for beginners</span></li>
+                        <li><span class="resource-name"><a href="https://www.coursera.org/learn/biology" target="_blank" class="resource-link">Introduction to Biology - The Secret of Life</a></span> - <span class="resource-description">MIT's introductory biology course</span></li>
+                        <li><span class="resource-name"><a href="https://www.edx.org/course/introduction-to-biology-the-secret-of-life" target="_blank" class="resource-link">EdX Biology Courses</a></span> - <span class="resource-description">Various university-level biology courses</span></li>
+                        <li><span class="resource-name"><a href="https://www.biologycorner.com/" target="_blank" class="resource-link">Biology Corner</a></span> - <span class="resource-description">High school biology resources and worksheets</span></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <h4 class="resource-category-title">Advanced Topics</h4>
+                    <ul class="resource-list">
+                        <li><span class="resource-name"><a href="https://www.nature.com/subjects/biological-sciences" target="_blank" class="resource-link">Nature - Biological Sciences</a></span> - <span class="resource-description">Latest research and reviews in biology</span></li>
+                        <li><span class="resource-name"><a href="https://www.cell.com/" target="_blank" class="resource-link">Cell Journal</a></span> - <span class="resource-description">Leading journal in molecular biology</span></li>
+                        <li><span class="resource-name"><a href="https://www.ncbi.nlm.nih.gov/pubmed/" target="_blank" class="resource-link">PubMed</a></span> - <span class="resource-description">Database of life sciences literature</span></li>
+                    </ul>
+                </div>
+                
+                <div class="resource-category">
+                    <h4 class="resource-category-title">Interactive Tools</h4>
+                    <ul class="resource-list">
+                        <li><span class="resource-name"><a href="https://www.biointeractive.org/" target="_blank" class="resource-link">HHMI BioInteractive</a></span> - <span class="resource-description">Interactive biology resources and virtual labs</span></li>
+                        <li><span class="resource-name"><a href="https://www.labxchange.org/" target="_blank" class="resource-link">LabXchange</a></span> - <span class="resource-description">Virtual lab experiences by Harvard</span></li>
+                        <li><span class="resource-name"><a href="https://phet.colorado.edu/en/simulations/category/biology" target="_blank" class="resource-link">PhET Biology Simulations</a></span> - <span class="resource-description">Interactive biology simulations</span></li>
                     </ul>
                 </div>
             </div>
         </div>
-         <!-- Mobile-only online resources dropdown -->
-         <div class="recommended-reading-dropdown mobile-only">
-            <button class="dropdown-btn">
-                Recommended Reading
+
+        <!-- Mobile-only recommended reading dropdown -->
+        <div class="recommended-reading-dropdown mobile-only">
+            <button class="recommended-reading-btn dropdown-btn">
+                <span class="dropdown-text">Recommended Reading</span>
+                <span class="dropdown-arrow">▼</span>
             </button>
             <div class="dropdown-content">
-                <button class="dropdown-btn">
-                    general biology
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">A Short History of Nearly Everything</li>
-                        <li class="mobile-author">Bill Bryson</li>
-                        <li class="mobile-blurb">While not exclusively biology, this book offers an incredibly engaging and accessible journey through scientific discoveries, including many biological ones, in a way that makes complex concepts understandable and fun. Highly recommended for both GCSE and A-Level.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">The Body: A Guide for Occupants</li>
-                        <li class="mobile-author">Bill Bryson</li>
-                        <li class="mobile-blurb">A fascinating and often humorous exploration of the human body, its functions, and its quirks. Excellent for anyone interested in human biology.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="recommended-reading-btn nested-dropdown-btn" data-reading="general">
+                        <img src="{{ '/images/gifs/g1.gif' | url }}" alt="General Biology" class="btn-gif" />
+                        <span>General Biology</span>
+                    </button>
                 </div>
-                <button class="dropdown-btn">
-                    evolution & genetics
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">The Selfish Gene</li>
-                        <li class="mobile-author">Richard Dawkins</li>
-                        <li class="mobile-blurb">A seminal work in evolutionary biology. While it can be challenging for GCSE students, it's a must-read for A-Level students and those considering further study in biology. It provides a foundational understanding of how genes drive evolution.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">The Blind Watchmaker</li>
-                        <li class="mobile-author">Richard Dawkins</li>
-                        <li class="mobile-blurb">Another excellent book by Dawkins, which further explores the theory of evolution and natural selection with clear and persuasive arguments. More accessible than 'The Selfish Gene' for some.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Why Evolution Is True</li>
-                        <li class="mobile-author">Jerry Coyne</li>
-                        <li class="mobile-blurb">Offers a comprehensive and accessible overview of the evidence for evolution, weaving together genetics, molecular biology, and anatomy.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Genome: The Autobiography of a Species in 23 Chapters</li>
-                        <li class="mobile-author">Matt Ridley</li>
-                        <li class="mobile-blurb">Explores the human genome chapter by chapter, with each chapter focusing on a specific chromosome and the scientific and ethical implications associated with it. A great way to understand genetics in context</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">The Double Helix</li>
-                        <li class="mobile-author">James Watson</li>
-                        <li class="mobile-blurb">A personal account of the discovery of the structure of DNA. Provides insight into the scientific process and the personalities involved.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">The Language of the Genes</li>
-                        <li class="mobile-author">Steve Jones</li>
-                        <li class="mobile-blurb">A highly readable exploration of human genetics and its implications.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">A Brief History of Everyone Who Ever Lived: The Stories in Our Genes</li>
-                        <li class="mobile-author">Adam Rutherford</li>
-                        <li class="mobile-blurb">Explains how our genes tell the story of human history, migrations, and even ancient viruses.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="recommended-reading-btn nested-dropdown-btn" data-reading="evolution">
+                        <img src="{{ '/images/gifs/g2.gif' | url }}" alt="Evolution & Genetics" class="btn-gif" />
+                        <span>Evolution & Genetics</span>
+                    </button>
                 </div>
-                <button class="dropdown-btn">
-                    medical & human
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">The Immortal Life of Henrietta Lacks</li>
-                        <li class="mobile-author">Rebecca Skloot</li>
-                        <li class="mobile-blurb">A powerful and important book that intertwines science, ethics, and medical history through the story of Henrietta Lacks and her immortal cell line (HeLa cells). Excellent for both GCSE and A-Level, and particularly relevant for those interested in medicine.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">When Breath Becomes Air</li>
-                        <li class="mobile-author">Paul Kalanithi</li>
-                        <li class="mobile-blurb">A poignant memoir by a neurosurgeon diagnosed with terminal lung cancer, reflecting on life, death, and the meaning of existence. Highly recommended for aspiring medics.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Being Mortal: Medicine and What Matters in the End</li>
-                        <li class="mobile-author">Atul Gawande</li>
-                        <li class="mobile-blurb">A profound exploration of aging, mortality, and end-of-life care, offering crucial insights for anyone considering a career in healthcare.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Do No Harm</li>
-                        <li class="mobile-author">Henry Marsh</li>
-                        <li class="mobile-blurb">A candid and fascinating memoir by a neurosurgeon, offering an honest look at the highs and lows of a career in brain surgery.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Bad Science</li>
-                        <li class="mobile-author">Ben Goldacre</li>
-                        <li class="mobile-blurb">Critically examines scientific research and exposes flaws and biases, especially in the context of medicine and pharmaceuticals. Essential for developing critical thinking skills.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">This Is Going to Hurt</li>
-                        <li class="mobile-author">Adam Kay</li>
-                        <li class="mobile-blurb">A humorous yet often heartbreaking collection of diary entries from a junior doctor in the NHS, providing a raw and honest insight into the medical profession.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">The Emperor of All Maladies: A Biography of Cancer</li>
-                        <li class="mobile-author">Siddhartha Mukherjee</li>
-                        <li class="mobile-blurb">A comprehensive history of cancer, its understanding, and the ongoing fight against it.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="recommended-reading-btn nested-dropdown-btn" data-reading="medical">
+                        <img src="{{ '/images/gifs/g3.gif' | url }}" alt="Medical & Human Biology" class="btn-gif" />
+                        <span>Medical & Human Biology</span>
+                    </button>
                 </div>
-                <button class="dropdown-btn">
-                    ecology & environment
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">The Hidden Life of Trees</li>
-                        <li class="mobile-author">Peter Wohlleben</li>
-                        <li class="mobile-blurb">Explores the fascinating ways trees communicate and interact within a forest ecosystem.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Entangled Life: How Fungi Make Our Worlds, Change Our Minds & Shape Our Futures</li>
-                        <li class="mobile-author">Merlin Sheldrake</li>
-                        <li class="mobile-blurb">A captivating dive into the often-overlooked world of fungi and their vital role in ecosystems and beyond.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">The Sixth Extinction: An Unnatural History</li>
-                        <li class="mobile-author">Elizabeth Kolbert</li>
-                        <li class="mobile-blurb">Explores past mass extinctions and the current human-caused extinction event, highlighting crucial environmental issues.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="recommended-reading-btn nested-dropdown-btn" data-reading="ecology">
+                        <img src="{{ '/images/gifs/g4.gif' | url }}" alt="Ecology & Environment" class="btn-gif" />
+                        <span>Ecology & Environment</span>
+                    </button>
                 </div>
-                <button class="dropdown-btn">
-                    other
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">I Contain Multitudes: The Microbes Within Us and a Grander View of Life</li>
-                        <li class="mobile-author">Ed Yong</li>
-                        <li class="mobile-blurb">A wonderful exploration of the microbiome and its profound influence on our health and the natural world.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Your Inner Fish: A Journey into the 3.5-Billion-Year History of the Human Body</li>
-                        <li class="mobile-author">Neil Shubin</li>
-                        <li class="mobile-blurb">Traces the evolutionary history of the human body by looking at our ancient aquatic ancestors.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Sapiens: A Brief History of Humankind</li>
-                        <li class="mobile-author">Yuval Noah Harari</li>
-                        <li class="mobile-blurb">While not strictly biology, this book offers a broad historical and evolutionary perspective on the human species, touching on biological developments.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="recommended-reading-btn nested-dropdown-btn" data-reading="other">
+                        <img src="{{ '/images/gifs/g5.gif' | url }}" alt="Other Notable" class="btn-gif" />
+                        <span>Other Notable</span>
+                    </button>
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile-only opportunities dropdown -->
         <div class="opportunities-dropdown mobile-only">
-            <button class="dropdown-btn">
-                Opportunities
+            <button class="opportunity-btn dropdown-btn">
+                <span class="dropdown-text">Opportunities</span>
+                <span class="dropdown-arrow">▼</span>
             </button>
             <div class="dropdown-content">
-                <button class="dropdown-btn">
-                    Research
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">Lumiere Research Scholar Program</li>
-                        <li class="mobile-url"><a href="https://www.lumiere-education.com/students-application-form" target="_blank">Apply Here</a></li>
-                        <li class="mobile-blurb">This program pairs high school students with PhD mentors from top universities to conduct independent research projects. They have a specific focus on biology and life sciences. The program is offered remotely, making it accessible to international students.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Polygence</li>
-                        <li class="mobile-url"><a href="https://www.polygence.org/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">Similar to Lumiere, Polygence connects students with academic mentors for one-on-one research projects. The platform is flexible and can accommodate a wide range of biology topics, from genetics to marine biology.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Cambridge Centre for International Research</li>
-                        <li class="mobile-url"><a href="https://cambridge-research.org/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">CCIR offers research mentorship programs in various subjects, including biology. Their programs are designed to provide a university-level research experience and are open to students aged 14-18.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Summer Science Program</li>
-                        <li class="mobile-url"><a href="https://www.summerscience.org/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">SSP is a highly selective and intensive program where students conduct research in celestial mechanics, biochemistry, or genomics. The biochemistry program focuses on molecular biology. It is open to international students who are at least 15 years old.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">London International Youth Science Forum</li>
-                        <li class="mobile-url"><a href="https://www.liysf.org.uk/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">While more of a summer school, LIYSF includes visits to world-class research institutions and hands-on sessions. It's a fantastic opportunity to see real-world research in action and network with scientists.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="opportunity-btn nested-dropdown-btn" data-opportunity="competitions">
+                        <span>Competitions</span>
+                    </button>
                 </div>
-                <button class="dropdown-btn">
-                    Programs
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">Immerse Education Biology Summer School</li>
-                        <li class="mobile-url"><a href="https://www.immerse.education/biology-summer-school/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">Immerse offers in-person biology programs at prestigious universities like Oxford and Cambridge. The curriculum is designed to give students a taste of university-level study in subjects like genetics, cellular biology, and ecology.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Imperial College London Global Summer School</li>
-                        <li class="mobile-url"><a href="https://www.imperial.ac.uk/study/visit/summer-schools/high-school/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">This program offers specialized areas of study, including biology and medicine, allowing students to engage in a combination of academic lectures and practical, problem-solving challenges.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Oxbridge Summer Scholars Biology Module</li>
-                        <li class="mobile-url"><a href="https://www.oxbridgesummerscholars.com/biology-cambridge-summer-school-module" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">This program offers a summer school experience with a specific focus on biology related to medicine. It covers topics like pharmacology and epidemiology, and is aimed at students considering a career in medicine.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Biosciences International Summer School at University of Manchester</li>
-                        <li class="mobile-url"><a href="https://www.bmh.manchester.ac.uk/study/summer-schools/biosciences/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">This program offers hands-on experience in various bioscience areas, including biochemistry, cancer biology, and cell biology.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="opportunity-btn nested-dropdown-btn" data-opportunity="internships">
+                        <span>Internships</span>
+                    </button>
                 </div>
-                <button class="dropdown-btn">
-                    Experience
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">Conrad Challenge</li>
-                        <li class="mobile-url"><a href="https://www.conradchallenge.org/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">This is a global competition for students to create innovative solutions to global challenges. A team could develop a biology-related project to address issues in food security, clean energy, or health and nutrition.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">International Genetically Engineered Machine Competition</li>
-                        <li class="mobile-url"><a href="https://competition.igem.org/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">iGEM is a prestigious synthetic biology competition where high school teams design and build their own biological systems. It is an intensive, team-based, hands-on experience.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">The Sanger Institute Work Experience</li>
-                        <li class="mobile-url"><a href="https://www.sanger.ac.uk/about/careers/work-experience/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">The Sanger Institute, a leading genomics research centre, offers work experience opportunities for young people. It's a great chance to see cutting-edge research up close.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">University of Warwick STEM Work Experience</li>
-                        <li class="mobile-url"><a href="https://warwick.ac.uk/fac/sci/semscienceinschools/workexperience/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">The University of Warwick offers short-term, unpaid laboratory placements in areas like molecular biology, biochemistry, and microbiology for students aged 16 and over.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Global Leadership Adventures</li>
-                        <li class="mobile-url"><a href="https://experiencegla.com/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">GLA offers volunteer and travel programs with a focus on marine biology and conservation in places like Costa Rica. These programs combine hands-on experience with cultural immersion.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="opportunity-btn nested-dropdown-btn" data-opportunity="programs">
+                        <span>Programs</span>
+                    </button>
                 </div>
-                <button class="dropdown-btn">
-                    Awards
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">International Biology Olympiad</li>
-                        <li class="mobile-url"><a href="https://www.ibo-info.org/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">This is the most prestigious biology competition for high school students globally. To participate, students must typically first succeed in their national biology olympiad.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Regeneron International Science and Engineering Fair</li>
-                        <li class="mobile-url"><a href="https://www.societyforscience.org/isef/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">ISEF is the world's largest pre-college STEM competition. Students qualify through local and regional fairs, and the event offers significant awards and networking opportunities.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">BioGENEius Challenge</li>
-                        <li class="mobile-url"><a href="https://biotechinstitute.org/biogeneius/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">This competition recognizes outstanding high school students for their research projects in biotechnology. It offers cash prizes and an opportunity to present research at a major conference.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Genes in Space Challenge</li>
-                        <li class="mobile-url"><a href="https://www.genesinspace.org/" target="_blank">Visit Website</a></li>
-                        <li class="mobile-blurb">This competition invites students to propose a DNA experiment that could be performed on the International Space Station. The winner's experiment is launched into space. It's a highly unique and prestigious award.</li>
-                    </ul>
-                </div>
-                <button class="dropdown-btn">
-                    Other
-                </button>
-                <div class="dropdown-content">
-                    <ul>
-                        <li class="mobile-title">Online Courses</li>
-                        <li class="mobile-blurb">Many universities and platforms offer free or low-cost online courses (MOOCs) in biology and related fields. Platforms like Coursera, edX, and FutureLearn have courses from institutions like Harvard, Johns Hopkins, and Imperial College London.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Science Communication</li>
-                        <li class="mobile-blurb">Look for opportunities to write for a school science magazine, start a blog, or create a YouTube channel about biology topics. This is a great way to deepen your understanding and build a portfolio.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Local Organizations</li>
-                        <li class="mobile-blurb">Check with local hospitals, museums, zoos, botanical gardens, or conservation charities for volunteer opportunities. Many of these places have programs for young people that can provide valuable experience.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">University Open Days</li>
-                        <li class="mobile-blurb">Many universities hold virtual and in-person open days where you can attend taster lectures and speak with faculty and students. This is a great way to explore different biology programs and see which university might be a good fit.</li>
-                    </ul>
-                    <ul>
-                        <li class="mobile-title">Journal Clubs</li>
-                        <li class="mobile-blurb">Start or join a biology journal club at your school. This involves meeting with peers and a teacher to discuss recent scientific papers. It's a fantastic way to engage with the latest research and develop critical thinking skills.</li>
-                    </ul>
+                <div class="nested-dropdown">
+                    <button class="opportunity-btn nested-dropdown-btn" data-opportunity="research">
+                        <span>Research</span>
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="content-wrapper">
         
-        <div class="word-image-section">
-            <img src="{{ '/images/word/biology-word.png' | url }}" alt="Biology" class="subject-word-image" />
-            <div class="word-resources-box">
-                <div class="resources-content" id="word-resources-content">
-                    <h3>Online Resources</h3>
-                    <div class="resource-details">
-                        <ul>
-                            <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Biology)</a></span> - <span class="resource-description">Clear revision notes and interactive activities</span></li>
-                            <li><span class="resource-name"><a href="https://www.physicsandmathstutor.com" target="_blank" class="resource-link">Physics & Maths Tutor Education</a></span> - <span class="resource-description">Extensive revision notes and past papers</span></li>
-                            <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Interactive courses for all exam boards</span></li>
-                            <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">Comprehensive revision materials and practice questions</span></li>
-                            <li><span class="resource-name"><a href="https://www.ck12.org/c/biology/" target="_blank" class="resource-link">CK Biology</a></span> - <span class="resource-description">High-quality revision materials</span></li>
-                            <li><span class="resource-name"><a href="https://cognitoedu.org" target="_blank" class="resource-link">Cognito</a></span> - <span class="resource-description">Free video lessons, notes, and practice questions</span></li>
+        <div class="desktop-resources-section">
+            <!-- Desktop Online Resources Section -->
+            <div class="resources-section">
+                <div class="resources-title-row">
+                    <h2 class="section-title resources-title">Online Resources</h2>
+                </div>
+                <div class="resources-categories">
+                    <div class="resource-category">
+                        <h3 class="resource-category-title">General Biology</h3>
+                        <ul class="resource-list">
+                            <li><span class="resource-name"><a href="https://www.khanacademy.org/science/biology" target="_blank" class="resource-link">Khan Academy - Biology</a></span> - <span class="resource-description">Comprehensive biology course for beginners</span></li>
+                            <li><span class="resource-name"><a href="https://www.coursera.org/learn/biology" target="_blank" class="resource-link">Introduction to Biology - The Secret of Life</a></span> - <span class="resource-description">MIT's introductory biology course</span></li>
+                            <li><span class="resource-name"><a href="https://www.edx.org/course/introduction-to-biology-the-secret-of-life" target="_blank" class="resource-link">EdX Biology Courses</a></span> - <span class="resource-description">Various university-level biology courses</span></li>
+                            <li><span class="resource-name"><a href="https://www.biologycorner.com/" target="_blank" class="resource-link">Biology Corner</a></span> - <span class="resource-description">High school biology resources and worksheets</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-category">
+                        <h3 class="resource-category-title">Advanced Topics</h3>
+                        <ul class="resource-list">
+                            <li><span class="resource-name"><a href="https://www.nature.com/subjects/biological-sciences" target="_blank" class="resource-link">Nature - Biological Sciences</a></span> - <span class="resource-description">Latest research and reviews in biology</span></li>
+                            <li><span class="resource-name"><a href="https://www.cell.com/" target="_blank" class="resource-link">Cell Journal</a></span> - <span class="resource-description">Leading journal in molecular biology</span></li>
+                            <li><span class="resource-name"><a href="https://www.ncbi.nlm.nih.gov/pubmed/" target="_blank" class="resource-link">PubMed</a></span> - <span class="resource-description">Database of life sciences literature</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-category">
+                        <h3 class="resource-category-title">Interactive Tools</h3>
+                        <ul class="resource-list">
+                            <li><span class="resource-name"><a href="https://www.biointeractive.org/" target="_blank" class="resource-link">HHMI BioInteractive</a></span> - <span class="resource-description">Interactive biology resources and virtual labs</span></li>
+                            <li><span class="resource-name"><a href="https://www.labxchange.org/" target="_blank" class="resource-link">LabXchange</a></span> - <span class="resource-description">Virtual lab experiences by Harvard</span></li>
+                            <li><span class="resource-name"><a href="https://phet.colorado.edu/en/simulations/category/biology" target="_blank" class="resource-link">PhET Biology Simulations</a></span> - <span class="resource-description">Interactive biology simulations</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="second-row-section">
-        <div class="recommended-reading-section">
-            <div class="recommended-reading-container">
-                <div class="ibook-image-container">
-                    <img src="{{ '/images/ibook/green-ibook.png' | url }}" alt="Biology Recommended Reading" class="subject-ibook-image" />
-                    <div class="ibook-recommended-reading-box">
-                        <div class="recommended-reading-content" id="recommended-reading-content">
-                            <h3 class="category-selection-text">Recommended Reading</h3>
-                        </div>
-                        <div class="recommended-reading-buttons">
-                            <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="general-biology">
-                                    <img src="{{ '/images/gifs/g1.gif' | url }}" alt="General Biology" class="btn-gif" />
-                                    General Biology
-                                </button>
-                                <button class="recommended-reading-btn" data-reading="evolution-genetics">
-                                    <img src="{{ '/images/gifs/g2.gif' | url }}" alt="Evolution & Genetics" class="btn-gif" />
-                                    Evolution & Genetics
-                                </button>
+
+        <div class="subject-sections">
+            <div class="subject-left-section">
+                <div class="word-image-container">
+                    <img src="{{ '/images/word/biology-word.png' | url }}" alt="Biology" class="subject-word-image" />
+                </div>
+                
+                <div class="book-recommendations-container">
+                    <div class="book-recommendations-section">
+                        <h2 class="section-title">Book Recommendations</h2>
+                        <div class="book-ui-container">
+                            <div class="book-selection-interface">
+                                <div class="book-ibook-container">
+                                    <img src="{{ '/images/ibook/green-ibook.png' | url }}" alt="Biology Recommended Reading" class="subject-ibook-image" />
+                                </div>
+                                <div class="book-buttons-grid">
+                                    <div class="book-button-group">
+                                        <button class="recommended-reading-btn book-btn" data-reading="general">
+                                            <img src="{{ '/images/gifs/g1.gif' | url }}" alt="General Biology" class="btn-gif" />
+                                            <span>General Biology</span>
+                                        </button>
+                                        <button class="recommended-reading-btn book-btn" data-reading="evolution">
+                                            <img src="{{ '/images/gifs/g2.gif' | url }}" alt="Evolution & Genetics" class="btn-gif" />
+                                            <span>Evolution & Genetics</span>
+                                        </button>
+                                    </div>
+                                    <div class="book-button-group">
+                                        <button class="recommended-reading-btn book-btn" data-reading="medical">
+                                            <img src="{{ '/images/gifs/g3.gif' | url }}" alt="Medical & Human Biology" class="btn-gif" />
+                                            <span>Medical & Human Biology</span>
+                                        </button>
+                                        <button class="recommended-reading-btn book-btn" data-reading="ecology">
+                                            <img src="{{ '/images/gifs/g4.gif' | url }}" alt="Ecology & Environment" class="btn-gif" />
+                                            <span>Ecology & Environment</span>
+                                        </button>
+                                    </div>
+                                    <div class="book-button-group">
+                                        <button class="recommended-reading-btn book-btn" data-reading="other">
+                                            <img src="{{ '/images/gifs/g5.gif' | url }}" alt="Other Notable" class="btn-gif" />
+                                            <span>Other Notable</span>
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="medical-human">
-                                    <img src="{{ '/images/gifs/g3.gif' | url }}" alt="Medical & Human Biology" class="btn-gif" />
-                                    Medical & Human
-                                </button>
-                                <button class="recommended-reading-btn" data-reading="ecology-environment">
-                                    <img src="{{ '/images/gifs/g4.gif' | url }}" alt="Ecology & Environment" class="btn-gif" />
-                                    Ecology & Environment
-                                </button>
-                            </div>
-                            <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="other-notable">
-                                    <img src="{{ '/images/gifs/g5.gif' | url }}" alt="Other Notable" class="btn-gif" />
-                                    Other
-                                </button>
+                            <div id="recommended-reading-content" class="book-display-area">
+                                <div class="book-placeholder">
+                                    <h3>Select a category to explore book recommendations</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="opportunities-section">
-            <div class="tips-and-game-container">
-                <div class="top-tips-section">
-                </div>
-                <div class="game-image-container">
-                    <img src="{{ '/images/game/green-game.png' | url }}" alt="Biology Game" class="subject-game-image" />
-                    <div class="game-opportunities-box">
-                        <div class="opportunity-content" id="opportunity-content">
-                            <h3>Select an opportunity type to see relevant options</h3>
-                        </div>
-                        <div class="opportunity-buttons">
-                            <button class="opportunity-btn" data-opportunity="research">
-                                Research
-                            </button>
-                            <button class="opportunity-btn" data-opportunity="experience">
-                                Experience
-                            </button>
-                            <button class="opportunity-btn" data-opportunity="programs">
-                                Programs
-                            </button>
-                            <button class="opportunity-btn" data-opportunity="awards">
-                                Awards
-                            </button>
-                            <button class="opportunity-btn" data-opportunity="other">
-                                Other
-                            </button>
+
+            <div class="subject-right-section">
+                <div class="game-section">
+                    <div class="game-container">
+                        <img src="{{ '/images/game/green-game.png' | url }}" alt="Biology Game" class="subject-game-image" />
+                        <div class="opportunities-display-area">
+                            <div id="opportunities-content" class="opportunities-content-display">
+                                <div class="opportunity-placeholder">
+                                    <h3>Select an opportunity category to explore</h3>
+                                </div>
+                            </div>
+                            <div class="opportunities-ui">
+                                <div class="opportunities-buttons">
+                                    <button class="opportunity-btn" data-opportunity="competitions">Competitions</button>
+                                    <button class="opportunity-btn" data-opportunity="internships">Internships</button>
+                                    <button class="opportunity-btn" data-opportunity="programs">Programs</button>
+                                    <button class="opportunity-btn" data-opportunity="research">Research</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                
+                <div class="articles-section">
+                    <div class="articles-header">
+                        <h2 class="section-title articles-title">Articles</h2>
+                        <div class="article-tiles-sidebar">
+                            <div class="game-sidebar">
+                                <div class="game-filter-controls">
+                                    <div class="game-tag-buttons">
+                                        <button class="game-tag-btn active" data-tag="all">All</button>
+                                        <button class="game-tag-btn" data-tag="careers">Careers</button>
+                                        <button class="game-tag-btn" data-tag="university">University</button>
+                                        <button class="game-tag-btn" data-tag="research">Research</button>
+                                    </div>
+                                </div>
+
+                                <div class="game-article-tiles-container">
+                                  
+                                  <div class="game-article-tile" data-tags="careers">
+                                    <img src="{{ '/images/error.png' | url }}" alt="Cryobiologist" class="tile-header-image" />
+                                    <div class="tile-divider"></div>
+                                    <div class="tile-title">Cryobiologist</div>
+                                    <a href="{{ '/articles/cryobiologist/' | url }}" class="tile-link"></a>
+                                  </div>
+                                
+                                
+                                
+                                  <div class="game-article-tile" data-tags="careers">
+                                    <img src="{{ '/images/error.png' | url }}" alt="Forensic Entomologist" class="tile-header-image" />
+                                    <div class="tile-divider"></div>
+                                    <div class="tile-title">Forensic Entomologist</div>
+                                    <a href="{{ '/articles/forensic-entomologist-career/' | url }}" class="tile-link"></a>
+                                  </div>
+                                
+                                
+                                
+                                  <div class="game-article-tile" data-tags="careers">
+                                    <img src="{{ '/images/error.png' | url }}" alt="Neurogeneticist" class="tile-header-image" />
+                                    <div class="tile-divider"></div>
+                                    <div class="tile-title">Neurogeneticist</div>
+                                    <a href="{{ '/articles/neurogeneticist-career/' | url }}" class="tile-link"></a>
+                                  </div>
+                                
+                                
+                                
+                                
+                                
+                                
+                                  <div class="game-article-tile" data-tags="careers,marine,biotech">
+                                    <img src="https://www.academicinfo.net/static/d35e90b6196456c1ec1b4ccc12b5a20e/14b42/marine1.jpg" alt="Marine Biotechnologist" class="tile-header-image" />
+                                    <div class="tile-divider"></div>
+                                    <div class="tile-title">Marine Biotechnologist</div>
+                                    <a href="{{ '/articles/marine-biotechnologist-career/' | url }}" class="tile-link"></a>
+                                  </div>
+                                
+                                
+                                  
+                                
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </main>
                 </div>
             </div>
         </div>
     </div>
 </main>
-
-<div class="game-articles-layout">
-  <main class="game-main-content">
-    <div class="article-tiles-sidebar" data-subject="biology">
-      <div class="game-tag-filter-bar">
-        <button class="game-tag-btn active" data-tag="all">All</button>
-        
-        
-        
-          
-            
-              
-            
-          
-        
-        
-        
-          
-            
-          
-        
-        
-        
-          
-            
-          
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          
-            
-          
-            
-              
-            
-          
-            
-              
-            
-          
-        
-        
-        
-          <button class="game-tag-btn" data-tag="careers">careers</button>
-        
-          <button class="game-tag-btn" data-tag="marine">marine</button>
-        
-          <button class="game-tag-btn" data-tag="biotech">biotech</button>
-        
-      </div>
-      <div class="articles-grid" id="game-articles-list">
-        
-        
-          <div class="game-article-tile" data-tags="careers">
-            <img src="{{ '/images/error.png' | url }}" alt="Cryobiologist" class="tile-header-image" />
-            <div class="tile-divider"></div>
-            <div class="tile-title">Cryobiologist</div>
-            <a href="{{ '/articles/cryobiologist/' | url }}" class="tile-link"></a>
-          </div>
-        
-        
-        
-          <div class="game-article-tile" data-tags="careers">
-            <img src="{{ '/images/error.png' | url }}" alt="Forensic Entomologist" class="tile-header-image" />
-            <div class="tile-divider"></div>
-            <div class="tile-title">Forensic Entomologist</div>
-            <a href="{{ '/articles/forensic-entomologist-career/' | url }}" class="tile-link"></a>
-          </div>
-        
-        
-        
-          <div class="game-article-tile" data-tags="careers">
-            <img src="{{ '/images/error.png' | url }}" alt="Neurogeneticist" class="tile-header-image" />
-            <div class="tile-divider"></div>
-            <div class="tile-title">Neurogeneticist</div>
-            <a href="{{ '/articles/neurogeneticist-career/' | url }}" class="tile-link"></a>
-          </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-          <div class="game-article-tile" data-tags="careers,marine,biotech">
-            <img src="https://www.academicinfo.net/static/d35e90b6196456c1ec1b4ccc12b5a20e/14b42/marine1.jpg" alt="Marine Biotechnologist" class="tile-header-image" />
-            <div class="tile-divider"></div>
-            <div class="tile-title">Marine Biotechnologist</div>
-            <a href="{{ '/articles/marine-biotechnologist-career/' | url }}" class="tile-link"></a>
-          </div>
-        
-        
-      </div>
-    </div>
-  </main>
-</div>
 <script src="{{ '/js/all-articles-filter.js' | url }}"></script>
 <script src="{{ '/js/opportunities-ui.js' | url }}"></script>
 <script src="{{ '/js/book-recommendations-ui.js' | url }}"></script>
-<div id="articleModal" class="modal">
-    <div id="modalContent" class="modal-content">
-        </div>
-</div>
-<script>
-    const biologyFigures = [
-        '/images/quotes/b1.png',
-        '/images/quotes/b2.png',
-        '/images/quotes/b3.png',
-        '/images/quotes/b4.png',
-        '/images/quotes/b5.png'
-    ];
-    let currentBiologyFigure = 0;
-    const biologyFigureImg = document.getElementById('biology-figure-img');
-    const biologyDefinitionImg = document.querySelector('.definition-img');
-    function matchBiologyFigureHeight() {
-        if (biologyDefinitionImg && biologyFigureImg) {
-            if (biologyDefinitionImg.complete && biologyFigureImg.complete) {
-                biologyFigureImg.style.height = biologyDefinitionImg.clientHeight + 'px';
-                biologyFigureImg.style.width = 'auto';
-            } else {
-                biologyDefinitionImg.onload = matchBiologyFigureHeight;
-                biologyFigureImg.onload = matchBiologyFigureHeight;
-            }
-        }
-    }
-    window.addEventListener('load', matchBiologyFigureHeight);
-    window.addEventListener('resize', matchBiologyFigureHeight);
-    if (biologyFigureImg) {
-        biologyFigureImg.addEventListener('click', function() {
-            currentBiologyFigure = (currentBiologyFigure + 1) % biologyFigures.length;
-            biologyFigureImg.src = biologyFigures[currentBiologyFigure];
-            biologyFigureImg.onload = matchBiologyFigureHeight;
-        });
-    }
-</script>
-<script>
-    // Opportunity buttons functionality
-    const opportunityButtons = document.querySelectorAll('.opportunity-btn');
-    const opportunityContent = document.getElementById('opportunity-content');
-    
-    const opportunities = {
-        research: [
-            "Laboratory Research Assistant",
-            "Field Research Internship",
-            "Data Analysis Projects",
-            "Literature Review Studies",
-            "Experimental Design Projects"
-        ],
-        experience: [
-            "Hospital Volunteer",
-            "Laboratory Internship",
-            "Field Work Experience",
-            "Research Assistant Position",
-            "Clinical Shadowing"
-        ],
-        programs: [
-            "Summer Research Programs",
-            "Biology Boot Camps",
-            "Laboratory Skills Workshops",
-            "Field Biology Programs",
-            "Research Methodology Courses"
-        ],
-        awards: [
-            "Biology Achievement Awards",
-            "Research Excellence Scholarships",
-            "Science Competition Prizes",
-            "Academic Merit Awards",
-            "Innovation in Biology Awards"
-        ],
-        other: [
-            "Biology Clubs & Societies",
-            "Science Communication",
-            "Teaching Assistant Roles",
-            "Science Outreach Programs",
-            "Biology Conferences"
-        ]
-    };
-    
-    opportunityButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const opportunityType = this.getAttribute('data-opportunity');
-            
-            // Remove active class from all buttons
-            opportunityButtons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            this.classList.add('active');
-            
-            // Update content
-            const content = opportunities[opportunityType];
-            opportunityContent.innerHTML = `
-                <h3>${opportunityType.charAt(0).toUpperCase() + opportunityType.slice(1)} Opportunities</h3>
-                <ul>
-                    ${content.map(item => `<li>• ${item}</li>`).join('')}
-                </ul>
-            `;
-        });
-    });
-</script>
-
-
-
-    <script src="{{ '/js/script.js' | url }}"></script>
-    
-    <!-- Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then((registration) => {
-                        console.log('Service Worker registered successfully:', registration.scope);
-                    })
-                    .catch((error) => {
-                        console.log('Service Worker registration failed:', error);
-                    });
-            });
-        }
-    </script>
-</body>
-</html>

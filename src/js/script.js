@@ -372,33 +372,38 @@ function setupCenteredList() {
             }, 200);
             
             // Handle navigation based on subject
+            // Get the base path for GitHub Pages
+            const basePath = window.location.pathname.includes('/curiositas-magazine/') 
+                ? '/curiositas-magazine' 
+                : '';
+            
             switch(subject) {
                 case 'home':
-                    window.location.href = '/index.html';
+                    window.location.href = basePath + '/index.html';
                     break;
                 case 'all':
-                    window.location.href = '/all-articles/';
+                    window.location.href = basePath + '/all-articles/';
                     break;
                 case 'chemistry':
-                    window.location.href = '/chemistry.html';
+                    window.location.href = basePath + '/chemistry.html';
                     break;
                 case 'physics':
-                    window.location.href = '/physics.html';
+                    window.location.href = basePath + '/physics.html';
                     break;
                 case 'biology':
-                    window.location.href = '/biology.html';
+                    window.location.href = basePath + '/biology.html';
                     break;
                 case 'mathematics':
-                    window.location.href = '/mathematics.html';
+                    window.location.href = basePath + '/mathematics.html';
                     break;
                 case 'computer-science':
-                    window.location.href = '/computer_science.html';
+                    window.location.href = basePath + '/computer_science.html';
                     break;
                 case 'submissions':
-                    window.location.href = '/submissions.html';
+                    window.location.href = basePath + '/submissions.html';
                     break;
                 case 'applications':
-                    window.location.href = '/applications.html';
+                    window.location.href = basePath + '/applications.html';
                     break;
                 default:
                     console.log('Subject not implemented:', subject);
