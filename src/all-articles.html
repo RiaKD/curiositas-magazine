@@ -1,0 +1,95 @@
+---
+layout: base.njk
+title: All Magazine Articles
+permalink: /all-articles/
+bodyClass: all-articles
+---
+
+<div class="header-row">
+    <h1 class="subject-title">All Articles</h1>
+</div>
+<main>
+    <div class="definition-image-row">
+        <img src="{{ '/images/definitions/articles.png' | url }}" alt="Articles" class="definition-img" />
+        <div class="articles-quote">
+            <h2>Explore all our magazine articles</h2>
+            <p>Discover fascinating insights across all subjects - from cutting-edge research to career guidance.</p>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="all-articles-container">
+            <div class="articles-filter-section">
+                <div class="filter-controls">
+                    <h3>Filter by Subject:</h3>
+                    <div class="subject-filter-buttons">
+                        <button class="subject-filter-btn active" data-subject="all">All Subjects</button>
+                        <button class="subject-filter-btn" data-subject="biology">Biology</button>
+                        <button class="subject-filter-btn" data-subject="chemistry">Chemistry</button>
+                        <button class="subject-filter-btn" data-subject="physics">Physics</button>
+                        <button class="subject-filter-btn" data-subject="mathematics">Mathematics</button>
+                        <button class="subject-filter-btn" data-subject="computer-science">Computer Science</button>
+                    </div>
+                </div>
+                
+                <div class="tag-filter-section">
+                    <h3>Filter by Category:</h3>
+                    <div class="tag-filter-buttons">
+                        <button class="tag-filter-btn active" data-tag="all">All Categories</button>
+                        <button class="tag-filter-btn" data-tag="careers">Careers</button>
+                        <button class="tag-filter-btn" data-tag="research">Research</button>
+                        <button class="tag-filter-btn" data-tag="university">University</button>
+                        <button class="tag-filter-btn" data-tag="guides">Guides</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="articles-grid" id="articlesGrid">
+                <!-- Articles will be populated by the Notion integration or statically -->
+                
+                <!-- Example static articles for now -->
+                <div class="article-card" data-subject="biology" data-tags="careers">
+                    <img src="{{ '/images/error.png' | url }}" alt="Cryobiologist" class="article-card-image" />
+                    <div class="article-card-content">
+                        <h3 class="article-card-title">Cryobiologist</h3>
+                        <p class="article-card-subject">Biology</p>
+                        <p class="article-card-description">Explore the fascinating world of cryobiology and preservation science.</p>
+                        <div class="article-card-tags">
+                            <span class="article-tag">careers</span>
+                        </div>
+                        <a href="{{ '/articles/cryobiologist/' | url }}" class="article-card-link">Read More</a>
+                    </div>
+                </div>
+
+                <div class="article-card" data-subject="chemistry" data-tags="careers">
+                    <img src="https://careersnow.ca/wp-content/uploads/2022/12/Flavourist-01.jpg" alt="Flavour Chemist" class="article-card-image" />
+                    <div class="article-card-content">
+                        <h3 class="article-card-title">Flavour Chemist</h3>
+                        <p class="article-card-subject">Chemistry</p>
+                        <p class="article-card-description">Discover the science behind taste and flavor creation.</p>
+                        <div class="article-card-tags">
+                            <span class="article-tag">careers</span>
+                        </div>
+                        <a href="{{ '/articles/flavour-chemist-career/' | url }}" class="article-card-link">Read More</a>
+                    </div>
+                </div>
+
+                <div class="article-card" data-subject="computer-science" data-tags="careers">
+                    <img src="https://www.fxguide.com/wp-content/uploads/2020/06/quantum-computer_resize_md.jpg" alt="Quantum Computing Researcher" class="article-card-image" />
+                    <div class="article-card-content">
+                        <h3 class="article-card-title">Quantum Computing Researcher</h3>
+                        <p class="article-card-subject">Computer Science</p>
+                        <p class="article-card-description">Explore the cutting-edge field of quantum computing research.</p>
+                        <div class="article-card-tags">
+                            <span class="article-tag">careers</span>
+                        </div>
+                        <a href="{{ '/articles/quantum-computing-researcher-career/' | url }}" class="article-card-link">Read More</a>
+                    </div>
+                </div>
+                
+                <!-- More articles would be added here via Notion integration -->
+            </div>
+        </div>
+    </div>
+</main>
+<script src="{{ '/js/all-articles-filter.js' | url }}"></script>
