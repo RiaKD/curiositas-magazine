@@ -113,9 +113,9 @@ Sample content for local development.
   </div>
 
   <!-- Right side: Camera screen and sidebar column -->
-  <div style="margin-left: auto; margin-right: 0; padding-right: 0;">
+  <div style="display: flex; flex-direction: column; align-items: flex-end;">
     <!-- Camera screen (flush with right edge) -->
-    <div class="camera-screen" style="margin-right: 0; padding-right: 0;">
+    <div class="camera-screen">
       <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
       <div class="camera-screen-cutout">
         
@@ -124,8 +124,8 @@ Sample content for local development.
       </div>
     </div>
 
-    <!-- Articles sidebar below camera using existing CSS -->
-    <div class="article-tiles-sidebar" data-subject="computer-science">
+    <!-- Articles sidebar with margin -->
+    <div class="article-tiles-sidebar" data-subject="computer-science" style="margin-top: 20px;">
       <div class="game-tag-filter-bar">
         <button class="game-tag-btn active" data-tag="all">All</button>
         
