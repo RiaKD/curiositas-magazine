@@ -7,25 +7,25 @@ layout: base
 <div class="article-layout" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
   <!-- Left side: Article content (takes remaining space) -->
   <div style="flex: 1;">
-    <!-- Article meta bar above the main text -->
-    <div class="article-meta-bar">
-      {% if article.author and article.date %}
-        <div class="article-author">{{ article.author }}</div>
-        <div class="article-date">{{ article.date }}</div>
-      {% endif %}
-    </div>
-
-    <!-- Tags above the main text -->
-    {% if article.tags and article.tags.length > 0 %}
-      <div class="article-tags">
-        {% for tag in article.tags %}
-          <span class="tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    {% endif %}
-
     <!-- Main article content -->
     <div class="article-page">
+      <!-- Tags above the meta bar -->
+      {% if article.tags and article.tags.length > 0 %}
+        <div class="article-tags">
+          {% for tag in article.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <!-- Article meta bar above the main text -->
+      <div class="article-meta-bar">
+        {% if article.author and article.date %}
+          <div class="article-author">{{ article.author }}</div>
+          <div class="article-date">{{ article.date }}</div>
+        {% endif %}
+      </div>
+
       <div class="article-content">
         {{ content | safe }}
       </div>
@@ -43,37 +43,40 @@ layout: base
     </div>
   </div>
 
-  <!-- Right side: Camera screen (flush with right edge) -->
-  <div class="camera-screen">
-    <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
-    <div class="camera-screen-cutout">
-      {% if article.headerImage %}
-        <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
-      {% endif %}
+  <!-- Right side: Camera screen and sidebar column -->
+  <div style="display: flex; flex-direction: column;">
+    <!-- Camera screen (flush with right edge) -->
+    <div class="camera-screen">
+      <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
+      <div class="camera-screen-cutout">
+        {% if article.headerImage %}
+          <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
+        {% endif %}
+      </div>
     </div>
-  </div>
-</div>
 
-<!-- Articles sidebar below the layout -->
-<div class="article-tiles-sidebar" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
-  <div class="sidebar-title">Other Articles</div>
-  <div class="game-tag-filter-bar">
-    <button class="game-tag-btn active" data-tag="all">All</button>
-    <button class="game-tag-btn" data-tag="careers">careers</button>
-    <button class="game-tag-btn" data-tag="research">research</button>
-  </div>
-  <div class="game-articles-list article-tiles-list" id="game-articles-list">
-    {% for otherArticle in articles %}
-      {% set currentSubject = (article.subject or subject or 'none') %}
-      {% set otherSubject = (otherArticle.subject or 'none') %}
-      {% if otherArticle.id != (article.id or '') and otherSubject and (otherSubject | lower) == (currentSubject | lower) %}
-        <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
-          <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
-          <div class="tile-title">{{ otherArticle.title }}</div>
-          <a href="{{ ('/articles/' + otherArticle.slug + '/') | url }}" class="tile-link"></a>
-        </div>
-      {% endif %}
-    {% endfor %}
+    <!-- Articles sidebar below camera -->
+    <div class="article-tiles-sidebar" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
+      <div class="sidebar-title">Other Articles</div>
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        <button class="game-tag-btn" data-tag="careers">careers</button>
+        <button class="game-tag-btn" data-tag="research">research</button>
+      </div>
+      <div class="game-articles-list article-tiles-list" id="game-articles-list">
+        {% for otherArticle in articles %}
+          {% set currentSubject = (article.subject or subject or 'none') %}
+          {% set otherSubject = (otherArticle.subject or 'none') %}
+          {% if otherArticle.id != (article.id or '') and otherSubject and (otherSubject | lower) == (currentSubject | lower) %}
+            <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
+              <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
+              <div class="tile-title">{{ otherArticle.title }}</div>
+              <a href="{{ ('/articles/' + otherArticle.slug + '/') | url }}" class="tile-link"></a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </div>
 
