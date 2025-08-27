@@ -81,22 +81,15 @@
 <h1 class="article-title">Test Game UI Article</h1>
 
 <div class="article-layout" data-subject="biology">
-  <!-- Camera screen with article header image overlay -->
-  <div class="camera-screen">
-    <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
-    <div class="camera-screen-cutout">
-      
-    </div>
-  </div>
-
-  <!-- Article content and sidebar -->
-  <div class="article-tiles-sidebar" data-subject="biology">
-    <!-- Article meta above the main text -->
+  <!-- Left side: Article content -->
+  <div class="article-main-content">
+    <!-- Article meta bar above the main text -->
     <div class="article-meta-bar">
       
-      
-      
     </div>
+
+    <!-- Tags above the main text -->
+    
 
     <!-- Main article content -->
     <div class="article-page">
@@ -106,37 +99,53 @@
       
       
     </div>
+  </div>
 
-    <!-- Other articles sidebar -->
-    <div class="sidebar-title">Other Articles</div>
-    <div class="game-tag-filter-bar">
-      <button class="game-tag-btn active" data-tag="all">All</button>
-      <button class="game-tag-btn" data-tag="careers">careers</button>
-      <button class="game-tag-btn" data-tag="research">research</button>
+  <!-- Right side: Camera screen and sidebar -->
+  <div class="article-right-column">
+    <!-- Camera screen with article header image overlay -->
+    <div class="camera-screen">
+      <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
+      <div class="camera-screen-cutout">
+        
+      </div>
     </div>
-    <div class="game-articles-list article-tiles-list" id="game-articles-list">
-      
+
+    <!-- Articles sidebar below camera -->
+    <div class="article-tiles-sidebar" data-subject="biology">
+      <div class="sidebar-title">Other Articles</div>
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        <button class="game-tag-btn" data-tag="careers">careers</button>
+        <button class="game-tag-btn" data-tag="research">research</button>
+      </div>
+      <div class="game-articles-list article-tiles-list" id="game-articles-list">
         
+          
+          
+          
+            <div class="game-article-tile" data-tags="careers">
+              <img src="/curiositas-magazine/images/error.png" alt="Sample Biology Article" class="tile-header-image" />
+              <div class="tile-title">Sample Biology Article</div>
+              <a href="/curiositas-magazine/articles/sample-biology-article/" class="tile-link"></a>
+            </div>
+          
         
+          
+          
+          
         
-          <div class="game-article-tile" data-tags="careers">
-            <img src="/curiositas-magazine/images/error.png" alt="Sample Biology Article" class="tile-header-image" />
-            <div class="tile-title">Sample Biology Article</div>
-            <a href="/curiositas-magazine/articles/sample-biology-article/" class="tile-link"></a>
-          </div>
+          
+          
+          
         
-      
-        
-        
-        
-      
-        
-        
-        
-      
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Include the article sidebar filter JavaScript -->
+<script src="/curiositas-magazine/js/article-sidebar-filter.js"></script>
 t
 
     <script src="/curiositas-magazine/js/script.js"></script>

@@ -81,36 +81,26 @@
 <h1 class="article-title">Sample Chemistry Article</h1>
 
 <div class="article-layout" data-subject="chemistry">
-  <!-- Camera screen with article header image overlay -->
-  <div class="camera-screen">
-    <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
-    <div class="camera-screen-cutout">
-      
-        <img src="/curiositas-magazine/images/error.png" alt="Sample Chemistry Article" class="article-header-image">
-      
-    </div>
-  </div>
-
-  <!-- Article content and sidebar -->
-  <div class="article-tiles-sidebar" data-subject="chemistry">
-    <!-- Article meta above the main text -->
+  <!-- Left side: Article content -->
+  <div class="article-main-content">
+    <!-- Article meta bar above the main text -->
     <div class="article-meta-bar">
       
-        <div class="article-meta">
-          <p>By Test Author | 2024-01-02</p>
-        </div>
-      
-      
-      
-        <div class="article-tags">
-          
-            <span class="tag">careers</span>
-          
-            <span class="tag">research</span>
-          
-        </div>
+        <div class="article-author">Test Author</div>
+        <div class="article-date">2024-01-02</div>
       
     </div>
+
+    <!-- Tags above the main text -->
+    
+      <div class="article-tags">
+        
+          <span class="tag">careers</span>
+        
+          <span class="tag">research</span>
+        
+      </div>
+    
 
     <!-- Main article content -->
     <div class="article-page">
@@ -122,31 +112,49 @@ Sample content for local development.
       
       
     </div>
+  </div>
 
-    <!-- Other articles sidebar -->
-    <div class="sidebar-title">Other Articles</div>
-    <div class="game-tag-filter-bar">
-      <button class="game-tag-btn active" data-tag="all">All</button>
-      <button class="game-tag-btn" data-tag="careers">careers</button>
-      <button class="game-tag-btn" data-tag="research">research</button>
+  <!-- Right side: Camera screen and sidebar -->
+  <div class="article-right-column">
+    <!-- Camera screen with article header image overlay -->
+    <div class="camera-screen">
+      <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
+      <div class="camera-screen-cutout">
+        
+          <img src="/curiositas-magazine/images/error.png" alt="Sample Chemistry Article" class="article-header-image">
+        
+      </div>
     </div>
-    <div class="game-articles-list article-tiles-list" id="game-articles-list">
-      
+
+    <!-- Articles sidebar below camera -->
+    <div class="article-tiles-sidebar" data-subject="chemistry">
+      <div class="sidebar-title">Other Articles</div>
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        <button class="game-tag-btn" data-tag="careers">careers</button>
+        <button class="game-tag-btn" data-tag="research">research</button>
+      </div>
+      <div class="game-articles-list article-tiles-list" id="game-articles-list">
         
+          
+          
+          
         
+          
+          
+          
         
-      
+          
+          
+          
         
-        
-        
-      
-        
-        
-        
-      
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Include the article sidebar filter JavaScript -->
+<script src="/curiositas-magazine/js/article-sidebar-filter.js"></script>
 t
 
     <script src="/curiositas-magazine/js/script.js"></script>
