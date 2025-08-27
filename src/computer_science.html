@@ -11,126 +11,287 @@ bodyClass: computer-science-page
 <main>
     <div class="definition-image-row">
         <img src="{{ '/images/definitions/computer-science.png' | url }}" alt="Computer Science Definition" class="definition-img" />
-        <img id="computerscience-figure-img" src="{{ '/images/quotes/co1.png' | url }}" alt="Computer Science Quote Figure" class="subject-figure-img" />
-    </div>
-
-    <div class="content-wrapper">
-        <div class="desktop-resources-section">
-            <!-- Desktop Online Resources Section -->
-            <div class="resources-section">
-                <div class="resources-title-row">
-                    <h2 class="section-title resources-title">Online Resources</h2>
+        <img id="computer-science-figure-img" src="{{ '/images/quotes/co1.png' | url }}" alt="Computer Science Quote Figure" class="subject-figure-img" />
+        
+        <!-- Mobile-only online resources dropdown -->
+        <div class="online-resources-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Online Resources
+            </button>
+            <div class="dropdown-content">
+                <div class="resource-details">
+                    <ul>
+                        <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Computer Science)</a></span> - <span class="resource-description">Superb free resource with interactive notes, videos, quizzes, and activities</span></li>
+                        <li><span class="resource-name"><a href="https://www.computer-scienceandmathstutor.com" target="_blank" class="resource-link">Computer Science & Maths Tutor Education</a></span> - <span class="resource-description">Essential free resource with extensive revision notes, past papers, and mark schemes</span></li>
+                        <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Free engaging platform using neuroscience-backed learning methods with GIFs and animations</span></li>
+                        <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">High-quality revision notes, exam-style questions, and past papers for all exam boards</span></li>
+                        <li><span class="resource-name"><a href="https://a-levelcomputer-sciencetutor.com" target="_blank" class="resource-link">A-Level Computer Science Online</a></span> - <span class="resource-description">Comprehensive free video tutorials covering entire AQA specification</span></li>
+                        <li><span class="resource-name"><a href="https://isaaccomputer-science.org" target="_blank" class="resource-link">Isaac Computer Science</a></span> - <span class="resource-description">Free platform from University of Cambridge with challenging computer-science problems</span></li>
+                        <li><span class="resource-name"><a href="http://hypercomputer-science.phy-astr.gsu.edu/hbase/index.html" target="_blank" class="resource-link">Hypercomputer-science</a></span> - <span class="resource-description">Fantastic in-depth resource for understanding computer-science concepts</span></li>
+                        <li><span class="resource-name"><a href="https://www.khanacademy.org/science/computer-science" target="_blank" class="resource-link">Khan Academy Computer Science</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for conceptual understanding</span></li>
+                    </ul>
                 </div>
-                <div class="resources-categories">
-                    <div class="resource-category">
-                        <h3 class="resource-category-title">Programming</h3>
-                        <ul class="resource-list">
-                            <li><span class="resource-name"><a href="https://www.codecademy.com/" target="_blank" class="resource-link">Codecademy</a></span> - <span class="resource-description">Interactive programming courses</span></li>
-                            <li><span class="resource-name"><a href="https://www.freecodecamp.org/" target="_blank" class="resource-link">FreeCodeCamp</a></span> - <span class="resource-description">Free coding bootcamp curriculum</span></li>
+            </div>
+        </div>
+        
+        <!-- Mobile-only recommended reading dropdown -->
+        <div class="recommended-reading-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Recommended Reading
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    General Computer Science
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">The Computer Science Book</li>
+                        <li class="mobile-author">Clifford A. Pickover</li>
+                        <li class="mobile-blurb">A comprehensive journey through 250 milestones in computer-science history. Perfect for GCSE students to understand the development of computer-science concepts.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Computer Science for Scientists and Engineers</li>
+                        <li class="mobile-author">Raymond A. Serway</li>
+                        <li class="mobile-blurb">A clear and comprehensive textbook that covers all fundamental computer-science concepts. Excellent for A-Level students.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Classical Mechanics
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Classical Mechanics</li>
+                        <li class="mobile-author">Herbert Goldstein</li>
+                        <li class="mobile-blurb">The definitive guide to classical mechanics. Great for students interested in understanding motion and forces in detail.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Mechanics</li>
+                        <li class="mobile-author">Keith R. Symon</li>
+                        <li class="mobile-blurb">A clear introduction to mechanics with excellent examples and problem-solving approaches.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Quantum & Modern
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Quantum Computer Science for Beginners</li>
+                        <li class="mobile-author">Zbigniew Ficek</li>
+                        <li class="mobile-blurb">An accessible introduction to quantum computer-science concepts. Perfect for A-Level students exploring modern computer-science.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">The Feynman Lectures on Computer Science</li>
+                        <li class="mobile-author">Richard P. Feynman</li>
+                        <li class="mobile-blurb">Classic lectures that provide deep insights into computer-science concepts. Highly recommended for advanced students.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Astrocomputer-science
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Astrocomputer-science for People in a Hurry</li>
+                        <li class="mobile-author">Neil deGrasse Tyson</li>
+                        <li class="mobile-blurb">A concise and engaging introduction to astrocomputer-science concepts. Great for students interested in space and cosmology.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">An Introduction to Modern Astrocomputer-science</li>
+                        <li class="mobile-author">Bradley W. Carroll</li>
+                        <li class="mobile-blurb">Comprehensive coverage of astrocomputer-science topics. Excellent for students considering further study in this field.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Critical Thinking
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Thinking Computer Science</li>
+                        <li class="mobile-author">Lewis Carroll Epstein</li>
+                        <li class="mobile-blurb">Uses thought experiments to develop critical thinking skills in computer-science. Perfect for developing problem-solving abilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile-only opportunities dropdown -->
+        <div class="opportunities-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Opportunities
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    Research
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Lumiere Research Scholar Program</li>
+                        <li class="mobile-url"><a href="https://www.lumiere-education.com/students-application-form" target="_blank">Apply Here</a></li>
+                        <li class="mobile-blurb">This program pairs high school students with PhD mentors from top universities to conduct independent research projects. They have a specific focus on computer-science and engineering.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Polygence</li>
+                        <li class="mobile-url"><a href="https://www.polygence.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Similar to Lumiere, Polygence connects students with academic mentors for one-on-one research projects. The platform is flexible and can accommodate a wide range of computer-science topics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Cambridge Centre for International Research</li>
+                        <li class="mobile-url"><a href="https://cambridge-research.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">CCIR offers research mentorship programs in various subjects, including computer-science. Their programs are designed to provide a university-level research experience.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Programs
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Immerse Education Computer Science Summer School</li>
+                        <li class="mobile-url"><a href="https://www.immerse.education/computer-science-summer-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Immerse offers in-person computer-science programs at prestigious universities like Oxford and Cambridge. The curriculum covers mechanics, thermodynamics, and modern computer-science.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Imperial College London Global Summer School</li>
+                        <li class="mobile-url"><a href="https://www.imperial.ac.uk/study/visit/summer-schools/high-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This program offers specialized areas of study, including computer-science and engineering, allowing students to engage in academic lectures and practical challenges.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Experience
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Conrad Challenge</li>
+                        <li class="mobile-url"><a href="https://www.conradchallenge.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is a global competition for students to create innovative solutions to global challenges. A team could develop a computer-science-related project to address energy or transportation issues.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">International Computer Science Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.ipho2024.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is the most prestigious computer-science competition for high school students globally. To participate, students must typically first succeed in their national computer-science olympiad.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Awards
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Regeneron International Science and Engineering Fair</li>
+                        <li class="mobile-url"><a href="https://www.societyforscience.org/isef/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">ISEF is the world's largest pre-college STEM competition. Students qualify through local and regional fairs, and the event offers significant awards and networking opportunities.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">British Computer Science Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.bpho.org.uk/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This competition recognizes outstanding high school students for their computer-science knowledge and problem-solving skills. It offers recognition and opportunities for further competition.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Other
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Online Courses</li>
+                        <li class="mobile-blurb">Many universities and platforms offer free or low-cost online courses (MOOCs) in computer-science and related fields. Platforms like Coursera, edX, and FutureLearn have courses from top institutions.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Science Communication</li>
+                        <li class="mobile-blurb">Look for opportunities to write for a school science magazine, start a blog, or create a YouTube channel about computer-science topics. This is a great way to deepen your understanding.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Local Organizations</li>
+                        <li class="mobile-blurb">Check with local science museums, planetariums, engineering companies, or research institutions for volunteer opportunities. Many of these places have programs for young people.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="word-image-section">
+            <img src="{{ '/images/word/computer-science-word.png' | url }}" alt="Computer Science" class="subject-word-image" />
+            <div class="word-resources-box">
+                <div class="resources-content" id="word-resources-content">
+                    <h3>Online Resources</h3>
+                    <div class="resource-details">
+                        <ul>
+                            <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Computer Science)</a></span> - <span class="resource-description">Superb free resource with interactive notes, videos, quizzes, and activities</span></li>
+                            <li><span class="resource-name"><a href="https://www.computer-scienceandmathstutor.com" target="_blank" class="resource-link">Computer Science & Maths Tutor Education</a></span> - <span class="resource-description">Essential free resource with extensive revision notes, past papers, and mark schemes</span></li>
+                            <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Free engaging platform using neuroscience-backed learning methods with GIFs and animations</span></li>
+                            <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">High-quality revision notes, exam-style questions, and past papers for all exam boards</span></li>
+                            <li><span class="resource-name"><a href="https://a-levelcomputer-sciencetutor.com" target="_blank" class="resource-link">A-Level Computer Science Online</a></span> - <span class="resource-description">Comprehensive free video tutorials covering entire AQA specification</span></li>
+                            <li><span class="resource-name"><a href="https://isaaccomputer-science.org" target="_blank" class="resource-link">Isaac Computer Science</a></span> - <span class="resource-description">Free platform from University of Cambridge with challenging computer-science problems</span></li>
+                            <li><span class="resource-name"><a href="http://hypercomputer-science.phy-astr.gsu.edu/hbase/index.html" target="_blank" class="resource-link">Hypercomputer-science</a></span> - <span class="resource-description">Fantastic in-depth resource for understanding computer-science concepts</span></li>
+                            <li><span class="resource-name"><a href="https://www.khanacademy.org/science/computer-science" target="_blank" class="resource-link">Khan Academy Computer Science</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for conceptual understanding</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="subject-sections">
-            <div class="subject-left-section">
-                <div class="word-image-container">
-                    <img src="{{ '/images/word/computer-science-word.png' | url }}" alt="Computer Science" class="subject-word-image" />
-                </div>
-                
-                <div class="book-recommendations-container">
-                    <div class="book-recommendations-section">
-                        <h2 class="section-title">Book Recommendations</h2>
-                        <div class="book-ui-container">
-                            <div class="book-selection-interface">
-                                <div class="book-ibook-container">
-                                    <img src="{{ '/images/ibook/purple-ibook.png' | url }}" alt="Computer Science Book Recommendations" class="subject-ibook-image" />
-                                </div>
-                                <div class="book-buttons-grid">
-                                    <div class="book-button-group">
-                                        <button class="recommended-reading-btn book-btn" data-reading="foundational">
-                                            <img src="{{ '/images/gifs/pu1.gif' | url }}" alt="Foundational Concepts" class="btn-gif" />
-                                            <span>Foundational Concepts</span>
-                                        </button>
-                                        <button class="recommended-reading-btn book-btn" data-reading="algorithms">
-                                            <img src="{{ '/images/gifs/pu2.gif' | url }}" alt="Algorithms & Logic" class="btn-gif" />
-                                            <span>Algorithms & Logic</span>
-                                        </button>
-                                    </div>
-                                    <div class="book-button-group">
-                                        <button class="recommended-reading-btn book-btn" data-reading="ai">
-                                            <img src="{{ '/images/gifs/pu3.gif' | url }}" alt="AI & Future Tech" class="btn-gif" />
-                                            <span>AI & Future Tech</span>
-                                        </button>
-                                        <button class="recommended-reading-btn book-btn" data-reading="programming">
-                                            <img src="{{ '/images/gifs/pu4.gif' | url }}" alt="Programming" class="btn-gif" />
-                                            <span>Programming</span>
-                                        </button>
-                                    </div>
-                                    <div class="book-button-group">
-                                        <button class="recommended-reading-btn book-btn" data-reading="ethics">
-                                            <img src="{{ '/images/gifs/pu5.gif' | url }}" alt="Ethics & Society" class="btn-gif" />
-                                            <span>Ethics & Society</span>
-                                        </button>
-                                    </div>
-                                </div>
+    </div>
+    <div class="second-row-section">
+        <div class="recommended-reading-section">
+            <div class="recommended-reading-container">
+                <div class="ibook-image-container">
+                    <img src="{{ '/images/ibook/orange-ibook.png' | url }}" alt="Computer Science Book Recommendations" class="subject-ibook-image" />
+                    <div class="ibook-recommended-reading-box">
+                        <div class="recommended-reading-content" id="recommended-reading-content">
+                            <h3 class="category-selection-text">Recommended Reading</h3>
+                        </div>
+                        <div class="recommended-reading-buttons">
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="general-computer-science">
+                                    <img src="{{ '/images/gifs/o1.gif' | url }}" alt="General Computer Science" class="btn-gif" />
+                                    General Computer Science
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="classical-mechanics">
+                                    <img src="{{ '/images/gifs/o2.gif' | url }}" alt="Classical Mechanics" class="btn-gif" />
+                                    Classical Mechanics
+                                </button>
                             </div>
-                            <div id="recommended-reading-content" class="book-display-area">
-                                <div class="book-placeholder">
-                                    <h3>Select a category to explore book recommendations</h3>
-                                </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="quantum-modern">
+                                    <img src="{{ '/images/gifs/o3.gif' | url }}" alt="Quantum & Modern" class="btn-gif" />
+                                    Quantum & Modern
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="astrocomputer-science-cosmology">
+                                    <img src="{{ '/images/gifs/o4.gif' | url }}" alt="Astrocomputer-science" class="btn-gif" />
+                                    Astrocomputer-science
+                                </button>
+                            </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="critical-thinking">
+                                    <img src="{{ '/images/gifs/o5.gif' | url }}" alt="Critical Thinking" class="btn-gif" />
+                                    Critical Thinking
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="subject-right-section">
-                <div class="game-section">
-                    <div class="game-container">
-                        <img src="{{ '/images/game/purple-game.png' | url }}" alt="Computer Science Game" class="subject-game-image" />
-                        <div class="opportunities-display-area">
-                            <div id="opportunities-content" class="opportunities-content-display">
-                                <div class="opportunity-placeholder">
-                                    <h3>Select an opportunity category to explore</h3>
-                                </div>
-                            </div>
-                            <div class="opportunities-ui">
-                                <div class="opportunities-buttons">
-                                    <button class="opportunity-btn" data-opportunity="competitions">Competitions</button>
-                                    <button class="opportunity-btn" data-opportunity="internships">Internships</button>
-                                    <button class="opportunity-btn" data-opportunity="programs">Programs</button>
-                                    <button class="opportunity-btn" data-opportunity="research">Research</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        <div class="opportunities-section">
+            <div class="tips-and-game-container">
+                <div class="top-tips-section">
                 </div>
-                
-                <div class="articles-section">
-                    <div class="articles-header">
-                        <h2 class="section-title articles-title">Articles</h2>
-                        <div class="article-tiles-sidebar">
-                            <div class="game-sidebar">
-                                <div class="game-filter-controls">
-                                    <div class="game-tag-buttons">
-                                        <button class="game-tag-btn active" data-tag="all">All</button>
-                                        <button class="game-tag-btn" data-tag="careers">Careers</button>
-                                        <button class="game-tag-btn" data-tag="university">University</button>
-                                        <button class="game-tag-btn" data-tag="research">Research</button>
-                                    </div>
-                                </div>
-
-                                <div class="game-article-tiles-container">
-                                    <div class="game-article-tile" data-tags="careers">
-                                        <img src="https://www.fxguide.com/wp-content/uploads/2020/06/quantum-computer_resize_md.jpg" alt="Quantum Computing Researcher" class="tile-header-image" />
-                                        <div class="tile-divider"></div>
-                                        <div class="tile-title">Quantum Computing Researcher</div>
-                                        <a href="{{ '/articles/quantum-computing-researcher-career/' | url }}" class="tile-link"></a>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="game-image-container">
+                    <img src="{{ '/images/game/orange-game.png' | url }}" alt="Computer Science Game" class="subject-game-image" />
+                    <div class="game-opportunities-box">
+                        <div class="opportunity-content" id="opportunity-content">
+                            <h3>Select an opportunity type to see relevant options</h3>
+                        </div>
+                        <div class="opportunity-buttons">
+                            <button class="opportunity-btn" data-opportunity="research">
+                                Research
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="experience">
+                                Experience
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="programs">
+                                Programs
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="awards">
+                                Awards
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="other">
+                                Other
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -138,6 +299,141 @@ bodyClass: computer-science-page
         </div>
     </div>
 </main>
+
+<div class="game-articles-layout">
+  <main class="game-main-content">
+    <div class="article-tiles-sidebar" data-subject="computer-science">
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        {% set allTags = [] %}
+        {% for article in articles %}
+          {% if article.subject and article.subject | trim | lower == 'computer-science' %}
+            {% for tag in article.tags %}
+              {% if tag not in allTags %}
+                {% set allTags = allTags.concat([tag]) %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        {% for tag in allTags %}
+          <button class="game-tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+        {% endfor %}
+      </div>
+      <div class="articles-grid" id="game-articles-list">
+        {% for article in articles %}
+          {% if article.subject and article.subject | trim | lower == 'computer-science' %}
+            <div class="game-article-tile" data-tags="{{ article.tags | join(',') }}">
+              <img src="{{ article.headerImage or '/images/error.png' }}" alt="{{ article.title }}" class="tile-header-image" />
+              <div class="tile-divider"></div>
+              <div class="tile-title">{{ article.title }}</div>
+              <a href="/articles/{{ article.slug }}/" class="tile-link"></a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+</div>
 <script src="{{ '/js/all-articles-filter.js' | url }}"></script>
 <script src="{{ '/js/opportunities-ui.js' | url }}"></script>
 <script src="{{ '/js/book-recommendations-ui.js' | url }}"></script>
+<div id="articleModal" class="modal">
+    <div id="modalContent" class="modal-content">
+    </div>
+</div>
+<script>
+    const computer-scienceFigures = [
+        '/images/quotes/co1.png',
+        '/images/quotes/co2.png',
+        '/images/quotes/co3.png',
+        '/images/quotes/co4.png',
+        '/images/quotes/co5.png'
+    ];
+    let currentComputer ScienceFigure = 0;
+    const computer-scienceFigureImg = document.getElementById('computer-science-figure-img');
+    const computer-scienceDefinitionImg = document.querySelector('.definition-img');
+    function matchComputer ScienceFigureHeight() {
+        if (computer-scienceDefinitionImg && computer-scienceFigureImg) {
+            if (computer-scienceDefinitionImg.complete && computer-scienceFigureImg.complete) {
+                computer-scienceFigureImg.style.height = computer-scienceDefinitionImg.clientHeight + 'px';
+                computer-scienceFigureImg.style.width = 'auto';
+            } else {
+                computer-scienceDefinitionImg.onload = matchComputer ScienceFigureHeight;
+                computer-scienceFigureImg.onload = matchComputer ScienceFigureHeight;
+            }
+        }
+    }
+    window.addEventListener('load', matchComputer ScienceFigureHeight);
+    window.addEventListener('resize', matchComputer ScienceFigureHeight);
+    if (computer-scienceFigureImg) {
+        computer-scienceFigureImg.addEventListener('click', function() {
+            currentComputer ScienceFigure = (currentComputer ScienceFigure + 1) % computer-scienceFigures.length;
+            computer-scienceFigureImg.src = computer-scienceFigures[currentComputer ScienceFigure];
+            computer-scienceFigureImg.onload = matchComputer ScienceFigureHeight;
+        });
+    }
+</script>
+<script>
+    // Opportunity buttons functionality
+    const opportunityButtons = document.querySelectorAll('.opportunity-btn');
+    const opportunityContent = document.getElementById('opportunity-content');
+    
+    const opportunities = {
+        research: [
+            "Laboratory Research Assistant",
+            "Theoretical Computer Science Projects",
+            "Data Analysis Studies",
+            "Computational Computer Science",
+            "Experimental Design Projects"
+        ],
+        experience: [
+            "Laboratory Internship",
+            "Research Assistant Position",
+            "Observatory Work",
+            "Industry Placement",
+            "Teaching Assistant Role"
+        ],
+        programs: [
+            "Summer Computer Science Programs",
+            "Computer Science Boot Camps",
+            "Laboratory Skills Workshops",
+            "Research Methodology Courses",
+            "Computational Computer Science Programs"
+        ],
+        awards: [
+            "Computer Science Achievement Awards",
+            "Research Excellence Scholarships",
+            "Science Competition Prizes",
+            "Academic Merit Awards",
+            "Innovation in Computer Science Awards"
+        ],
+        other: [
+            "Computer Science Clubs & Societies",
+            "Science Communication",
+            "Science Outreach Programs",
+            "Computer Science Conferences",
+            "Science Journalism"
+        ]
+    };
+    
+    opportunityButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const opportunityType = this.getAttribute('data-opportunity');
+            
+            // Remove active class from all buttons
+            opportunityButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update content
+            const content = opportunities[opportunityType];
+            opportunityContent.innerHTML = `
+                <h3>${opportunityType.charAt(0).toUpperCase() + opportunityType.slice(1)} Opportunities</h3>
+                <ul>
+                    ${content.map(item => `<li>• ${item}</li>`).join('')}
+                </ul>
+            `;
+        });
+    });
+</script>

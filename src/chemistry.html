@@ -12,119 +12,286 @@ bodyClass: chemistry-page
     <div class="definition-image-row">
         <img src="{{ '/images/definitions/chemistry.png' | url }}" alt="Chemistry Definition" class="definition-img" />
         <img id="chemistry-figure-img" src="{{ '/images/quotes/ch1.png' | url }}" alt="Chemistry Quote Figure" class="subject-figure-img" />
-    </div>
-
-    <div class="content-wrapper">
-        <div class="desktop-resources-section">
-            <!-- Desktop Online Resources Section -->
-            <div class="resources-section">
-                <div class="resources-title-row">
-                    <h2 class="section-title resources-title">Online Resources</h2>
+        
+        <!-- Mobile-only online resources dropdown -->
+        <div class="online-resources-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Online Resources
+            </button>
+            <div class="dropdown-content">
+                <div class="resource-details">
+                    <ul>
+                        <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Chemistry)</a></span> - <span class="resource-description">Superb free resource with interactive notes, videos, quizzes, and activities</span></li>
+                        <li><span class="resource-name"><a href="https://www.chemistryandmathstutor.com" target="_blank" class="resource-link">Chemistry & Maths Tutor Education</a></span> - <span class="resource-description">Essential free resource with extensive revision notes, past papers, and mark schemes</span></li>
+                        <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Free engaging platform using neuroscience-backed learning methods with GIFs and animations</span></li>
+                        <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">High-quality revision notes, exam-style questions, and past papers for all exam boards</span></li>
+                        <li><span class="resource-name"><a href="https://a-levelchemistrytutor.com" target="_blank" class="resource-link">A-Level Chemistry Online</a></span> - <span class="resource-description">Comprehensive free video tutorials covering entire AQA specification</span></li>
+                        <li><span class="resource-name"><a href="https://isaacchemistry.org" target="_blank" class="resource-link">Isaac Chemistry</a></span> - <span class="resource-description">Free platform from University of Cambridge with challenging chemistry problems</span></li>
+                        <li><span class="resource-name"><a href="http://hyperchemistry.phy-astr.gsu.edu/hbase/index.html" target="_blank" class="resource-link">Hyperchemistry</a></span> - <span class="resource-description">Fantastic in-depth resource for understanding chemistry concepts</span></li>
+                        <li><span class="resource-name"><a href="https://www.khanacademy.org/science/chemistry" target="_blank" class="resource-link">Khan Academy Chemistry</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for conceptual understanding</span></li>
+                    </ul>
                 </div>
-                <div class="resources-categories">
-                    <div class="resource-category">
-                        <h3 class="resource-category-title">General Chemistry</h3>
-                        <ul class="resource-list">
-                            <li><span class="resource-name"><a href="https://www.khanacademy.org/science/chemistry" target="_blank" class="resource-link">Khan Academy - Chemistry</a></span> - <span class="resource-description">Comprehensive chemistry course</span></li>
-                            <li><span class="resource-name"><a href="https://www.coursera.org/learn/chemistry" target="_blank" class="resource-link">Introduction to Chemistry</a></span> - <span class="resource-description">University-level chemistry course</span></li>
+            </div>
+        </div>
+        
+        <!-- Mobile-only recommended reading dropdown -->
+        <div class="recommended-reading-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Recommended Reading
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    General Chemistry
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">The Chemistry Book</li>
+                        <li class="mobile-author">Clifford A. Pickover</li>
+                        <li class="mobile-blurb">A comprehensive journey through 250 milestones in chemistry history. Perfect for GCSE students to understand the development of chemistry concepts.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Chemistry for Scientists and Engineers</li>
+                        <li class="mobile-author">Raymond A. Serway</li>
+                        <li class="mobile-blurb">A clear and comprehensive textbook that covers all fundamental chemistry concepts. Excellent for A-Level students.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Classical Mechanics
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Classical Mechanics</li>
+                        <li class="mobile-author">Herbert Goldstein</li>
+                        <li class="mobile-blurb">The definitive guide to classical mechanics. Great for students interested in understanding motion and forces in detail.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Mechanics</li>
+                        <li class="mobile-author">Keith R. Symon</li>
+                        <li class="mobile-blurb">A clear introduction to mechanics with excellent examples and problem-solving approaches.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Quantum & Modern
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Quantum Chemistry for Beginners</li>
+                        <li class="mobile-author">Zbigniew Ficek</li>
+                        <li class="mobile-blurb">An accessible introduction to quantum chemistry concepts. Perfect for A-Level students exploring modern chemistry.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">The Feynman Lectures on Chemistry</li>
+                        <li class="mobile-author">Richard P. Feynman</li>
+                        <li class="mobile-blurb">Classic lectures that provide deep insights into chemistry concepts. Highly recommended for advanced students.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Astrochemistry
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Astrochemistry for People in a Hurry</li>
+                        <li class="mobile-author">Neil deGrasse Tyson</li>
+                        <li class="mobile-blurb">A concise and engaging introduction to astrochemistry concepts. Great for students interested in space and cosmology.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">An Introduction to Modern Astrochemistry</li>
+                        <li class="mobile-author">Bradley W. Carroll</li>
+                        <li class="mobile-blurb">Comprehensive coverage of astrochemistry topics. Excellent for students considering further study in this field.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Critical Thinking
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Thinking Chemistry</li>
+                        <li class="mobile-author">Lewis Carroll Epstein</li>
+                        <li class="mobile-blurb">Uses thought experiments to develop critical thinking skills in chemistry. Perfect for developing problem-solving abilities.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile-only opportunities dropdown -->
+        <div class="opportunities-dropdown mobile-only">
+            <button class="dropdown-btn">
+                Opportunities
+            </button>
+            <div class="dropdown-content">
+                <button class="dropdown-btn">
+                    Research
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Lumiere Research Scholar Program</li>
+                        <li class="mobile-url"><a href="https://www.lumiere-education.com/students-application-form" target="_blank">Apply Here</a></li>
+                        <li class="mobile-blurb">This program pairs high school students with PhD mentors from top universities to conduct independent research projects. They have a specific focus on chemistry and engineering.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Polygence</li>
+                        <li class="mobile-url"><a href="https://www.polygence.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Similar to Lumiere, Polygence connects students with academic mentors for one-on-one research projects. The platform is flexible and can accommodate a wide range of chemistry topics.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Cambridge Centre for International Research</li>
+                        <li class="mobile-url"><a href="https://cambridge-research.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">CCIR offers research mentorship programs in various subjects, including chemistry. Their programs are designed to provide a university-level research experience.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Programs
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Immerse Education Chemistry Summer School</li>
+                        <li class="mobile-url"><a href="https://www.immerse.education/chemistry-summer-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">Immerse offers in-person chemistry programs at prestigious universities like Oxford and Cambridge. The curriculum covers mechanics, thermodynamics, and modern chemistry.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Imperial College London Global Summer School</li>
+                        <li class="mobile-url"><a href="https://www.imperial.ac.uk/study/visit/summer-schools/high-school/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This program offers specialized areas of study, including chemistry and engineering, allowing students to engage in academic lectures and practical challenges.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Experience
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Conrad Challenge</li>
+                        <li class="mobile-url"><a href="https://www.conradchallenge.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is a global competition for students to create innovative solutions to global challenges. A team could develop a chemistry-related project to address energy or transportation issues.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">International Chemistry Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.ipho2024.org/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This is the most prestigious chemistry competition for high school students globally. To participate, students must typically first succeed in their national chemistry olympiad.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Awards
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Regeneron International Science and Engineering Fair</li>
+                        <li class="mobile-url"><a href="https://www.societyforscience.org/isef/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">ISEF is the world's largest pre-college STEM competition. Students qualify through local and regional fairs, and the event offers significant awards and networking opportunities.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">British Chemistry Olympiad</li>
+                        <li class="mobile-url"><a href="https://www.bpho.org.uk/" target="_blank">Visit Website</a></li>
+                        <li class="mobile-blurb">This competition recognizes outstanding high school students for their chemistry knowledge and problem-solving skills. It offers recognition and opportunities for further competition.</li>
+                    </ul>
+                </div>
+                <button class="dropdown-btn">
+                    Other
+                </button>
+                <div class="dropdown-content">
+                    <ul>
+                        <li class="mobile-title">Online Courses</li>
+                        <li class="mobile-blurb">Many universities and platforms offer free or low-cost online courses (MOOCs) in chemistry and related fields. Platforms like Coursera, edX, and FutureLearn have courses from top institutions.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Science Communication</li>
+                        <li class="mobile-blurb">Look for opportunities to write for a school science magazine, start a blog, or create a YouTube channel about chemistry topics. This is a great way to deepen your understanding.</li>
+                    </ul>
+                    <ul>
+                        <li class="mobile-title">Local Organizations</li>
+                        <li class="mobile-blurb">Check with local science museums, planetariums, engineering companies, or research institutions for volunteer opportunities. Many of these places have programs for young people.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="word-image-section">
+            <img src="{{ '/images/word/chemistry-word.png' | url }}" alt="Chemistry" class="subject-word-image" />
+            <div class="word-resources-box">
+                <div class="resources-content" id="word-resources-content">
+                    <h3>Online Resources</h3>
+                    <div class="resource-details">
+                        <ul>
+                            <li><span class="resource-name"><a href="https://www.bbc.co.uk/bitesize" target="_blank" class="resource-link">BBC Bitesize (GCSE & A-Level Chemistry)</a></span> - <span class="resource-description">Superb free resource with interactive notes, videos, quizzes, and activities</span></li>
+                            <li><span class="resource-name"><a href="https://www.chemistryandmathstutor.com" target="_blank" class="resource-link">Chemistry & Maths Tutor Education</a></span> - <span class="resource-description">Essential free resource with extensive revision notes, past papers, and mark schemes</span></li>
+                            <li><span class="resource-name"><a href="https://senecalearning.com" target="_blank" class="resource-link">Seneca Learning</a></span> - <span class="resource-description">Free engaging platform using neuroscience-backed learning methods with GIFs and animations</span></li>
+                            <li><span class="resource-name"><a href="https://www.savemyexams.co.uk" target="_blank" class="resource-link">Save My Exams</a></span> - <span class="resource-description">High-quality revision notes, exam-style questions, and past papers for all exam boards</span></li>
+                            <li><span class="resource-name"><a href="https://a-levelchemistrytutor.com" target="_blank" class="resource-link">A-Level Chemistry Online</a></span> - <span class="resource-description">Comprehensive free video tutorials covering entire AQA specification</span></li>
+                            <li><span class="resource-name"><a href="https://isaacchemistry.org" target="_blank" class="resource-link">Isaac Chemistry</a></span> - <span class="resource-description">Free platform from University of Cambridge with challenging chemistry problems</span></li>
+                            <li><span class="resource-name"><a href="http://hyperchemistry.phy-astr.gsu.edu/hbase/index.html" target="_blank" class="resource-link">Hyperchemistry</a></span> - <span class="resource-description">Fantastic in-depth resource for understanding chemistry concepts</span></li>
+                            <li><span class="resource-name"><a href="https://www.khanacademy.org/science/chemistry" target="_blank" class="resource-link">Khan Academy Chemistry</a></span> - <span class="resource-description">Wide range of free video lessons and practice exercises for conceptual understanding</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="subject-sections">
-            <div class="subject-left-section">
-                <div class="word-image-container">
-                    <img src="{{ '/images/word/chemistry-word.png' | url }}" alt="Chemistry" class="subject-word-image" />
-                </div>
-                
-                <div class="book-recommendations-container">
-                    <div class="book-recommendations-section">
-                        <h2 class="section-title">Book Recommendations</h2>
-                        <div class="book-ui-container">
-                            <div class="book-selection-interface">
-                                <div class="book-ibook-container">
-                                    <img src="{{ '/images/ibook/red-ibook.png' | url }}" alt="Chemistry Book Recommendations" class="subject-ibook-image" />
-                                </div>
-                                <div class="book-buttons-grid">
-                                    <div class="book-button-group">
-                                        <button class="recommended-reading-btn book-btn" data-reading="general">
-                                            <img src="{{ '/images/gifs/r1.gif' | url }}" alt="General Chemistry" class="btn-gif" />
-                                            <span>General Chemistry</span>
-                                        </button>
-                                        <button class="recommended-reading-btn book-btn" data-reading="applied">
-                                            <img src="{{ '/images/gifs/r2.gif' | url }}" alt="Applied Chemistry" class="btn-gif" />
-                                            <span>Applied Chemistry</span>
-                                        </button>
-                                    </div>
-                                    <div class="book-button-group">
-                                        <button class="recommended-reading-btn book-btn" data-reading="deeper">
-                                            <img src="{{ '/images/gifs/r3.gif' | url }}" alt="Deeper Concepts" class="btn-gif" />
-                                            <span>Deeper Concepts</span>
-                                        </button>
-                                        <button class="recommended-reading-btn book-btn" data-reading="advanced">
-                                            <img src="{{ '/images/gifs/r4.gif' | url }}" alt="Advanced" class="btn-gif" />
-                                            <span>Advanced</span>
-                                        </button>
-                                    </div>
-                                </div>
+    </div>
+    <div class="second-row-section">
+        <div class="recommended-reading-section">
+            <div class="recommended-reading-container">
+                <div class="ibook-image-container">
+                    <img src="{{ '/images/ibook/orange-ibook.png' | url }}" alt="Chemistry Book Recommendations" class="subject-ibook-image" />
+                    <div class="ibook-recommended-reading-box">
+                        <div class="recommended-reading-content" id="recommended-reading-content">
+                            <h3 class="category-selection-text">Recommended Reading</h3>
+                        </div>
+                        <div class="recommended-reading-buttons">
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="general-chemistry">
+                                    <img src="{{ '/images/gifs/o1.gif' | url }}" alt="General Chemistry" class="btn-gif" />
+                                    General Chemistry
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="classical-mechanics">
+                                    <img src="{{ '/images/gifs/o2.gif' | url }}" alt="Classical Mechanics" class="btn-gif" />
+                                    Classical Mechanics
+                                </button>
                             </div>
-                            <div id="recommended-reading-content" class="book-display-area">
-                                <div class="book-placeholder">
-                                    <h3>Select a category to explore book recommendations</h3>
-                                </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="quantum-modern">
+                                    <img src="{{ '/images/gifs/o3.gif' | url }}" alt="Quantum & Modern" class="btn-gif" />
+                                    Quantum & Modern
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="astrochemistry-cosmology">
+                                    <img src="{{ '/images/gifs/o4.gif' | url }}" alt="Astrochemistry" class="btn-gif" />
+                                    Astrochemistry
+                                </button>
+                            </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="critical-thinking">
+                                    <img src="{{ '/images/gifs/o5.gif' | url }}" alt="Critical Thinking" class="btn-gif" />
+                                    Critical Thinking
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="subject-right-section">
-                <div class="game-section">
-                    <div class="game-container">
-                        <img src="{{ '/images/game/red-game.png' | url }}" alt="Chemistry Game" class="subject-game-image" />
-                        <div class="opportunities-display-area">
-                            <div id="opportunities-content" class="opportunities-content-display">
-                                <div class="opportunity-placeholder">
-                                    <h3>Select an opportunity category to explore</h3>
-                                </div>
-                            </div>
-                            <div class="opportunities-ui">
-                                <div class="opportunities-buttons">
-                                    <button class="opportunity-btn" data-opportunity="competitions">Competitions</button>
-                                    <button class="opportunity-btn" data-opportunity="internships">Internships</button>
-                                    <button class="opportunity-btn" data-opportunity="programs">Programs</button>
-                                    <button class="opportunity-btn" data-opportunity="research">Research</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        </div>
+        <div class="opportunities-section">
+            <div class="tips-and-game-container">
+                <div class="top-tips-section">
                 </div>
-                
-                <div class="articles-section">
-                    <div class="articles-header">
-                        <h2 class="section-title articles-title">Articles</h2>
-                        <div class="article-tiles-sidebar">
-                            <div class="game-sidebar">
-                                <div class="game-filter-controls">
-                                    <div class="game-tag-buttons">
-                                        <button class="game-tag-btn active" data-tag="all">All</button>
-                                        <button class="game-tag-btn" data-tag="careers">Careers</button>
-                                        <button class="game-tag-btn" data-tag="university">University</button>
-                                        <button class="game-tag-btn" data-tag="research">Research</button>
-                                    </div>
-                                </div>
-
-                                <div class="game-article-tiles-container">
-                                    <div class="game-article-tile" data-tags="careers">
-                                        <img src="https://careersnow.ca/wp-content/uploads/2022/12/Flavourist-01.jpg" alt="Flavour Chemist" class="tile-header-image" />
-                                        <div class="tile-divider"></div>
-                                        <div class="tile-title">Flavour Chemist</div>
-                                        <a href="{{ '/articles/flavour-chemist-career/' | url }}" class="tile-link"></a>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="game-image-container">
+                    <img src="{{ '/images/game/orange-game.png' | url }}" alt="Chemistry Game" class="subject-game-image" />
+                    <div class="game-opportunities-box">
+                        <div class="opportunity-content" id="opportunity-content">
+                            <h3>Select an opportunity type to see relevant options</h3>
+                        </div>
+                        <div class="opportunity-buttons">
+                            <button class="opportunity-btn" data-opportunity="research">
+                                Research
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="experience">
+                                Experience
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="programs">
+                                Programs
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="awards">
+                                Awards
+                            </button>
+                            <button class="opportunity-btn" data-opportunity="other">
+                                Other
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -132,6 +299,141 @@ bodyClass: chemistry-page
         </div>
     </div>
 </main>
+
+<div class="game-articles-layout">
+  <main class="game-main-content">
+    <div class="article-tiles-sidebar" data-subject="chemistry">
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        {% set allTags = [] %}
+        {% for article in articles %}
+          {% if article.subject and article.subject | trim | lower == 'chemistry' %}
+            {% for tag in article.tags %}
+              {% if tag not in allTags %}
+                {% set allTags = allTags.concat([tag]) %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        {% for tag in allTags %}
+          <button class="game-tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+        {% endfor %}
+      </div>
+      <div class="articles-grid" id="game-articles-list">
+        {% for article in articles %}
+          {% if article.subject and article.subject | trim | lower == 'chemistry' %}
+            <div class="game-article-tile" data-tags="{{ article.tags | join(',') }}">
+              <img src="{{ article.headerImage or '/images/error.png' }}" alt="{{ article.title }}" class="tile-header-image" />
+              <div class="tile-divider"></div>
+              <div class="tile-title">{{ article.title }}</div>
+              <a href="/articles/{{ article.slug }}/" class="tile-link"></a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+</div>
 <script src="{{ '/js/all-articles-filter.js' | url }}"></script>
 <script src="{{ '/js/opportunities-ui.js' | url }}"></script>
 <script src="{{ '/js/book-recommendations-ui.js' | url }}"></script>
+<div id="articleModal" class="modal">
+    <div id="modalContent" class="modal-content">
+    </div>
+</div>
+<script>
+    const chemistryFigures = [
+        '/images/quotes/ch1.png',
+        '/images/quotes/ch2.png',
+        '/images/quotes/ch3.png',
+        '/images/quotes/ch4.png',
+        '/images/quotes/ch5.png'
+    ];
+    let currentChemistryFigure = 0;
+    const chemistryFigureImg = document.getElementById('chemistry-figure-img');
+    const chemistryDefinitionImg = document.querySelector('.definition-img');
+    function matchChemistryFigureHeight() {
+        if (chemistryDefinitionImg && chemistryFigureImg) {
+            if (chemistryDefinitionImg.complete && chemistryFigureImg.complete) {
+                chemistryFigureImg.style.height = chemistryDefinitionImg.clientHeight + 'px';
+                chemistryFigureImg.style.width = 'auto';
+            } else {
+                chemistryDefinitionImg.onload = matchChemistryFigureHeight;
+                chemistryFigureImg.onload = matchChemistryFigureHeight;
+            }
+        }
+    }
+    window.addEventListener('load', matchChemistryFigureHeight);
+    window.addEventListener('resize', matchChemistryFigureHeight);
+    if (chemistryFigureImg) {
+        chemistryFigureImg.addEventListener('click', function() {
+            currentChemistryFigure = (currentChemistryFigure + 1) % chemistryFigures.length;
+            chemistryFigureImg.src = chemistryFigures[currentChemistryFigure];
+            chemistryFigureImg.onload = matchChemistryFigureHeight;
+        });
+    }
+</script>
+<script>
+    // Opportunity buttons functionality
+    const opportunityButtons = document.querySelectorAll('.opportunity-btn');
+    const opportunityContent = document.getElementById('opportunity-content');
+    
+    const opportunities = {
+        research: [
+            "Laboratory Research Assistant",
+            "Theoretical Chemistry Projects",
+            "Data Analysis Studies",
+            "Computational Chemistry",
+            "Experimental Design Projects"
+        ],
+        experience: [
+            "Laboratory Internship",
+            "Research Assistant Position",
+            "Observatory Work",
+            "Industry Placement",
+            "Teaching Assistant Role"
+        ],
+        programs: [
+            "Summer Chemistry Programs",
+            "Chemistry Boot Camps",
+            "Laboratory Skills Workshops",
+            "Research Methodology Courses",
+            "Computational Chemistry Programs"
+        ],
+        awards: [
+            "Chemistry Achievement Awards",
+            "Research Excellence Scholarships",
+            "Science Competition Prizes",
+            "Academic Merit Awards",
+            "Innovation in Chemistry Awards"
+        ],
+        other: [
+            "Chemistry Clubs & Societies",
+            "Science Communication",
+            "Science Outreach Programs",
+            "Chemistry Conferences",
+            "Science Journalism"
+        ]
+    };
+    
+    opportunityButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const opportunityType = this.getAttribute('data-opportunity');
+            
+            // Remove active class from all buttons
+            opportunityButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update content
+            const content = opportunities[opportunityType];
+            opportunityContent.innerHTML = `
+                <h3>${opportunityType.charAt(0).toUpperCase() + opportunityType.slice(1)} Opportunities</h3>
+                <ul>
+                    ${content.map(item => `<li>• ${item}</li>`).join('')}
+                </ul>
+            `;
+        });
+    });
+</script>
