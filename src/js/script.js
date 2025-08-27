@@ -415,12 +415,23 @@ function setupCenteredList() {
 // Inspiring Figures Carousel Logic (for mathematics.html)
 // Removed carousel logic and references to quoteone.png, quotetwo.jpg, quotethree.jpg
 
-// TV remote cycling logic (unified, absolute paths)
+// TV remote cycling logic (GitHub Pages compatible paths)
 document.addEventListener('DOMContentLoaded', function() {
     const tvImg = document.getElementById('pinktv');
     const remoteBtn = document.getElementById('remote-btn');
-    const tvImages = ['/images/pinktv0.png', '/images/pinktv1.png', '/images/pinktv2.png'];
+    
+    // Get the base path from the current page URL
+    const basePath = window.location.pathname.includes('/curiositas-magazine/') 
+        ? '/curiositas-magazine' 
+        : '';
+    
+    const tvImages = [
+        `${basePath}/images/pinktv0.png`, 
+        `${basePath}/images/pinktv1.png`, 
+        `${basePath}/images/pinktv2.png`
+    ];
     let currentIndex = 0; // Start at pinktv0.png
+    
     if (tvImg && remoteBtn) {
         remoteBtn.addEventListener('click', function() {
             currentIndex = (currentIndex + 1) % tvImages.length;
