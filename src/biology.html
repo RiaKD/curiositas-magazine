@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
     <title>Biology Articles | cūriōsitās</title>
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
@@ -15,42 +15,42 @@
     
     <div class="top-bar">
         <div class="logo-container">
-            <a href="/index.html" title="Home" class="nav-btn home-btn">
-                <img src="/images/logo.png" alt="Curiositas Logo" class="nav-button" />
+            <a href="{{ '/index.html' | url }}" title="Home" class="nav-btn home-btn">
+                <img src="{{ '/images/logo.png' | url }}" alt="Curiositas Logo" class="nav-button" />
                 <span class="nav-button-label">Home</span>
             </a>
-            <a href="/submissions.html" title="Submissions" class="nav-btn submit-btn">
-                <img src="/images/submit.png" alt="Submissions" class="nav-button" />
+            <a href="{{ '/submissions.html' | url }}" title="Submissions" class="nav-btn submit-btn">
+                <img src="{{ '/images/submit.png' | url }}" alt="Submissions" class="nav-button" />
                 <span class="nav-button-label">Submissions</span>
             </a>
-            <a href="/applications.html" title="Applications" class="nav-btn join-btn">
-                <img src="/images/join2.png" alt="Applications" class="nav-button" />
+            <a href="{{ '/applications.html' | url }}" title="Applications" class="nav-btn join-btn">
+                <img src="{{ '/images/join2.png' | url }}" alt="Applications" class="nav-button" />
                 <span class="nav-button-label">Applications</span>
             </a>
         </div>
         <div class="dog-nav">
-            <a href="/all-articles/" class="dog-btn dog-pink" title="Articles">
-                <img src="/images/dog/pink.png" alt="Articles Dog" />
+            <a href="{{ '/all-articles/' | url }}" class="dog-btn dog-pink" title="Articles">
+                <img src="{{ '/images/dog/pink.png' | url }}" alt="Articles Dog" />
                 <span>Articles</span>
             </a>
-            <a href="/chemistry.html" class="dog-btn dog-red" title="Chemistry">
-                <img src="/images/dog/red.png" alt="Chemistry Dog" />
+            <a href="{{ '/chemistry.html' | url }}" class="dog-btn dog-red" title="Chemistry">
+                <img src="{{ '/images/dog/red.png' | url }}" alt="Chemistry Dog" />
                 <span>Chemistry</span>
             </a>
-            <a href="/physics.html" class="dog-btn dog-orange" title="Physics">
-                <img src="/images/dog/orange.png" alt="Physics Dog" />
+            <a href="{{ '/physics.html' | url }}" class="dog-btn dog-orange" title="Physics">
+                <img src="{{ '/images/dog/orange.png' | url }}" alt="Physics Dog" />
                 <span>Physics</span>
             </a>
-            <a href="/biology.html" class="dog-btn dog-green" title="Biology">
-                <img src="/images/dog/green.png" alt="Biology Dog" />
+            <a href="{{ '/biology.html' | url }}" class="dog-btn dog-green" title="Biology">
+                <img src="{{ '/images/dog/green.png' | url }}" alt="Biology Dog" />
                 <span>Biology</span>
             </a>
-            <a href="/mathematics.html" class="dog-btn dog-blue" title="Mathematics">
-                <img src="/images/dog/blue.png" alt="Mathematics Dog" />
+            <a href="{{ '/mathematics.html' | url }}" class="dog-btn dog-blue" title="Mathematics">
+                <img src="{{ '/images/dog/blue.png' | url }}" alt="Mathematics Dog" />
                 <span>Mathematics</span>
             </a>
-            <a href="/computer_science.html" class="dog-btn dog-purple" title="Computer Science">
-                <img src="/images/dog/purple.png" alt="Computer Science Dog" />
+            <a href="{{ '/computer_science.html' | url }}" class="dog-btn dog-purple" title="Computer Science">
+                <img src="{{ '/images/dog/purple.png' | url }}" alt="Computer Science Dog" />
                 <span>Computer Science</span>
             </a>
         </div>
@@ -83,8 +83,8 @@
 </div>
 <main>
     <div class="definition-image-row">
-        <img src="/images/definitions/biology.png" alt="Biology Definition" class="definition-img" />
-        <img id="biology-figure-img" src="/images/quotes/b1.png" alt="Biology Quote Figure" class="subject-figure-img" />
+        <img src="{{ '/images/definitions/biology.png' | url }}" alt="Biology Definition" class="definition-img" />
+        <img id="biology-figure-img" src="{{ '/images/quotes/b1.png' | url }}" alt="Biology Quote Figure" class="subject-figure-img" />
         
         <!-- Mobile-only online resources dropdown -->
         <div class="online-resources-dropdown mobile-only">
@@ -393,7 +393,7 @@
         </div>
         
         <div class="word-image-section">
-            <img src="/images/word/biology-word.png" alt="Biology" class="subject-word-image" />
+            <img src="{{ '/images/word/biology-word.png' | url }}" alt="Biology" class="subject-word-image" />
             <div class="word-resources-box">
                 <div class="resources-content" id="word-resources-content">
                     <h3>Online Resources</h3>
@@ -415,7 +415,7 @@
         <div class="recommended-reading-section">
             <div class="recommended-reading-container">
                 <div class="ibook-image-container">
-                    <img src="/images/ibook/green-ibook.png" alt="Biology Recommended Reading" class="subject-ibook-image" />
+                    <img src="{{ '/images/ibook/green-ibook.png' | url }}" alt="Biology Recommended Reading" class="subject-ibook-image" />
                     <div class="ibook-recommended-reading-box">
                         <div class="recommended-reading-content" id="recommended-reading-content">
                             <h3 class="category-selection-text">Recommended Reading</h3>
@@ -423,27 +423,27 @@
                         <div class="recommended-reading-buttons">
                             <div class="button-row">
                                 <button class="recommended-reading-btn" data-reading="general-biology">
-                                    <img src="/images/gifs/g1.gif" alt="General Biology" class="btn-gif" />
+                                    <img src="{{ '/images/gifs/g1.gif' | url }}" alt="General Biology" class="btn-gif" />
                                     General Biology
                                 </button>
                                 <button class="recommended-reading-btn" data-reading="evolution-genetics">
-                                    <img src="/images/gifs/g2.gif" alt="Evolution & Genetics" class="btn-gif" />
+                                    <img src="{{ '/images/gifs/g2.gif' | url }}" alt="Evolution & Genetics" class="btn-gif" />
                                     Evolution & Genetics
                                 </button>
                             </div>
                             <div class="button-row">
                                 <button class="recommended-reading-btn" data-reading="medical-human">
-                                    <img src="/images/gifs/g3.gif" alt="Medical & Human Biology" class="btn-gif" />
+                                    <img src="{{ '/images/gifs/g3.gif' | url }}" alt="Medical & Human Biology" class="btn-gif" />
                                     Medical & Human
                                 </button>
                                 <button class="recommended-reading-btn" data-reading="ecology-environment">
-                                    <img src="/images/gifs/g4.gif" alt="Ecology & Environment" class="btn-gif" />
+                                    <img src="{{ '/images/gifs/g4.gif' | url }}" alt="Ecology & Environment" class="btn-gif" />
                                     Ecology & Environment
                                 </button>
                             </div>
                             <div class="button-row">
                                 <button class="recommended-reading-btn" data-reading="other-notable">
-                                    <img src="/images/gifs/g5.gif" alt="Other Notable" class="btn-gif" />
+                                    <img src="{{ '/images/gifs/g5.gif' | url }}" alt="Other Notable" class="btn-gif" />
                                     Other
                                 </button>
                             </div>
@@ -457,7 +457,7 @@
                 <div class="top-tips-section">
                 </div>
                 <div class="game-image-container">
-                    <img src="/images/game/green-game.png" alt="Biology Game" class="subject-game-image" />
+                    <img src="{{ '/images/game/green-game.png' | url }}" alt="Biology Game" class="subject-game-image" />
                     <div class="game-opportunities-box">
                         <div class="opportunity-content" id="opportunity-content">
                             <h3>Select an opportunity type to see relevant options</h3>
@@ -549,28 +549,28 @@
         
         
           <div class="game-article-tile" data-tags="careers">
-            <img src="/images/error.png" alt="Cryobiologist" class="tile-header-image" />
+            <img src="{{ '/images/error.png' | url }}" alt="Cryobiologist" class="tile-header-image" />
             <div class="tile-divider"></div>
             <div class="tile-title">Cryobiologist</div>
-            <a href="/articles/cryobiologist/" class="tile-link"></a>
+            <a href="{{ '/articles/cryobiologist/' | url }}" class="tile-link"></a>
           </div>
         
         
         
           <div class="game-article-tile" data-tags="careers">
-            <img src="/images/error.png" alt="Forensic Entomologist" class="tile-header-image" />
+            <img src="{{ '/images/error.png' | url }}" alt="Forensic Entomologist" class="tile-header-image" />
             <div class="tile-divider"></div>
             <div class="tile-title">Forensic Entomologist</div>
-            <a href="/articles/forensic-entomologist-career/" class="tile-link"></a>
+            <a href="{{ '/articles/forensic-entomologist-career/' | url }}" class="tile-link"></a>
           </div>
         
         
         
           <div class="game-article-tile" data-tags="careers">
-            <img src="/images/error.png" alt="Neurogeneticist" class="tile-header-image" />
+            <img src="{{ '/images/error.png' | url }}" alt="Neurogeneticist" class="tile-header-image" />
             <div class="tile-divider"></div>
             <div class="tile-title">Neurogeneticist</div>
-            <a href="/articles/neurogeneticist-career/" class="tile-link"></a>
+            <a href="{{ '/articles/neurogeneticist-career/' | url }}" class="tile-link"></a>
           </div>
         
         
@@ -589,7 +589,7 @@
             <img src="https://www.academicinfo.net/static/d35e90b6196456c1ec1b4ccc12b5a20e/14b42/marine1.jpg" alt="Marine Biotechnologist" class="tile-header-image" />
             <div class="tile-divider"></div>
             <div class="tile-title">Marine Biotechnologist</div>
-            <a href="/articles/marine-biotechnologist-career/" class="tile-link"></a>
+            <a href="{{ '/articles/marine-biotechnologist-career/' | url }}" class="tile-link"></a>
           </div>
         
         
