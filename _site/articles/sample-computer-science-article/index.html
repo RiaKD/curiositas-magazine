@@ -113,7 +113,7 @@ Sample content for local development.
   </div>
 
   <!-- Right side: Camera screen (flush with right edge) -->
-  <div class="camera-screen">
+  <div class="camera-screen" style="position: relative;">
     <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
     <div class="camera-screen-cutout">
       
@@ -123,8 +123,8 @@ Sample content for local development.
   </div>
 </div>
 
-<!-- Articles sidebar below the layout -->
-<div class="article-tiles-sidebar" data-subject="computer-science">
+<!-- Articles sidebar positioned below camera using CSS positioning -->
+<div class="article-tiles-sidebar" data-subject="computer-science" style="position: absolute; right: 0; top: calc(100vh - 50vh); width: 600px; max-width: 600px;">
   <div class="game-tag-filter-bar">
     <button class="game-tag-btn active" data-tag="all">All</button>
     
