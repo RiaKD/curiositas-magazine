@@ -92,4 +92,37 @@ bodyClass: all-articles
         </div>
     </div>
 </main>
-<script src="{{ '/js/all-articles-filter.js' | url }}"></script>
+
+<div class="game-articles-layout">
+  <main class="game-main-content">
+    <div class="article-tiles-sidebar" data-subject="all">
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        {% set uniqueTags = [] %}
+        {% for article in articles %}
+          {% if article.tags %}
+            {% for tag in article.tags %}
+              {% if tag not in uniqueTags %}
+                {% set uniqueTags = (uniqueTags.push(tag), uniqueTags) %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+        {% for tag in uniqueTags %}
+          <button class="game-tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+        {% endfor %}
+      </div>
+      <div class="articles-grid" id="game-articles-list">
+        {% for article in articles %}
+          <div class="game-article-tile" data-tags="{{ article.tags | join(',') }}">
+            <img src="{{ (article.headerImage or '/images/error.png') | url }}" alt="{{ article.title }}" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">{{ article.title }}</div>
+            <a href="{{ ('/articles/' + article.slug + '/') | url }}" class="tile-link"></a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </main>
+</div>
+<script src="{{ '/js/article-sidebar-filter.js' | url }}"></script>
