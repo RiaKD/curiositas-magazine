@@ -426,16 +426,33 @@ bodyClass: biology-page
         <button class="game-tag-btn" data-tag="biotech">biotech</button>
       </div>
       <div class="articles-grid" id="game-articles-list">
-        {% for article in articles %}
-          {% if article.subject and article.subject | trim | lower == 'biology' %}
-            <div class="game-article-tile" data-tags="{{ article.tags | join(',') }}">
-              <img src="{{ article.headerImage or '/images/error.png' | url }}" alt="{{ article.title }}" class="tile-header-image" />
-              <div class="tile-divider"></div>
-              <div class="tile-title">{{ article.title }}</div>
-              <a href="{{ '/articles/' + article.slug + '/' | url }}" class="tile-link"></a>
-            </div>
-          {% endif %}
-        {% endfor %}
+        <div class="game-article-tile" data-tags="careers">
+          <img src="{{ '/images/error.png' | url }}" alt="Cryobiologist" class="tile-header-image" />
+          <div class="tile-divider"></div>
+          <div class="tile-title">Cryobiologist</div>
+          <a href="{{ '/articles/cryobiologist/' | url }}" class="tile-link"></a>
+        </div>
+        
+        <div class="game-article-tile" data-tags="careers">
+          <img src="{{ '/images/error.png' | url }}" alt="Forensic Entomologist" class="tile-header-image" />
+          <div class="tile-divider"></div>
+          <div class="tile-title">Forensic Entomologist</div>
+          <a href="{{ '/articles/forensic-entomologist-career/' | url }}" class="tile-link"></a>
+        </div>
+        
+        <div class="game-article-tile" data-tags="careers">
+          <img src="{{ '/images/error.png' | url }}" alt="Neurogeneticist" class="tile-header-image" />
+          <div class="tile-divider"></div>
+          <div class="tile-title">Neurogeneticist</div>
+          <a href="{{ '/articles/neurogeneticist-career/' | url }}" class="tile-link"></a>
+        </div>
+        
+        <div class="game-article-tile" data-tags="careers,marine,biotech">
+          <img src="https://www.academicinfo.net/static/d35e90b6196456c1ec1b4ccc12b5a20e/14b42/marine1.jpg" alt="Marine Biotechnologist" class="tile-header-image" />
+          <div class="tile-divider"></div>
+          <div class="tile-title">Marine Biotechnologist</div>
+          <a href="{{ '/articles/marine-biotechnologist-career/' | url }}" class="tile-link"></a>
+        </div>
       </div>
     </div>
   </main>
