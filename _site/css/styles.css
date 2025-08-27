@@ -4085,23 +4085,23 @@ text-align: center;
 
 /* Subject-specific gradient backgrounds for recommended reading buttons */
 .biology-page .recommended-reading-btn {
-  background: linear-gradient(135deg, var(--dark-green), var(--light-green)) !important;
+  background: linear-gradient(135deg, var(--dark-green), var(--green)) !important;
 }
 
 .chemistry-page .recommended-reading-btn {
-  background: linear-gradient(135deg, var(--dark-red), var(--light-red)) !important;
+  background: linear-gradient(135deg, var(--dark-red), var(--red)) !important;
 }
 
 .physics-page .recommended-reading-btn {
-  background: linear-gradient(135deg, var(--dark-orange), var(--light-orange)) !important;
+  background: linear-gradient(135deg, var(--dark-orange), var(--orange)) !important;
 }
 
 .mathematics-page .recommended-reading-btn {
-  background: linear-gradient(135deg, var(--dark-blue), var(--light-blue)) !important;
+  background: linear-gradient(135deg, var(--dark-blue), var(--blue)) !important;
 }
 
 .computer-science-page .recommended-reading-btn {
-  background: linear-gradient(135deg, var(--dark-purple), var(--light-purple)) !important;
+  background: linear-gradient(135deg, var(--dark-purple), var(--purple)) !important;
 }
 
 .opportunity-btn {
