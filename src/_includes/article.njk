@@ -44,7 +44,7 @@ layout: base
   </div>
 
   <!-- Right side: Camera screen and sidebar (flush with right edge) -->
-  <div>
+  <div style="margin-left: auto;">
     <!-- Camera screen -->
     <div class="camera-screen">
       <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
@@ -64,9 +64,7 @@ layout: base
       </div>
       <div class="game-articles-list article-tiles-list" id="game-articles-list">
         {% for otherArticle in articles %}
-          {% set currentSubject = (article.subject or subject or 'none') %}
-          {% set otherSubject = (otherArticle.subject or 'none') %}
-          {% if otherArticle.id != (article.id or '') and otherSubject and (otherSubject | lower) == (currentSubject | lower) %}
+          {% if otherArticle.id != (article.id or '') %}
             <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
               <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
               <div class="tile-title">{{ otherArticle.title }}</div>
