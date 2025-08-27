@@ -1,16 +1,16 @@
 ---
 layout: base
 ---
-<div class="article-layout" data-subject="{{ subject or 'none' }}">
+<div class="article-layout" data-subject="{{ article.subject or subject or 'none' }}">
   <div class="article-page">
     <div class="article-header">
-      {% if headerImage %}
-        <img src="{{ headerImage | url }}" alt="{{ title }}" class="article-header-image">
+      {% if article.headerImage %}
+        <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
       {% endif %}
-      <h1 class="article-title">{{ title }}</h1>
-      {% if author and date %}
+      <h1 class="article-title">{{ article.title or title }}</h1>
+      {% if article.author and article.date %}
         <div class="article-meta">
-          <p>By {{ author }} | {{ date }}</p>
+          <p>By {{ article.author }} | {{ article.date }}</p>
         </div>
       {% endif %}
     </div>
@@ -19,19 +19,19 @@ layout: base
       {{ content | safe }}
     </div>
     
-    {% if tags and tags.length > 0 %}
+    {% if article.tags and article.tags.length > 0 %}
       <div class="article-tags">
-        {% for tag in tags %}
+        {% for tag in article.tags %}
           <span class="tag">{{ tag }}</span>
         {% endfor %}
       </div>
     {% endif %}
     
-    {% if citations and citations.length > 0 %}
+    {% if article.citations and article.citations.length > 0 %}
       <div class="article-citations">
         <h4>References:</h4>
         <ul>
-          {% for citation in citations %}
+          {% for citation in article.citations %}
             <li>{{ citation }}</li>
           {% endfor %}
         </ul>
@@ -39,3 +39,4 @@ layout: base
     {% endif %}
   </div>
 </div>
+t
