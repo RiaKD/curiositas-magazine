@@ -407,38 +407,7 @@
     <div id="modalContent" class="modal-content">
     </div>
 </div>
-<script>
-    const physicsFigures = [
-        '/images/quotes/p1.png',
-        '/images/quotes/p2.png',
-        '/images/quotes/p3.png',
-        '/images/quotes/p4.png',
-        '/images/quotes/p5.png'
-    ];
-    let currentPhysicsFigure = 0;
-    const physicsFigureImg = document.getElementById('physics-figure-img');
-    const physicsDefinitionImg = document.querySelector('.definition-img');
-    function matchPhysicsFigureHeight() {
-        if (physicsDefinitionImg && physicsFigureImg) {
-            if (physicsDefinitionImg.complete && physicsFigureImg.complete) {
-                physicsFigureImg.style.height = physicsDefinitionImg.clientHeight + 'px';
-                physicsFigureImg.style.width = 'auto';
-            } else {
-                physicsDefinitionImg.onload = matchPhysicsFigureHeight;
-                physicsFigureImg.onload = matchPhysicsFigureHeight;
-            }
-        }
-    }
-    window.addEventListener('load', matchPhysicsFigureHeight);
-    window.addEventListener('resize', matchPhysicsFigureHeight);
-    if (physicsFigureImg) {
-        physicsFigureImg.addEventListener('click', function() {
-            currentPhysicsFigure = (currentPhysicsFigure + 1) % physicsFigures.length;
-            physicsFigureImg.src = physicsFigures[currentPhysicsFigure];
-            physicsFigureImg.onload = matchPhysicsFigureHeight;
-        });
-    }
-</script>
+
 <script>
     // Opportunity buttons functionality
     const opportunityButtons = document.querySelectorAll('.opportunity-btn');

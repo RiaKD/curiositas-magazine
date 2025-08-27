@@ -313,25 +313,25 @@
                                     <img src="/curiositas-magazine/images/gifs/o1.gif" alt="General Chemistry" class="btn-gif" />
                                     General Chemistry
                                 </button>
-                                <button class="recommended-reading-btn" data-reading="classical-mechanics">
-                                    <img src="/curiositas-magazine/images/gifs/o2.gif" alt="Classical Mechanics" class="btn-gif" />
-                                    Classical Mechanics
+                                <button class="recommended-reading-btn" data-reading="applied-chemistry">
+                                    <img src="/curiositas-magazine/images/gifs/o2.gif" alt="Applied Chemistry" class="btn-gif" />
+                                    Applied Chemistry
                                 </button>
                             </div>
                             <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="quantum-modern">
-                                    <img src="/curiositas-magazine/images/gifs/o3.gif" alt="Quantum & Modern" class="btn-gif" />
-                                    Quantum & Modern
+                                <button class="recommended-reading-btn" data-reading="molecular-chemistry">
+                                    <img src="/curiositas-magazine/images/gifs/o3.gif" alt="Molecular Chemistry" class="btn-gif" />
+                                    Molecular Chemistry
                                 </button>
-                                <button class="recommended-reading-btn" data-reading="astrochemistry-cosmology">
-                                    <img src="/curiositas-magazine/images/gifs/o4.gif" alt="Astrochemistry" class="btn-gif" />
-                                    Astrochemistry
+                                <button class="recommended-reading-btn" data-reading="environmental-chemistry">
+                                    <img src="/curiositas-magazine/images/gifs/o4.gif" alt="Environmental Chemistry" class="btn-gif" />
+                                    Environmental Chemistry
                                 </button>
                             </div>
                             <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="critical-thinking">
-                                    <img src="/curiositas-magazine/images/gifs/o5.gif" alt="Critical Thinking" class="btn-gif" />
-                                    Critical Thinking
+                                <button class="recommended-reading-btn" data-reading="other-chemistry">
+                                    <img src="/curiositas-magazine/images/gifs/o5.gif" alt="Other Chemistry" class="btn-gif" />
+                                    Other Chemistry
                                 </button>
                             </div>
                         </div>
@@ -428,38 +428,7 @@
     <div id="modalContent" class="modal-content">
     </div>
 </div>
-<script>
-    const chemistryFigures = [
-        '/images/quotes/ch1.png',
-        '/images/quotes/ch2.png',
-        '/images/quotes/ch3.png',
-        '/images/quotes/ch4.png',
-        '/images/quotes/ch5.png'
-    ];
-    let currentChemistryFigure = 0;
-    const chemistryFigureImg = document.getElementById('chemistry-figure-img');
-    const chemistryDefinitionImg = document.querySelector('.definition-img');
-    function matchChemistryFigureHeight() {
-        if (chemistryDefinitionImg && chemistryFigureImg) {
-            if (chemistryDefinitionImg.complete && chemistryFigureImg.complete) {
-                chemistryFigureImg.style.height = chemistryDefinitionImg.clientHeight + 'px';
-                chemistryFigureImg.style.width = 'auto';
-            } else {
-                chemistryDefinitionImg.onload = matchChemistryFigureHeight;
-                chemistryFigureImg.onload = matchChemistryFigureHeight;
-            }
-        }
-    }
-    window.addEventListener('load', matchChemistryFigureHeight);
-    window.addEventListener('resize', matchChemistryFigureHeight);
-    if (chemistryFigureImg) {
-        chemistryFigureImg.addEventListener('click', function() {
-            currentChemistryFigure = (currentChemistryFigure + 1) % chemistryFigures.length;
-            chemistryFigureImg.src = chemistryFigures[currentChemistryFigure];
-            chemistryFigureImg.onload = matchChemistryFigureHeight;
-        });
-    }
-</script>
+
 <script>
     // Opportunity buttons functionality
     const opportunityButtons = document.querySelectorAll('.opportunity-btn');

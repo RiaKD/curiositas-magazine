@@ -236,29 +236,29 @@ bodyClass: computer-science-page
                         </div>
                         <div class="recommended-reading-buttons">
                             <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="general-computer-science">
-                                    <img src="{{ '/images/gifs/pu1.gif' | url }}" alt="General Computer Science" class="btn-gif" />
-                                    General Computer Science
+                                <button class="recommended-reading-btn" data-reading="foundational-concepts">
+                                    <img src="{{ '/images/gifs/pu1.gif' | url }}" alt="Foundational Concepts" class="btn-gif" />
+                                    Foundational Concepts
                                 </button>
-                                <button class="recommended-reading-btn" data-reading="classical-mechanics">
-                                    <img src="{{ '/images/gifs/pu2.gif' | url }}" alt="Algorithms & Data Structures" class="btn-gif" />
-                                    Classical Mechanics
-                                </button>
-                            </div>
-                            <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="quantum-modern">
-                                    <img src="{{ '/images/gifs/pu3.gif' | url }}" alt="Machine Learning & AI" class="btn-gif" />
-                                    Quantum & Modern
-                                </button>
-                                <button class="recommended-reading-btn" data-reading="astrocomputer-science-cosmology">
-                                    <img src="{{ '/images/gifs/pu4.gif' | url }}" alt="Software Engineering" class="btn-gif" />
-                                    Astrocomputer-science
+                                <button class="recommended-reading-btn" data-reading="algorithms-logic">
+                                    <img src="{{ '/images/gifs/pu2.gif' | url }}" alt="Algorithms & Logic" class="btn-gif" />
+                                    Algorithms & Logic
                                 </button>
                             </div>
                             <div class="button-row">
-                                <button class="recommended-reading-btn" data-reading="critical-thinking">
-                                    <img src="{{ '/images/gifs/pu5.gif' | url }}" alt="Critical Thinking" class="btn-gif" />
-                                    Critical Thinking
+                                <button class="recommended-reading-btn" data-reading="ai-future-tech">
+                                    <img src="{{ '/images/gifs/pu3.gif' | url }}" alt="AI & Future Tech" class="btn-gif" />
+                                    AI & Future Tech
+                                </button>
+                                <button class="recommended-reading-btn" data-reading="programming-problem-solving">
+                                    <img src="{{ '/images/gifs/pu4.gif' | url }}" alt="Programming & Problem Solving" class="btn-gif" />
+                                    Programming & Problem Solving
+                                </button>
+                            </div>
+                            <div class="button-row">
+                                <button class="recommended-reading-btn" data-reading="ethics-society">
+                                    <img src="{{ '/images/gifs/pu5.gif' | url }}" alt="Ethics & Society" class="btn-gif" />
+                                    Ethics & Society
                                 </button>
                             </div>
                         </div>
@@ -341,38 +341,7 @@ bodyClass: computer-science-page
     <div id="modalContent" class="modal-content">
     </div>
 </div>
-<script>
-    const computer-scienceFigures = [
-        '/images/quotes/co1.png',
-        '/images/quotes/co2.png',
-        '/images/quotes/co3.png',
-        '/images/quotes/co4.png',
-        '/images/quotes/co5.png'
-    ];
-    let currentComputer ScienceFigure = 0;
-    const computer-scienceFigureImg = document.getElementById('computer-science-figure-img');
-    const computer-scienceDefinitionImg = document.querySelector('.definition-img');
-    function matchComputer ScienceFigureHeight() {
-        if (computer-scienceDefinitionImg && computer-scienceFigureImg) {
-            if (computer-scienceDefinitionImg.complete && computer-scienceFigureImg.complete) {
-                computer-scienceFigureImg.style.height = computer-scienceDefinitionImg.clientHeight + 'px';
-                computer-scienceFigureImg.style.width = 'auto';
-            } else {
-                computer-scienceDefinitionImg.onload = matchComputer ScienceFigureHeight;
-                computer-scienceFigureImg.onload = matchComputer ScienceFigureHeight;
-            }
-        }
-    }
-    window.addEventListener('load', matchComputer ScienceFigureHeight);
-    window.addEventListener('resize', matchComputer ScienceFigureHeight);
-    if (computer-scienceFigureImg) {
-        computer-scienceFigureImg.addEventListener('click', function() {
-            currentComputer ScienceFigure = (currentComputer ScienceFigure + 1) % computer-scienceFigures.length;
-            computer-scienceFigureImg.src = computer-scienceFigures[currentComputer ScienceFigure];
-            computer-scienceFigureImg.onload = matchComputer ScienceFigureHeight;
-        });
-    }
-</script>
+
 <script>
     // Opportunity buttons functionality
     const opportunityButtons = document.querySelectorAll('.opportunity-btn');

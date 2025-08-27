@@ -441,6 +441,66 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Quote figure cycling logic for all subjects (GitHub Pages compatible paths)
+document.addEventListener('DOMContentLoaded', function() {
+    // Define quote configurations for each subject
+    const quoteConfigs = {
+        'biology-figure-img': { prefix: 'b', count: 5 },
+        'chemistry-figure-img': { prefix: 'ch', count: 5 },
+        'computer-science-figure-img': { prefix: 'co', count: 5 },
+        'mathematics-figure-img': { prefix: 'm', count: 5 },
+        'physics-figure-img': { prefix: 'p', count: 5 }
+    };
+    
+    // Setup cycling for each subject figure
+    Object.keys(quoteConfigs).forEach(figureId => {
+        const figureImg = document.getElementById(figureId);
+        const definitionImg = document.querySelector('.definition-img');
+        
+        if (figureImg) {
+            const config = quoteConfigs[figureId];
+            
+            // Get the base path by examining existing images
+            const existingImgSrc = figureImg.src;
+            const basePath = existingImgSrc.includes('/curiositas-magazine/') 
+                ? '/curiositas-magazine' 
+                : '';
+            
+            // Generate quote images array
+            const quoteImages = [];
+            for (let i = 1; i <= config.count; i++) {
+                quoteImages.push(`${basePath}/images/quotes/${config.prefix}${i}.png`);
+            }
+            
+            let currentIndex = 0;
+            
+            // Height matching function
+            function matchFigureHeight() {
+                if (definitionImg && figureImg) {
+                    if (definitionImg.complete && figureImg.complete) {
+                        figureImg.style.height = definitionImg.clientHeight + 'px';
+                        figureImg.style.width = 'auto';
+                    } else {
+                        definitionImg.onload = matchFigureHeight;
+                        figureImg.onload = matchFigureHeight;
+                    }
+                }
+            }
+            
+            // Setup event listeners
+            window.addEventListener('load', matchFigureHeight);
+            window.addEventListener('resize', matchFigureHeight);
+            
+            // Click to cycle through quotes
+            figureImg.addEventListener('click', function() {
+                currentIndex = (currentIndex + 1) % quoteImages.length;
+                figureImg.src = quoteImages[currentIndex];
+                figureImg.onload = matchFigureHeight;
+            });
+        }
+    });
+});
+
 // Online Resources, Recommended Reading, and Opportunities Dropdown functionality
 function setupOnlineResourcesDropdown() {
     const onlineResourceDropdowns = document.querySelectorAll('.online-resources-dropdown');

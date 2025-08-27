@@ -391,38 +391,7 @@
     <div id="modalContent" class="modal-content">
     </div>
 </div>
-<script>
-    const mathematicsFigures = [
-        '/images/quotes/m1.png',
-        '/images/quotes/m2.png',
-        '/images/quotes/m3.png',
-        '/images/quotes/m4.png',
-        '/images/quotes/m5.png'
-    ];
-    let currentMathematicsFigure = 0;
-    const mathematicsFigureImg = document.getElementById('mathematics-figure-img');
-    const mathematicsDefinitionImg = document.querySelector('.definition-img');
-    function matchMathematicsFigureHeight() {
-        if (mathematicsDefinitionImg && mathematicsFigureImg) {
-            if (mathematicsDefinitionImg.complete && mathematicsFigureImg.complete) {
-                mathematicsFigureImg.style.height = mathematicsDefinitionImg.clientHeight + 'px';
-                mathematicsFigureImg.style.width = 'auto';
-            } else {
-                mathematicsDefinitionImg.onload = matchMathematicsFigureHeight;
-                mathematicsFigureImg.onload = matchMathematicsFigureHeight;
-            }
-        }
-    }
-    window.addEventListener('load', matchMathematicsFigureHeight);
-    window.addEventListener('resize', matchMathematicsFigureHeight);
-    if (mathematicsFigureImg) {
-        mathematicsFigureImg.addEventListener('click', function() {
-            currentMathematicsFigure = (currentMathematicsFigure + 1) % mathematicsFigures.length;
-            mathematicsFigureImg.src = mathematicsFigures[currentMathematicsFigure];
-            mathematicsFigureImg.onload = matchMathematicsFigureHeight;
-        });
-    }
-</script>
+
 <script>
     // Opportunity buttons functionality
     const opportunityButtons = document.querySelectorAll('.opportunity-btn');
