@@ -323,10 +323,10 @@ bodyClass: physics-page
         {% for article in articles %}
           {% if article.subject and article.subject | trim | lower == 'physics' %}
             <div class="game-article-tile" data-tags="{{ article.tags | join(',') }}">
-              <img src="{{ article.headerImage or '/images/error.png' | url }}" alt="{{ article.title }}" class="tile-header-image" />
+              <img src="{{ (article.headerImage or '/images/error.png') | url }}" alt="{{ article.title }}" class="tile-header-image" />
               <div class="tile-divider"></div>
               <div class="tile-title">{{ article.title }}</div>
-              <a href="{{ '/articles/' + article.slug + '/' | url }}" class="tile-link"></a>
+              <a href="{{ ('/articles/' + article.slug + '/') | url }}" class="tile-link"></a>
             </div>
           {% endif %}
         {% endfor %}
