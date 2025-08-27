@@ -5,7 +5,7 @@ layout: base
   <div class="article-page">
     <div class="article-header">
       {% if headerImage %}
-        <img src="{{ headerImage }}" alt="{{ title }}" class="article-header-image">
+        <img src="{{ headerImage | url }}" alt="{{ title }}" class="article-header-image">
       {% endif %}
       <h1 class="article-title">{{ title }}</h1>
       {% if author and date %}

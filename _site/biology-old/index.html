@@ -104,9 +104,8 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Mobile-only recommended reading dropdown -->
-        <div class="recommended-reading-dropdown mobile-only">
+         <!-- Mobile-only online resources dropdown -->
+         <div class="recommended-reading-dropdown mobile-only">
             <button class="dropdown-btn">
                 Recommended Reading
             </button>
@@ -412,7 +411,6 @@
             </div>
         </div>
     </div>
-    
     <div class="second-row-section">
         <div class="recommended-reading-section">
             <div class="recommended-reading-container">
@@ -454,7 +452,6 @@
                 </div>
             </div>
         </div>
-        
         <div class="opportunities-section">
             <div class="tips-and-game-container">
                 <div class="top-tips-section">
@@ -494,38 +491,108 @@
     <div class="article-tiles-sidebar" data-subject="biology">
       <div class="game-tag-filter-bar">
         <button class="game-tag-btn active" data-tag="all">All</button>
-        <button class="game-tag-btn" data-tag="careers">careers</button>
-        <button class="game-tag-btn" data-tag="marine">marine</button>
-        <button class="game-tag-btn" data-tag="biotech">biotech</button>
+        
+        
+        
+          
+            
+              
+            
+          
+        
+        
+        
+          
+            
+          
+        
+        
+        
+          
+            
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+        
+        
+        
+          <button class="game-tag-btn" data-tag="careers">careers</button>
+        
+          <button class="game-tag-btn" data-tag="marine">marine</button>
+        
+          <button class="game-tag-btn" data-tag="biotech">biotech</button>
+        
       </div>
       <div class="articles-grid" id="game-articles-list">
-        <div class="game-article-tile" data-tags="careers">
-          <img src="/curiositas-magazine/images/error.png" alt="Cryobiologist" class="tile-header-image" />
-          <div class="tile-divider"></div>
-          <div class="tile-title">Cryobiologist</div>
-          <a href="/curiositas-magazine/articles/cryobiologist/" class="tile-link"></a>
-        </div>
         
-        <div class="game-article-tile" data-tags="careers">
-          <img src="/curiositas-magazine/images/error.png" alt="Forensic Entomologist" class="tile-header-image" />
-          <div class="tile-divider"></div>
-          <div class="tile-title">Forensic Entomologist</div>
-          <a href="/curiositas-magazine/articles/forensic-entomologist-career/" class="tile-link"></a>
-        </div>
         
-        <div class="game-article-tile" data-tags="careers">
-          <img src="/curiositas-magazine/images/error.png" alt="Neurogeneticist" class="tile-header-image" />
-          <div class="tile-divider"></div>
-          <div class="tile-title">Neurogeneticist</div>
-          <a href="/curiositas-magazine/articles/neurogeneticist-career/" class="tile-link"></a>
-        </div>
+          <div class="game-article-tile" data-tags="careers">
+            <img src="/curiositas-magazine/images/error.png" alt="Cryobiologist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Cryobiologist</div>
+            <a href="/curiositas-magazine/articles/cryobiologist/" class="tile-link"></a>
+          </div>
         
-        <div class="game-article-tile" data-tags="careers,marine,biotech">
-          <img src="https://www.academicinfo.net/static/d35e90b6196456c1ec1b4ccc12b5a20e/14b42/marine1.jpg" alt="Marine Biotechnologist" class="tile-header-image" />
-          <div class="tile-divider"></div>
-          <div class="tile-title">Marine Biotechnologist</div>
-          <a href="/curiositas-magazine/articles/marine-biotechnologist-career/" class="tile-link"></a>
-        </div>
+        
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="/curiositas-magazine/images/error.png" alt="Forensic Entomologist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Forensic Entomologist</div>
+            <a href="/curiositas-magazine/articles/forensic-entomologist-career/" class="tile-link"></a>
+          </div>
+        
+        
+        
+          <div class="game-article-tile" data-tags="careers">
+            <img src="/curiositas-magazine/images/error.png" alt="Neurogeneticist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Neurogeneticist</div>
+            <a href="/curiositas-magazine/articles/neurogeneticist-career/" class="tile-link"></a>
+          </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <div class="game-article-tile" data-tags="careers,marine,biotech">
+            <img src="https://www.academicinfo.net/static/d35e90b6196456c1ec1b4ccc12b5a20e/14b42/marine1.jpg" alt="Marine Biotechnologist" class="tile-header-image" />
+            <div class="tile-divider"></div>
+            <div class="tile-title">Marine Biotechnologist</div>
+            <a href="/curiositas-magazine/articles/marine-biotechnologist-career/" class="tile-link"></a>
+          </div>
+        
+        
       </div>
     </div>
   </main>
@@ -533,6 +600,107 @@
 <script src="/curiositas-magazine/js/all-articles-filter.js"></script>
 <script src="/curiositas-magazine/js/opportunities-ui.js"></script>
 <script src="/curiositas-magazine/js/book-recommendations-ui.js"></script>
+<div id="articleModal" class="modal">
+    <div id="modalContent" class="modal-content">
+        </div>
+</div>
+<script>
+    const biologyFigures = [
+        '/images/quotes/b1.png',
+        '/images/quotes/b2.png',
+        '/images/quotes/b3.png',
+        '/images/quotes/b4.png',
+        '/images/quotes/b5.png'
+    ];
+    let currentBiologyFigure = 0;
+    const biologyFigureImg = document.getElementById('biology-figure-img');
+    const biologyDefinitionImg = document.querySelector('.definition-img');
+    function matchBiologyFigureHeight() {
+        if (biologyDefinitionImg && biologyFigureImg) {
+            if (biologyDefinitionImg.complete && biologyFigureImg.complete) {
+                biologyFigureImg.style.height = biologyDefinitionImg.clientHeight + 'px';
+                biologyFigureImg.style.width = 'auto';
+            } else {
+                biologyDefinitionImg.onload = matchBiologyFigureHeight;
+                biologyFigureImg.onload = matchBiologyFigureHeight;
+            }
+        }
+    }
+    window.addEventListener('load', matchBiologyFigureHeight);
+    window.addEventListener('resize', matchBiologyFigureHeight);
+    if (biologyFigureImg) {
+        biologyFigureImg.addEventListener('click', function() {
+            currentBiologyFigure = (currentBiologyFigure + 1) % biologyFigures.length;
+            biologyFigureImg.src = biologyFigures[currentBiologyFigure];
+            biologyFigureImg.onload = matchBiologyFigureHeight;
+        });
+    }
+</script>
+<script>
+    // Opportunity buttons functionality
+    const opportunityButtons = document.querySelectorAll('.opportunity-btn');
+    const opportunityContent = document.getElementById('opportunity-content');
+    
+    const opportunities = {
+        research: [
+            "Laboratory Research Assistant",
+            "Field Research Internship",
+            "Data Analysis Projects",
+            "Literature Review Studies",
+            "Experimental Design Projects"
+        ],
+        experience: [
+            "Hospital Volunteer",
+            "Laboratory Internship",
+            "Field Work Experience",
+            "Research Assistant Position",
+            "Clinical Shadowing"
+        ],
+        programs: [
+            "Summer Research Programs",
+            "Biology Boot Camps",
+            "Laboratory Skills Workshops",
+            "Field Biology Programs",
+            "Research Methodology Courses"
+        ],
+        awards: [
+            "Biology Achievement Awards",
+            "Research Excellence Scholarships",
+            "Science Competition Prizes",
+            "Academic Merit Awards",
+            "Innovation in Biology Awards"
+        ],
+        other: [
+            "Biology Clubs & Societies",
+            "Science Communication",
+            "Teaching Assistant Roles",
+            "Science Outreach Programs",
+            "Biology Conferences"
+        ]
+    };
+    
+    opportunityButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const opportunityType = this.getAttribute('data-opportunity');
+            
+            // Remove active class from all buttons
+            opportunityButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update content
+            const content = opportunities[opportunityType];
+            opportunityContent.innerHTML = `
+                <h3>${opportunityType.charAt(0).toUpperCase() + opportunityType.slice(1)} Opportunities</h3>
+                <ul>
+                    ${content.map(item => `<li>• ${item}</li>`).join('')}
+                </ul>
+            `;
+        });
+    });
+</script>
+
 
 
     <script src="/curiositas-magazine/js/script.js"></script>
