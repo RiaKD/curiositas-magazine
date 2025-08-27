@@ -43,48 +43,45 @@ layout: base
     </div>
   </div>
 
-  <!-- Right side: Camera screen and sidebar (flush with right edge) -->
-  <div style="margin-left: auto; margin-right: -32px;">
-    <!-- Camera screen -->
-    <div class="camera-screen">
-      <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
-      <div class="camera-screen-cutout">
-        {% if article.headerImage %}
-          <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
-        {% endif %}
-      </div>
+  <!-- Right side: Camera screen (flush with right edge) -->
+  <div class="camera-screen">
+    <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
+    <div class="camera-screen-cutout">
+      {% if article.headerImage %}
+        <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
+      {% endif %}
     </div>
+  </div>
+</div>
 
-    <!-- Articles sidebar below camera -->
-    <div class="article-tiles-sidebar" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
-      <div class="game-tag-filter-bar">
-        <button class="game-tag-btn active" data-tag="all">All</button>
-        {% set uniqueTags = [] %}
-        {% for article in articles %}
-          {% if article.tags %}
-            {% for tag in article.tags %}
-              {% if tag not in uniqueTags %}
-                {% set uniqueTags = (uniqueTags.push(tag), uniqueTags) %}
-              {% endif %}
-            {% endfor %}
+<!-- Articles sidebar below the layout -->
+<div class="article-tiles-sidebar" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
+  <div class="game-tag-filter-bar">
+    <button class="game-tag-btn active" data-tag="all">All</button>
+    {% set uniqueTags = [] %}
+    {% for article in articles %}
+      {% if article.tags %}
+        {% for tag in article.tags %}
+          {% if tag not in uniqueTags %}
+            {% set uniqueTags = (uniqueTags.push(tag), uniqueTags) %}
           {% endif %}
         {% endfor %}
-        {% for tag in uniqueTags %}
-          <button class="game-tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
-        {% endfor %}
-      </div>
-      <div class="game-articles-list article-tiles-list" id="game-articles-list">
-        {% for otherArticle in articles %}
-          {% if otherArticle.id != (article.id or '') %}
-            <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
-              <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
-              <div class="tile-title">{{ otherArticle.title }}</div>
-              <a href="{{ ('/articles/' + otherArticle.slug + '/') | url }}" class="tile-link"></a>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
+      {% endif %}
+    {% endfor %}
+    {% for tag in uniqueTags %}
+      <button class="game-tag-btn" data-tag="{{ tag }}">{{ tag }}</button>
+    {% endfor %}
+  </div>
+  <div class="game-articles-list article-tiles-list" id="game-articles-list">
+    {% for otherArticle in articles %}
+      {% if otherArticle.id != (article.id or '') %}
+        <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
+          <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
+          <div class="tile-title">{{ otherArticle.title }}</div>
+          <a href="{{ ('/articles/' + otherArticle.slug + '/') | url }}" class="tile-link"></a>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 
