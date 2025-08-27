@@ -5,8 +5,8 @@ layout: base
 <h1 class="article-title">{{ article.title or title }}</h1>
 
 <div class="article-layout" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
-  <!-- Left side: Article content -->
-  <div class="article-main-content">
+  <!-- Left side: Article content (takes remaining space) -->
+  <div style="flex: 1;">
     <!-- Article meta bar above the main text -->
     <div class="article-meta-bar">
       {% if article.author and article.date %}
@@ -43,40 +43,37 @@ layout: base
     </div>
   </div>
 
-  <!-- Right side: Camera screen and sidebar -->
-  <div class="article-right-column">
-    <!-- Camera screen with article header image overlay -->
-    <div class="camera-screen">
-      <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
-      <div class="camera-screen-cutout">
-        {% if article.headerImage %}
-          <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
-        {% endif %}
-      </div>
+  <!-- Right side: Camera screen (flush with right edge) -->
+  <div class="camera-screen">
+    <img src="{{ '/images/bigcamerascreen.png' | url }}" alt="Camera Screen" class="camera-screen-img">
+    <div class="camera-screen-cutout">
+      {% if article.headerImage %}
+        <img src="{{ article.headerImage | url }}" alt="{{ article.title }}" class="article-header-image">
+      {% endif %}
     </div>
+  </div>
+</div>
 
-    <!-- Articles sidebar below camera -->
-    <div class="article-tiles-sidebar" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
-      <div class="sidebar-title">Other Articles</div>
-      <div class="game-tag-filter-bar">
-        <button class="game-tag-btn active" data-tag="all">All</button>
-        <button class="game-tag-btn" data-tag="careers">careers</button>
-        <button class="game-tag-btn" data-tag="research">research</button>
-      </div>
-      <div class="game-articles-list article-tiles-list" id="game-articles-list">
-        {% for otherArticle in articles %}
-          {% set currentSubject = (article.subject or subject or 'none') %}
-          {% set otherSubject = (otherArticle.subject or 'none') %}
-          {% if otherArticle.id != (article.id or '') and otherSubject and (otherSubject | lower) == (currentSubject | lower) %}
-            <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
-              <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
-              <div class="tile-title">{{ otherArticle.title }}</div>
-              <a href="{{ ('/articles/' + otherArticle.slug + '/') | url }}" class="tile-link"></a>
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
+<!-- Articles sidebar below the layout -->
+<div class="article-tiles-sidebar" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
+  <div class="sidebar-title">Other Articles</div>
+  <div class="game-tag-filter-bar">
+    <button class="game-tag-btn active" data-tag="all">All</button>
+    <button class="game-tag-btn" data-tag="careers">careers</button>
+    <button class="game-tag-btn" data-tag="research">research</button>
+  </div>
+  <div class="game-articles-list article-tiles-list" id="game-articles-list">
+    {% for otherArticle in articles %}
+      {% set currentSubject = (article.subject or subject or 'none') %}
+      {% set otherSubject = (otherArticle.subject or 'none') %}
+      {% if otherArticle.id != (article.id or '') and otherSubject and (otherSubject | lower) == (currentSubject | lower) %}
+        <div class="game-article-tile" data-tags="{{ otherArticle.tags | join(',') }}">
+          <img src="{{ (otherArticle.headerImage or '/images/error.png') | url }}" alt="{{ otherArticle.title }}" class="tile-header-image" />
+          <div class="tile-title">{{ otherArticle.title }}</div>
+          <a href="{{ ('/articles/' + otherArticle.slug + '/') | url }}" class="tile-link"></a>
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
 
