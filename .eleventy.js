@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
       output: "_site"
     },
     htmlTemplateEngine: "njk",
-    markdownTemplateEngine: "njk"
+    markdownTemplateEngine: "njk",
+    pathPrefix: "/curiositas-magazine/"
   };
 };
