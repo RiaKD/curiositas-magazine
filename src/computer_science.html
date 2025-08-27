@@ -321,7 +321,7 @@ bodyClass: computer-science-page
       </div>
       <div class="articles-grid" id="game-articles-list">
         {% for article in articles %}
-          {% if article.subject and article.subject | trim | lower == 'computer science' %}
+          {% if article.subject and (article.subject | trim | lower == 'computer science' or article.subject | trim == 'Computer science') %}
             <div class="game-article-tile" data-tags="{{ article.tags | join(',') }}">
               <img src="{{ (article.headerImage or '/images/error.png') | url }}" alt="{{ article.title }}" class="tile-header-image" />
               <div class="tile-divider"></div>
