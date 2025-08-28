@@ -2030,6 +2030,12 @@ body:has(.none-article-page) .article-page {
   box-shadow: 0 0 24px var(--dark-pink), 0 0 48px #fff2 !important;
 }
 
+/* Article header section */
+.article-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 /* Article title styling - centered above article box */
 .article-title {
   color: white;
@@ -2041,6 +2047,17 @@ body:has(.none-article-page) .article-page {
   margin: 40px auto 24px auto;
   text-shadow: 0 0 8px var(--color-dark), 0 0 16px white;
   width: fit-content;
+}
+
+/* Article excerpt styling */
+.article-excerpt {
+  color: #e0e0e0;
+  font-size: 1.2em;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Article layout with camera screen */
@@ -2790,10 +2807,19 @@ scrollbar-color: var(--color-dark) white;
   padding: 12px 24px;
   margin: 0 32px 24px 32px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+
+.article-meta-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .article-meta-bar .article-author,
 .article-meta-bar .article-date {
   color: var(--light-grey);
@@ -2895,6 +2921,50 @@ scrollbar-color: var(--color-dark) white;
   font-size: 1.15em;
   font-family: 'Intel One Mono', Arial, sans-serif;
   line-height: 1.7;
+}
+
+.article-body {
+  max-width: 100%;
+}
+
+.article-body p {
+  margin-bottom: 1.2em;
+  text-indent: 0;
+}
+
+.article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 {
+  color: var(--dark-pink);
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  font-family: 'Orbitron', 'Intel One Mono', Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 8px var(--dark-pink);
+}
+
+.article-body h1 { font-size: 1.8em; }
+.article-body h2 { font-size: 1.6em; }
+.article-body h3 { font-size: 1.4em; }
+.article-body h4 { font-size: 1.2em; }
+.article-body h5, .article-body h6 { font-size: 1.1em; }
+
+.article-body ul, .article-body ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+.article-body li {
+  margin-bottom: 0.5em;
+}
+
+.article-body blockquote {
+  border-left: 4px solid var(--dark-pink);
+  padding-left: 1em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: #e0e0e0;
+  background: rgba(24, 24, 40, 0.5);
+  padding: 1em;
+  border-radius: 0 8px 8px 0;
 }
 .article-citations {
   padding: 24px 32px 32px 32px;
@@ -5801,6 +5871,47 @@ text-align: center;
     padding-left: 3px !important; /* Add equal left padding to match right side */
     padding-right: 3px !important; /* Add equal right padding to match left side */
     box-sizing: border-box !important; /* Ensure padding is included in width calculation */
+  }
+
+  /* Mobile article header styling */
+  .article-layout .article-header,
+  body .article-layout .article-header,
+  html .article-layout .article-header {
+    margin-bottom: 20px !important;
+  }
+
+  .article-layout .article-excerpt,
+  body .article-layout .article-excerpt,
+  html .article-layout .article-excerpt {
+    font-size: 1em !important;
+    max-width: 100% !important;
+    padding: 0 10px !important;
+  }
+
+  /* Mobile article body styling */
+  .article-layout .article-body,
+  body .article-layout .article-body,
+  html .article-layout .article-body {
+    font-size: 1em !important;
+    line-height: 1.6 !important;
+  }
+
+  .article-layout .article-body h1,
+  body .article-layout .article-body h1,
+  html .article-layout .article-body h1 {
+    font-size: 1.5em !important;
+  }
+
+  .article-layout .article-body h2,
+  body .article-layout .article-body h2,
+  html .article-layout .article-body h2 {
+    font-size: 1.3em !important;
+  }
+
+  .article-layout .article-body h3,
+  body .article-layout .article-body h3,
+  html .article-layout .article-body h3 {
+    font-size: 1.2em !important;
   }
   
   /* Move article citations up on mobile */

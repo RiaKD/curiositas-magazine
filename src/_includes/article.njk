@@ -1,8 +1,13 @@
 ---
 layout: base
 ---
-<!-- Article title outside the layout as per CSS expectations -->
-<h1 class="article-title">{{ article.title or title }}</h1>
+<!-- Article header section -->
+<div class="article-header">
+  <h1 class="article-title">{{ article.title or title }}</h1>
+  {% if article.excerpt %}
+    <div class="article-excerpt">{{ article.excerpt }}</div>
+  {% endif %}
+</div>
 
 <div class="article-layout" data-subject="{{ article.subjectNormalized or ((article.subject or subject or 'none') | lower | replace(' ', '-')) }}">
   <!-- Left side: Article content (takes remaining space) -->
@@ -20,14 +25,22 @@ layout: base
 
       <!-- Article meta bar above the main text -->
       <div class="article-meta-bar">
-        {% if article.author and article.date %}
-          <div class="article-author">{{ article.author }}</div>
-          <div class="article-date">{{ article.date }}</div>
+        {% if article.author or article.date %}
+          <div class="article-meta-info">
+            {% if article.author %}
+              <span class="article-author">By {{ article.author }}</span>
+            {% endif %}
+            {% if article.date %}
+              <span class="article-date">{{ article.date }}</span>
+            {% endif %}
+          </div>
         {% endif %}
       </div>
 
       <div class="article-content">
-        {{ content | safe }}
+        <div class="article-body">
+          {{ content | safe }}
+        </div>
       </div>
       
       {% if article.citations and article.citations.length > 0 %}
