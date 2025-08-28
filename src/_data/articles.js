@@ -1,6 +1,5 @@
 const { Client } = require('@notionhq/client');
 const { NotionToMarkdown } = require('notion-to-md');
-const { marked } = require('marked');
 
 module.exports = async function() {
   // Check if we have Notion credentials
@@ -101,6 +100,7 @@ module.exports = async function() {
           const mdString = n2m.toMarkdownString(mdblocks);
           
           // Convert markdown to HTML for proper formatting
+          const { marked } = await import('marked');
           const htmlContent = marked(mdString.parent || mdString || 'No content available');
 
           // Extract properties
