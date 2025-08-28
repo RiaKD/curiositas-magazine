@@ -1,5 +1,6 @@
 const { Client } = require('@notionhq/client');
 const { NotionToMarkdown } = require('notion-to-md');
+const { marked } = require('marked');
 
 module.exports = async function() {
   // Check if we have Notion credentials
@@ -18,7 +19,7 @@ module.exports = async function() {
         excerpt: 'Sample excerpt',
         date: '2024-01-01',
         slug: 'sample-biology-article',
-        content: 'Sample content for local development.',
+        content: '<p>This is a <strong>sample biology article</strong> with <em>formatted content</em> to test the new HTML rendering.</p><p>It includes multiple paragraphs and <strong>bold text</strong> as well as <em>italic text</em>.</p>',
         status: 'Published'
       },
       {
@@ -32,7 +33,7 @@ module.exports = async function() {
         excerpt: 'Sample excerpt',
         date: '2024-01-02',
         slug: 'sample-chemistry-article',
-        content: 'Sample content for local development.',
+        content: '<p>This is a <strong>sample chemistry article</strong> with <em>formatted content</em> to test the new HTML rendering.</p><p>It includes multiple paragraphs and <strong>bold text</strong> as well as <em>italic text</em>.</p>',
         status: 'Published'
       },
       {
@@ -46,7 +47,7 @@ module.exports = async function() {
         excerpt: 'Sample excerpt',
         date: '2024-01-03',
         slug: 'sample-computer-science-article',
-        content: 'Sample content for local development.',
+        content: '<p>This is a <strong>sample computer science article</strong> with <em>formatted content</em> to test the new HTML rendering.</p><p>It includes multiple paragraphs and <strong>bold text</strong> as well as <strong>code examples</strong> and <em>italic text</em>.</p>',
         status: 'Published'
       }
     ];
@@ -98,6 +99,9 @@ module.exports = async function() {
           // Get the page content as markdown
           const mdblocks = await n2m.pageToMarkdown(page.id);
           const mdString = n2m.toMarkdownString(mdblocks);
+          
+          // Convert markdown to HTML for proper formatting
+          const htmlContent = marked(mdString.parent || mdString || 'No content available');
 
           // Extract properties
           const properties = page.properties;
@@ -164,7 +168,7 @@ module.exports = async function() {
             excerpt: '', // Add if you have an excerpt field
             date: date || new Date().toISOString().split('T')[0],
             slug: slug || (title || 'untitled').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
-            content: mdString.parent || mdString || 'No content available',
+            content: htmlContent,
             status: status || 'Draft'
           };
 

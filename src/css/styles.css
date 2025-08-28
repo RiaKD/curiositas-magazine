@@ -2817,26 +2817,33 @@ scrollbar-color: var(--color-dark) white;
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .article-meta-bar .article-author,
 .article-meta-bar .article-date {
-  color: var(--light-grey);
+  color: white;
   font-family: 'Intel One Mono', Arial, sans-serif;
   font-size: 1.1em;
   font-weight: bold;
 }
+
+.author-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .author-gif {
   width: 24px;
   height: 24px;
   object-fit: contain;
-  margin-right: 8px;
-  vertical-align: middle;
+  background: white;
   border-radius: 4px;
   border: 1px solid white;
-  background: white;
 }
+
 .article-meta {
   display: flex;
   flex-wrap: wrap;
@@ -5878,6 +5885,28 @@ text-align: center;
   body .article-layout .article-header,
   html .article-layout .article-header {
     margin-bottom: 20px !important;
+  }
+
+  /* Mobile meta bar styling */
+  .article-layout .article-meta-info,
+  body .article-layout .article-meta-info,
+  html .article-layout .article-meta-info {
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  /* Mobile author section styling */
+  .article-layout .author-section,
+  body .article-layout .author-section,
+  html .article-layout .author-section {
+    gap: 6px !important;
+  }
+
+  .article-layout .author-gif,
+  body .article-layout .author-gif,
+  html .article-layout .author-gif {
+    width: 20px !important;
+    height: 20px !important;
   }
 
   .article-layout .article-excerpt,

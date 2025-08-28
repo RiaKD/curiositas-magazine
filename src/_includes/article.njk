@@ -27,9 +27,27 @@ layout: base
       <div class="article-meta-bar">
         {% if article.author or article.date %}
           <div class="article-meta-info">
-            {% if article.author %}
-              <span class="article-author">By {{ article.author }}</span>
-            {% endif %}
+            <div class="author-section">
+              {% if article.author %}
+                {% if article.subjectNormalized == 'physics' %}
+                  <img src="{{ '/images/gifs/o1.gif' | url }}" alt="Physics GIF" class="author-gif" />
+                {% elif article.subjectNormalized == 'mathematics' %}
+                  <img src="{{ '/images/gifs/b1.gif' | url }}" alt="Mathematics GIF" class="author-gif" />
+                {% elif article.subjectNormalized == 'biology' %}
+                  <img src="{{ '/images/gifs/g1.gif' | url }}" alt="Biology GIF" class="author-gif" />
+                {% elif article.subjectNormalized == 'computer-science' %}
+                  <img src="{{ '/images/gifs/pu1.gif' | url }}" alt="Computer Science GIF" class="author-gif" />
+                {% elif article.subjectNormalized == 'chemistry' %}
+                  <img src="{{ '/images/gifs/r1.gif' | url }}" alt="Chemistry GIF" class="author-gif" />
+                {% else %}
+                  <img src="{{ '/images/gifs/p1.gif' | url }}" alt="Default GIF" class="author-gif" />
+                {% endif %}
+                <span class="article-author">By {{ article.author }}</span>
+              {% else %}
+                <img src="{{ '/images/gifs/p1.gif' | url }}" alt="Default GIF" class="author-gif" />
+                <span class="article-author">By Unknown</span>
+              {% endif %}
+            </div>
             {% if article.date %}
               <span class="article-date">{{ article.date }}</span>
             {% endif %}
