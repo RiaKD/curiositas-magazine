@@ -1702,6 +1702,8 @@ display: flex;
 flex-direction: column;
 gap: 10px;
 width: 100%;
+max-height: 200px; /* Adjust this value as needed */
+overflow: hidden; /* Hides any content that exceeds the max-height */
 }
 /* Game tag button styles - now using consolidated class below */
 /*.featured-article {
