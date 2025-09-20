@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+    <title> | cūriōsitās</title>
+    <link rel="stylesheet" href="/curiositas-magazine/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+  <body class="">
+    
+    <div class="top-bar">
+        <div class="logo-container">
+            <a href="/curiositas-magazine/index.html" title="Home" class="nav-btn home-btn">
+                <img src="/curiositas-magazine/images/logo.png" alt="Curiositas Logo" class="nav-button" />
+                <span class="nav-button-label">Home</span>
+            </a>
+            <a href="/curiositas-magazine/submissions.html" title="Submissions" class="nav-btn submit-btn">
+                <img src="/curiositas-magazine/images/submit.png" alt="Submissions" class="nav-button" />
+                <span class="nav-button-label">Submissions</span>
+            </a>
+            <a href="/curiositas-magazine/applications.html" title="Applications" class="nav-btn join-btn">
+                <img src="/curiositas-magazine/images/join2.png" alt="Applications" class="nav-button" />
+                <span class="nav-button-label">Applications</span>
+            </a>
+        </div>
+        <div class="dog-nav">
+            <a href="/curiositas-magazine/all-articles/" class="dog-btn dog-pink" title="Articles">
+                <img src="/curiositas-magazine/images/dog/pink.png" alt="Articles Dog" />
+                <span>Articles</span>
+            </a>
+            <a href="/curiositas-magazine/chemistry.html" class="dog-btn dog-red" title="Chemistry">
+                <img src="/curiositas-magazine/images/dog/red.png" alt="Chemistry Dog" />
+                <span>Chemistry</span>
+            </a>
+            <a href="/curiositas-magazine/physics.html" class="dog-btn dog-orange" title="Physics">
+                <img src="/curiositas-magazine/images/dog/orange.png" alt="Physics Dog" />
+                <span>Physics</span>
+            </a>
+            <a href="/curiositas-magazine/biology.html" class="dog-btn dog-green" title="Biology">
+                <img src="/curiositas-magazine/images/dog/green.png" alt="Biology Dog" />
+                <span>Biology</span>
+            </a>
+            <a href="/curiositas-magazine/mathematics.html" class="dog-btn dog-blue" title="Mathematics">
+                <img src="/curiositas-magazine/images/dog/blue.png" alt="Mathematics Dog" />
+                <span>Mathematics</span>
+            </a>
+            <a href="/curiositas-magazine/computer_science.html" class="dog-btn dog-purple" title="Computer Science">
+                <img src="/curiositas-magazine/images/dog/purple.png" alt="Computer Science Dog" />
+                <span>Computer Science</span>
+            </a>
+        </div>
+    </div>
+    
+
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰ Menu</button>
+    
+    <!-- Centered Scrollable List -->
+    <div class="centered-scrollable-list" id="centeredList">
+        <div class="list-content">
+            <div class="list-item" data-subject="home">Home</div>
+            <div class="list-item" data-subject="all">All Articles</div>
+            <div class="list-item" data-subject="submissions">Submissions</div>
+            <div class="list-item" data-subject="applications">Applications</div>
+            <div class="list-item" data-subject="chemistry">Chemistry</div>
+            <div class="list-item" data-subject="physics">Physics</div>
+            <div class="list-item" data-subject="biology">Biology</div>
+            <div class="list-item" data-subject="mathematics">Mathematics</div>
+            <div class="list-item" data-subject="computer-science">Computer Science</div>
+        </div>
+    </div>
+    
+
+    <!-- Article header section -->
+<div class="article-header">
+  <h1 class="article-title">Sample Computer Science Article</h1>
+  
+    <div class="article-excerpt">Sample excerpt</div>
+  
+</div>
+
+<div class="article-layout" data-subject="computer-science">
+  <!-- Left side: Article content (takes remaining space) -->
+  <div style="flex: 1;">
+    <!-- Main article content -->
+    <div class="article-page">
+      <!-- Tags above the meta bar -->
+      
+        <div class="article-tags">
+          
+            <span class="tag">careers</span>
+          
+        </div>
+      
+
+      <!-- Article meta bar above the main text -->
+      <div class="article-meta-bar">
+        
+          <div class="article-meta-info">
+            <div class="author-section">
+              
+                
+                  <img src="/curiositas-magazine/images/gifs/pu1.gif" alt="Computer Science GIF" class="author-gif" />
+                
+                <span class="article-author">By Test Author</span>
+              
+            </div>
+            
+              <span class="article-date">2024-01-03</span>
+            
+          </div>
+        
+      </div>
+
+      <div class="article-content">
+        <div class="article-body">
+          
+<p>This is a <strong>sample computer science article</strong> with <em>formatted content</em> to test the new HTML rendering.</p><p>It includes multiple paragraphs and <strong>bold text</strong> as well as <strong>code examples</strong> and <em>italic text</em>.</p>
+
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+
+  <!-- Right side: Camera screen and sidebar column -->
+  <div style="display: flex; flex-direction: column; align-items: flex-end;">
+    <!-- Camera screen (flush with right edge) -->
+    <div class="camera-screen">
+      <img src="/curiositas-magazine/images/bigcamerascreen.png" alt="Camera Screen" class="camera-screen-img">
+      <div class="camera-screen-cutout">
+        
+          <img src="/curiositas-magazine/images/error.png" alt="Sample Computer Science Article" class="article-header-image">
+        
+      </div>
+    </div>
+
+    <!-- Articles sidebar with margin -->
+    <div class="article-tiles-sidebar" data-subject="computer-science" style="margin-top: 20px;">
+      <div class="game-tag-filter-bar">
+        <button class="game-tag-btn active" data-tag="all">All</button>
+        
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+            
+          
+        
+        
+          <button class="game-tag-btn" data-tag="careers">careers</button>
+        
+          <button class="game-tag-btn" data-tag="research">research</button>
+        
+      </div>
+      <div class="game-articles-list article-tiles-list" id="game-articles-list">
+        
+          
+            <div class="game-article-tile" data-tags="careers">
+              <img src="/curiositas-magazine/images/error.png" alt="Sample Biology Article" class="tile-header-image" />
+              <div class="tile-title">Sample Biology Article</div>
+              <a href="/curiositas-magazine/articles/sample-biology-article/" class="tile-link"></a>
+            </div>
+          
+        
+          
+            <div class="game-article-tile" data-tags="careers,research">
+              <img src="/curiositas-magazine/images/error.png" alt="Sample Chemistry Article" class="tile-header-image" />
+              <div class="tile-title">Sample Chemistry Article</div>
+              <a href="/curiositas-magazine/articles/sample-chemistry-article/" class="tile-link"></a>
+            </div>
+          
+        
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include the article sidebar filter JavaScript -->
+<script src="/curiositas-magazine/js/article-sidebar-filter.js"></script>
+t
+
+    <script src="/curiositas-magazine/js/script.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registered successfully:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
