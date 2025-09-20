@@ -6860,12 +6860,14 @@ text-align: center;
 /* Small mobile screens (≤600px) */
 @media (max-width: 600px) {
   /* Hides the camera image */
-  .camera-screen {
+  .camera-screen-img {
     display: none;
   }
-  
+  camera-screen-cutout{
+    display: none;
+    }
   /* Hides the article image */
-  .article-image {
+  .article-header-image {
     display: none;
   }
 
