@@ -5975,29 +5975,12 @@ text-align: center;
   }
   
   /* Compact tag filter bar on mobile */
-  /* This hides ALL tag buttons by default on mobile */
-  .game-tag-filter-bar .game-tag-btn {
-    display: none;
-  }
-  
-  /* This re-displays only the specific tags you want to be visible */
-  .game-tag-filter-bar .game-tag-btn[data-tag="biology"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="physics"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="chemistry"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="computer-science"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="mathematics"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="career"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="advice"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="figures"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="projects"],
-  .game-tag-filter-bar .game-tag-btn[data-tag="research"] {
-    display: inline-block; /* Or 'flex', depending on the original layout */
-  }
-
-  /* This ensures the "All" button remains visible for functionality */
-  .game-tag-filter-bar .game-tag-btn[data-tag="all"] {
-    display: inline-block;
-  }
+ .article-layout .article-tiles-sidebar .game-tag-filter-bar,
+  body .article-layout .article-tiles-sidebar .game-tag-filter-bar,
+  html .article-layout .article-tiles-sidebar .game-tag-filter-bar {
+    margin-bottom: 12px !important; /* Reduce bottom margin */
+    padding-bottom: 8px !important; /* Reduce bottom padding */
+  }
   
   /* Hide right sidebar on mobile individual article pages - OVERRIDE ALL DESKTOP RULES */
   .article-layout .right-sidebar,
