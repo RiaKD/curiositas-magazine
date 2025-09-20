@@ -5975,12 +5975,32 @@ text-align: center;
   }
   
   /* Compact tag filter bar on mobile */
-  .article-layout .article-tiles-sidebar .game-tag-filter-bar,
-  body .article-layout .article-tiles-sidebar .game-tag-filter-bar,
-  html .article-layout .article-tiles-sidebar .game-tag-filter-bar {
-    margin-bottom: 12px !important; /* Reduce bottom margin */
-    padding-bottom: 8px !important; /* Reduce bottom padding */
+/* Hides all tags within the filter bar by default on mobile */
+  .game-tag-filter-bar .game-tag-filter {
+    display: none;
   }
+  
+  /* Makes the specified tags visible again */
+  .game-tag-filter-bar .game-tag-filter[data-tag="biology"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="physics"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="chemistry"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="computer-science"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="mathematics"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="career"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="advice"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="figures"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="projects"],
+  .game-tag-filter-bar .game-tag-filter[data-tag="research"] {
+    display: inline-block; /* Or 'flex' depending on the original layout */
+  }
+}
+
+/* The CSS you provided for margin and padding, left as is */
+.article-layout .article-tiles-sidebar .game-tag-filter-bar,
+body .article-layout .article-tiles-sidebar .game-tag-filter-bar,
+html .article-layout .article-tiles-sidebar .game-tag-filter-bar {
+  margin-bottom: 12px !important;
+  padding-bottom: 8px !important;
   
   /* Hide right sidebar on mobile individual article pages - OVERRIDE ALL DESKTOP RULES */
   .article-layout .right-sidebar,
