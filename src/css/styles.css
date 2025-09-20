@@ -6859,6 +6859,21 @@ text-align: center;
 
 /* Small mobile screens (≤600px) */
 @media (max-width: 600px) {
+  /* Hides the camera image */
+  .camera-screen {
+    display: none;
+  }
+  
+  /* Hides the article image */
+  .article-image {
+    display: none;
+  }
+
+  /* Hides the camera cutout if it's a separate element */
+  .camera-screen-cutout {
+    display: none;
+  }
+  
   .mobile-form {
     visibility: visible;
     display: block;
