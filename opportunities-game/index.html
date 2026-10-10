@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: https: http:;">
+    <title>Opportunities Game | cūriōsitās</title>
+    <link rel="stylesheet" href="/curiositas-magazine/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo-container">
+            <a href="/curiositas-magazine/index.html" title="Home" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="/curiositas-magazine/images/logo.png" alt="Curiositas Logo" class="site-logo" />
+            </a>
+        </div>
+        <div class="top-buttons">
+            <a href="/curiositas-magazine/contact/" title="Contact Us" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                <img src="/curiositas-magazine/images/pink_flip_phone.png" alt="Contact Us" class="nav-icon-btn" />
+                <span class="nav-label">Contact Us</span>
+            </a>
+            <div class="nav-dropdown">
+                <button class="nav-icon-btn">Subjects</button>
+                <div class="dropdown-content">
+                    <a href="/curiositas-magazine/biology.html">Biology</a>
+                    <a href="/curiositas-magazine/chemistry.html">Chemistry</a>
+                    <a href="/curiositas-magazine/computer_science.html">Computer Science</a>
+                    <a href="/curiositas-magazine/mathematics.html">Mathematics</a>
+                    <a href="/curiositas-magazine/physics.html">Physics</a>
+                    <a href="/curiositas-magazine/opportunities-game.html">Opportunities Game</a>
+                </div>
+            </div>
+            <a href="/curiositas-magazine/submissions.html" title="Submissions" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+                <img src="/curiositas-magazine/images/icon/rose_gold_metallic_heart.png" alt="Submissions" class="nav-icon-btn" />
+                <span class="nav-label">Submissions</span>
+            </a>
+        </div>
+    </div>
+
+    
+<div class="header-row">
+    <h1 class="main-title">Opportunities Game</h1>
+</div>
+
+<div class="opportunities-game-container">
+    <div class="game-image-section">
+        <img src="/curiositas-magazine/images/game/green-game.png" alt="Biology Game" class="game-image biology-game" data-subject="biology" />
+        <img src="/curiositas-magazine/images/game/red-game.png" alt="Chemistry Game" class="game-image chemistry-game" data-subject="chemistry" />
+        <img src="/curiositas-magazine/images/game/orange-game.png" alt="Physics Game" class="game-image physics-game" data-subject="physics" />
+        <img src="/curiositas-magazine/images/game/blue-game.png" alt="Mathematics Game" class="game-image mathematics-game" data-subject="mathematics" />
+        <img src="/curiositas-magazine/images/game/purple-game.png" alt="Computer Science Game" class="game-image computerscience-game" data-subject="computer-science" />
+    </div>
+    
+    <div class="opportunities-overlay" id="opportunitiesOverlay">
+        <div class="overlay-content">
+            <div class="overlay-header">
+                <h2 id="subjectTitle">Biology Opportunities</h2>
+                <button class="close-overlay" id="closeOverlay">×</button>
+            </div>
+            
+            <div class="category-buttons" id="categoryButtons">
+                <button class="category-btn active" data-category="competitions">Competitions</button>
+                <button class="category-btn" data-category="resources">Resources</button>
+                <button class="category-btn" data-category="courses">Courses</button>
+                <button class="category-btn" data-category="other">Other</button>
+            </div>
+            
+            <div class="opportunity-display" id="opportunityDisplay">
+                <div class="opportunity-content" id="opportunityContent">
+                    <!-- Opportunity content will be populated here -->
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev-btn" id="prevBtn">← Back</button>
+                    <span class="opportunity-counter" id="opportunityCounter">1 of 3</span>
+                    <button class="nav-btn next-btn" id="nextBtn">Next →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Opportunities data structure
+const opportunitiesData = {
+    biology: {
+        competitions: [
+            {
+                name: "British Biology Olympiad",
+                url: "https://www.ukbiologycompetitions.org/british-biology-olympiad/",
+                description: "The premier biology competition for students in the UK, testing knowledge and practical skills.",
+                eligibility: "Ages 16-19",
+                deadline: "January"
+            },
+            {
+                name: "International Biology Olympiad",
+                url: "https://ibo-info.org/",
+                description: "The most prestigious international biology competition for secondary school students.",
+                eligibility: "Ages 15-19",
+                deadline: "Varies by country"
+            },
+            {
+                name: "Young Scientist Awards",
+                url: "https://britishscienceassociation.org/young-scientist-awards",
+                description: "Celebrating young people's achievements in science and engineering.",
+                eligibility: "Ages 12-19",
+                deadline: "March"
+            }
+        ],
+        resources: [
+            {
+                name: "Khan Academy Biology",
+                url: "https://www.khanacademy.org/science/biology",
+                description: "Comprehensive biology courses with videos, practice exercises, and assessments.",
+                type: "Online Learning",
+                cost: "Free"
+            },
+            {
+                name: "BBC Bitesize Biology",
+                url: "https://www.bbc.co.uk/bitesize/subjects/z9ddmp3",
+                description: "GCSE and A-level biology resources with interactive content and revision guides.",
+                type: "Study Resources",
+                cost: "Free"
+            },
+            {
+                name: "Biology Dictionary",
+                url: "https://biologydictionary.net/",
+                description: "Comprehensive biology terms and definitions with clear explanations.",
+                type: "Reference",
+                cost: "Free"
+            }
+        ],
+        courses: [
+            {
+                name: "FutureLearn Biology Courses",
+                url: "https://www.futurelearn.com/subjects/biology-courses",
+                description: "Online courses from top universities covering various biology topics.",
+                duration: "2-8 weeks",
+                cost: "Free to audit"
+            },
+            {
+                name: "Coursera Biology Specializations",
+                url: "https://www.coursera.org/browse/life-sciences/biology",
+                description: "Specialized courses in genetics, ecology, and molecular biology.",
+                duration: "4-6 months",
+                cost: "Free to audit"
+            },
+            {
+                name: "edX Biology Courses",
+                url: "https://www.edx.org/learn/biology",
+                description: "University-level biology courses from institutions worldwide.",
+                duration: "4-12 weeks",
+                cost: "Free to audit"
+            }
+        ],
+        other: [
+            {
+                name: "Royal Society Biology",
+                url: "https://royalsociety.org/topics-policy/education-skills/",
+                description: "Resources and opportunities from the UK's national academy of sciences.",
+                type: "Professional Development",
+                cost: "Free"
+            },
+            {
+                name: "Wellcome Trust",
+                url: "https://wellcome.org/what-we-do/our-work/education",
+                description: "Educational resources and funding opportunities in biomedical science.",
+                type: "Funding & Resources",
+                cost: "Free"
+            },
+            {
+                name: "Society of Biology",
+                url: "https://www.rsb.org.uk/",
+                description: "Professional body offering student memberships and career guidance.",
+                type: "Professional Network",
+                cost: "Membership fees apply"
+            }
+        ]
+    },
+    chemistry: {
+        competitions: [
+            {
+                name: "UK Chemistry Olympiad",
+                url: "https://www.rsc.org/education-events/students/chemistry-olympiad/",
+                description: "The premier chemistry competition for students in the UK.",
+                eligibility: "Ages 16-19",
+                deadline: "January"
+            },
+            {
+                name: "International Chemistry Olympiad",
+                url: "https://www.icho2024.org/",
+                description: "The most prestigious international chemistry competition.",
+                eligibility: "Ages 15-19",
+                deadline: "Varies by country"
+            },
+            {
+                name: "Cambridge Chemistry Challenge",
+                url: "https://www.c3l6.com/",
+                description: "Challenging chemistry problems for enthusiastic students.",
+                eligibility: "Ages 16-19",
+                deadline: "June"
+            }
+        ],
+        resources: [
+            {
+                name: "Khan Academy Chemistry",
+                url: "https://www.khanacademy.org/science/chemistry",
+                description: "Comprehensive chemistry courses with interactive content.",
+                type: "Online Learning",
+                cost: "Free"
+            },
+            {
+                name: "BBC Bitesize Chemistry",
+                url: "https://www.bbc.co.uk/bitesize/subjects/zm6h2hv",
+                description: "GCSE and A-level chemistry resources and revision guides.",
+                type: "Study Resources",
+                cost: "Free"
+            },
+            {
+                name: "Chemguide",
+                url: "https://www.chemguide.co.uk/",
+                description: "Detailed chemistry explanations and tutorials.",
+                type: "Reference",
+                cost: "Free"
+            }
+        ],
+        courses: [
+            {
+                name: "FutureLearn Chemistry",
+                url: "https://www.futurelearn.com/subjects/chemistry-courses",
+                description: "Online chemistry courses from leading universities.",
+                duration: "2-8 weeks",
+                cost: "Free to audit"
+            },
+            {
+                name: "Coursera Chemistry",
+                url: "https://www.coursera.org/browse/physical-science-and-engineering/chemistry",
+                description: "Specialized courses in organic, inorganic, and physical chemistry.",
+                duration: "4-6 months",
+                cost: "Free to audit"
+            },
+            {
+                name: "edX Chemistry",
+                url: "https://www.edx.org/learn/chemistry",
+                description: "University-level chemistry courses from top institutions.",
+                duration: "4-12 weeks",
+                cost: "Free to audit"
+            }
+        ],
+        other: [
+            {
+                name: "Royal Society of Chemistry",
+                url: "https://www.rsc.org/membership-and-community/students/",
+                description: "Student membership with access to resources and events.",
+                type: "Professional Network",
+                cost: "Membership fees apply"
+            },
+            {
+                name: "Chemistry World",
+                url: "https://www.chemistryworld.com/",
+                description: "Latest news and developments in chemistry.",
+                type: "News & Updates",
+                cost: "Free"
+            },
+            {
+                name: "ChemSpider",
+                url: "http://www.chemspider.com/",
+                description: "Free chemical structure database and search engine.",
+                type: "Research Tool",
+                cost: "Free"
+            }
+        ]
+    },
+    physics: {
+        competitions: [
+            {
+                name: "British Physics Olympiad",
+                url: "https://www.bpho.org.uk/",
+                description: "The premier physics competition for students in the UK.",
+                eligibility: "Ages 16-19",
+                deadline: "November"
+            },
+            {
+                name: "International Physics Olympiad",
+                url: "https://ipho.org/",
+                description: "The most prestigious international physics competition.",
+                eligibility: "Ages 15-19",
+                deadline: "Varies by country"
+            },
+            {
+                name: "Sir Isaac Newton Competition",
+                url: "https://www.isaacnewton.org.uk/",
+                description: "Challenging physics problems for enthusiastic students.",
+                eligibility: "Ages 16-19",
+                deadline: "March"
+            }
+        ],
+        resources: [
+            {
+                name: "Khan Academy Physics",
+                url: "https://www.khanacademy.org/science/physics",
+                description: "Comprehensive physics courses with interactive simulations.",
+                type: "Online Learning",
+                cost: "Free"
+            },
+            {
+                name: "BBC Bitesize Physics",
+                url: "https://www.bbc.co.uk/bitesize/subjects/zpm6fg8",
+                description: "GCSE and A-level physics resources and revision guides.",
+                type: "Study Resources",
+                cost: "Free"
+            },
+            {
+                name: "Physics Classroom",
+                url: "https://www.physicsclassroom.com/",
+                description: "Interactive physics tutorials and simulations.",
+                type: "Interactive Learning",
+                cost: "Free"
+            }
+        ],
+        courses: [
+            {
+                name: "FutureLearn Physics",
+                url: "https://www.futurelearn.com/subjects/physics-courses",
+                description: "Online physics courses from leading universities.",
+                duration: "2-8 weeks",
+                cost: "Free to audit"
+            },
+            {
+                name: "Coursera Physics",
+                url: "https://www.coursera.org/browse/physical-science-and-engineering/physics",
+                description: "Specialized courses in mechanics, thermodynamics, and quantum physics.",
+                duration: "4-6 months",
+                cost: "Free to audit"
+            },
+            {
+                name: "edX Physics",
+                url: "https://www.edx.org/learn/physics",
+                description: "University-level physics courses from top institutions.",
+                duration: "4-12 weeks",
+                cost: "Free to audit"
+            }
+        ],
+        other: [
+            {
+                name: "Institute of Physics",
+                url: "https://www.iop.org/",
+                description: "Professional body for physics with student membership.",
+                type: "Professional Network",
+                cost: "Membership fees apply"
+            },
+            {
+                name: "Physics World",
+                url: "https://physicsworld.com/",
+                description: "Latest news and developments in physics.",
+                type: "News & Updates",
+                cost: "Free"
+            },
+            {
+                name: "CERN Education",
+                url: "https://education.web.cern.ch/",
+                description: "Educational resources from the world's largest particle physics laboratory.",
+                type: "Research & Education",
+                cost: "Free"
+            }
+        ]
+    },
+    mathematics: {
+        competitions: [
+            {
+                name: "UK Mathematics Trust",
+                url: "https://www.ukmt.org.uk/",
+                description: "The premier mathematics competition organization in the UK.",
+                eligibility: "Ages 11-18",
+                deadline: "Various throughout year"
+            },
+            {
+                name: "International Mathematical Olympiad",
+                url: "https://www.imo-official.org/",
+                description: "The most prestigious international mathematics competition.",
+                eligibility: "Ages 15-19",
+                deadline: "Varies by country"
+            },
+            {
+                name: "Kangaroo Mathematics",
+                url: "https://www.ukmt.org.uk/competitions/solo/kangaroo",
+                description: "International mathematics competition with multiple choice questions.",
+                eligibility: "Ages 7-18",
+                deadline: "March"
+            }
+        ],
+        resources: [
+            {
+                name: "Khan Academy Mathematics",
+                url: "https://www.khanacademy.org/math",
+                description: "Comprehensive mathematics courses from basic to advanced.",
+                type: "Online Learning",
+                cost: "Free"
+            },
+            {
+                name: "BBC Bitesize Mathematics",
+                url: "https://www.bbc.co.uk/bitesize/subjects/z38pycw",
+                description: "GCSE and A-level mathematics resources and practice.",
+                type: "Study Resources",
+                cost: "Free"
+            },
+            {
+                name: "Maths Genie",
+                url: "https://www.mathsgenie.co.uk/",
+                description: "Free GCSE and A-level mathematics revision resources.",
+                type: "Practice & Revision",
+                cost: "Free"
+            }
+        ],
+        courses: [
+            {
+                name: "FutureLearn Mathematics",
+                url: "https://www.futurelearn.com/subjects/mathematics-courses",
+                description: "Online mathematics courses from leading universities.",
+                duration: "2-8 weeks",
+                cost: "Free to audit"
+            },
+            {
+                name: "Coursera Mathematics",
+                url: "https://www.coursera.org/browse/math-and-logic",
+                description: "Specialized courses in calculus, algebra, and statistics.",
+                duration: "4-6 months",
+                cost: "Free to audit"
+            },
+            {
+                name: "edX Mathematics",
+                url: "https://www.edx.org/learn/mathematics",
+                description: "University-level mathematics courses from top institutions.",
+                duration: "4-12 weeks",
+                cost: "Free to audit"
+            }
+        ],
+        other: [
+            {
+                name: "Institute of Mathematics",
+                url: "https://ima.org.uk/",
+                description: "Professional body for mathematics with student membership.",
+                type: "Professional Network",
+                cost: "Membership fees apply"
+            },
+            {
+                name: "Plus Magazine",
+                url: "https://plus.maths.org/",
+                description: "Online mathematics magazine with articles and resources.",
+                type: "Reading & Research",
+                cost: "Free"
+            },
+            {
+                name: "NRICH Mathematics",
+                url: "https://nrich.maths.org/",
+                description: "Enriching mathematics resources for students and teachers.",
+                type: "Enrichment",
+                cost: "Free"
+            }
+        ]
+    },
+    "computer-science": {
+        competitions: [
+            {
+                name: "British Informatics Olympiad",
+                url: "https://www.olympiad.org.uk/",
+                description: "The premier programming competition for students in the UK.",
+                eligibility: "Ages 16-19",
+                deadline: "January"
+            },
+            {
+                name: "International Olympiad in Informatics",
+                url: "https://ioinformatics.org/",
+                description: "The most prestigious international programming competition.",
+                eligibility: "Ages 15-19",
+                deadline: "Varies by country"
+            },
+            {
+                name: "Google Code Jam",
+                url: "https://codingcompetitions.withgoogle.com/codejam",
+                description: "Global programming competition hosted by Google.",
+                eligibility: "Ages 13+",
+                deadline: "April"
+            }
+        ],
+        resources: [
+            {
+                name: "Khan Academy Computer Science",
+                url: "https://www.khanacademy.org/computing",
+                description: "Comprehensive computer science courses with interactive programming.",
+                type: "Online Learning",
+                cost: "Free"
+            },
+            {
+                name: "BBC Bitesize Computer Science",
+                url: "https://www.bbc.co.uk/bitesize/subjects/z34k7ty",
+                description: "GCSE and A-level computer science resources.",
+                type: "Study Resources",
+                cost: "Free"
+            },
+            {
+                name: "Codecademy",
+                url: "https://www.codecademy.com/",
+                description: "Interactive coding tutorials in multiple programming languages.",
+                type: "Programming Practice",
+                cost: "Free basic, paid premium"
+            }
+        ],
+        courses: [
+            {
+                name: "FutureLearn Computer Science",
+                url: "https://www.futurelearn.com/subjects/computer-science-courses",
+                description: "Online computer science courses from top universities.",
+                duration: "2-8 weeks",
+                cost: "Free to audit"
+            },
+            {
+                name: "Coursera Computer Science",
+                url: "https://www.coursera.org/browse/computer-science",
+                description: "Specialized courses in algorithms, data structures, and software engineering.",
+                duration: "4-6 months",
+                cost: "Free to audit"
+            },
+            {
+                name: "edX Computer Science",
+                url: "https://www.edx.org/learn/computer-science",
+                description: "University-level computer science courses from leading institutions.",
+                duration: "4-12 weeks",
+                cost: "Free to audit"
+            }
+        ],
+        other: [
+            {
+                name: "BCS Student Membership",
+                url: "https://www.bcs.org/membership-and-registrations/become-a-member/student-membership/",
+                description: "Professional body for computing with student benefits.",
+                type: "Professional Network",
+                cost: "Membership fees apply"
+            },
+            {
+                name: "GitHub Student Pack",
+                url: "https://education.github.com/pack",
+                description: "Free developer tools and services for students.",
+                type: "Development Tools",
+                cost: "Free"
+            },
+            {
+                name: "Stack Overflow",
+                url: "https://stackoverflow.com/",
+                description: "Q&A community for programmers and developers.",
+                type: "Community",
+                cost: "Free"
+            }
+        ]
+    }
+};
+
+// Game state
+let currentSubject = null;
+let currentCategory = 'competitions';
+let currentOpportunityIndex = 0;
+
+// DOM elements
+const overlay = document.getElementById('opportunitiesOverlay');
+const subjectTitle = document.getElementById('subjectTitle');
+const categoryButtons = document.getElementById('categoryButtons');
+const opportunityContent = document.getElementById('opportunityContent');
+const opportunityCounter = document.getElementById('opportunityCounter');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const closeOverlay = document.getElementById('closeOverlay');
+
+// Initialize game
+function initGame() {
+    // Add click listeners to game images
+    const gameImages = document.querySelectorAll('.game-image');
+    gameImages.forEach(img => {
+        img.addEventListener('click', () => {
+            const subject = img.dataset.subject;
+            openOpportunities(subject);
+        });
+    });
+
+    // Add click listeners to category buttons
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const category = btn.dataset.category;
+            switchCategory(category);
+        });
+    });
+
+    // Add navigation listeners
+    prevBtn.addEventListener('click', showPreviousOpportunity);
+    nextBtn.addEventListener('click', showNextOpportunity);
+    closeOverlay.addEventListener('click', closeOpportunities);
+}
+
+function openOpportunities(subject) {
+    currentSubject = subject;
+    currentCategory = 'competitions';
+    currentOpportunityIndex = 0;
+    
+    // Update subject title
+    const subjectNames = {
+        'biology': 'Biology',
+        'chemistry': 'Chemistry',
+        'physics': 'Physics',
+        'mathematics': 'Mathematics',
+        'computer-science': 'Computer Science'
+    };
+    subjectTitle.textContent = `${subjectNames[subject]} Opportunities`;
+    
+    // Update category buttons
+    updateCategoryButtons();
+    
+    // Show first opportunity
+    showCurrentOpportunity();
+    
+    // Show overlay
+    overlay.style.display = 'flex';
+}
+
+function switchCategory(category) {
+    currentCategory = category;
+    currentOpportunityIndex = 0;
+    
+    // Update active category button
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    document.querySelector(`[data-category="${category}"]`).classList.add('active');
+    
+    // Show first opportunity in new category
+    showCurrentOpportunity();
+}
+
+function showCurrentOpportunity() {
+    const opportunities = opportunitiesData[currentSubject][currentCategory];
+    if (opportunities.length === 0) {
+        opportunityContent.innerHTML = '<p>No opportunities available in this category.</p>';
+        opportunityCounter.textContent = '0 of 0';
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+        return;
+    }
+    
+    const opportunity = opportunities[currentOpportunityIndex];
+    
+    // Create opportunity display
+    let html = `
+        <div class="opportunity-card">
+            <h3 class="opportunity-name">
+                <a href="${opportunity.url}" target="_blank" rel="noopener noreferrer">
+                    ${opportunity.name}
+                </a>
+            </h3>
+            <p class="opportunity-description">${opportunity.description}</p>
+    `;
+    
+    // Add additional fields based on category
+    if (currentCategory === 'competitions') {
+        html += `
+            <div class="opportunity-details">
+                <p><strong>Eligibility:</strong> ${opportunity.eligibility}</p>
+                <p><strong>Deadline:</strong> ${opportunity.deadline}</p>
+            </div>
+        `;
+    } else if (currentCategory === 'resources') {
+        html += `
+            <div class="opportunity-details">
+                <p><strong>Type:</strong> ${opportunity.type}</p>
+                <p><strong>Cost:</strong> ${opportunity.cost}</p>
+            </div>
+        `;
+    } else if (currentCategory === 'courses') {
+        html += `
+            <div class="opportunity-details">
+                <p><strong>Duration:</strong> ${opportunity.duration}</p>
+                <p><strong>Cost:</strong> ${opportunity.cost}</p>
+            </div>
+        `;
+    } else if (currentCategory === 'other') {
+        html += `
+            <div class="opportunity-details">
+                <p><strong>Type:</strong> ${opportunity.type}</p>
+                <p><strong>Cost:</strong> ${opportunity.cost}</p>
+            </div>
+        `;
+    }
+    
+    html += '</div>';
+    
+    opportunityContent.innerHTML = html;
+    
+    // Update counter
+    opportunityCounter.textContent = `${currentOpportunityIndex + 1} of ${opportunities.length}`;
+    
+    // Update navigation buttons
+    prevBtn.disabled = currentOpportunityIndex === 0;
+    nextBtn.disabled = currentOpportunityIndex === opportunities.length - 1;
+}
+
+function showPreviousOpportunity() {
+    if (currentOpportunityIndex > 0) {
+        currentOpportunityIndex--;
+        showCurrentOpportunity();
+    }
+}
+
+function showNextOpportunity() {
+    const opportunities = opportunitiesData[currentSubject][currentCategory];
+    if (currentOpportunityIndex < opportunities.length - 1) {
+        currentOpportunityIndex++;
+        showCurrentOpportunity();
+    }
+}
+
+function updateCategoryButtons() {
+    // Reset all buttons
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Activate competitions button
+    document.querySelector('[data-category="competitions"]').classList.add('active');
+}
+
+function closeOpportunities() {
+    overlay.style.display = 'none';
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', initGame);
+</script> 
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
